@@ -1,0 +1,8 @@
+build/
+out/
+*.txt
+*.o
+ss_psi
+local_compute
+.vscode/
+.cmake/

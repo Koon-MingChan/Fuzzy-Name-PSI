@@ -1,0 +1,86 @@
+# MP-SPDZ program for Approximate PSI
+# This script performs the F_ssHamCom and F_ssVMult stages of the 
+# "Approximate PSI with Near-Linear Communication" paper.
+
+# Configuration matching the C++ layer
+L = 256
+D = 4
+
+# Number of projected elements that passed the OPPRF stage and have circuit shares
+# For demonstration, we assume we process N matching shares per round.
+N = 100 
+
+def f_ss_hamcom(share_A, share_B, threshold):
+    """
+    F_ssHamCom: Secret-Shared Hamming Distance Comparison.
+    Inputs are `sbitint` (boolean secret-shared integers) or arrays of `sbit`.
+    Returns a boolean secret share `out` which is 1 if distance <= threshold, else 0.
+    """
+    # 1. Compute XOR to find differing bits
+    diff = share_A ^ share_B
+    
+    # 2. Count the number of set bits (Hamming weight)
+    # Using popcnt on the boolean share
+    dist = diff.popcnt()
+    
+    # 3. Secure comparison: check if dist <= threshold
+    # The result `is_match` remains secret-shared.
+    is_match = dist <= threshold
+    
+    return is_match
+
+def f_ss_vmult(is_match, share_A, share_B):
+    """
+    F_ssVMult: Secret-Shared Vector Multiplication.
+    Multiplies the boolean indicator `is_match` by the payloads.
+    If is_match is 0, the resulting shares are shares of 0.
+    """
+    # Simply multiply the payload by the boolean mask.
+    out_A = is_match * share_A
+    out_B = is_match * share_B
+    return out_A, out_B
+
+# ---- Main Execution Logic ----
+print_ln("--- Starting MP-SPDZ Evaluation for Approx-PSI ---")
+
+# Step 1: Read the secret shares outputted by the F_ssPSI (volepsi) layer.
+# In a real MP-SPDZ deployment, this would be read from external inputs or pre-shared files.
+shares_A = Array(N, sbits.get_type(L))
+shares_B = Array(N, sbits.get_type(L))
+
+# Mocking the reading of shares from file (using secret inputs for demonstration)
+@for_range(N)
+def _(i):
+    shares_A[i] = sbits.get_type(L).get_input_from(0)
+    shares_B[i] = sbits.get_type(L).get_input_from(1)
+
+# Step 2 & 3: Evaluate F_ssHamCom and F_ssVMult on each item
+valid_matches_A = Array(N, sbits.get_type(L))
+valid_matches_B = Array(N, sbits.get_type(L))
+
+@for_range(N)
+def evaluate_items(i):
+    # Compute the Hamming Distance and perform threshold comparison securely
+    is_match_share = f_ss_hamcom(shares_A[i], shares_B[i], D)
+    
+    # Multiply the payload by the boolean match indicator
+    out_A, out_B = f_ss_vmult(is_match_share, shares_A[i], shares_B[i])
+    
+    valid_matches_A[i] = out_A
+    valid_matches_B[i] = out_B
+
+# Step 4: Final Reconstruction (Opening phase)
+print_ln("Revealing matched payloads securely...")
+@for_range(N)
+def open_results(i):
+    # Both parties implicitly open the results. 
+    # If it was a non-match, the value is 0. If it was a match, the payload is revealed.
+    revealed_A = valid_matches_A[i].reveal()
+    revealed_B = valid_matches_B[i].reveal()
+    
+    # The paper mentions you output the elements. If it equals 0, it means it was filtered out.
+    @if_(revealed_A != 0)
+    def _():
+        print_ln("Found Approximate Match Pair! Payload A: %s, Payload B: %s", revealed_A, revealed_B)
+
+print_ln("Evaluation complete.")
