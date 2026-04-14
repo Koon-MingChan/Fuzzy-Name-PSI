@@ -26,7 +26,7 @@ public:
 
 private:
     NameEncodingConfig cfg_;
-    std::string normalize(const std::string& name) const;
+    std::string normalize(const std::string& name, bool keep_hyphen = false) const;
     std::vector<std::string> tokenize(const std::string& clean) const;
     void apply_tail_token(std::vector<std::string>& tokens) const;
     uint64_t hash_gram(const std::string& gram) const;
