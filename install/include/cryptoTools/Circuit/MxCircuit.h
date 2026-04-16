@@ -277,12 +277,10 @@ namespace osuCrypto
 			{
 				if (b.mAddress.hasValue() == false)
 					throw std::runtime_error("error: reading an uninitilized value. " LOCATION);
-#ifndef NDEBUG
 				auto addr = b.mAddress.gate();
 				auto off = b.mAddress.offset();
 				assert(addr < mGates.size() &&
 					off < mGates[addr].mNumOutputs);
-#endif // !NDEBUG
 
 				return b.mAddress;
 			}

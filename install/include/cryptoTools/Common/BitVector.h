@@ -40,7 +40,7 @@ namespace osuCrypto {
         void assign(const BitVector& K);
 
         // Append length bits pointed to by data starting a the bit index by offset.
-        void append(const u8* data, u64 length, u64 offset = 0);
+        void append(u8* data, u64 length, u64 offset = 0);
 
         // Append an existing BitVector to this BitVector.
         void append(const BitVector& k) { append(k.data(), k.size()); }
@@ -157,17 +157,6 @@ namespace osuCrypto {
         // Reinterpret the vector of bits as a vector of type T.
         template<class T>
         span<T> getSpan() const;
-
-        BitVector subvec(u64 begin, u64 size = ~0ull) const
-        {
-
-            if (size == ~0ull) size = mNumBits - begin;
-            if (begin + size > mNumBits) 
-                throw std::runtime_error("rt error at " LOCATION);
-            BitVector ret;
-            ret.append(data() + (begin / 8), size, begin % 8);
-			return ret;
-        }
 
     private:
         std::unique_ptr<block[]> mData;

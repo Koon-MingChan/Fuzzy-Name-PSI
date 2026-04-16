@@ -17,16 +17,24 @@ NameEncoding::NameEncoding(NameEncodingConfig cfg) : cfg_(std::move(cfg)) {
     }
 }
 
-std::string NameEncoding::normalize(const std::string& name) const {
+std::string NameEncoding::normalize(const std::string& name, bool keep_hyphen) const {
     std::string out;
     out.reserve(name.size());
     for (char c : name) {
-        if (c == ' ') {
+        if (std::isspace(static_cast<unsigned char>(c))) {
             out.push_back(' ');
             continue;
         }
-        if (std::isalnum(static_cast<unsigned char>(c)) || c == '-') {
+        if (std::isalnum(static_cast<unsigned char>(c))) {
             out.push_back(std::toupper(static_cast<unsigned char>(c)));
+        } else if (c == '-') {
+            // Smart Fix: Keep it as a trigger for Tail Token, 
+            // otherwise convert to space for standard tokenization.
+            if (keep_hyphen) {
+                out.push_back('-');
+            } else {
+                out.push_back(' '); 
+            }
         }
     }
     return out;
@@ -95,20 +103,20 @@ BitVector NameEncoding::encode_tokens_base(const std::vector<std::string>& token
 }
 
 BitVector NameEncoding::encode_name_base(const std::string& name) const {
-    auto cleaned = normalize(name);
+    auto cleaned = normalize(name, false);
     auto tokens = tokenize(cleaned);
     return encode_tokens_base(tokens);
 }
 
 BitVector NameEncoding::encode_name_tail_token(const std::string& name) const {
-    auto cleaned = normalize(name);
+    auto cleaned = normalize(name, true);
     auto tokens = tokenize(cleaned);
     apply_tail_token(tokens);
     return encode_tokens_base(tokens);
 }
 
 BitVector NameEncoding::encode_name_token_or(const std::string& name) const {
-    auto cleaned = normalize(name);
+    auto cleaned = normalize(name, false);
     auto tokens = tokenize(cleaned);
     BitVector combined(cfg_.BITVECTOR_LENGTH);
     combined.reset();

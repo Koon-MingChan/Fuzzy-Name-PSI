@@ -21,12 +21,12 @@ using BitVector = approx_psi::BitVector;
 
 // Configuration parameters
 // Global Constants for the Approx-PSI Pipeline
-const int L_BIT_LENGTH = 1024;  // Length of the bit-vector (L)
+const int L_BIT_LENGTH = 8192;  // Length of the bit-vector (L)
 const int GRAM_SIZE = 3;         // Size of n-grams for name encoding
-const int HAMMING_D = 4;         // Distance threshold (d)
-const int GAP_T = 4;             // Gap factor (T)
+const int HAMMING_D = 8;         // Distance threshold (d)
+const int GAP_T = 10;             // Gap factor (T)
 const int N_ELEMENTS = 100;      // Number of elements per set (n)
-const int K_ROUNDS = 20;         // Number of projection rounds (k)
+const int K_ROUNDS = 40;         // Number of projection rounds (k)
 
 using BinaryVector = vector<int>;
 
@@ -161,14 +161,18 @@ vector<vector<size_t>> generate_projections_from_seed(uint64_t joint_seed, int L
     uniform_real_distribution<> dis(0.0, 1.0);
     
     vector<vector<size_t>> projections;
-    for (int i = 0; i < k_rounds; ++i) {
+    while (projections.size() < k_rounds) {
         vector<size_t> current_proj;
         for (int j = 0; j < L_size; ++j) {
             if (dis(synchronized_prg) <= p) {
                 current_proj.push_back(static_cast<size_t>(j));
             }
         }
-        projections.push_back(current_proj);
+        // BUG FIX: Ensure we didn't get an empty projection 
+        // which would cause 100% false positives
+        if (current_proj.size() > (L_size * p * 0.5)) { 
+            projections.push_back(current_proj);
+        }
     }
     return projections;
 }
@@ -182,30 +186,77 @@ int main() {
     NameEncoding encoder(enc_cfg);
     
     // We use the same seed for RLC and Projection Masking to simulate synchronized setup
-    uint64_t shared_seed = 12345ULL; 
+    uint64_t shared_seed = execute_coin_toss(); 
     ProjectionConsistencyCheck rlc_checker(shared_seed);
 
     // 2. Define Test Names (Fuzzy Pairs)
     // We test: Exact Match, Hyphenation, and Token Reordering
     vector<pair<string, string>> test_pairs = {
-        {"BARON-COHEN SIMON", "SIMON BARON COHEN"}, // Hyphen + Reorder
-        {"CHAN KOON MING", "CHAN KOON-MING"},       // Hyphenation
-        {"ALICE SMITH", "SMITH ALICE"},             // Reordering
-        {"DIANA PRINCE", "DIANA P"}                 // Significant deletion (should likely fail)
+        // Reordering & Hyphenation
+        {"ALEXANDER-SMITH JONATHAN", "JONATHAN ALEXANDER SMITH"},
+        {"LEE CHING-WAI", "CHING WAI LEE"},
+        {"GARCIA-LORENZ MARIA ELENA", "MARIA ELENA GARCIA LORENZ"},
+        {"ABDUL RAHMAN BIN AZIZ", "AZIZ ABDUL RAHMAN"},
+        
+        // Minor Typos/OCR Errors (Distance < 10)
+        {"CATHERINE ZETA-JONES", "KATHERINE ZETA JONES"},
+        {"MUHAMMAD AL-FARISI", "MOHAMMAD AL FARISI"},
+        {"ELIZABETH HIGGINS", "ELISABETH HIGGINS"},
+        {"NICHOLAS BROOKS", "NICKOLAS BROOKS"},
+
+        // Abbreviations vs Full Name
+        {"WILLIAM ROBERT THORNTON", "WM ROBERT THORNTON"},
+        {"CHRISTOPHER P. LOWE", "CHRISTOPHER PAUL LOWE"},
+        {"SOPHIA ISABELLA RODRIGUEZ", "SOPHIA I. RODRIGUEZ"},
+
+        // Extra whitespace/Case sensitivity (already handled by normalization)
+        {"  LIAN  WEI  ", "LIAN WEI"},
+        {"O'CONNOR SHAUN", "OCONNOR SHAUN"},
+
+        // Sibling/Parent names (Shared Surname)
+        {"JONATHAN SMITH", "JENNIFER SMITH"},
+        {"LI WEI MING", "LI WEI KANG"},
+        {"AHMED BIN HASSAN", "AHMED BIN HUSSEIN"},
+        
+        // Different Middle Names
+        {"ROBERT JAMES MILLER", "ROBERT EDWARD MILLER"},
+        {"SARAH ANN CONNOR", "SARAH JANE CONNOR"},
+
+        // Very short names (High collision risk in Bit-Vectors)
+        {"LI NA", "LU NA"},
+        {"BO JODIE", "BO JOE"},
+
+        // Significant Deletions
+        {"BENJAMIN FRANKLIN", "BEN F"},
+        {"MAXIMILLIAN SCHMIDT", "MAX S"},
+        
+        //Completely different names to verify the baseline noise floor.
+        {"DAISY MILLER", "THOMAS ANDERSON"},
+        {"YUKI TANAKA", "CARLOS ESTEVEZ"},
+        {"FATIMA MANSUR", "CHLOE O'BRIAN"},
+        {"PETER PARKER", "BRUCE WAYNE"}
     };
 
     vector<BitVector> original_set_A;
     vector<BitVector> original_set_B;
 
     for (const auto& p : test_pairs) {
+        // original_set_A.push_back(encoder.encode_name_base(p.first));
+        // original_set_B.push_back(encoder.encode_name_base(p.second));
+
+        //Testing Tail Token
         original_set_A.push_back(encoder.encode_name_tail_token(p.first));
-        original_set_B.push_back(encoder.encode_name_base(p.second));
+        original_set_B.push_back(encoder.encode_name_tail_token(p.second));
+
+        //Testing Token OR
+        //original_set_A.push_back(encoder.encode_name_token_or(p.first));
+        //original_set_B.push_back(encoder.encode_name_token_or(p.second));
     }
 
     // 3. Generate Projection Masks
     // In real MPC, this uses the generate_projections_from_seed logic
     // Here we simulate 20 rounds of random bit-position sampling
-    auto masks = generate_projections_from_seed(shared_seed, L_BIT_LENGTH, HAMMING_D, 4, test_pairs.size(), K_ROUNDS);
+    auto masks = generate_projections_from_seed(shared_seed, L_BIT_LENGTH, HAMMING_D, GAP_T, test_pairs.size(), K_ROUNDS);
 
     // 4. Processing Rounds
     for (int k = 0; k < K_ROUNDS; ++k) {

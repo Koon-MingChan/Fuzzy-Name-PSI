@@ -6,3 +6,5 @@ ss_psi
 local_compute
 .vscode/
 .cmake/
+extern/
+install/

@@ -19,12 +19,12 @@
 using namespace std;
 
 // --- Global Constants (Synchronized with local_compute.cpp) ---
-const int L_BIT_LENGTH = 1024;  // Length of the bit-vector (L)
+const int L_BIT_LENGTH = 8192;  // Length of the bit-vector (L)
 const int GRAM_SIZE = 3;         // Size of n-grams for name encoding
-const int HAMMING_D = 4;         // Distance threshold (d)
-const int GAP_T = 4;             // Gap factor (T)
+const int HAMMING_D = 8;         // Distance threshold (d)
+const int GAP_T = 10;             // Gap factor (T)
 const int N_ELEMENTS = 100;      // Number of elements per set (n)
-const int K_ROUNDS = 20;         // Number of projection rounds (k)
+const int K_ROUNDS = 40;         // Number of projection rounds (k)
 
 // Initialize the ASS Engine with a master key
 approx_psi::AuthenticatedSecretSharing ass_engine(98765ULL); 
@@ -117,30 +117,38 @@ void simulate_f_sspsi(int party_id) {
             for (auto& [projA, payloadA] : dataA) {
                 
                 // 1. Perform Matching based on Hamming Distance
-                if (hamming_distance(projA, projB) <= HAMMING_D) {
+                if (hamming_distance(projA, projB) <= 1) {
+
+                    // 2. Step 5: Hamming Check (The Verifier)
+                    // This is the F_ssHamCom part. 
+                    // We check the ORIGINAL payloads (the full 2048-bit vectors).
+                    if (hamming_distance(payloadA, payloadB) <= HAMMING_D) {
                     
-                    // 2. Generate the XOR result (The shared secret)
-                    BinaryVector z = xor_vector(payloadA, payloadB);
+                        // 2. Generate the XOR result (The shared secret)
+                        BinaryVector z = xor_vector(payloadA, payloadB);
                     
-                    // 3. INTEGRATION: Apply ASS to protect the result
-                    // For each bit in the result, we create an authenticated share
-                    for (size_t i = 0; i < z.size(); ++i) {
-                        auto [share0, share1] = ass_engine.share(z[i], k);
+                        // 3. INTEGRATION: Apply ASS to protect the result
+                        // For each bit in the result, we create an authenticated share
+                        for (size_t i = 0; i < z.size(); ++i) {
+                            auto [share0, share1] = ass_engine.share(z[i], k);
                         
-                        // Select share based on current party
-                        approx_psi::Share my_share = (party_id == 0 ? share0 : share1);
+                            // Select share based on current party
+                            approx_psi::Share my_share = (party_id == 0 ? share0 : share1);
 
-                        // 4. INTEGRATION: Verify the share before saving
-                        // This simulates the "Abort" mechanism if data is corrupted
-                        if (!ass_engine.verify(my_share, k)) {
-                            throw runtime_error("ASS Verification Failed in Round " + to_string(k));
+                            // 4. INTEGRATION: Verify the share before saving
+                            // This simulates the "Abort" mechanism if data is corrupted
+                            if (!ass_engine.verify(my_share, k)) {
+                                throw runtime_error("ASS Verification Failed in Round " + to_string(k));
+                            }
+
+                            // Save the bit value of the verified share
+                            fout << my_share.value;
                         }
-
-                        // Save the bit value of the verified share
-                        fout << my_share.value;
+                        fout << "\n";
+                        // TEMPORARY DEBUG:
+                        cout << "False Match Detected! Distance: " << hamming_distance(payloadA, payloadB) << endl;
+                        matches_this_round++;
                     }
-                    fout << "\n";
-                    matches_this_round++;
                 }
             }
         }

@@ -7,8 +7,8 @@ set(coproto_VERSION_PATCH     0)
 set(COPROTO_CPP20 ON)
 
 set(COPROTO_ENABLE_SPAN )
-set(COPROTO_ENABLE_BOOST )
-set(COPROTO_ENABLE_OPENSSL )
+set(COPROTO_ENABLE_BOOST ON)
+set(COPROTO_ENABLE_OPENSSL OFF)
 
 # compile the library logging support
 set(COPROTO_LOGGING ) 
@@ -62,8 +62,8 @@ else()
 endif()
 set(coproto_cpp20_FOUND ON)
 
-set(coproto_boost_FOUND )
-set(coproto_openssl_FOUND )
+set(coproto_boost_FOUND ON)
+set(coproto_openssl_FOUND OFF)
 set(coproto_asan_FOUND OFF)
 set(coproto_pic_FOUND OFF)
 

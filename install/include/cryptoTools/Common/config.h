@@ -8,13 +8,13 @@
 /* #undef ENABLE_RELIC */
 
 // use the libsodium library for curves
-/* #undef ENABLE_SODIUM */
+#define ENABLE_SODIUM ON
 
 // does the libsodium library support noclamp operations on Montgomery curves?
-/* #undef SODIUM_MONTGOMERY */
+#define SODIUM_MONTGOMERY ON
 
 // compile the circuit library
-/* #undef ENABLE_CIRCUITS */
+#define ENABLE_CIRCUITS ON
 
 // include the span-lite
 /* #undef ENABLE_SPAN_LITE */
@@ -30,7 +30,7 @@
 /* #undef ENABLE_WOLFSSL */
 
 // enable integration with boost for networking.
-/* #undef ENABLE_BOOST */
+#define ENABLE_BOOST ON
 
 // enable the use of ARM AES instructions.
 /* #undef ENABLE_ARM_AES */
@@ -40,17 +40,6 @@
 
 // enable the use of intel AVX instructions.
 #define ENABLE_AVX ON
-
-// enable the use of intel AVX2 instructions.
-#define ENABLE_AVX2 ON
-
-// enable the use of intel AVX512 instructions.
-#define ENABLE_AVX512 ON
-
-// enable the use of intel BMI2 instructions.
-#define ENABLE_BMI2 ON
-
-
 
 // enable the use of the portable AES implementation.
 /* #undef ENABLE_PORTABLE_AES */
@@ -74,42 +63,4 @@
 
 #if (defined(_MSC_VER) || defined(__AVX2__)) && defined(ENABLE_AVX)
 #define OC_ENABLE_AVX2 ON
-#endif
-
-
-
-
-
-#ifdef __CUDACC__
-    #define OC_CUDA_CALLABLE __host__ __device__
-    #define OC_CUDA_DEVICE __device__
-    #define OC_CUDA_HOST __host__ 
-    
-    #ifdef OC_ENABLE_PCLMUL
-        #undef OC_ENABLE_PCLMUL
-    #endif
-    #ifdef OC_ENABLE_SSE2
-        #undef OC_ENABLE_SSE2
-    #endif
-    
-    #ifdef ENABLE_SSE
-        #undef ENABLE_SSE
-    #endif
-    #ifdef OC_ENABLE_SSE
-        #undef OC_ENABLE_SSE
-    #endif
-    #ifdef ENABLE_AVX
-        #undef ENABLE_AVX
-    #endif
-    #ifdef ENABLE_ARM_AES
-        #undef ENABLE_ARM_AES
-    #endif
-    #if !defined(ENABLE_PORTABLE_AES)
-        #define ENABLE_PORTABLE_AES 
-    #endif
-#else
-    #define OC_CUDA_CALLABLE
-    #define OC_CUDA_DEVICE
-    #define OC_CUDA_HOST
-
 #endif

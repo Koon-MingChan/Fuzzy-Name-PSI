@@ -22,7 +22,6 @@
 #define LOCATION __FILE__ ":" STRINGIZE(__LINE__)
 #define RTE_LOC std::runtime_error(LOCATION)
 
-
 #ifdef _MSC_VER
     #ifndef _WIN32_WINNT
         // compile for win 7 and up.
@@ -63,7 +62,7 @@ namespace osuCrypto {
     constexpr u64 divNearest(u64 val, u64 d) { return (val + (d/2)) / d; } // Ties go towards infinity.
     constexpr u64 roundUpTo(u64 val, u64 step) { return divCeil(val, step) * step; }
 
-    inline constexpr u64 log2ceil(u64 x)
+    inline u64 log2ceil(u64 x)
     {
         return bit_width(x - 1);
     }

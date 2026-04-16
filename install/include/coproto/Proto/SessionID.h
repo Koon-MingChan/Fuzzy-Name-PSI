@@ -14,7 +14,6 @@
 #include <iostream>
 #include <iomanip>
 #include <ios>
-#include <sstream>
 
 namespace coproto
 {
@@ -87,8 +86,6 @@ namespace coproto
 
 			return { 45234ull, 325434 };
 		}
-
-		std::string toString() const;
 	};
 
 
@@ -101,13 +98,6 @@ namespace coproto
 			<< std::setw(16) << std::setfill('0') << s.mVal[0];
 		out.flags(f);
 		return out;
-	}
-
-	inline std::string SessionID::toString() const
-	{
-		std::ostringstream oss;
-		oss << *this;
-		return oss.str();
 	}
 }
 

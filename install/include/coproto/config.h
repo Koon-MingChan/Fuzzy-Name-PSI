@@ -10,7 +10,7 @@
 
 
 // compile the library with boost asio support
-/* #undef COPROTO_ENABLE_BOOST */
+#define COPROTO_ENABLE_BOOST ON 
 
 // compile the library with OpenSSL (TLS) support
 /* #undef COPROTO_ENABLE_OPENSSL */
