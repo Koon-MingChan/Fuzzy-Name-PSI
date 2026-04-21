@@ -118,8 +118,8 @@ BitVector NameEncoding::encode_name_tail_token(const std::string& name) const {
 BitVector NameEncoding::encode_name_token_or(const std::string& name) const {
     auto cleaned = normalize(name, false);
     auto tokens = tokenize(cleaned);
-    BitVector combined(cfg_.BITVECTOR_LENGTH);
-    combined.reset();
+    BitVector combined;
+    combined.reset(cfg_.BITVECTOR_LENGTH);
     for (auto& token : tokens) {
         std::vector<std::string> single{token};
         auto token_bv = encode_tokens_base(single);
