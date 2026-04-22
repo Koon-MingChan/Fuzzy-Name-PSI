@@ -58,6 +58,7 @@ void NameEncoding::apply_tail_token(std::vector<std::string>& tokens) const {
             std::string head = t.substr(0, p);
             std::string tail = t.substr(p + 1);
             std::string full = head + tail;
+            extra.push_back(head);
             extra.push_back(full);
             extra.push_back(tail);
         }
@@ -68,6 +69,17 @@ void NameEncoding::apply_tail_token(std::vector<std::string>& tokens) const {
 uint64_t NameEncoding::hash_gram(const std::string& gram) const {
     std::hash<std::string> hasher;
     return static_cast<uint64_t>(hasher(gram));
+}
+
+void NameEncoding::add_token_grams(BitVector& bv, const std::string& token) const {
+    if (token.size() < cfg_.GRAM_SIZE) return;
+
+    for (size_t i = 0; i + cfg_.GRAM_SIZE <= token.size(); ++i) {
+        std::string gram = token.substr(i, cfg_.GRAM_SIZE);
+        uint64_t h = hash_gram(gram);
+        size_t idx = static_cast<size_t>(h % bv.size());
+        bv[idx] = 1;
+    }
 }
 
 BitVector NameEncoding::encode_tokens_base(const std::vector<std::string>& tokens) const {
@@ -102,6 +114,25 @@ BitVector NameEncoding::encode_tokens_base(const std::vector<std::string>& token
     return bv;
 }
 
+BitVector NameEncoding::encode_tokens_individually(const std::vector<std::string>& tokens) const {
+    if (cfg_.BITVECTOR_LENGTH == 0) {
+        throw std::runtime_error("BitVector length is 0. Check NameEncodingConfig initialization.");
+    }
+
+    BitVector bv;
+    bv.reset(cfg_.BITVECTOR_LENGTH);
+
+    std::vector<std::string> sorted_tok = tokens;
+    std::sort(sorted_tok.begin(), sorted_tok.end());
+    sorted_tok.erase(std::unique(sorted_tok.begin(), sorted_tok.end()), sorted_tok.end());
+
+    for (const auto& token : sorted_tok) {
+        add_token_grams(bv, token);
+    }
+
+    return bv;
+}
+
 BitVector NameEncoding::encode_name_base(const std::string& name) const {
     auto cleaned = normalize(name, false);
     auto tokens = tokenize(cleaned);
@@ -112,7 +143,12 @@ BitVector NameEncoding::encode_name_tail_token(const std::string& name) const {
     auto cleaned = normalize(name, true);
     auto tokens = tokenize(cleaned);
     apply_tail_token(tokens);
-    return encode_tokens_base(tokens);
+
+    for (auto& token : tokens) {
+        token.erase(std::remove(token.begin(), token.end(), '-'), token.end());
+    }
+
+    return encode_tokens_individually(tokens);
 }
 
 BitVector NameEncoding::encode_name_token_or(const std::string& name) const {

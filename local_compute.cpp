@@ -20,10 +20,10 @@ using BitVector = approx_psi::BitVector;
 // Global Constants for the Approx-PSI Pipeline
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 3;
-const int HAMMING_D = 5;
-const int GAP_T = 10;
-const int N_ELEMENTS = 100;
-const int K_ROUNDS = 40;
+const int HAMMING_D = 7;
+const int GAP_T = 5;
+const int N_ELEMENTS = 18;
+const int K_ROUNDS = 45;
 
 using BinaryVector = vector<int>;
 
@@ -154,7 +154,8 @@ int main() {
     // Two independent party datasets to better simulate bank-to-bank fuzzy PSI.
     vector<string> party0_names = {
         "ALEXANDER-SMITH JONATHAN",
-        "LEE CHING-WAI",
+        "LEE CHING WAI",
+        "SIMON BARON-COHEN",
         "GARCIA-LORENZ MARIA ELENA",
         "ABDUL RAHMAN BIN AZIZ",
         "CATHERINE ZETA-JONES",
@@ -176,6 +177,7 @@ int main() {
     vector<string> party1_names = {
         "JONATHAN ALEXANDER SMITH",
         "CHING WAI LEE",
+        "SIMON COHEN",
         "MARIA ELENA GARCIA LORENZ",
         "AZIZ ABDUL RAHMAN",
         "KATHERINE ZETA JONES",

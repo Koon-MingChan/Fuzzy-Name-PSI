@@ -31,6 +31,11 @@ void test_name_encoding() {
     auto v4 = encoder.encode_name_tail_token("SMITH ALICE");
     assert(v3.size() == v4.size());
     log_pass("NameEncoding: variant inputs still produce compatible encoded vectors");
+
+    auto v5 = encoder.encode_name_tail_token("SIMON BARON-COHEN");
+    auto v6 = encoder.encode_name_tail_token("SIMON COHEN");
+    assert(v5 != v6);
+    log_pass("NameEncoding: Tail-Token preserves distinctness while sharing hyphen-derived evidence");
 }
 
 void test_ass() {
