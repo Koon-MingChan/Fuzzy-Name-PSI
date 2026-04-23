@@ -69,3 +69,7 @@ target_link_libraries(local_compute
 
 add_executable(ss_psi ss_psi.cpp ${SOURCES})
 target_link_libraries(ss_psi ${LINK_STR})
+
+add_executable(mpc_fuzzy_psi mpc_fuzzy_psi.cpp ${SOURCES})
+target_include_directories(mpc_fuzzy_psi PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/extern/volepsi/out/build/linux)
+target_link_libraries(mpc_fuzzy_psi ${LINK_STR})

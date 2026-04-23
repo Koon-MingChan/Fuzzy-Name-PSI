@@ -19,7 +19,7 @@ using BitVector = approx_psi::BitVector;
 
 // Global Constants for the Approx-PSI Pipeline
 const int L_BIT_LENGTH = 8192;
-const int GRAM_SIZE = 3;
+const int GRAM_SIZE = 2;
 const int HAMMING_D = 7;
 const int GAP_T = 5;
 const int N_ELEMENTS = 18;
@@ -109,8 +109,8 @@ vector<PlainRecord> build_records(const vector<string>& names, const NameEncodin
         records.push_back(PlainRecord{
             i,
             names[i],
-            //encoder.encode_name_tail_token(names[i])
-            encoder.encode_name_token_or(names[i])
+            encoder.encode_name_tail_token(names[i])
+            //encoder.encode_name_token_or(names[i])
         });
     }
     return records;

@@ -21,7 +21,7 @@
 using namespace std;
 
 const int L_BIT_LENGTH = 8192;
-const int GRAM_SIZE = 3;
+const int GRAM_SIZE = 2;
 const int HAMMING_D = 7;
 const int GAP_T = 5;
 const int N_ELEMENTS = 18;
