@@ -3,9 +3,57 @@
 #include <cctype>
 #include <sstream>
 #include <functional>
+#include <unordered_map>
 #include <cryptoTools/Common/BitVector.h>
 
 namespace approx_psi {
+namespace {
+
+const std::unordered_map<std::string, std::string>& diacritic_map() {
+    static const std::unordered_map<std::string, std::string> table = {
+        {"À", "A"}, {"Á", "A"}, {"Â", "A"}, {"Ã", "A"}, {"Ä", "A"}, {"Å", "A"},
+        {"à", "A"}, {"á", "A"}, {"â", "A"}, {"ã", "A"}, {"ä", "A"}, {"å", "A"},
+        {"Ā", "A"}, {"ā", "A"}, {"Ă", "A"}, {"ă", "A"}, {"Ą", "A"}, {"ą", "A"},
+        {"Ǎ", "A"}, {"ǎ", "A"},
+        {"Ç", "C"}, {"ç", "C"}, {"Ć", "C"}, {"ć", "C"}, {"Č", "C"}, {"č", "C"},
+        {"Đ", "D"}, {"đ", "D"}, {"Ð", "D"}, {"ð", "D"},
+        {"È", "E"}, {"É", "E"}, {"Ê", "E"}, {"Ë", "E"},
+        {"è", "E"}, {"é", "E"}, {"ê", "E"}, {"ë", "E"},
+        {"Ē", "E"}, {"ē", "E"}, {"Ė", "E"}, {"ė", "E"}, {"Ě", "E"}, {"ě", "E"},
+        {"Ğ", "G"}, {"ğ", "G"},
+        {"Ì", "I"}, {"Í", "I"}, {"Î", "I"}, {"Ï", "I"},
+        {"ì", "I"}, {"í", "I"}, {"î", "I"}, {"ï", "I"},
+        {"Ī", "I"}, {"ī", "I"}, {"İ", "I"}, {"ı", "I"}, {"Ǐ", "I"}, {"ǐ", "I"},
+        {"Ļ", "L"}, {"ļ", "L"}, {"Ł", "L"}, {"ł", "L"},
+        {"Ñ", "N"}, {"ñ", "N"}, {"Ń", "N"}, {"ń", "N"}, {"Ņ", "N"}, {"ņ", "N"},
+        {"Ò", "O"}, {"Ó", "O"}, {"Ô", "O"}, {"Õ", "O"}, {"Ö", "O"}, {"Ø", "O"},
+        {"ò", "O"}, {"ó", "O"}, {"ô", "O"}, {"õ", "O"}, {"ö", "O"}, {"ø", "O"},
+        {"Ō", "O"}, {"ō", "O"},
+        {"Ř", "R"}, {"ř", "R"},
+        {"Ś", "S"}, {"ś", "S"}, {"Ş", "S"}, {"ş", "S"}, {"Š", "S"}, {"š", "S"},
+        {"Ț", "T"}, {"ț", "T"}, {"Þ", "TH"}, {"þ", "TH"},
+        {"Ù", "U"}, {"Ú", "U"}, {"Û", "U"}, {"Ü", "U"},
+        {"ù", "U"}, {"ú", "U"}, {"û", "U"}, {"ü", "U"},
+        {"Ū", "U"}, {"ū", "U"}, {"Ŭ", "U"}, {"ŭ", "U"}, {"Ǔ", "U"}, {"ǔ", "U"},
+        {"Ý", "Y"}, {"ý", "Y"},
+        {"Ź", "Z"}, {"ź", "Z"}, {"Ž", "Z"}, {"ž", "Z"},
+        {"С", "S"}, {"с", "S"}, {"е", "E"}, {"Е", "E"}, {"р", "R"}, {"Р", "R"},
+        {"и", "I"}, {"И", "I"}, {"к", "K"}, {"К", "K"}, {"а", "A"}, {"А", "A"},
+        {"б", "B"}, {"Б", "B"}, {"й", "Y"}, {"Й", "Y"}
+    };
+    return table;
+}
+
+size_t utf8_char_length(unsigned char c) {
+    if ((c & 0x80) == 0) return 1;
+    if ((c & 0xE0) == 0xC0) return 2;
+    if ((c & 0xF0) == 0xE0) return 3;
+    if ((c & 0xF8) == 0xF0) return 4;
+    return 1;
+}
+
+} // namespace
+
 NameEncoding::NameEncoding(NameEncodingConfig cfg) : cfg_(std::move(cfg)) {
     std::cout << "[DEBUG] Encoder Init: BV_LEN=" << cfg_.BITVECTOR_LENGTH 
               << ", GRAM=" << cfg_.GRAM_SIZE << std::endl;
@@ -20,9 +68,22 @@ NameEncoding::NameEncoding(NameEncodingConfig cfg) : cfg_(std::move(cfg)) {
 std::string NameEncoding::normalize(const std::string& name, bool keep_hyphen) const {
     std::string out;
     out.reserve(name.size());
-    for (char c : name) {
+    for (size_t i = 0; i < name.size();) {
+        unsigned char c = static_cast<unsigned char>(name[i]);
+        if (c >= 0x80) {
+            const size_t char_len = std::min(utf8_char_length(c), name.size() - i);
+            const std::string utf8_char = name.substr(i, char_len);
+            const auto mapped = diacritic_map().find(utf8_char);
+            if (mapped != diacritic_map().end()) {
+                out += mapped->second;
+            }
+            i += char_len;
+            continue;
+        }
+
         if (std::isspace(static_cast<unsigned char>(c))) {
             out.push_back(' ');
+            ++i;
             continue;
         }
         if (std::isalnum(static_cast<unsigned char>(c))) {
@@ -33,9 +94,10 @@ std::string NameEncoding::normalize(const std::string& name, bool keep_hyphen) c
             if (keep_hyphen) {
                 out.push_back('-');
             } else {
-                out.push_back(' '); 
+                out.push_back(' ');
             }
         }
+        ++i;
     }
     return out;
 }
