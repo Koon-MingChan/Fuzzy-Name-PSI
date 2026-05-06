@@ -2,6 +2,7 @@
 #include <array>
 #include <cstdint>
 #include <cstring>
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -29,6 +30,9 @@ const int K_ROUNDS = 45;
 const u64 STAT_SEC_PARAM = 40;
 const u64 NUM_THREADS = 1;
 const size_t MAX_NAME_BYTES = 128;
+const size_t TERMINAL_PREVIEW_LIMIT = 10;
+const char* RECEIVER_MATCH_OUTPUT_CSV = "output/mpc_fuzzy_matches.csv";
+const char* RECEIVER_SUMMARY_OUTPUT_TXT = "output/mpc_fuzzy_summary.txt";
 
 using BinaryVector = vector<int>;
 
@@ -227,6 +231,19 @@ vector<u8> xor_rows(std::span<const u8> a, std::span<const u8> b) {
     return out;
 }
 
+string resolve_output_path(const string& path) {
+    namespace fs = std::filesystem;
+    fs::path out = path;
+    if (!fs::exists(out.parent_path())) {
+        fs::path alt = fs::path("..") / out;
+        fs::create_directories(alt.parent_path());
+        return alt.string();
+    }
+
+    fs::create_directories(out.parent_path());
+    return out.string();
+}
+
 void print_opened_matches(const vector<OpenMatch>& opened_matches) {
     cout << "\n--- Open Phase: Revealed Fuzzy Matches ---\n";
     if (opened_matches.empty()) {
@@ -234,7 +251,9 @@ void print_opened_matches(const vector<OpenMatch>& opened_matches) {
         return;
     }
 
-    for (const auto& match : opened_matches) {
+    const size_t preview_count = min(opened_matches.size(), TERMINAL_PREVIEW_LIMIT);
+    for (size_t i = 0; i < preview_count; ++i) {
+        const auto& match = opened_matches[i];
         cout << "Round " << match.round
              << ": Party0[" << match.party0_index << "] " << quoted(match.party0_name)
              << " <-> Party1[" << match.party1_index << "] " << quoted(match.party1_name)
@@ -242,6 +261,45 @@ void print_opened_matches(const vector<OpenMatch>& opened_matches) {
              << ", payload_dist=" << match.payload_distance
              << "\n";
     }
+
+    if (opened_matches.size() > preview_count) {
+        cout << "... " << (opened_matches.size() - preview_count)
+             << " more matches written to " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
+    }
+}
+
+void write_opened_matches_csv(const vector<OpenMatch>& opened_matches) {
+    const string output_path = resolve_output_path(RECEIVER_MATCH_OUTPUT_CSV);
+    ofstream fout(output_path);
+    if (!fout) {
+        throw runtime_error("Cannot create " + output_path);
+    }
+
+    fout << "round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist\n";
+    for (const auto& match : opened_matches) {
+        fout << match.round << ','
+             << match.party0_index << ','
+             << quoted(match.party0_name) << ','
+             << match.party1_index << ','
+             << quoted(match.party1_name) << ','
+             << match.projection_distance << ','
+             << match.payload_distance << '\n';
+    }
+}
+
+void write_summary_file(long total_candidates, const vector<OpenMatch>& opened_matches) {
+    const string output_path = resolve_output_path(RECEIVER_SUMMARY_OUTPUT_TXT);
+    ofstream fout(output_path);
+    if (!fout) {
+        throw runtime_error("Cannot create " + output_path);
+    }
+
+    fout << "Technique: mpc_fuzzy_psi_exact_projection\n";
+    fout << "K_ROUNDS: " << K_ROUNDS << "\n";
+    fout << "HAMMING_D: " << HAMMING_D << "\n";
+    fout << "Total exact projected candidates across rounds: " << total_candidates << "\n";
+    fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    fout << "Detailed CSV: " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
 }
 
 template <typename T>
@@ -434,6 +492,10 @@ void run_receiver(coproto::Socket& sock) {
     cout << "Total exact projected candidates across " << K_ROUNDS << " rounds: "
          << total_candidates << "\n";
     cout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    write_opened_matches_csv(opened_matches);
+    write_summary_file(total_candidates, opened_matches);
+    cout << "Detailed matches written to " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
+    cout << "Summary written to " << RECEIVER_SUMMARY_OUTPUT_TXT << "\n";
     print_opened_matches(opened_matches);
 }
 

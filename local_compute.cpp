@@ -1,10 +1,12 @@
 #include <cassert>
 #include <cmath>
 #include <fstream>
+#include <filesystem>
 #include <functional>
 #include <iomanip>
 #include <iostream>
 #include <random>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -21,9 +23,13 @@ using BitVector = approx_psi::BitVector;
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
 const int HAMMING_D = 7;
-const int GAP_T = 5;
-const int N_ELEMENTS = 18;
-const int K_ROUNDS = 45;
+const int GAP_T = 9;
+const int N_ELEMENTS = 500;
+const int K_ROUNDS = 50;
+const bool USE_CSV_DATASET = true;
+const size_t CSV_LIMIT = 500;
+const char* CLEAN_NAMES_CSV = "output/clean_names.csv";
+const char* FUZZY_NAMES_CSV = "output/fuzzy_names.csv";
 
 using BinaryVector = vector<int>;
 
@@ -32,6 +38,86 @@ struct PlainRecord {
     string name;
     BitVector encoded;
 };
+
+vector<string> parse_csv_row(const string& line) {
+    vector<string> fields;
+    string current;
+    bool in_quotes = false;
+
+    for (size_t i = 0; i < line.size(); ++i) {
+        const char c = line[i];
+        if (c == '"') {
+            if (in_quotes && i + 1 < line.size() && line[i + 1] == '"') {
+                current.push_back('"');
+                ++i;
+            } else {
+                in_quotes = !in_quotes;
+            }
+        } else if (c == ',' && !in_quotes) {
+            fields.push_back(current);
+            current.clear();
+        } else {
+            current.push_back(c);
+        }
+    }
+
+    fields.push_back(current);
+    return fields;
+}
+
+size_t find_csv_column(const vector<string>& header, const string& column_name) {
+    for (size_t i = 0; i < header.size(); ++i) {
+        if (header[i] == column_name) return i;
+    }
+    throw runtime_error("CSV column not found: " + column_name);
+}
+
+vector<string> load_names_from_csv(const string& path,
+                                   const string& column_name,
+                                   size_t limit = 0) {
+    ifstream fin(path);
+    if (!fin) {
+        throw runtime_error("Unable to open CSV file: " + path);
+    }
+
+    string line;
+    if (!getline(fin, line)) {
+        throw runtime_error("CSV file is empty: " + path);
+    }
+    if (!line.empty() && line.back() == '\r') line.pop_back();
+
+    const auto header = parse_csv_row(line);
+    const size_t name_col = find_csv_column(header, column_name);
+
+    vector<string> names;
+    while (getline(fin, line)) {
+        if (!line.empty() && line.back() == '\r') line.pop_back();
+        if (line.empty()) continue;
+
+        const auto row = parse_csv_row(line);
+        if (name_col >= row.size()) {
+            throw runtime_error("Malformed CSV row in " + path);
+        }
+
+        if (!row[name_col].empty()) {
+            names.push_back(row[name_col]);
+        }
+
+        if (limit != 0 && names.size() >= limit) break;
+    }
+
+    return names;
+}
+
+string resolve_input_path(const string& path) {
+    namespace fs = std::filesystem;
+    if (fs::exists(path)) return path;
+
+    const fs::path alt = fs::path("..") / path;
+    if (fs::exists(alt)) return alt.string();
+
+    throw runtime_error("Unable to locate input file: " + path);
+}
 
 string to_binary_string(const BinaryVector& v) {
     string s;
@@ -151,7 +237,7 @@ int main() {
     uint64_t shared_seed = execute_coin_toss();
     ProjectionConsistencyCheck rlc_checker(shared_seed);
 
-    // Two independent party datasets to better simulate bank-to-bank fuzzy PSI.
+    // Hardcoded datasets are kept as a compact regression test bed.
     vector<string> party0_names = {
         "ALEXANDER-SMITH JONATHAN",
         "LEE CHING WAI",
@@ -195,6 +281,24 @@ int main() {
         "THOMAS ANDERSON",
         "BRUCE WAYNE"
     };
+
+    if (USE_CSV_DATASET) {
+        const string clean_csv = resolve_input_path(CLEAN_NAMES_CSV);
+        const string fuzzy_csv = resolve_input_path(FUZZY_NAMES_CSV);
+        party0_names = load_names_from_csv(clean_csv, "full_name_romanised", CSV_LIMIT);
+        party1_names = load_names_from_csv(fuzzy_csv, "fuzzy_name", CSV_LIMIT);
+
+        if (party0_names.size() != party1_names.size()) {
+            throw runtime_error("CSV datasets must currently have matching row counts");
+        }
+
+        cout << "Loaded dataset from CSV files:\n";
+        cout << "  Party 0 source: " << clean_csv << "\n";
+        cout << "  Party 1 source: " << fuzzy_csv << "\n";
+        cout << "  Record limit: " << CSV_LIMIT << "\n";
+    } else {
+        cout << "Using hardcoded regression dataset.\n";
+    }
 
     auto party0_records = build_records(party0_names, encoder);
     auto party1_records = build_records(party1_names, encoder);

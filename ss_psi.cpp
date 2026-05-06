@@ -1,3 +1,4 @@
+#include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -26,6 +27,9 @@ const int HAMMING_D = 7;
 const int GAP_T = 5;
 const int N_ELEMENTS = 18;
 const int K_ROUNDS = 45;
+const size_t TERMINAL_PREVIEW_LIMIT = 10;
+const char* MATCH_OUTPUT_CSV = "output/ss_psi_opened_matches.csv";
+const char* SUMMARY_OUTPUT_TXT = "output/ss_psi_summary.txt";
 
 approx_psi::AuthenticatedSecretSharing ass_engine(98765ULL);
 
@@ -82,6 +86,19 @@ BinaryVector xor_vector(const BinaryVector& a, const BinaryVector& b) {
     return c;
 }
 
+string resolve_output_path(const string& path) {
+    namespace fs = std::filesystem;
+    fs::path out = path;
+    if (!fs::exists(out.parent_path())) {
+        fs::path alt = fs::path("..") / out;
+        fs::create_directories(alt.parent_path());
+        return alt.string();
+    }
+
+    fs::create_directories(out.parent_path());
+    return out.string();
+}
+
 void read_round_data(int round,
                      vector<EncodedRecord>& outA,
                      vector<EncodedRecord>& outB) {
@@ -130,7 +147,9 @@ void print_opened_matches(const vector<OpenMatch>& opened_matches) {
         return;
     }
 
-    for (const auto& match : opened_matches) {
+    const size_t preview_count = min(opened_matches.size(), TERMINAL_PREVIEW_LIMIT);
+    for (size_t i = 0; i < preview_count; ++i) {
+        const auto& match = opened_matches[i];
         cout << "Round " << match.round
              << ": Party0[" << match.party0_index << "] " << quoted(match.party0_name)
              << " <-> Party1[" << match.party1_index << "] " << quoted(match.party1_name)
@@ -138,6 +157,45 @@ void print_opened_matches(const vector<OpenMatch>& opened_matches) {
              << ", payload_dist=" << match.payload_distance
              << "\n";
     }
+
+    if (opened_matches.size() > preview_count) {
+        cout << "... " << (opened_matches.size() - preview_count)
+             << " more matches written to " << MATCH_OUTPUT_CSV << "\n";
+    }
+}
+
+void write_opened_matches_csv(const vector<OpenMatch>& opened_matches) {
+    const string output_path = resolve_output_path(MATCH_OUTPUT_CSV);
+    ofstream fout(output_path);
+    if (!fout) {
+        throw runtime_error("Cannot create " + output_path);
+    }
+
+    fout << "round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist\n";
+    for (const auto& match : opened_matches) {
+        fout << match.round << ','
+             << match.party0_index << ','
+             << quoted(match.party0_name) << ','
+             << match.party1_index << ','
+             << quoted(match.party1_name) << ','
+             << match.projection_distance << ','
+             << match.payload_distance << '\n';
+    }
+}
+
+void write_summary_file(long total_matches, const vector<OpenMatch>& opened_matches) {
+    const string output_path = resolve_output_path(SUMMARY_OUTPUT_TXT);
+    ofstream fout(output_path);
+    if (!fout) {
+        throw runtime_error("Cannot create " + output_path);
+    }
+
+    fout << "Technique: simulation_ss_psi\n";
+    fout << "K_ROUNDS: " << K_ROUNDS << "\n";
+    fout << "HAMMING_D: " << HAMMING_D << "\n";
+    fout << "Total matched pairs across rounds: " << total_matches << "\n";
+    fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    fout << "Detailed CSV: " << MATCH_OUTPUT_CSV << "\n";
 }
 
 void simulate_f_sspsi(int party_id) {
@@ -214,6 +272,10 @@ void simulate_f_sspsi(int party_id) {
     cout << "\n--- Pipeline Simulation Summary ---\n";
     cout << "Total matched pairs across " << K_ROUNDS << " rounds: " << total_matches << "\n";
     cout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    write_opened_matches_csv(opened_matches);
+    write_summary_file(total_matches, opened_matches);
+    cout << "Detailed matches written to " << MATCH_OUTPUT_CSV << "\n";
+    cout << "Summary written to " << SUMMARY_OUTPUT_TXT << "\n";
     print_opened_matches(opened_matches);
 }
 
