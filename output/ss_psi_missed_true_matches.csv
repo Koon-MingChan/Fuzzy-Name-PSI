@@ -1,0 +1,46 @@
+index,record_id,clean_name,fuzzy_name,original_name,error_type,is_noisy
+1,N00000002,Artyom  Bogdanov,Atryom  Bogdanov,Artyom  Bogdanov,transposition,True
+4,N00000005,Maria Alice  Montes,M. A. Montes,Maria Alice  Montes,abbrev_forename,True
+17,N00000018,Julen Ibai Gutiérrez,Julen Ibai Gtuiérrez,Julen Ibai Gutiérrez,transposition,True
+28,N00000029,Alexander  Jensen,A. Jensen,Alexander  Jensen,abbrev_forename,True
+35,N00000036,Julen Pau Gutiérrez,J. P. Gutiérrez,Julen Pau Gutiérrez,abbrev_forename,True
+40,N00000041,Juan  Duarte,Juan  Durate,Juan  Duarte,transposition,True
+49,N00000050,Nathalie  Dizon,N. Dizon,Nathalie  Dizon,abbrev_forename,True
+59,N00000060,Julen Álvaro Gutiérrez,Julen. Á. Gutiérrez,Julen Álvaro Gutiérrez,abbrev_middle,True
+80,N00000081,Mark Anastasia Petrov,M. A. Petrov,Mark Anastasia Petrov,abbrev_forename,True
+92,N00000093,Mark Dmitry Petrov,M. D. Petrov,Mark Dmitry Petrov,abbrev_forename,True
+103,N00000104,Mark Alisa Petrov,Mrak Alisa Petrov,Mark Alisa Petrov,transposition,True
+107,N00000108,Mark Alexandra Petrov,M. A. Petrov,Mark Alexandra Petrov,abbrev_forename,True
+111,N00000112,Bruno  López,Bruno  Lpóez,Bruno  López,transposition,True
+112,N00000113,Richard  Diaz,R. Diaz,Richard  Diaz,abbrev_forename,True
+130,N00000131,Bautista  Morales,Bauitsta  Morales,Bautista  Morales,transposition,True
+131,N00000132,Aleksandar Zoran Trajanovski,A. Z. Trajanovski,Aleksandar Zoran Trajanovski,abbrev_forename,True
+146,N00000147,Noam  Segel,Naom  Segel,Noam  Segel,transposition,True
+156,N00000157,Yuina  Fujii,Yuina  Fjuii,Yuina  Fujii,transposition,True
+162,N00000163,Hamza  Delić,Hamza  Deilć,Hamza  Delić,transposition,True
+167,N00000168,Daniel  Rojas,D. Rojas,Daniel  Rojas,abbrev_forename,True
+181,N00000182,Yǔtóng  Tsui,Yǔótng  Tsui,Yǔtóng  Tsui,transposition,True
+206,N00000207,Anna  Roux,Anna  Ruox,Anna  Roux,transposition,True
+212,N00000213,Yìhán Míngzé Wáng,Y. M. Wáng,Yìhán Míngzé Wáng,abbrev_forename,True
+217,N00000218,Yìhán Yǔxuān Wáng,Y. Y. Wáng,Yìhán Yǔxuān Wáng,abbrev_forename,True
+221,N00000222,Laura Francisca Sousa,Laura. F. Sousa,Laura Francisca Sousa,abbrev_middle,True
+288,N00000289,Isabella  Ramos,Isaeblla  Ramos,Isabella  Ramos,transposition,True
+308,N00000309,Miguel  Martins,M. Martins,Miguel  Martins,abbrev_forename,True
+353,N00000354,Matija Teo Stojanović,Mtaija Teo Stojanović,Matija Teo Stojanović,transposition,True
+360,N00000361,Matija Marija Stojanović,M. M. Stojanović,Matija Marija Stojanović,abbrev_forename,True
+365,N00000366,Manuela  Gomes,Manulea  Gomes,Manuela  Gomes,transposition,True
+367,N00000368,Matija Gordana Stojanović,Matija Stojanović,Matija Gordana Stojanović,drop_middle,True
+383,N00000384,Freja  Mejía,Ferja  Mejía,Freja  Mejía,transposition,True
+384,N00000385,Ayalah  Khen,A. Khen,Ayalah  Khen,abbrev_forename,True
+389,N00000390,Chien-hung  Le,C. Le,Chien-hung  Le,abbrev_forename,True
+393,N00000394,Victoria Emiliano García,Victoria. E. García,Victoria Emiliano García,abbrev_middle,True
+414,N00000415,Astrid  Rivas,Astird  Rivas,Astrid  Rivas,transposition,True
+417,N00000418,Guadalupe  González,G. González,Guadalupe  González,abbrev_forename,True
+424,N00000425,Biljana  Andov,Biljana  Adnov,Biljana  Andov,transposition,True
+432,N00000433,Martina  Franco,M. Franco,Martina  Franco,abbrev_forename,True
+438,N00000439,Francisca  Simões,Fracnisca  Simões,Francisca  Simões,transposition,True
+439,N00000440,Lucas Emma Hall,L. E. Hall,Lucas Emma Hall,abbrev_forename,True
+440,N00000441,Lucas Charlotte Hall,L. C. Hall,Lucas Charlotte Hall,abbrev_forename,True
+453,N00000454,Lucas William Hall,Lucas Willaim Hall,Lucas William Hall,transposition,True
+472,N00000473,Josefa  Torres,Josfea  Torres,Josefa  Torres,transposition,True
+483,N00000484,Thomas Sophia Brown,Thomas. S. Brown,Thomas Sophia Brown,abbrev_middle,True
