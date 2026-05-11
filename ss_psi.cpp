@@ -221,7 +221,7 @@ void simulate_f_sspsi(int party_id) {
         for (const auto& recB : dataB) {
             for (const auto& recA : dataA) {
                 int proj_dist = hamming_distance(recA.projection, recB.projection);
-                if (proj_dist > 1) continue;
+                if (proj_dist > 0) continue;
 
                 int payload_dist = hamming_distance(recA.payload, recB.payload);
                 if (payload_dist > HAMMING_D) continue;
