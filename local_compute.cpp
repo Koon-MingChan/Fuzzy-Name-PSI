@@ -22,10 +22,11 @@ using BitVector = approx_psi::BitVector;
 // Global Constants for the Approx-PSI Pipeline
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
-const int HAMMING_D = 4;
+const int HAMMING_D = 5;
 const int GAP_T = 9;
 const int N_ELEMENTS = 500;
 const int K_ROUNDS = 50;
+
 const bool USE_CSV_DATASET = true;
 const size_t CSV_LIMIT = 500;
 const char* CLEAN_NAMES_CSV = "output/clean_names.csv";
@@ -231,7 +232,7 @@ void write_party_section(ofstream& fout,
 int main() {
     cout << "--- Starting Full Name-to-PSI Pipeline Simulation ---\n";
 
-    NameEncodingConfig enc_cfg{L_BIT_LENGTH, GRAM_SIZE};
+    NameEncodingConfig enc_cfg{L_BIT_LENGTH, GRAM_SIZE,true};
     NameEncoding encoder(enc_cfg);
 
     uint64_t shared_seed = execute_coin_toss();

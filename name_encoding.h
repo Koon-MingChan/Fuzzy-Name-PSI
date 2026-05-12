@@ -12,8 +12,9 @@ namespace approx_psi {
 using BitVector = osuCrypto::BitVector;
 
 struct NameEncodingConfig {
-    size_t BITVECTOR_LENGTH = 2048;
-    size_t GRAM_SIZE = 3;
+    size_t BITVECTOR_LENGTH;
+    size_t GRAM_SIZE;
+    bool USE_BOUNDARY_GRAMS = false;
 };
 
 class NameEncoding {

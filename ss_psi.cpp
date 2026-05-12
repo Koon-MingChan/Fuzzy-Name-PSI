@@ -23,7 +23,7 @@ using namespace std;
 
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
-const int HAMMING_D = 4;
+const int HAMMING_D = 5;
 const int GAP_T = 9;
 const int N_ELEMENTS = 500;
 const int K_ROUNDS = 50;

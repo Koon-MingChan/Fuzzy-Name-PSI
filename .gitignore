@@ -8,3 +8,4 @@ local_compute
 .cmake/
 extern/
 install/
+.venv/

@@ -1,258 +1,81 @@
 round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
-0,12,Julen Julen Gutiérrez,0,Gutiérrez Julen Ane,0,2
-0,20,Julen Júlia Gutiérrez,0,Gutiérrez Julen Ane,0,4
-0,33,Julen Jan Gutiérrez,0,Gutiérrez Julen Ane,0,2
-0,35,Julen Pau Gutiérrez,0,Gutiérrez Julen Ane,0,4
-0,36,Julen Àlex Gutiérrez,0,Gutiérrez Julen Ane,0,4
-0,0,Julen Ane Gutiérrez,3,Julen. N. Gutiérrez,0,2
-0,8,Julen Izaro Gutiérrez,3,Julen. N. Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,3,Julen. N. Gutiérrez,0,0
-0,20,Julen Júlia Gutiérrez,3,Julen. N. Gutiérrez,0,2
-0,29,Julen Paula Gutiérrez,3,Julen. N. Gutiérrez,0,3
-0,33,Julen Jan Gutiérrez,3,Julen. N. Gutiérrez,0,2
-0,35,Julen Pau Gutiérrez,3,Julen. N. Gutiérrez,0,2
-0,36,Julen Àlex Gutiérrez,3,Julen. N. Gutiérrez,0,2
-0,37,Julen Marti Gutiérrez,3,Julen. N. Gutiérrez,0,3
-0,39,Julen Hugo Gutiérrez,3,Julen. N. Gutiérrez,0,3
-0,50,Julen Martín Gutiérrez,3,Julen. N. Gutiérrez,0,4
-0,58,Julen Pablo Gutiérrez,3,Julen. N. Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,8,Julen Izaro Gutierrez,0,4
-0,0,Julen Ane Gutiérrez,12,rulen Julen Gutiérrez,0,3
-0,20,Julen Júlia Gutiérrez,12,rulen Julen Gutiérrez,0,3
-0,29,Julen Paula Gutiérrez,12,rulen Julen Gutiérrez,0,4
-0,33,Julen Jan Gutiérrez,12,rulen Julen Gutiérrez,0,3
-0,35,Julen Pau Gutiérrez,12,rulen Julen Gutiérrez,0,3
-0,36,Julen Àlex Gutiérrez,12,rulen Julen Gutiérrez,0,3
-0,37,Julen Marti Gutiérrez,12,rulen Julen Gutiérrez,0,4
-0,39,Julen Hugo Gutiérrez,12,rulen Julen Gutiérrez,0,4
-0,0,Julen Ane Gutiérrez,23,Julen. E. Gutiérrez,0,2
-0,3,Julen Nahia Gutiérrez,23,Julen. E. Gutiérrez,0,4
-0,8,Julen Izaro Gutiérrez,23,Julen. E. Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,23,Julen. E. Gutiérrez,0,0
-0,20,Julen Júlia Gutiérrez,23,Julen. E. Gutiérrez,0,2
-0,29,Julen Paula Gutiérrez,23,Julen. E. Gutiérrez,0,3
-0,33,Julen Jan Gutiérrez,23,Julen. E. Gutiérrez,0,2
-0,35,Julen Pau Gutiérrez,23,Julen. E. Gutiérrez,0,2
-0,36,Julen Àlex Gutiérrez,23,Julen. E. Gutiérrez,0,2
-0,37,Julen Marti Gutiérrez,23,Julen. E. Gutiérrez,0,3
-0,39,Julen Hugo Gutiérrez,23,Julen. E. Gutiérrez,0,3
-0,50,Julen Martín Gutiérrez,23,Julen. E. Gutiérrez,0,4
-0,58,Julen Pablo Gutiérrez,23,Julen. E. Gutiérrez,0,4
-0,0,Julen Ane Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,31,Julen Nkl Gutiérrez,0,2
-0,20,Julen Júlia Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-0,33,Julen Jan Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-0,35,Julen Pau Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-0,36,Julen Àlex Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-0,0,Julen Ane Gutiérrez,33,Julen Jan Gutiérrez,0,2
-0,12,Julen Julen Gutiérrez,33,Julen Jan Gutiérrez,0,2
-0,20,Julen Júlia Gutiérrez,33,Julen Jan Gutiérrez,0,4
-0,35,Julen Pau Gutiérrez,33,Julen Jan Gutiérrez,0,4
-0,36,Julen Àlex Gutiérrez,33,Julen Jan Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,35,J. P. Gutiérrez,0,4
-0,0,Julen Ane Gutiérrez,36,Julen Alex Gutierrez,0,4
-0,12,Julen Julen Gutiérrez,36,Julen Alex Gutierrez,0,2
-0,20,Julen Júlia Gutiérrez,36,Julen Alex Gutierrez,0,4
-0,33,Julen Jan Gutiérrez,36,Julen Alex Gutierrez,0,4
-0,35,Julen Pau Gutiérrez,36,Julen Alex Gutierrez,0,4
-0,12,Julen Julen Gutiérrez,39,Julen Hugo Gutierrez,0,3
+0,12,Julen Julen Gutiérrez,0,Gutiérrez Julen Ane,0,4
+0,0,Julen Ane Gutiérrez,3,Julen. N. Gutiérrez,0,5
+0,12,Julen Julen Gutiérrez,3,Julen. N. Gutiérrez,0,1
+0,14,Julen Jon Gutiérrez,3,Julen. N. Gutiérrez,0,3
+0,20,Julen Júlia Gutiérrez,3,Julen. N. Gutiérrez,0,4
+0,31,Julen Nil Gutiérrez,3,Julen. N. Gutiérrez,0,3
+0,36,Julen Àlex Gutiérrez,3,Julen. N. Gutiérrez,0,5
+0,14,Julen Jon Gutiérrez,12,rulen Julen Gutiérrez,0,4
+0,20,Julen Júlia Gutiérrez,12,rulen Julen Gutiérrez,0,5
+0,12,Julen Julen Gutiérrez,14,Julen Jon Gutiérrrez,0,2
+0,20,Julen Júlia Gutiérrez,14,Julen Jon Gutiérrrez,0,5
+0,0,Julen Ane Gutiérrez,23,Julen. E. Gutiérrez,0,4
+0,12,Julen Julen Gutiérrez,23,Julen. E. Gutiérrez,0,2
+0,14,Julen Jon Gutiérrez,23,Julen. E. Gutiérrez,0,4
+0,20,Julen Júlia Gutiérrez,23,Julen. E. Gutiérrez,0,5
+0,47,Julen Emma Gutiérrez,23,Julen. E. Gutiérrez,0,5
+0,12,Julen Julen Gutiérrez,31,Julen Nkl Gutiérrez,0,4
+0,12,Julen Julen Gutiérrez,36,Julen Alex Gutierrez,0,4
+0,12,Julen Julen Gutiérrez,47,Julen Emma Gutierrez,0,5
 0,23,Julen Emma Gutiérrez,47,Julen Emma Gutierrez,0,0
-0,37,Julen Marti Gutiérrez,50,Julen Martín Gutiérre,0,2
-0,479,Ha-joon  Yoon,51,Ha-joon  Jue,0,3
-0,12,Julen Julen Gutiérrez,58,Gutiérrez Julen Pablo,0,4
-0,35,Julen Pau Gutiérrez,58,Gutiérrez Julen Pablo,0,4
-0,0,Julen Ane Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-0,3,Julen Nahia Gutiérrez,59,Julen. Á. Gutiérrez,0,4
-0,8,Julen Izaro Gutiérrez,59,Julen. Á. Gutiérrez,0,4
-0,12,Julen Julen Gutiérrez,59,Julen. Á. Gutiérrez,0,0
-0,20,Julen Júlia Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-0,29,Julen Paula Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-0,33,Julen Jan Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-0,35,Julen Pau Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-0,36,Julen Àlex Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-0,37,Julen Marti Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-0,39,Julen Hugo Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-0,50,Julen Martín Gutiérrez,59,Julen. Á. Gutiérrez,0,4
-0,58,Julen Pablo Gutiérrez,59,Julen. Á. Gutiérrez,0,4
+0,37,Julen Marti Gutiérrez,50,Julen Martín Gutiérre,0,5
+0,35,Julen Pau Gutiérrez,58,Gutiérrez Julen Pablo,0,5
+0,0,Julen Ane Gutiérrez,59,Julen. Á. Gutiérrez,0,4
+0,12,Julen Julen Gutiérrez,59,Julen. Á. Gutiérrez,0,2
+0,14,Julen Jon Gutiérrez,59,Julen. Á. Gutiérrez,0,4
+0,20,Julen Júlia Gutiérrez,59,Julen. Á. Gutiérrez,0,3
+0,23,Julen Emma Gutiérrez,59,Julen. Á. Gutiérrez,0,5
+0,36,Julen Àlex Gutiérrez,59,Julen. Á. Gutiérrez,0,4
+0,47,Julen Emma Gutiérrez,59,Julen. Á. Gutiérrez,0,5
 0,92,Mark Dmitry Petrov,76,Mark Dmitry Petrov,0,0
-0,76,Mark Dmitry Petrov,101,Mark Petrov,0,4
-0,88,Mark Irina Petrov,101,Mark Petrov,0,4
-0,92,Mark Dmitry Petrov,101,Mark Petrov,0,4
-0,396,Ha-yoon  Youn,139,Ha-yoon  Btk,0,4
-0,135,Aleksandar Dejan Trajanovski,144,Aleksandar Trajanovski,0,2
-0,157,Aleksandar Matej Trajanovski,144,Aleksandar Trajanovski,0,4
-0,135,Aleksandar Dejan Trajanovski,157,Aleksandar Trajanovski,0,2
-0,364,Noah  Bah,191,Roy Noah,0,3
-0,41,Yìzé  Wáng,212,Y. M. Wáng,0,3
-0,41,Yìzé  Wáng,217,Y. Y. Wáng,0,3
-0,245,Laura Maitê Sousa,221,Laura. F. Sousa,0,4
-0,263,Zǐhán Zǐhán Ho,259,Zǐhán Ruòxī Ho,0,4
-0,259,Zǐhán Ruòxī Ho,263,Zǐhán. Z. Ho,0,4
-0,301,Zǐhán  Mǎ,263,Zǐhán. Z. Ho,0,2
+0,135,Aleksandar Dejan Trajanovski,144,Aleksandar Trajanovski,0,4
+0,135,Aleksandar Dejan Trajanovski,157,Aleksandar Trajanovski,0,4
+0,73,Ida  Christensen,242,N. Christensen,0,5
 0,267,Zǐhán Yǔtóng Ho,265,Zihan Yutong Ho,0,0
 0,265,Zǐhán Yǔtóng Ho,267,Zǐhán Yǔtóng Ho,0,0
-0,469,Yu-jun  Ju,270,U Do-yun,0,2
-0,492,Yu-jun  Oh,270,U Do-yun,0,3
-0,259,Zǐhán Ruòxī Ho,274,Zǐhán. Y. Ho,0,4
-0,263,Zǐhán Zǐhán Ho,274,Zǐhán. Y. Ho,0,0
-0,301,Zǐhán  Mǎ,274,Zǐhán. Y. Ho,0,2
-0,309,Ji-ho  Ahn,299,Ji-ho  Koh,0,4
-0,299,Ji-ho  Koh,309,Ji-ho  Ahn,0,4
+0,263,Zǐhán Zǐhán Ho,274,Zǐhán. Y. Ho,0,2
+0,321,Ema Hina Nakashima,315,Ema Yūma Nakashima,0,5
 0,333,Ema Yua Nakashima,315,Ema Yūma Nakashima,0,2
-0,318,Ema Haru Nakashima,316,Ema Harumw Nakashima,0,2
-0,316,Ema Haruma Nakashima,318,Ema Haru kakashima,0,2
-0,304,Ema Ren Nakashima,321,Ema Hina Nakashima,0,3
-0,318,Ema Haru Nakashima,321,Ema Hina Nakashima,0,4
-0,323,Ema Uta Nakashima,321,Ema Hina Nakashima,0,3
-0,334,Ema Mei Nakashima,321,Ema Hina Nakashima,0,3
-0,335,Ema Riko Nakashima,321,Ema Hina Nakashima,0,4
-0,304,Ema Ren Nakashima,323,Ema Uta Nakashima,0,4
-0,321,Ema Hina Nakashima,323,Ema Uta Nakashima,0,3
-0,334,Ema Mei Nakashima,323,Ema Uta Nakashima,0,4
-0,304,Ema Ren Nakashima,334,Ema Mei Nakashima,0,4
-0,321,Ema Hina Nakashima,334,Ema Mei Nakashima,0,3
-0,323,Ema Uta Nakashima,334,Ema Mei Nakashima,0,4
-0,321,Ema Hina Nakashima,335,Ema Riko Nakashima,0,4
-0,353,Matija Teo Stojanović,349,Matija aMteo Stojanović,0,2
-0,347,Matija Natalija Stojanović,367,Matija Stojanović,0,4
-0,360,Matija Marija Stojanović,367,Matija Stojanović,0,2
-0,192,Liam  Lee,389,C. Le,0,4
-0,465,Mia Ámbar Sosa,462,Mia Sosa,0,4
-0,419,Liam  Brown,477,J. Brown,0,3
-0,496,Thomas Thomas Brown,483,Thomas. S. Brown,0,0
-0,104,Ji-a  Shen,486,Len  Moshe,0,4
-1,19,Julen Danel Gutiérrez,0,Gutiérrez Julen Ane,0,2
-1,31,Julen Nil Gutiérrez,0,Gutiérrez Julen Ane,0,4
-1,19,Julen Danel Gutiérrez,3,Julen. N. Gutiérrez,0,4
-1,31,Julen Nil Gutiérrez,3,Julen. N. Gutiérrez,0,2
-1,469,Yu-jun  Ju,6,Soo-ah  Jun,0,4
-1,31,Julen Nil Gutiérrez,12,rulen Julen Gutiérrez,0,3
-1,0,Julen Ane Gutiérrez,19,hJulen Danel Gutiérrez,0,3
-1,19,Julen Danel Gutiérrez,23,Julen. E. Gutiérrez,0,4
-1,31,Julen Nil Gutiérrez,23,Julen. E. Gutiérrez,0,2
-1,19,Julen Danel Gutiérrez,33,Julen Jan Gutiérrez,0,4
-1,31,Julen Nil Gutiérrez,33,Julen Jan Gutiérrez,0,4
-1,437,Robert  Gutierrez,35,J. P. Gutiérrez,0,4
-1,31,Julen Nil Gutiérrez,36,Julen Alex Gutierrez,0,4
-1,19,Julen Danel Gutiérrez,59,Julen. Á. Gutiérrez,0,4
-1,31,Julen Nil Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-1,16,Yǔzé  Tsui,71,Yǔzé  Wú,0,4
-1,270,Do-yun  U,90,J. Munn,0,4
-1,469,Yu-jun  Ju,90,J. Munn,0,4
-1,262,Lucía  Díaz,112,R. Diaz,0,3
-1,131,Aleksandar Zoran Trajanovski,144,Aleksandar Trajanovski,0,2
-1,131,Aleksandar Zoran Trajanovski,157,Aleksandar Trajanovski,0,2
-1,73,Ida  Christensen,242,N. Christensen,0,2
-1,391,Kiara  Williams,261,Kiwa  Williams,0,4
-1,311,Ema Aoi Nakashima,315,Ema Yūma Nakashima,0,4
-1,316,Ema Haruma Nakashima,315,Ema Yūma Nakashima,0,4
-1,321,Ema Hina Nakashima,315,Ema Yūma Nakashima,0,3
-1,334,Ema Mei Nakashima,315,Ema Yūma Nakashima,0,4
-1,311,Ema Aoi Nakashima,321,Ema Hina Nakashima,0,3
-1,315,Ema Yūma Nakashima,321,Ema Hina Nakashima,0,3
-1,333,Ema Yua Nakashima,321,Ema Hina Nakashima,0,3
-1,311,Ema Aoi Nakashima,334,Ema Mei Nakashima,0,4
-1,315,Ema Yūma Nakashima,334,Ema Mei Nakashima,0,4
-1,333,Ema Yua Nakashima,334,Ema Mei Nakashima,0,4
+0,316,Ema Haruma Nakashima,318,Ema Haru kakashima,0,5
+0,315,Ema Yūma Nakashima,321,Ema Hina Nakashima,0,5
+0,316,Ema Haruma Nakashima,321,Ema Hina Nakashima,0,5
+0,318,Ema Haru Nakashima,321,Ema Hina Nakashima,0,5
+0,333,Ema Yua Nakashima,321,Ema Hina Nakashima,0,5
+0,353,Matija Teo Stojanović,349,Matija aMteo Stojanović,0,4
+0,346,Matija Lea Stojanović,367,Matija Stojanović,0,3
+0,347,Matija Natalija Stojanović,367,Matija Stojanović,0,5
+0,376,Matija Dušan Stojanović,367,Matija Stojanović,0,5
+0,496,Thomas Thomas Brown,483,Thomas. S. Brown,0,1
+1,33,Julen Jan Gutiérrez,3,Julen. N. Gutiérrez,0,3
+1,33,Julen Jan Gutiérrez,12,rulen Julen Gutiérrez,0,4
+1,12,Julen Julen Gutiérrez,33,Julen Jan Gutiérrez,0,2
+1,20,Julen Júlia Gutiérrez,33,Julen Jan Gutiérrez,0,5
+1,33,Julen Jan Gutiérrez,59,Julen. Á. Gutiérrez,0,4
+1,95,Mark Maxim Petrov,101,Mark Petrov,0,4
 1,432,Martina  Franco,339,Martina  Frunco,0,4
-1,191,Noah  Roy,364,Noah  Bgah,0,4
-1,346,Matija Lea Stojanović,367,Matija Stojanović,0,2
-1,207,Si-woo  Lee,389,C. Le,0,4
-1,270,Do-yun  U,389,C. Le,0,4
-1,469,Yu-jun  Ju,389,C. Le,0,4
-1,394,Victoria Diego García,393,Victoria. E. García,0,4
-1,114,Nino  Brunner,409,lina  Brunner,0,4
-1,423,Linda  Gonzalez,417,G. González,0,4
-1,492,Yu-jun  Oh,469,Yu-jxn  Ju,0,4
-1,51,Ha-joon  Joe,479,Ha-joon  Yooh,0,3
-1,469,Yu-jun  Ju,492,pu-jun  Oh,0,3
-2,14,Julen Jon Gutiérrez,0,Gutiérrez Julen Ane,0,4
-2,14,Julen Jon Gutiérrez,3,Julen. N. Gutiérrez,0,2
-2,23,Julen Emma Gutiérrez,3,Julen. N. Gutiérrez,0,3
-2,47,Julen Emma Gutiérrez,3,Julen. N. Gutiérrez,0,3
-2,14,Julen Jon Gutiérrez,12,rulen Julen Gutiérrez,0,3
-2,23,Julen Emma Gutiérrez,12,rulen Julen Gutiérrez,0,4
-2,47,Julen Emma Gutiérrez,12,rulen Julen Gutiérrez,0,4
-2,0,Julen Ane Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-2,12,Julen Julen Gutiérrez,14,Julen Jon Gutiérrrez,0,2
-2,20,Julen Júlia Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-2,35,Julen Pau Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-2,14,Julen Jon Gutiérrez,23,Julen. E. Gutiérrez,0,2
-2,47,Julen Emma Gutiérrez,23,Julen. E. Gutiérrez,0,3
-2,12,Julen Julen Gutiérrez,47,Julen Emma Gutierrez,0,3
-2,37,Julen Marti Gutiérrez,47,Julen Emma Gutierrez,0,4
-2,14,Julen Jon Gutiérrez,59,Julen. Á. Gutiérrez,0,2
-2,23,Julen Emma Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-2,47,Julen Emma Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-2,380,Eva  Trajanoski,131,A. Z. Trajanovski,0,4
-2,149,Aleksandar Luka Trajanovski,144,Aleksandar Trajanovski,0,3
-2,149,Aleksandar Luka Trajanovski,157,Aleksandar Trajanovski,0,3
-2,174,Mateo  Rojas,167,D. Rojas,0,4
-2,274,Zǐhán Yǔzé Ho,263,Zǐhán. Z. Ho,0,3
-2,315,Ema Yūma Nakashima,304,E. R. Nakashima,0,3
-2,318,Ema Haru Nakashima,304,E. R. Nakashima,0,4
-2,321,Ema Hina Nakashima,304,E. R. Nakashima,0,2
-2,333,Ema Yua Nakashima,304,E. R. Nakashima,0,3
-2,334,Ema Mei Nakashima,304,E. R. Nakashima,0,3
-2,304,Ema Ren Nakashima,315,Ema Yūma Nakashima,0,4
-2,56,Ava  Davis,337,Gace  Davis,0,4
-2,349,Matija Mateo Stojanović,367,Matija Stojanović,0,2
-2,353,Matija Teo Stojanović,367,Matija Stojanović,0,2
-2,104,Ji-a  Shen,384,A. Khen,0,3
-2,340,Leo  Ali,389,C. Le,0,3
-2,471,Álvaro  Morales,392,J. Morales,0,4
-2,479,Ha-joon  Yoon,396,gHa-yoon  Youn,0,4
-2,469,Yu-jun  Ju,436,Ye-ju  Jung,0,3
-2,492,Yu-jun  Oh,436,Ye-ju  Jung,0,4
-2,396,Ha-yoon  Youn,479,Ha-joon  Yooh,0,4
-2,436,Ye-jun  Jung,492,pu-jun  Oh,0,4
-3,17,Julen Ibai Gutiérrez,3,Julen. N. Gutiérrez,0,3
-3,17,Julen Ibai Gutiérrez,12,rulen Julen Gutiérrez,0,4
-3,33,Julen Jan Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-3,36,Julen Àlex Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-3,17,Julen Ibai Gutiérrez,23,Julen. E. Gutiérrez,0,3
-3,69,Carolina  Castro,32,Carolina  Rojas,0,4
-3,14,Julen Jon Gutiérrez,33,Julen Jan Gutiérrez,0,4
-3,14,Julen Jon Gutiérrez,36,Julen Alex Gutierrez,0,4
-3,17,Julen Ibai Gutiérrez,59,Julen. Á. Gutiérrez,0,3
-3,95,Mark Maxim Petrov,101,Mark Petrov,0,3
-3,103,Mark Alisa Petrov,101,Mark Petrov,0,4
-3,479,Ha-joon  Yoon,139,Ha-yoon  Btk,0,3
-3,144,Aleksandar Bisera Trajanovski,157,Aleksandar Trajanovski,0,4
-3,311,Ema Aoi Nakashima,304,E. R. Nakashima,0,3
-3,323,Ema Uta Nakashima,304,E. R. Nakashima,0,3
-3,330,Ema Anzu Nakashima,304,E. R. Nakashima,0,4
-3,323,Ema Uta Nakashima,315,Ema Yūma Nakashima,0,4
-3,330,Ema Anzu Nakashima,321,Ema Hina Nakashima,0,4
-3,311,Ema Aoi Nakashima,323,Ema Uta Nakashima,0,4
-3,315,Ema Yūma Nakashima,323,Ema Uta Nakashima,0,4
-3,333,Ema Yua Nakashima,323,Ema Uta Nakashima,0,4
-3,311,Ema Aoi Nakashima,330,Ema nzu Nakashima,0,4
-3,315,Ema Yūma Nakashima,330,Ema nzu Nakashima,0,4
-3,321,Ema Hina Nakashima,330,Ema nzu Nakashima,0,3
-3,323,Ema Uta Nakashima,330,Ema nzu Nakashima,0,4
-3,333,Ema Yua Nakashima,330,Ema nzu Nakashima,0,4
-3,334,Ema Mei Nakashima,330,Ema nzu Nakashima,0,4
-3,376,Matija Dušan Stojanović,367,Matija Stojanović,0,3
-3,381,Victoria María José García,393,Victoria. E. García,0,4
-3,381,Victoria María José García,394,Victoria. D. García,0,4
-4,31,Julen Nil Gutiérrez,14,Julen Jon Gutiérrrez,0,4
-4,252,Laura Théo Sousa,221,Laura. F. Sousa,0,3
-4,360,Matija Marija Stojanović,346,Matija Lea Stojanović,0,4
-4,22,Leo  Gil,389,C. Le,0,3
-5,479,Ha-joon  Yoon,223,L. Ohayon,0,4
-5,349,Matija Mateo Stojanović,346,Matija Lea Stojanović,0,4
-5,353,Matija Teo Stojanović,346,Matija Lea Stojanović,0,4
-5,288,Isabella  Ramos,461,Moa Isabella Sosa,0,4
-5,139,Ha-yoon  Bak,479,Ha-joon  Yooh,0,4
-7,14,Julen Jon Gutiérrez,31,Julen Nkl Gutiérrez,0,4
-7,335,Ema Riko Nakashima,304,E. R. Nakashima,0,4
-8,35,Julen Pau Gutiérrez,29,Julen Paula Guptiérrez,0,4
-8,51,Ha-joon  Joe,134,Chen Ha-joon,0,4
-8,104,Ji-a  Shen,143,Ji-a  Shin,0,4
-9,479,Ha-joon  Yoon,134,Chen Ha-joon,0,4
-9,251,Laura Gael Sousa,221,Laura. F. Sousa,0,3
-9,304,Ema Ren Nakashima,330,Ema nzu Nakashima,0,4
-15,487,Thomas Isla Brown,483,Thomas. S. Brown,0,3
-15,487,Thomas Isla Brown,496,Thomas. T. Brown,0,3
-20,37,Julen Marti Gutiérrez,10,Gutiérrez Julen Markel,0,4
+1,360,Matija Marija Stojanović,346,Matija Lea Stojanović,0,5
+1,349,Matija Mateo Stojanović,367,Matija Stojanović,0,3
+1,353,Matija Teo Stojanović,367,Matija Stojanović,0,4
+1,360,Matija Marija Stojanović,367,Matija Stojanović,0,2
+2,33,Julen Jan Gutiérrez,0,Gutiérrez Julen Ane,0,4
+2,35,Julen Pau Gutiérrez,3,Julen. N. Gutiérrez,0,5
+2,33,Julen Jan Gutiérrez,14,Julen Jon Gutiérrrez,0,4
+2,33,Julen Jan Gutiérrez,23,Julen. E. Gutiérrez,0,4
+2,0,Julen Ane Gutiérrez,33,Julen Jan Gutiérrez,0,4
+2,14,Julen Jon Gutiérrez,33,Julen Jan Gutiérrez,0,4
+2,479,Ha-joon  Yoon,51,Ha-joon  Jue,0,5
+2,391,Kiara  Williams,261,Kiwa  Williams,0,4
+2,318,Ema Haru Nakashima,316,Ema Harumw Nakashima,0,4
+3,12,Julen Julen Gutiérrez,39,Julen Hugo Gutierrez,0,5
+3,12,Julen Julen Gutiérrez,58,Gutiérrez Julen Pablo,0,5
+3,29,Julen Paula Gutiérrez,59,Julen. Á. Gutiérrez,0,5
+3,104,Ji-a  Shen,143,Ji-a  Shin,0,4
+3,149,Aleksandar Luka Trajanovski,144,Aleksandar Trajanovski,0,5
+3,149,Aleksandar Luka Trajanovski,157,Aleksandar Trajanovski,0,5
+5,131,Aleksandar Zoran Trajanovski,144,Aleksandar Trajanovski,0,4
+5,131,Aleksandar Zoran Trajanovski,157,Aleksandar Trajanovski,0,4
+5,41,Yìzé  Wáng,217,Y. Y. Wáng,0,5
+5,323,Ema Uta Nakashima,321,Ema Hina Nakashima,0,5
+5,321,Ema Hina Nakashima,323,Ema Uta Nakashima,0,5
+7,321,Ema Hina Nakashima,330,Ema nzu Nakashima,0,5

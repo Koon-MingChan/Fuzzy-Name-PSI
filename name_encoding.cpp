@@ -134,10 +134,22 @@ uint64_t NameEncoding::hash_gram(const std::string& gram) const {
 }
 
 void NameEncoding::add_token_grams(BitVector& bv, const std::string& token) const {
-    if (token.size() < cfg_.GRAM_SIZE) return;
+    if (token.empty()) return;
 
-    for (size_t i = 0; i + cfg_.GRAM_SIZE <= token.size(); ++i) {
-        std::string gram = token.substr(i, cfg_.GRAM_SIZE);
+    std::string source = token;
+
+    // Boundary-aware q-grams:
+    // Example for q=2:
+    // JULEN -> ^J, JU, UL, LE, EN, N$
+    // E     -> ^E, E$
+    if (cfg_.USE_BOUNDARY_GRAMS) {
+        source = "^" + token + "$";
+    }
+
+    if (source.size() < cfg_.GRAM_SIZE) return;
+
+    for (size_t i = 0; i + cfg_.GRAM_SIZE <= source.size(); ++i) {
+        std::string gram = source.substr(i, cfg_.GRAM_SIZE);
         uint64_t h = hash_gram(gram);
         size_t idx = static_cast<size_t>(h % bv.size());
         bv[idx] = 1;
@@ -156,6 +168,19 @@ BitVector NameEncoding::encode_tokens_base(const std::vector<std::string>& token
     std::vector<std::string> sorted_tok = tokens;
     std::sort(sorted_tok.begin(), sorted_tok.end());
     
+    if (cfg_.USE_BOUNDARY_GRAMS) {
+        // Boundary-aware mode:
+        // Encode each sorted token independently with boundary markers.
+        // This avoids cross-token grams and preserves token start/end evidence.
+        sorted_tok.erase(std::unique(sorted_tok.begin(), sorted_tok.end()), sorted_tok.end());
+
+        for (const auto& token : sorted_tok) {
+            add_token_grams(bv, token);
+        }
+    
+        return bv;
+    }
+
     std::string concat;
     for (const auto& t : sorted_tok) {
         concat += t;
