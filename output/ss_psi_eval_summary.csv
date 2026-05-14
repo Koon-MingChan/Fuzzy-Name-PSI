@@ -1,0 +1,2 @@
+evaluated_records,opened_candidate_pairs,true_positives_index_match,equivalent_duplicate_name_matches,possible_false_positives,missed_true_matches,strict_precision,strict_recall,strict_f1,adjusted_precision_including_equivalent_duplicates,adjusted_f1_including_equivalent_duplicates,strict_false_discovery_rate,possible_false_discovery_rate,valid_expected_records,false_negative_rate
+1000,1034,871,82,81,128,0.842360,0.871872,0.856862,0.921663,0.896077,0.157640,0.078337,999,0.128128

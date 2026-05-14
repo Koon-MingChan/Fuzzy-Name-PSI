@@ -24,11 +24,11 @@ const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
 const int HAMMING_D = 5;
 const int GAP_T = 9;
-const int N_ELEMENTS = 500;
+const int N_ELEMENTS = 10000;
 const int K_ROUNDS = 50;
 
 const bool USE_CSV_DATASET = true;
-const size_t CSV_LIMIT = 500;
+const size_t CSV_LIMIT = 10000;
 const char* CLEAN_NAMES_CSV = "output/clean_names.csv";
 const char* FUZZY_NAMES_CSV = "output/fuzzy_names.csv";
 
@@ -37,6 +37,7 @@ using BinaryVector = vector<int>;
 struct PlainRecord {
     size_t index;
     string name;
+    bool valid;
     BitVector encoded;
 };
 
@@ -73,6 +74,10 @@ size_t find_csv_column(const vector<string>& header, const string& column_name) 
     throw runtime_error("CSV column not found: " + column_name);
 }
 
+bool is_blank_name(const string& s) {
+    return s.find_first_not_of(" \t\r\n") == string::npos;
+}
+
 vector<string> load_names_from_csv(const string& path,
                                    const string& column_name,
                                    size_t limit = 0) {
@@ -100,9 +105,8 @@ vector<string> load_names_from_csv(const string& path,
             throw runtime_error("Malformed CSV row in " + path);
         }
 
-        if (!row[name_col].empty()) {
-            names.push_back(row[name_col]);
-        }
+        // Do not skip empty names, otherwise party0_index and party1_index shift.
+        names.push_back(row[name_col]);
 
         if (limit != 0 && names.size() >= limit) break;
     }
@@ -192,14 +196,26 @@ vector<vector<size_t>> generate_projections_from_seed(uint64_t joint_seed, int L
 vector<PlainRecord> build_records(const vector<string>& names, const NameEncoding& encoder) {
     vector<PlainRecord> records;
     records.reserve(names.size());
+
     for (size_t i = 0; i < names.size(); ++i) {
+        const bool valid = !is_blank_name(names[i]);
+
+        BitVector encoded;
+        encoded.reset(L_BIT_LENGTH);
+
+        if (valid) {
+            //encoded = encoder.encode_name_tail_token(names[i]);
+            encoded = encoder.encode_name_token_or(names[i]);
+        }
+
         records.push_back(PlainRecord{
             i,
             names[i],
-            //encoder.encode_name_tail_token(names[i])
-            encoder.encode_name_token_or(names[i])
+            valid,
+            encoded
         });
     }
+
     return records;
 }
 
@@ -209,7 +225,13 @@ void write_party_section(ofstream& fout,
                          const vector<size_t>& mask,
                          const ProjectionConsistencyCheck& rlc_checker) {
     fout << header << "\n";
+
     for (const auto& record : records) {
+        // Preserve original index in PlainRecord, but do not output invalid records.
+        if (!record.valid) {
+            continue;
+        }
+
         BitVector projected;
         projected.resize(mask.size());
 
@@ -218,7 +240,12 @@ void write_party_section(ofstream& fout,
         }
 
         if (!rlc_checker.verify_projection(record.encoded, projected, mask)) {
-            throw runtime_error(string("RLC Verification Failed for ") + header + ", record " + to_string(record.index));
+            throw runtime_error(
+                string("RLC Verification Failed for ") +
+                header +
+                ", record " +
+                to_string(record.index)
+            );
         }
 
         fout << record.index

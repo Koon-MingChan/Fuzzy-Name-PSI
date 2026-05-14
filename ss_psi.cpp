@@ -1,3 +1,4 @@
+#include <chrono>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
@@ -25,7 +26,7 @@ const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
 const int HAMMING_D = 5;
 const int GAP_T = 9;
-const int N_ELEMENTS = 500;
+const int N_ELEMENTS = 10000;
 const int K_ROUNDS = 50;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
 const char* MATCH_OUTPUT_CSV = "output/ss_psi_opened_matches.csv";
@@ -183,7 +184,9 @@ void write_opened_matches_csv(const vector<OpenMatch>& opened_matches) {
     }
 }
 
-void write_summary_file(long total_matches, const vector<OpenMatch>& opened_matches) {
+void write_summary_file(long total_matches,
+                        const vector<OpenMatch>& opened_matches,
+                        double matching_elapsed_seconds) {
     const string output_path = resolve_output_path(SUMMARY_OUTPUT_TXT);
     ofstream fout(output_path);
     if (!fout) {
@@ -195,6 +198,8 @@ void write_summary_file(long total_matches, const vector<OpenMatch>& opened_matc
     fout << "HAMMING_D: " << HAMMING_D << "\n";
     fout << "Total matched pairs across rounds: " << total_matches << "\n";
     fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    fout << fixed << setprecision(3);
+    fout << "Matching elapsed seconds: " << matching_elapsed_seconds << "\n";
     fout << "Detailed CSV: " << MATCH_OUTPUT_CSV << "\n";
 }
 
@@ -204,6 +209,8 @@ void simulate_f_sspsi(int party_id) {
     long total_matches = 0;
     vector<OpenMatch> opened_matches;
     set<pair<size_t, size_t>> seen_pairs;
+
+    const auto matching_start = chrono::steady_clock::now();
 
     for (int k = 0; k < K_ROUNDS; ++k) {
         vector<EncodedRecord> dataA;
@@ -269,11 +276,19 @@ void simulate_f_sspsi(int party_id) {
              << " candidate matches written to " << outFile << "\n";
     }
 
+    const auto matching_end = chrono::steady_clock::now();
+    const chrono::duration<double> matching_elapsed = matching_end - matching_start;
+    const auto matching_elapsed_ms =
+        chrono::duration_cast<chrono::milliseconds>(matching_end - matching_start).count();
+
     cout << "\n--- Pipeline Simulation Summary ---\n";
     cout << "Total matched pairs across " << K_ROUNDS << " rounds: " << total_matches << "\n";
     cout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    cout << fixed << setprecision(3);
+    cout << "Matching time taken: " << matching_elapsed.count()
+         << " seconds (" << matching_elapsed_ms << " ms)\n";
     write_opened_matches_csv(opened_matches);
-    write_summary_file(total_matches, opened_matches);
+    write_summary_file(total_matches, opened_matches, matching_elapsed.count());
     cout << "Detailed matches written to " << MATCH_OUTPUT_CSV << "\n";
     cout << "Summary written to " << SUMMARY_OUTPUT_TXT << "\n";
     print_opened_matches(opened_matches);
