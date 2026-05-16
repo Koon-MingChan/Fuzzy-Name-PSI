@@ -9,3 +9,4 @@ local_compute
 extern/
 install/
 .venv/
+MP-SPDZ/

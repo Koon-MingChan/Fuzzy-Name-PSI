@@ -13,6 +13,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <utility>
 
 #include "cryptoTools/Common/Defines.h"
 #include "cryptoTools/Common/Matrix.h"
@@ -21,18 +22,34 @@
 #include "volePSI/RsCpsi.h"
 #include "macoro/sync_wait.h"
 
+// Stage 2 prototype:
+// This version realises PSI-style candidate generation and writes aligned
+// split-party private input files for a secret-shared MPC Hamming/masking
+// stage. Party 0 payloads are written by Party 0, Party 1 payloads are written
+// by Party 1, and the receiver no longer opens Party 0 payloads.
+
 using namespace std;
 using namespace osuCrypto;
 using namespace volePSI;
 
-const int HAMMING_D = 7;
-const int K_ROUNDS = 45;
+const int HAMMING_D = 5;
+const int K_ROUNDS = 50;
 const u64 STAT_SEC_PARAM = 40;
 const u64 NUM_THREADS = 1;
 const size_t MAX_NAME_BYTES = 128;
+const size_t MAX_BUCKET_RECORDS = 512;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
+const size_t MPC_PAYLOAD_BITS = 8192;
+const size_t MPC_CHUNK_BITS = 64;
+const size_t MPC_PAYLOAD_CHUNKS = MPC_PAYLOAD_BITS / MPC_CHUNK_BITS;
 const char* RECEIVER_MATCH_OUTPUT_CSV = "output/mpc_fuzzy_matches.csv";
 const char* RECEIVER_SUMMARY_OUTPUT_TXT = "output/mpc_fuzzy_summary.txt";
+const char* MPC_HANDOFF_MANIFEST_CSV = "output/mpc_fuzzy_mpc_candidates.csv";
+const char* MPC_PARTY0_INPUT_TXT = "output/mpc_fuzzy_party0_payloads.txt";
+const char* MPC_PARTY1_INPUT_TXT = "output/mpc_fuzzy_party1_payloads.txt";
+const char* MPC_CONFIG_MPC = "output/mp_spdz/approx_psi_config.mpc";
+const char* MPC_SPDZ_PARTY0_INPUT_TXT = "output/mp_spdz/Player-Data/Input-P0-0";
+const char* MPC_SPDZ_PARTY1_INPUT_TXT = "output/mp_spdz/Player-Data/Input-P1-0";
 
 using BinaryVector = vector<int>;
 
@@ -46,7 +63,6 @@ struct EncodedRecord {
 struct SenderValue {
     size_t index = 0;
     string name;
-    BinaryVector payload;
 };
 
 struct OpenMatch {
@@ -59,6 +75,20 @@ struct OpenMatch {
     int payload_distance;
 };
 
+struct MpcCandidate {
+    u64 candidate_id;
+    int round;
+    size_t party0_index;
+    string party0_name;
+    size_t party1_index;
+    string party1_name;
+};
+
+struct MpcInputRecord {
+    u64 candidate_id;
+    BinaryVector payload;
+};
+
 BinaryVector from_binary_string(const string& s) {
     BinaryVector v;
     v.reserve(s.size());
@@ -68,6 +98,27 @@ BinaryVector from_binary_string(const string& s) {
         else throw runtime_error("Invalid bit character: " + string(1, c));
     }
     return v;
+}
+
+string to_binary_string(const BinaryVector& v) {
+    string s;
+    s.reserve(v.size());
+    for (int bit : v) s.push_back(bit ? '1' : '0');
+    return s;
+}
+
+vector<u64> binary_vector_to_u64_chunks(const BinaryVector& v) {
+    if (v.size() != MPC_PAYLOAD_BITS) {
+        throw runtime_error("MPC payload bit length must be " + to_string(MPC_PAYLOAD_BITS));
+    }
+
+    vector<u64> chunks(MPC_PAYLOAD_CHUNKS, 0);
+    for (size_t i = 0; i < v.size(); ++i) {
+        if (v[i]) {
+            chunks[i / MPC_CHUNK_BITS] |= (u64{1} << (i % MPC_CHUNK_BITS));
+        }
+    }
+    return chunks;
 }
 
 int hamming_distance(const BinaryVector& a, const BinaryVector& b) {
@@ -168,14 +219,17 @@ void write_u32(u8* dest, u32 value) {
     memcpy(dest, &value, sizeof(value));
 }
 
-size_t value_byte_length(size_t payload_bits) {
-    const size_t payload_bytes = (payload_bits + 7) / 8;
-    return sizeof(u32) + sizeof(u32) + MAX_NAME_BYTES + sizeof(u32) + payload_bytes;
+size_t single_sender_value_byte_length(size_t payload_bits) {
+    (void)payload_bits;
+    return sizeof(u32) + sizeof(u32) + MAX_NAME_BYTES;
+}
+
+size_t bucket_value_byte_length(size_t payload_bits) {
+    return sizeof(u32) + (MAX_BUCKET_RECORDS * single_sender_value_byte_length(payload_bits));
 }
 
 vector<u8> serialize_sender_value(const EncodedRecord& rec) {
-    const auto packed_payload = pack_bits(rec.payload);
-    vector<u8> out(value_byte_length(rec.payload.size()), 0);
+    vector<u8> out(single_sender_value_byte_length(rec.payload.size()), 0);
 
     size_t offset = 0;
     write_u32(out.data() + offset, static_cast<u32>(rec.index));
@@ -186,12 +240,6 @@ vector<u8> serialize_sender_value(const EncodedRecord& rec) {
     offset += sizeof(u32);
 
     memcpy(out.data() + offset, rec.name.data(), clamped_name_len);
-    offset += MAX_NAME_BYTES;
-
-    write_u32(out.data() + offset, static_cast<u32>(rec.payload.size()));
-    offset += sizeof(u32);
-
-    memcpy(out.data() + offset, packed_payload.data(), packed_payload.size());
     return out;
 }
 
@@ -210,18 +258,73 @@ SenderValue deserialize_sender_value(std::span<const u8> data) {
     }
 
     out.name.assign(reinterpret_cast<const char*>(data.data() + offset), name_len);
-    offset += MAX_NAME_BYTES;
+    return out;
+}
 
-    const auto payload_bits = read_u32(data.data() + offset);
-    offset += sizeof(u32);
-
-    const size_t payload_bytes = (payload_bits + 7) / 8;
-    if (offset + payload_bytes > data.size()) {
-        throw runtime_error("Serialized sender value truncated");
+vector<u8> serialize_sender_bucket(const vector<size_t>& bucket_records,
+                                   const vector<EncodedRecord>& dataA,
+                                   size_t payload_bits) {
+    if (bucket_records.size() > MAX_BUCKET_RECORDS) {
+        throw runtime_error("Sender projection bucket exceeds MAX_BUCKET_RECORDS");
     }
 
-    out.payload = unpack_bits(data.subspan(offset, payload_bytes), payload_bits);
+    vector<u8> out(bucket_value_byte_length(payload_bits), 0);
+    write_u32(out.data(), static_cast<u32>(bucket_records.size()));
+
+    const size_t single_len = single_sender_value_byte_length(payload_bits);
+    size_t offset = sizeof(u32);
+    for (size_t rec_index : bucket_records) {
+        const auto& rec = dataA[rec_index];
+
+        auto serialized = serialize_sender_value(rec);
+        if (serialized.size() != single_len) {
+            throw runtime_error("Unexpected serialized sender value width");
+        }
+        memcpy(out.data() + offset, serialized.data(), serialized.size());
+        offset += single_len;
+    }
+
     return out;
+}
+
+vector<SenderValue> deserialize_sender_bucket(std::span<const u8> data,
+                                              size_t payload_bits) {
+    const size_t expected_len = bucket_value_byte_length(payload_bits);
+    if (data.size() != expected_len) {
+        throw runtime_error("Serialized sender bucket has unexpected length");
+    }
+
+    const auto bucket_count = read_u32(data.data());
+    if (bucket_count > MAX_BUCKET_RECORDS) {
+        throw runtime_error("Serialized sender bucket count exceeds MAX_BUCKET_RECORDS");
+    }
+
+    vector<SenderValue> out;
+    out.reserve(bucket_count);
+
+    const size_t single_len = single_sender_value_byte_length(payload_bits);
+    size_t offset = sizeof(u32);
+    for (u32 i = 0; i < bucket_count; ++i) {
+        auto sender_value = deserialize_sender_value(data.subspan(offset, single_len));
+        out.push_back(std::move(sender_value));
+        offset += single_len;
+    }
+
+    return out;
+}
+
+size_t validate_payload_bit_length(const vector<EncodedRecord>& records,
+                                   const string& party_label,
+                                   int round) {
+    if (records.empty()) return 0;
+
+    const size_t payload_bits = records.front().payload.size();
+    for (const auto& rec : records) {
+        if (rec.payload.size() != payload_bits) {
+            throw runtime_error(party_label + " payload length mismatch in round " + to_string(round));
+        }
+    }
+    return payload_bits;
 }
 
 vector<u8> xor_rows(std::span<const u8> a, std::span<const u8> b) {
@@ -295,11 +398,87 @@ void write_summary_file(long total_candidates, const vector<OpenMatch>& opened_m
     }
 
     fout << "Technique: mpc_fuzzy_psi_exact_projection\n";
+    fout << "Filtering: split_party_mpc_handoff_secret_shared_hamming\n";
     fout << "K_ROUNDS: " << K_ROUNDS << "\n";
     fout << "HAMMING_D: " << HAMMING_D << "\n";
-    fout << "Total exact projected candidates across rounds: " << total_candidates << "\n";
+    fout << "Total expanded exact-projection candidate pairs across rounds: " << total_candidates << "\n";
     fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    fout << "MPC handoff manifest: " << MPC_HANDOFF_MANIFEST_CSV << "\n";
+    fout << "MPC Party 0 input: " << MPC_PARTY0_INPUT_TXT << "\n";
+    fout << "MPC Party 1 input: " << MPC_PARTY1_INPUT_TXT << "\n";
+    fout << "MP-SPDZ Party 0 input: " << MPC_SPDZ_PARTY0_INPUT_TXT << "\n";
+    fout << "MP-SPDZ Party 1 input: " << MPC_SPDZ_PARTY1_INPUT_TXT << "\n";
+    fout << "MP-SPDZ config: " << MPC_CONFIG_MPC << "\n";
+    fout << "MP-SPDZ payload chunks: " << MPC_PAYLOAD_CHUNKS << "\n";
     fout << "Detailed CSV: " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
+}
+
+void write_mpc_config(size_t candidate_count) {
+    if (MPC_PAYLOAD_BITS % MPC_CHUNK_BITS != 0) {
+        throw runtime_error("MPC_PAYLOAD_BITS must be divisible by MPC_CHUNK_BITS");
+    }
+
+    const string config_path = resolve_output_path(MPC_CONFIG_MPC);
+
+    ofstream config(config_path);
+    if (!config) throw runtime_error("Cannot create " + config_path);
+
+    config << "PAYLOAD_BITS = " << MPC_PAYLOAD_BITS << "\n";
+    config << "CHUNK_BITS = " << MPC_CHUNK_BITS << "\n";
+    config << "PAYLOAD_CHUNKS = " << MPC_PAYLOAD_CHUNKS << "\n";
+    config << "HAMMING_D = " << HAMMING_D << "\n";
+    config << "CANDIDATE_OFFSET = 0\n";
+    config << "MAX_CANDIDATES = " << candidate_count << "\n";
+}
+
+void write_mpc_manifest_file(const vector<MpcCandidate>& candidates) {
+    const string manifest_path = resolve_output_path(MPC_HANDOFF_MANIFEST_CSV);
+    ofstream manifest(manifest_path);
+    if (!manifest) throw runtime_error("Cannot create " + manifest_path);
+
+    // Public bookkeeping for candidate-id to record-id mapping. Payloads are
+    // not written here.
+    manifest << "candidate_id,round,party0_index,party0_name,party1_index,party1_name,proj_dist\n";
+    for (const auto& candidate : candidates) {
+        manifest << candidate.candidate_id << ','
+                 << candidate.round << ','
+                 << candidate.party0_index << ','
+                 << quoted(candidate.party0_name) << ','
+                 << candidate.party1_index << ','
+                 << quoted(candidate.party1_name) << ','
+                 << 0 << '\n';
+    }
+}
+
+void write_mpc_party_input_files(const string& readable_path,
+                                 const string& spdz_path,
+                                 vector<MpcInputRecord> inputs) {
+    sort(inputs.begin(), inputs.end(), [](const auto& a, const auto& b) {
+        return a.candidate_id < b.candidate_id;
+    });
+
+    const string resolved_readable_path = resolve_output_path(readable_path);
+    const string resolved_spdz_path = resolve_output_path(spdz_path);
+
+    ofstream readable(resolved_readable_path);
+    ofstream spdz_input(resolved_spdz_path);
+    if (!readable) throw runtime_error("Cannot create " + resolved_readable_path);
+    if (!spdz_input) throw runtime_error("Cannot create " + resolved_spdz_path);
+
+    readable << "# candidate_id payload_bits\n";
+    for (const auto& input : inputs) {
+        readable << input.candidate_id << ' '
+                 << to_binary_string(input.payload) << '\n';
+
+        const auto chunks = binary_vector_to_u64_chunks(input.payload);
+
+        // MP-SPDZ player input format is whitespace-separated decimal values.
+        // For each candidate each party writes: active_flag, then payload
+        // chunks. The generated approx_psi_config.mpc records exactly how many
+        // candidate slots were emitted.
+        spdz_input << 1 << '\n';
+        for (u64 chunk : chunks) spdz_input << chunk << '\n';
+    }
 }
 
 template <typename T>
@@ -323,38 +502,83 @@ vector<T> recv_vec(coproto::Socket& sock) {
 }
 
 void run_sender(coproto::Socket& sock) {
-    cout << "Party 0 starting MPC fuzzy PSI sender on exact projected keys.\n";
+    cout << "Party 0 starting PSI-style candidate generation sender on exact projected keys.\n";
 
     long total_candidates = 0;
+    vector<MpcInputRecord> party0_inputs;
     for (int round = 0; round < K_ROUNDS; ++round) {
         vector<EncodedRecord> dataA;
         read_round_party_data(round, 0, dataA);
+        const size_t payload_bits = validate_payload_bit_length(dataA, "Party 0", round);
 
-        vector<size_t> sender_rows;
-        map<string, size_t> sender_projection_rows;
+        map<size_t, const EncodedRecord*> records_by_index;
+        for (const auto& rec : dataA) {
+            records_by_index[rec.index] = &rec;
+        }
+
+        map<string, vector<size_t>> sender_projection_buckets;
         for (size_t i = 0; i < dataA.size(); ++i) {
             auto key = projection_string(dataA[i].projection);
-            if (sender_projection_rows.emplace(key, sender_rows.size()).second) {
-                sender_rows.push_back(i);
+            sender_projection_buckets[key].push_back(i);
+        }
+
+        size_t max_sender_bucket_size = 0;
+        for (const auto& [key, bucket_records] : sender_projection_buckets) {
+            max_sender_bucket_size = max(max_sender_bucket_size, bucket_records.size());
+            if (bucket_records.size() > MAX_BUCKET_RECORDS) {
+                throw runtime_error("Sender projection bucket for round " + to_string(round)
+                                    + " exceeds MAX_BUCKET_RECORDS");
             }
         }
 
-        const u64 sender_size = static_cast<u64>(sender_rows.size());
+        const u64 sender_size = static_cast<u64>(sender_projection_buckets.size());
         macoro::sync_wait(sock.send(sender_size));
+        macoro::sync_wait(sock.send(static_cast<u64>(payload_bits)));
+        macoro::sync_wait(sock.send(static_cast<u64>(dataA.size())));
+        macoro::sync_wait(sock.send(static_cast<u64>(max_sender_bucket_size)));
 
         u64 receiver_size = 0;
         macoro::sync_wait(sock.recv(receiver_size));
+        u64 receiver_payload_bits = 0;
+        macoro::sync_wait(sock.recv(receiver_payload_bits));
+
+        if (sender_size && receiver_size && payload_bits != receiver_payload_bits) {
+            throw runtime_error("Sender/receiver payload bit length mismatch in round " + to_string(round));
+        }
+
+        const size_t packed_len = bucket_value_byte_length(payload_bits);
+        if (sender_size == 0 || receiver_size == 0) {
+            send_vec(sock, vector<u8>{});
+            send_vec(sock, vector<u8>{});
+
+            auto assignment_words = recv_vec<u64>(sock);
+            if (!assignment_words.empty()) {
+                throw runtime_error("Expected no candidate assignments for empty PSI round");
+            }
+
+            u64 receiver_candidates = 0;
+            macoro::sync_wait(sock.recv(receiver_candidates));
+            total_candidates += static_cast<long>(receiver_candidates);
+
+            cout << "Round " << round
+                 << ": party0_records=" << dataA.size()
+                 << ", sender_projection_buckets=" << sender_projection_buckets.size()
+                 << ", max_sender_bucket_size=" << max_sender_bucket_size
+                 << ", receiver reported " << receiver_candidates
+                 << " expanded candidate pairs.\n";
+            continue;
+        }
 
         vector<block> keys;
-        keys.reserve(sender_rows.size());
-        const size_t packed_len = value_byte_length(dataA.front().payload.size());
-        osuCrypto::Matrix<u8> values(sender_rows.size(), packed_len);
+        keys.reserve(sender_projection_buckets.size());
+        osuCrypto::Matrix<u8> values(sender_projection_buckets.size(), packed_len);
 
-        for (size_t row = 0; row < sender_rows.size(); ++row) {
-            const auto& rec = dataA[sender_rows[row]];
-            keys.push_back(projection_key(rec.projection));
-            auto serialized = serialize_sender_value(rec);
+        size_t row = 0;
+        for (const auto& [key, bucket_records] : sender_projection_buckets) {
+            keys.push_back(projection_key_from_string(key));
+            auto serialized = serialize_sender_bucket(bucket_records, dataA, payload_bits);
             memcpy(&values(row, 0), serialized.data(), serialized.size());
+            ++row;
         }
 
         PRNG prng(toBlock(static_cast<u64>(round + 1), 0xABCDEF));
@@ -377,33 +601,68 @@ void run_sender(coproto::Socket& sock) {
         send_vec(sock, flag_bytes);
         send_vec(sock, share_bytes);
 
+        auto assignment_words = recv_vec<u64>(sock);
+        if (assignment_words.size() % 2 != 0) {
+            throw runtime_error("Candidate assignment message has odd length");
+        }
+
+        for (size_t i = 0; i < assignment_words.size(); i += 2) {
+            const u64 candidate_id = assignment_words[i];
+            const size_t party0_index = static_cast<size_t>(assignment_words[i + 1]);
+            const auto rec_it = records_by_index.find(party0_index);
+            if (rec_it == records_by_index.end()) {
+                throw runtime_error("Candidate assignment references unknown Party 0 index");
+            }
+
+            party0_inputs.push_back(MpcInputRecord{
+                candidate_id,
+                rec_it->second->payload
+            });
+        }
+
         u64 receiver_candidates = 0;
         macoro::sync_wait(sock.recv(receiver_candidates));
         total_candidates += static_cast<long>(receiver_candidates);
 
-        cout << "Round " << round << ": sender processed " << dataA.size()
-             << " unique projection keys, receiver reported " << receiver_candidates
-             << " exact projected candidates.\n";
+        cout << "Round " << round
+             << ": party0_records=" << dataA.size()
+             << ", sender_projection_buckets=" << sender_projection_buckets.size()
+             << ", max_sender_bucket_size=" << max_sender_bucket_size
+             << ", receiver reported " << receiver_candidates
+             << " expanded candidate pairs.\n";
     }
 
     cout << "\n--- MPC Sender Summary ---\n";
     cout << "Receiver reported " << total_candidates
-         << " exact projected candidates across " << K_ROUNDS << " rounds.\n";
+         << " expanded exact-projection candidate pairs across " << K_ROUNDS << " rounds.\n";
+    cout << "Party 0 private MPC inputs written: " << party0_inputs.size() << "\n";
+    write_mpc_party_input_files(MPC_PARTY0_INPUT_TXT, MPC_SPDZ_PARTY0_INPUT_TXT, party0_inputs);
+    cout << "Party 0 MPC inputs written to " << MPC_PARTY0_INPUT_TXT << "\n";
+    cout << "MP-SPDZ Party 0 input written to " << MPC_SPDZ_PARTY0_INPUT_TXT << "\n";
 }
 
 void run_receiver(coproto::Socket& sock) {
-    cout << "Party 1 starting MPC fuzzy PSI receiver on exact projected keys.\n";
+    cout << "Party 1 starting PSI-style candidate generation receiver on exact projected keys.\n";
 
     long total_candidates = 0;
     vector<OpenMatch> opened_matches;
-    set<pair<size_t, size_t>> seen_pairs;
+    vector<MpcCandidate> mpc_candidates;
+    vector<MpcInputRecord> party1_inputs;
+    u64 next_candidate_id = 0;
 
     for (int round = 0; round < K_ROUNDS; ++round) {
         vector<EncodedRecord> dataB;
         read_round_party_data(round, 1, dataB);
+        const size_t payload_bits = validate_payload_bit_length(dataB, "Party 1", round);
 
         u64 sender_size = 0;
         macoro::sync_wait(sock.recv(sender_size));
+        u64 sender_payload_bits = 0;
+        macoro::sync_wait(sock.recv(sender_payload_bits));
+        u64 sender_record_count = 0;
+        macoro::sync_wait(sock.recv(sender_record_count));
+        u64 max_sender_bucket_size = 0;
+        macoro::sync_wait(sock.recv(max_sender_bucket_size));
 
         vector<block> keys;
         vector<vector<size_t>> receiver_row_records;
@@ -421,8 +680,46 @@ void run_receiver(coproto::Socket& sock) {
 
         const u64 receiver_size = static_cast<u64>(keys.size());
         macoro::sync_wait(sock.send(receiver_size));
+        macoro::sync_wait(sock.send(static_cast<u64>(payload_bits)));
 
-        const size_t packed_len = value_byte_length(dataB.front().payload.size());
+        if (sender_size && receiver_size && payload_bits != sender_payload_bits) {
+            throw runtime_error("Sender/receiver payload bit length mismatch in round " + to_string(round));
+        }
+
+        size_t max_receiver_bucket_size = 0;
+        for (const auto& bucket_records : receiver_row_records) {
+            max_receiver_bucket_size = max(max_receiver_bucket_size, bucket_records.size());
+        }
+
+        u64 bucket_intersections_this_round = 0;
+        u64 candidate_pairs_this_round = 0;
+        const size_t packed_len = bucket_value_byte_length(payload_bits);
+
+        if (sender_size == 0 || receiver_size == 0) {
+            auto sender_flag_bytes = recv_vec<u8>(sock);
+            auto sender_share_bytes = recv_vec<u8>(sock);
+            if (!sender_flag_bytes.empty() || !sender_share_bytes.empty()) {
+                throw runtime_error("Expected empty sender shares for empty PSI round");
+            }
+
+            total_candidates += static_cast<long>(candidate_pairs_this_round);
+            send_vec(sock, vector<u64>{});
+            macoro::sync_wait(sock.send(candidate_pairs_this_round));
+
+            cout << "Round " << round
+                 << ": party0_records=" << sender_record_count
+                 << ", sender_projection_buckets=" << sender_size
+                 << ", max_sender_bucket_size=" << max_sender_bucket_size
+                 << ", party1_records=" << dataB.size()
+                 << ", receiver_projection_buckets=" << receiver_projection_rows.size()
+                 << ", max_receiver_bucket_size=" << max_receiver_bucket_size
+                 << ", bucket_intersections=" << bucket_intersections_this_round
+                 << ", expanded_candidate_pairs=" << candidate_pairs_this_round
+                 << ", mpc_candidate_pairs=" << candidate_pairs_this_round
+                 << ".\n";
+            continue;
+        }
+
         PRNG prng(toBlock(static_cast<u64>(round + 1), 0xABCDEF));
         RsCpsiReceiver receiver;
         receiver.init(sender_size, receiver_size, packed_len, STAT_SEC_PARAM, prng.get(), NUM_THREADS);
@@ -441,7 +738,15 @@ void run_receiver(coproto::Socket& sock) {
             throw runtime_error("Sender share matrix size mismatch");
         }
 
-        u64 matches_this_round = 0;
+        if (sender_flag_bytes.size() != share.mFlagBits.sizeBytes()) {
+            throw runtime_error("Sender flag share size mismatch");
+        }
+
+        // Stage 2 handoff: PSI gives exact projection-bucket candidates. Each
+        // expanded record pair receives a public candidate id. Party 1 writes
+        // only Party 1 payloads locally, and sends candidate id + Party 0
+        // record id back to Party 0 so Party 0 can write its own private input.
+        vector<u64> assignment_words;
         for (size_t i = 0; i < keys.size(); ++i) {
             const auto output_row = share.mMapping[i];
             if (output_row == ~u64(0)) continue;
@@ -452,7 +757,7 @@ void run_receiver(coproto::Socket& sock) {
             const bool receiver_flag = share.mFlagBits[output_row];
             if (!(sender_flag ^ receiver_flag)) continue;
 
-            ++matches_this_round;
+            ++bucket_intersections_this_round;
 
             const u8* receiver_row = &share.mValues(output_row, 0);
             const u8* sender_row = sender_share_bytes.data() + (output_row * share.mValues.cols());
@@ -460,41 +765,68 @@ void run_receiver(coproto::Socket& sock) {
                 std::span<const u8>(receiver_row, share.mValues.cols()),
                 std::span<const u8>(sender_row, share.mValues.cols()));
 
-            auto sender_value = deserialize_sender_value(opened_value);
+            auto sender_values = deserialize_sender_bucket(opened_value, payload_bits);
+            candidate_pairs_this_round +=
+                static_cast<u64>(sender_values.size() * receiver_row_records[i].size());
 
-            for (size_t rec_index : receiver_row_records[i]) {
-                const auto& recB = dataB[rec_index];
-                const int payload_dist = hamming_distance(sender_value.payload, recB.payload);
-                if (payload_dist > HAMMING_D) continue;
-
-                if (seen_pairs.insert({sender_value.index, recB.index}).second) {
-                    opened_matches.push_back(OpenMatch{
+            for (const auto& sender_value : sender_values) {
+                for (size_t rec_index : receiver_row_records[i]) {
+                    const auto& recB = dataB[rec_index];
+                    const u64 candidate_id = next_candidate_id++;
+                    mpc_candidates.push_back(MpcCandidate{
+                        candidate_id,
                         round,
                         sender_value.index,
                         sender_value.name,
                         recB.index,
-                        recB.name,
-                        0,
-                        payload_dist
+                        recB.name
                     });
+
+                    party1_inputs.push_back(MpcInputRecord{
+                        candidate_id,
+                        recB.payload
+                    });
+                    assignment_words.push_back(candidate_id);
+                    assignment_words.push_back(static_cast<u64>(sender_value.index));
                 }
             }
         }
 
-        total_candidates += static_cast<long>(matches_this_round);
-        macoro::sync_wait(sock.send(matches_this_round));
+        total_candidates += static_cast<long>(candidate_pairs_this_round);
+        send_vec(sock, assignment_words);
+        macoro::sync_wait(sock.send(candidate_pairs_this_round));
 
-        cout << "Round " << round << ": receiver found " << matches_this_round
-             << " exact projected candidates.\n";
+        cout << "Round " << round
+             << ": party0_records=" << sender_record_count
+             << ", sender_projection_buckets=" << sender_size
+             << ", max_sender_bucket_size=" << max_sender_bucket_size
+             << ", party1_records=" << dataB.size()
+             << ", receiver_projection_buckets=" << receiver_projection_rows.size()
+             << ", max_receiver_bucket_size=" << max_receiver_bucket_size
+             << ", bucket_intersections=" << bucket_intersections_this_round
+             << ", expanded_candidate_pairs=" << candidate_pairs_this_round
+             << ", mpc_candidate_pairs=" << candidate_pairs_this_round
+             << ".\n";
     }
 
     cout << "\n--- MPC Fuzzy PSI Summary ---\n";
-    cout << "Total exact projected candidates across " << K_ROUNDS << " rounds: "
+    cout << "Filtering mode: split-party MPC handoff for secret-shared Hamming threshold.\n";
+    cout << "Total expanded exact-projection candidate pairs across " << K_ROUNDS << " rounds: "
          << total_candidates << "\n";
-    cout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
+    cout << "MPC candidate inputs written: " << mpc_candidates.size() << "\n";
+    cout << "Plaintext fuzzy pairs opened before MPC: " << opened_matches.size() << "\n";
+    write_mpc_config(mpc_candidates.size());
+    write_mpc_manifest_file(mpc_candidates);
+    write_mpc_party_input_files(MPC_PARTY1_INPUT_TXT, MPC_SPDZ_PARTY1_INPUT_TXT, party1_inputs);
     write_opened_matches_csv(opened_matches);
     write_summary_file(total_candidates, opened_matches);
-    cout << "Detailed matches written to " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
+    cout << "MPC handoff manifest written to " << MPC_HANDOFF_MANIFEST_CSV << "\n";
+    cout << "Party 0 MPC inputs written to " << MPC_PARTY0_INPUT_TXT << "\n";
+    cout << "Party 1 MPC inputs written to " << MPC_PARTY1_INPUT_TXT << "\n";
+    cout << "MP-SPDZ config written to " << MPC_CONFIG_MPC << "\n";
+    cout << "MP-SPDZ Party 0 input written to " << MPC_SPDZ_PARTY0_INPUT_TXT << "\n";
+    cout << "MP-SPDZ Party 1 input written to " << MPC_SPDZ_PARTY1_INPUT_TXT << "\n";
+    cout << "Plaintext reference matches written to " << RECEIVER_MATCH_OUTPUT_CSV << "\n";
     cout << "Summary written to " << RECEIVER_SUMMARY_OUTPUT_TXT << "\n";
     print_opened_matches(opened_matches);
 }

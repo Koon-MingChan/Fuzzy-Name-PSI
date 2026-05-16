@@ -15,6 +15,7 @@ struct NameEncodingConfig {
     size_t BITVECTOR_LENGTH;
     size_t GRAM_SIZE;
     bool USE_BOUNDARY_GRAMS = false;
+    bool CANONICALIZE_BIGRAMS_FOR_TRANSPOSITION = false;
 };
 
 class NameEncoding {
@@ -31,6 +32,7 @@ private:
     std::vector<std::string> tokenize(const std::string& clean) const;
     void apply_tail_token(std::vector<std::string>& tokens) const;
     uint64_t hash_gram(const std::string& gram) const;
+    std::string feature_gram(const std::string& gram) const;
     BitVector encode_tokens_base(const std::vector<std::string>& tokens) const;
     void add_token_grams(BitVector& bv, const std::string& token) const;
     BitVector encode_tokens_individually(const std::vector<std::string>& tokens) const;

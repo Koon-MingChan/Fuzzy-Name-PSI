@@ -22,13 +22,13 @@ using BitVector = approx_psi::BitVector;
 // Global Constants for the Approx-PSI Pipeline
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
-const int HAMMING_D = 5;
+const int HAMMING_D = 4;
 const int GAP_T = 9;
-const int N_ELEMENTS = 10000;
+const int N_ELEMENTS = 2000;
 const int K_ROUNDS = 50;
 
 const bool USE_CSV_DATASET = true;
-const size_t CSV_LIMIT = 10000;
+const size_t CSV_LIMIT = 2000;
 const char* CLEAN_NAMES_CSV = "output/clean_names.csv";
 const char* FUZZY_NAMES_CSV = "output/fuzzy_names.csv";
 
@@ -259,7 +259,9 @@ void write_party_section(ofstream& fout,
 int main() {
     cout << "--- Starting Full Name-to-PSI Pipeline Simulation ---\n";
 
-    NameEncodingConfig enc_cfg{L_BIT_LENGTH, GRAM_SIZE,true};
+    // Canonicalizing character bigrams makes adjacent transpositions such as
+    // AR/RA less likely to exceed the final Hamming threshold.
+    NameEncodingConfig enc_cfg{L_BIT_LENGTH, GRAM_SIZE, true, true};
     NameEncoding encoder(enc_cfg);
 
     uint64_t shared_seed = execute_coin_toss();

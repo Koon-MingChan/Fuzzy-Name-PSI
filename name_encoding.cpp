@@ -133,6 +133,23 @@ uint64_t NameEncoding::hash_gram(const std::string& gram) const {
     return static_cast<uint64_t>(hasher(gram));
 }
 
+std::string NameEncoding::feature_gram(const std::string& gram) const {
+    if (cfg_.CANONICALIZE_BIGRAMS_FOR_TRANSPOSITION &&
+        cfg_.GRAM_SIZE == 2 &&
+        gram.size() == 2 &&
+        gram[0] != '^' &&
+        gram[0] != '$' &&
+        gram[1] != '^' &&
+        gram[1] != '$' &&
+        gram[1] < gram[0]) {
+        std::string canonical = gram;
+        std::swap(canonical[0], canonical[1]);
+        return canonical;
+    }
+
+    return gram;
+}
+
 void NameEncoding::add_token_grams(BitVector& bv, const std::string& token) const {
     if (token.empty()) return;
 
@@ -149,7 +166,7 @@ void NameEncoding::add_token_grams(BitVector& bv, const std::string& token) cons
     if (source.size() < cfg_.GRAM_SIZE) return;
 
     for (size_t i = 0; i + cfg_.GRAM_SIZE <= source.size(); ++i) {
-        std::string gram = source.substr(i, cfg_.GRAM_SIZE);
+        std::string gram = feature_gram(source.substr(i, cfg_.GRAM_SIZE));
         uint64_t h = hash_gram(gram);
         size_t idx = static_cast<size_t>(h % bv.size());
         bv[idx] = 1;
@@ -189,7 +206,7 @@ BitVector NameEncoding::encode_tokens_base(const std::vector<std::string>& token
     if (concat.size() < cfg_.GRAM_SIZE) return bv;
 
     for (size_t i = 0; i + cfg_.GRAM_SIZE <= concat.size(); ++i) {
-        std::string gram = concat.substr(i, cfg_.GRAM_SIZE);
+        std::string gram = feature_gram(concat.substr(i, cfg_.GRAM_SIZE));
         uint64_t h = hash_gram(gram);
         
         // 2. MODULO: Double check the size at runtime

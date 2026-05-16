@@ -1,86 +1,90 @@
-# MP-SPDZ program for Approximate PSI
-# This script performs the F_ssHamCom and F_ssVMult stages of the 
-# "Approximate PSI with Near-Linear Communication" paper.
+# MP-SPDZ program for the post-PSI Approx-PSI stage.
+#
+# The C++ PSI stage writes aligned MP-SPDZ input files:
+#   output/mp_spdz/Player-Data/Input-P0-0
+#   output/mp_spdz/Player-Data/Input-P1-0
+#
+# Copy the generated config next to this program before compiling:
+#   cp output/mp_spdz/approx_psi_config.mpc \
+#      ../MP-SPDZ/Programs/Source/approx_psi_config.mpc
+#
+# Each candidate slot contains:
+#   active_flag
+#   128 decimal u64 chunks of the 8192-bit payload
+#
+# This program keeps the payload chunks secret-shared, computes the Hamming
+# threshold check inside MP-SPDZ, applies the match flag as a secret mask
+# (F_ssVMult-style), and reveals only the final match indicators.
+from approx_psi_config import *
 
-# Configuration matching the C++ layer
-L = 256
-D = 4
+word_type = sbits.get_type(CHUNK_BITS)
 
-# Number of projected elements that passed the OPPRF stage and have circuit shares
-# For demonstration, we assume we process N matching shares per round.
-N = 100 
+def candidate_word_offset(candidate_index):
+    return candidate_index * PAYLOAD_CHUNKS
 
-def f_ss_hamcom(share_A, share_B, threshold):
+def f_ss_hamcom(words_a, words_b, threshold):
     """
-    F_ssHamCom: Secret-Shared Hamming Distance Comparison.
-    Inputs are `sbitint` (boolean secret-shared integers) or arrays of `sbit`.
-    Returns a boolean secret share `out` which is 1 if distance <= threshold, else 0.
+    Secret-shared Hamming distance comparison.
+    Returns a secret bit indicating whether popcount(a xor b) <= threshold.
     """
-    # 1. Compute XOR to find differing bits
-    diff = share_A ^ share_B
-    
-    # 2. Count the number of set bits (Hamming weight)
-    # Using popcnt on the boolean share
-    dist = diff.popcnt()
-    
-    # 3. Secure comparison: check if dist <= threshold
-    # The result `is_match` remains secret-shared.
-    is_match = dist <= threshold
-    
-    return is_match
+    dist = MemValue(sint(0))
 
-def f_ss_vmult(is_match, share_A, share_B):
+    @for_range(PAYLOAD_CHUNKS)
+    def _(chunk):
+        diff = words_a[chunk] ^ words_b[chunk]
+        dist.write(dist.read() + diff.popcnt())
+
+    return dist.read() <= threshold
+
+def f_ss_vmult(is_match, words):
     """
-    F_ssVMult: Secret-Shared Vector Multiplication.
-    Multiplies the boolean indicator `is_match` by the payloads.
-    If is_match is 0, the resulting shares are shares of 0.
+    Secret-shared vector masking. Non-matches become zero chunks, matches keep
+    their secret payload chunks until the explicit opening phase.
     """
-    # Simply multiply the payload by the boolean mask.
-    out_A = is_match * share_A
-    out_B = is_match * share_B
-    return out_A, out_B
+    out = Array(PAYLOAD_CHUNKS, word_type)
 
-# ---- Main Execution Logic ----
-print_ln("--- Starting MP-SPDZ Evaluation for Approx-PSI ---")
+    @for_range(PAYLOAD_CHUNKS)
+    def _(chunk):
+        out[chunk] = is_match * words[chunk]
 
-# Step 1: Read the secret shares outputted by the F_ssPSI (volepsi) layer.
-# In a real MP-SPDZ deployment, this would be read from external inputs or pre-shared files.
-shares_A = Array(N, sbits.get_type(L))
-shares_B = Array(N, sbits.get_type(L))
+    return out
 
-# Mocking the reading of shares from file (using secret inputs for demonstration)
-@for_range(N)
-def _(i):
-    shares_A[i] = sbits.get_type(L).get_input_from(0)
-    shares_B[i] = sbits.get_type(L).get_input_from(1)
+print_ln("--- Starting MP-SPDZ Approx-PSI post-filter ---")
+print_ln("CANDIDATE_OFFSET=%s MAX_CANDIDATES=%s PAYLOAD_BITS=%s HAMMING_D=%s",
+         CANDIDATE_OFFSET, MAX_CANDIDATES, PAYLOAD_BITS, HAMMING_D)
 
-# Step 2 & 3: Evaluate F_ssHamCom and F_ssVMult on each item
-valid_matches_A = Array(N, sbits.get_type(L))
-valid_matches_B = Array(N, sbits.get_type(L))
+@for_range(MAX_CANDIDATES)
+def evaluate_candidate(candidate):
+    # Stream one candidate at a time. This avoids allocating
+    # MAX_CANDIDATES * PAYLOAD_CHUNKS secret words in VM memory.
+    active_a = sbit.get_input_from(0)
+    active_b = sbit.get_input_from(1)
+    words_a = Array(PAYLOAD_CHUNKS, word_type)
+    words_b = Array(PAYLOAD_CHUNKS, word_type)
 
-@for_range(N)
-def evaluate_items(i):
-    # Compute the Hamming Distance and perform threshold comparison securely
-    is_match_share = f_ss_hamcom(shares_A[i], shares_B[i], D)
-    
-    # Multiply the payload by the boolean match indicator
-    out_A, out_B = f_ss_vmult(is_match_share, shares_A[i], shares_B[i])
-    
-    valid_matches_A[i] = out_A
-    valid_matches_B[i] = out_B
+    @for_range(PAYLOAD_CHUNKS)
+    def _(chunk):
+        words_a[chunk] = word_type.get_input_from(0)
 
-# Step 4: Final Reconstruction (Opening phase)
-print_ln("Revealing matched payloads securely...")
-@for_range(N)
-def open_results(i):
-    # Both parties implicitly open the results. 
-    # If it was a non-match, the value is 0. If it was a match, the payload is revealed.
-    revealed_A = valid_matches_A[i].reveal()
-    revealed_B = valid_matches_B[i].reveal()
-    
-    # The paper mentions you output the elements. If it equals 0, it means it was filtered out.
-    @if_(revealed_A != 0)
+    @for_range(PAYLOAD_CHUNKS)
+    def _(chunk):
+        words_b[chunk] = word_type.get_input_from(1)
+
+    within_threshold = f_ss_hamcom(words_a, words_b, HAMMING_D)
+    is_active = active_a & active_b
+    is_match = within_threshold & is_active
+
+    # Keep the vector-multiplication stage in-circuit. We do not reveal the
+    # masked chunks here; candidate metadata is joined outside MP-SPDZ using
+    # the revealed candidate id.
+    f_ss_vmult(is_match, words_a)
+    f_ss_vmult(is_match, words_b)
+
+    revealed_match = is_match.reveal()
+    @if_(revealed_match == 1)
     def _():
-        print_ln("Found Approximate Match Pair! Payload A: %s, Payload B: %s", revealed_A, revealed_B)
+        # Candidate metadata stays in output/mpc_fuzzy_mpc_candidates.csv.
+        # The candidate number here is the candidate_id from that manifest.
+        print_ln("MATCH candidate_id=%s", CANDIDATE_OFFSET + candidate)
 
-print_ln("Evaluation complete.")
+print_ln("MP-SPDZ Approx-PSI post-filter complete.")

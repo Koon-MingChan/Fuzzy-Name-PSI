@@ -1,413 +1,429 @@
 round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
 0,0,"Julen Ane Gutiérrez",0,"Gutiérrez Julen Ane",0,0
+0,1,"Artyom  Bogdanov",1,"Atryom  Bogdanov",0,4
 0,2,"Huseyn  Aliyev",2,"Aliyev Huseyn",0,0
 0,12,"Julen Julen Gutiérrez",3,"Julen. N. Gutiérrez",0,1
-0,14,"Julen Jon Gutiérrez",3,"Julen. N. Gutiérrez",0,3
+0,20,"Julen Júlia Gutiérrez",3,"Julen. N. Gutiérrez",0,4
 0,33,"Julen Jan Gutiérrez",3,"Julen. N. Gutiérrez",0,3
-0,35,"Julen Pau Gutiérrez",3,"Julen. N. Gutiérrez",0,5
 0,5,"Sebastián  Mendoza",5,"Mendoza Sebastián",0,0
 0,6,"Soo-ah  Jun",6,"Soo-ah  Jun",0,0
-0,7,"Isidora  Reyes",7,"psidora  Reyes",0,4
 0,8,"Julen Izaro Gutiérrez",8,"Julen Izaro Gutierrez",0,0
-0,9,"Chun-hung  Lin",9,"Chan-hung  Lin",0,2
 0,10,"Julen Markel Gutiérrez",10,"Gutiérrez Julen Markel",0,0
 0,11,"Daris  Jovanović",11,"Darrs  Jovanović",0,4
-0,12,"Julen Julen Gutiérrez",12,"rulen Julen Gutiérrez",0,2
-0,14,"Julen Jon Gutiérrez",12,"rulen Julen Gutiérrez",0,4
-0,33,"Julen Jan Gutiérrez",12,"rulen Julen Gutiérrez",0,4
-0,13,"Liam  Reyes",13,"Liam  Rewes",0,4
-0,12,"Julen Julen Gutiérrez",14,"Julen Jon Gutiérrrez",0,2
+0,13,"Liam  Reyes",13,"Liam  Rewes",0,2
 0,14,"Julen Jon Gutiérrez",14,"Julen Jon Gutiérrrez",0,0
-0,33,"Julen Jan Gutiérrez",14,"Julen Jon Gutiérrrez",0,4
-0,15,"Milana  Bondar",15,"Milana  Bdondar",0,3
+0,17,"Julen Ibai Gutiérrez",17,"Julen Ibai Gtuiérrez",0,4
 0,19,"Julen Danel Gutiérrez",19,"hJulen Danel Gutiérrez",0,3
+0,20,"Julen Júlia Gutiérrez",20,"Julen Júlia Gatiérrez",0,4
 0,21,"Maddi  Fernández",21,"Fernández Maddi",0,0
 0,12,"Julen Julen Gutiérrez",23,"Julen. E. Gutiérrez",0,2
-0,14,"Julen Jon Gutiérrez",23,"Julen. E. Gutiérrez",0,4
 0,33,"Julen Jan Gutiérrez",23,"Julen. E. Gutiérrez",0,4
 0,24,"Liz  Melo",24,"Liz  Melo",0,0
+0,26,"Leonardo  Mariani",26,"kLeonardo  Mariani",0,3
 0,27,"Himari  Ishii",27,"Himari  Ishii",0,0
-0,30,"Aada  Jokinen",30,"Acda  Jokinen",0,4
+0,29,"Julen Paula Gutiérrez",29,"Julen Paula Guptiérrez",0,3
+0,30,"Aada  Jokinen",30,"Acda  Jokinen",0,3
+0,31,"Julen Nil Gutiérrez",31,"Julen Nkl Gutiérrez",0,4
 0,32,"Carolina  Rojas",32,"Carolina  Rojas",0,0
 0,12,"Julen Julen Gutiérrez",33,"Julen Jan Gutiérrez",0,2
-0,14,"Julen Jon Gutiérrez",33,"Julen Jan Gutiérrez",0,4
 0,33,"Julen Jan Gutiérrez",33,"Julen Jan Gutiérrez",0,0
 0,34,"Aline  Levi",34,"Aline  Levj",0,4
 0,36,"Julen Àlex Gutiérrez",36,"Julen Alex Gutierrez",0,0
+0,37,"Julen Marti Gutiérrez",37,"Julen Marti Gutiérrze",0,3
 0,38,"José  Alves",38,"José  Alves",0,0
+0,767,"João  Alves",38,"José  Alves",0,4
+0,12,"Julen Julen Gutiérrez",39,"Julen Hugo Gutierrez",0,4
 0,39,"Julen Hugo Gutiérrez",39,"Julen Hugo Gutierrez",0,0
-0,42,"Artiom  Munteanu",42,"Ardiom  Munteanu",0,4
-0,45,"Muhammad  David",45,"Muhmmad  David",0,3
 0,46,"Jude  Chadad",46,"Jade  Chadad",0,3
 0,23,"Julen Emma Gutiérrez",47,"Julen Emma Gutierrez",0,0
 0,47,"Julen Emma Gutiérrez",47,"Julen Emma Gutierrez",0,0
-0,48,"Patricija  Žukauskas",48,"Patricija  Žuksuskas",0,3
-0,37,"Julen Marti Gutiérrez",50,"Julen Martín Gutiérre",0,5
+0,48,"Patricija  Žukauskas",48,"Patricija  Žuksuskas",0,1
 0,50,"Julen Martín Gutiérrez",50,"Julen Martín Gutiérre",0,3
-0,51,"Ha-joon  Joe",51,"Ha-joon  Jue",0,3
-0,479,"Ha-joon  Yoon",51,"Ha-joon  Jue",0,5
 0,53,"Olivia  Alexander",53,"Olivia  Alexander",0,0
-0,54,"Aoife  Davis",54,"Aoife  Dqvis",0,4
-0,55,"Yūna  Takada",55,"Yūna  Takaya",0,4
+0,55,"Yūna  Takada",55,"Yūna  Takaya",0,2
 0,57,"Ji-an  Gwon",57,"Gwon Ji-an",0,0
 0,58,"Julen Pablo Gutiérrez",58,"Gutiérrez Julen Pablo",0,0
+0,0,"Julen Ane Gutiérrez",59,"Julen. Á. Gutiérrez",0,3
 0,60,"Lucas  Navarrete",60,"Lucas  Navarrete",0,0
 0,65,"Ya-ting  Zoeng",65,"Zoeng Ya-ting",0,0
-0,66,"Matías  Vargas",66,"M. Vargas",0,5
 0,68,"Andrea  Javier",68,"Andrea  oavier",0,4
+0,69,"Carolina  Castro",69,"Caaolina  Castro",0,3
+0,70,"Theo  Becker",70,"Theo  eBcker",0,4
 0,71,"Yǔzé  Wú",71,"Yǔzé  Wú",0,0
 0,72,"Sarah  Chadad",72,"Sarah  Chadad",0,0
-0,75,"Murad  Ismayilov",75,"Murad  Osmayilov",0,4
+0,73,"Ida  Christensen",73,"Ida  hristensen",0,3
+0,74,"Emilia  Steiner",74,"Emilis  Steiner",0,4
 0,76,"Mark Dmitry Petrov",76,"Mark Dmitry Petrov",0,0
 0,92,"Mark Dmitry Petrov",76,"Mark Dmitry Petrov",0,0
-0,77,"Nathan  Martin",77,"Nathqn  Martin",0,4
 0,78,"Sunita  Chhetri",78,"Sunita  Chhvetri",0,3
 0,83,"Yūna  Kaneko",83,"Yūna  Kaneko",0,0
 0,84,"Sō  Matsumoto",84,"So  Matsumoto",0,0
-0,85,"Gayane  Khachatryan",85,"Gqyane  Khachatryan",0,4
+0,85,"Gayane  Khachatryan",85,"Gqyane  Khachatryan",0,3
 0,86,"Ajda  Horvat",86,"Ajda  Horvat",0,0
+0,87,"Eleni  Samaras",87,"Eleni  Samaars",0,2
 0,88,"Mark Irina Petrov",88,"Mark Irifa Petrov",0,4
 0,91,"Beatrice  Parisi",91,"Bewtrice  Parisi",0,4
+0,93,"Mark Andrei Petrov",93,"Mwrk Andrei Petrov",0,4
 0,94,"Huseyn  Ismayilov",94,"Huseyn  Ismayilov",0,0
 0,96,"Mark Evgeny Petrov",96,"Mark Evgeny Petrov",0,0
-0,97,"Freja  Mortensen",97,"Freja  Mortenien",0,4
 0,98,"Fran  Šarić",98,"Fran  Šarić",0,0
 0,99,"Ria  Joensen",99,"Ria  Joensen",0,0
 0,100,"Minato  Hirano",100,"Hirano Minato",0,0
-0,104,"Ji-a  Shen",104,"Ji-a  Scen",0,4
+0,101,"Mark Mariya Petrov",101,"Mark Petrov",0,4
+0,102,"Haruto  Ichikawa",102,"Haruto  Ichhkawa",0,4
 0,108,"Mark Elizaveta Petrov",108,"Mark Elizavea Petrov",0,2
 0,109,"Laia  Ortiz",109,"Laia  Ortiz",0,0
 0,110,"Carla  López",110,"Carla  López",0,0
 0,114,"Nino  Brunner",114,"Nino  Brunner",0,0
 0,115,"Viraj  Singh",115,"Viraj  Singh",0,0
+0,116,"Liam  Martínez",116,"jLiam  Martínez",0,3
 0,117,"Yìzé  Luó",117,"Luó Yìzé",0,0
 0,120,"Itsuki  Tanaka",120,"Tanaka Itsuki",0,0
+0,122,"Sara  Castro",122,"Sara  Caytro",0,2
 0,123,"Stefan  Janev",123,"Janev Stefan",0,0
 0,124,"Jacob  Castillo",124,"Castillo Jacob",0,0
 0,125,"Seo-jun  Woo",125,"Seo-jun  roo",0,4
-0,126,"Malen  Moreno",126,"talen  Moreno",0,3
+0,1316,"Seo-jun  Ryoo",125,"Seo-jun  roo",0,3
 0,127,"Ali  David",127,"Ali  David",0,0
 0,128,"Máté  Molnár",128,"Máté  Molnár",0,0
 0,129,"Alejandro  Romero",129,"Alejandro  Romero",0,0
+0,130,"Bautista  Morales",130,"Bauitsta  Morales",0,3
 0,132,"Aleksandar Nikola Trajanovski",132,"Aleksandar Nikola Trajanovski",0,0
 0,133,"Luknė  Jankauskas",133,"Luknė  Jankauskas",0,0
 0,134,"Ha-joon  Chen",134,"Chen Ha-joon",0,0
-0,135,"Aleksandar Dejan Trajanovski",135,"Aleksandar Dejan Trajanovsji",0,3
-0,136,"Benicio  Morales",136,"Benicuo  Morales",0,4
-0,141,"Lėja  Urbonas",141,"Lėja  Urbohas",0,4
+0,1532,"Ha-joon  Jen",134,"Chen Ha-joon",0,4
+0,136,"Benicio  Morales",136,"Benicuo  Morales",0,3
+0,138,"Margarida  Gonçalves",138,"Margarida  Gonçalve",0,3
+0,142,"Dion  Shkreli",142,"Dion  Shkrels",0,4
 0,143,"Ji-a  Shin",143,"Ji-a  Shin",0,0
-0,149,"Aleksandar Luka Trajanovski",149,"Alesandar Luka Trajanovski",0,3
+0,145,"Harris  Phillips",145,"Harrjs  Phillips",0,4
+0,146,"Noam  Segel",146,"Naom  Segel",0,4
+0,149,"Aleksandar Luka Trajanovski",149,"Alesandar Luka Trajanovski",0,2
 0,150,"James  Mendoza",150,"James  Mendoza",0,0
-0,151,"Mikael  Hansen",151,"Mikael  Hensen",0,3
-0,152,"Juan  Aguilar",152,"nJuan  Aguilar",0,3
+0,153,"Chih-wei  Li",153,"Chh-wei  Li",0,2
 0,154,"Emiliano  García",154,"García Emiliano",0,0
-0,156,"Yuina  Fujii",156,"Yuina  Fjuii",0,5
 0,158,"Leo  Heinonen",158,"Leo  Heknonen",0,4
-0,160,"Maria  Araújo",160,"Maria  Arnújo",0,4
+0,159,"Mateo  Pino",159,"cateo  Pino",0,4
 0,161,"Susanna  Hakobyan",161,"Susanna  Hakobynn",0,2
 0,163,"Dimitar  Ivanov",163,"Dimitar  Ivanov",0,0
 0,164,"David  Vera",164,"David  Vera",0,0
 0,166,"Theodore  Lee",166,"Teeodore  Lee",0,3
 0,168,"Charlotte  Cook",168,"Charlotte  Cook",0,0
-0,169,"Stanisław Antoni Kozłowski",169,"Stanisłow Antoni Kozłowski",0,2
 0,170,"Martina  Acosta",170,"Martina  Acosta",0,0
 0,171,"Samuel  López",171,"López Samuel",0,0
-0,172,"Grace  Jones",172,"Grace  Jojes",0,4
 0,173,"Cecília  Cavalcante",173,"Cecília  Cavalcant",0,3
+0,175,"Dimitar  Georgiev",175,"Dimitaj  Georgiev",0,4
 0,177,"Yekaterina  Kuznetsov",177,"Yxkaterina  Kuznetsov",0,4
-0,179,"Sakura  Ogawa",179,"Sakura  Ogswa",0,4
+0,180,"Julieta  Bustos",180,"Julieda  Bustos",0,4
+0,181,"Yǔtóng  Tsui",181,"Yǔótng  Tsui",0,4
 0,182,"Bruno  Bianchi",182,"Bruno  Bianchi",0,0
-0,183,"Cecília  Ribeiro",183,"Cecíplia  Ribeiro",0,3
+0,184,"Bisera  Popoff",184,"Bisero  Popoff",0,4
 0,185,"Liepa Gabija Stankevičius",185,"Stankevičius Liepa Gabija",0,0
 0,186,"Emine  Aydın",186,"Emine  Aydın",0,0
 0,187,"Ramazan  Ismailov",187,"Ismailov Ramazan",0,0
-0,189,"Delfina  Muñoz",189,"Delfina  Miñoz",0,3
+0,188,"Mia  O'Connor",188,"Mai  O'Connor",0,4
 0,191,"Noah  Roy",191,"Roy Noah",0,0
-0,192,"Liam  Lee",192,"piam  Lee",0,3
 0,193,"Oscar  Wilson",193,"Oscar  Wilson",0,0
-0,194,"Mary  Howard",194,"M. Howard",0,4
 0,195,"Astrid  Vásquez",195,"Astrid  Vásquez",0,0
+0,197,"Beatrice  Benedetti",197,"Beatrice  Bdnedetti",0,2
 0,198,"Sofia  Rizzi",198,"Sofia  Rizzi",0,0
-0,199,"Thomas  Wilson",199,"Thomas  Wnlson",0,4
 0,200,"Lyn  Amar",200,"Lyn  Amar",0,0
 0,201,"Mia  Moreau",201,"Mia  Moreau",0,0
-0,202,"Jennifer  Bailey",202,"Jennifer  Bailee",0,4
 0,203,"Jack  Rose",203,"Rose Jack",0,0
 0,204,"Lamija  Suljić",204,"Suljić Lamija",0,0
+0,205,"Chih-ming  Chua",205,"Chih-ming  Chuc",0,4
 0,208,"Mikhail  Vinogradov",208,"Mnkhail  Vinogradov",0,4
 0,209,"Davud  Petrović",209,"Davud  Petrović",0,0
 0,214,"Fūma  Murakami",214,"Fūma  Murakami",0,0
 0,215,"Aþena  Hansen",215,"Aþena  Hansen",0,0
-0,216,"Agustín  Tapia",216,"Agustín  Talia",0,4
-0,218,"August  Olsson",218,"August  Oesson",0,4
 0,219,"Amar  Jovanović",219,"Amar  Jovanovic",0,0
 0,220,"Aoi  Yoshida",220,"Aoi  Yoshida",0,0
-0,222,"Laura Antônia Sousa",222,"Laqura Antônia Sousa",0,3
 0,224,"Milan  Jovanović",224,"Mlan  Jovanović",0,3
 0,227,"Maneh  Sahakyan",227,"Maneh  Sahakyan",0,0
+0,228,"Jan  Szymański",228,"Jan  Szykański",0,4
 0,229,"Haru  Miyasaki",229,"Haru  Miyasaki",0,0
-0,231,"Elza  Ozols",231,"Elza  hzols",0,4
-0,233,"Laura Carlos Sousa",233,"Laura Carlos rousa",0,3
+0,231,"Elza  Ozols",231,"Elza  hzols",0,3
+0,233,"Laura Carlos Sousa",233,"Laura Carlos rousa",0,2
 0,234,"Noah  Cáceres",234,"Noah  Caceres",0,0
+0,235,"Sophia  Morais",235,"Sophka  Morais",0,3
 0,236,"Kiara  Taylor",236,"Kiara  Taylor",0,0
 0,237,"Richard  Davis",237,"Davis Richard",0,0
-0,239,"Laura Helena Sousa",239,"Laura Helenva Sousa",0,3
+0,238,"Biel  Ramos",238,"Biel  Ranos",0,4
+0,242,"Nora  Christensen",242,"N. Christensen",0,4
 0,243,"Filip  Kučera",243,"Filip  Kučera",0,0
-0,245,"Laura Maitê Sousa",245,"Lauea Maitê Sousa",0,4
-0,246,"Éabha  Sullivan",246,"Éabha  Sulliva",0,2
+0,244,"Yǔtóng  Chow",244,"Yǔtóng  Chiw",0,4
+0,247,"James  Ross",247,"James  oRss",0,3
 0,250,"Luka  Kavčič",250,"Luka  Kavcic",0,0
-0,253,"Nilay  Aliyev",253,"Niliy  Aliyev",0,2
+0,251,"Laura Gael Sousa",251,"Laura Gael Souas",0,2
+0,252,"Laura Théo Sousa",252,"Laura Tho Sousa",0,3
+0,253,"Nilay  Aliyev",253,"Niliy  Aliyev",0,1
 0,254,"Sofía  Johansen",254,"Sofía  Johansen",0,0
 0,255,"Laia  Álvarez",255,"Laia  Álvarez",0,0
+0,1122,"María  Álvarez",255,"Laia  Álvarez",0,4
+0,256,"Ao  Fujihara",256,"Ao  Fujihart",0,3
 0,257,"Emma  Parra",257,"Emma  Parar",0,2
 0,259,"Zǐhán Ruòxī Ho",259,"Zǐhán Ruòxī Ho",0,0
 0,260,"Davud  Kovačević",260,"Davud  Kovačević",0,0
 0,261,"Kiwa  Williams",261,"Kiwa  Williams",0,0
-0,262,"Lucía  Díaz",262,"Lucía  líaz",0,3
 0,263,"Zǐhán Zǐhán Ho",263,"Zǐhán. Z. Ho",0,1
 0,265,"Zǐhán Yǔtóng Ho",265,"Zihan Yutong Ho",0,0
 0,267,"Zǐhán Yǔtóng Ho",265,"Zihan Yutong Ho",0,0
 0,265,"Zǐhán Yǔtóng Ho",267,"Zǐhán Yǔtóng Ho",0,0
 0,267,"Zǐhán Yǔtóng Ho",267,"Zǐhán Yǔtóng Ho",0,0
+0,269,"José  Carvalho",269,"Joés  Carvalho",0,4
 0,270,"Do-yun  U",270,"U Do-yun",0,0
-0,272,"Mia  Potočnik",272,"ia  Potočnik",0,3
+0,271,"Helmi  Järvinen",271,"Helma  Järvinen",0,4
 0,273,"Luka  Nozadze",273,"Luka  Nozadze",0,0
-0,263,"Zǐhán Zǐhán Ho",274,"Zǐhán. Y. Ho",0,2
-0,275,"Isabella  Vidal",275,"Isabelzla  Vidal",0,3
-0,276,"William  Olofsson",276,"Willjam  Olofsson",0,4
+0,276,"William  Olofsson",276,"Willjam  Olofsson",0,3
 0,277,"Mikayel  Khachatryan",277,"Mikayel  hachatryan",0,3
-0,278,"Natálie  Novotná",278,"Natálie  Novoná",0,3
-0,279,"Maja  Kamiński",279,"Maja  Kaumiński",0,3
+0,278,"Natálie  Novotná",278,"Natálie  Novoná",0,2
+0,279,"Maja  Kamiński",279,"Maja  Kaumiński",0,2
 0,282,"Aleksandar  Todorova",282,"aleksandar  Todorova",0,0
 0,283,"Sofia  Virtanen",283,"Sofia  Virtenen",0,3
+0,284,"Éabha  O'Ryan",284,"Éabha  O'Ryazn",0,3
 0,285,"Isla  Lewis",285,"Isla  Lewis",0,0
+0,286,"Sofía Agustina Hernández",286,"Sofía Agustona Hernández",0,4
 0,287,"Daniel  García",287,"Doniel  García",0,4
 0,290,"Sofía Gaspar Hernández",290,"Sefía Gaspar Hernández",0,4
 0,291,"Sofía Santiago Hernández",291,"Hernández Sofía Santiago",0,0
-0,294,"John  Jackson",294,"pohn  Jackson",0,3
+0,292,"Sofía Lucas Hernández",292,"Sofía Luca sHernández",0,4
+0,296,"Szymon  Zieliński",296,"Szysmon  Zieliński",0,3
 0,297,"Ginevra  Ferretti",297,"Ferretti Ginevra",0,0
 0,299,"Ji-ho  Koh",299,"Ji-ho  Koh",0,0
 0,300,"Omer  Mizrahi",300,"Omer  Mizrahi",0,0
-0,301,"Zǐhán  Mǎ",301,"Zǐkán  Mǎ",0,4
-0,303,"Ema Nagisa Nakashima",303,"Ema Naggisa Nakashima",0,1
+0,302,"Chih-ming  Ieong",302,"Chih-ming  Iecong",0,3
 0,307,"Matej  Kovač",307,"Matej  Kovač",0,0
 0,309,"Ji-ho  Ahn",309,"Ji-ho  Ahn",0,0
 0,310,"Filip  Kavčič",310,"Filip  Kavčič",0,0
-0,313,"Yuna  Shimada",313,"Y. Shimada",0,4
+0,311,"Ema Aoi Nakashima",311,"Ema Aoi Nakashkma",0,4
+0,312,"Uta  Kudō",312,"Uts  Kudō",0,4
 0,315,"Ema Yūma Nakashima",315,"Ema Yūma Nakashima",0,0
-0,321,"Ema Hina Nakashima",315,"Ema Yūma Nakashima",0,5
 0,333,"Ema Yua Nakashima",315,"Ema Yūma Nakashima",0,2
-0,316,"Ema Haruma Nakashima",316,"Ema Harumw Nakashima",0,2
-0,318,"Ema Haru Nakashima",316,"Ema Harumw Nakashima",0,4
-0,317,"Hamza  Savić",317,"Hamza  Savkć",0,4
-0,316,"Ema Haruma Nakashima",318,"Ema Haru kakashima",0,5
 0,318,"Ema Haru Nakashima",318,"Ema Haru kakashima",0,3
 0,319,"Gustavs  Ozols",319,"Gustavs  Ozols",0,0
 0,320,"Mehmet  Şimşek",320,"Mehmet  Şimşek",0,0
-0,315,"Ema Yūma Nakashima",321,"Ema Hina Nakashima",0,5
 0,321,"Ema Hina Nakashima",321,"Ema Hina Nakashima",0,0
-0,333,"Ema Yua Nakashima",321,"Ema Hina Nakashima",0,5
 0,322,"Tomás  Orellana",322,"Tomas  Orellana",0,0
 0,323,"Ema Uta Nakashima",323,"Ema Uta Nakashima",0,0
 0,324,"Lilja  Mäkinen",324,"Lilja  Makinen",0,0
 0,325,"Isla  Roberts",325,"Roberts Isla",0,0
 0,326,"Hasan  Kılıç",326,"Kılıç Hasan",0,0
+0,1863,"Hasan  Kılıç",326,"Kılıç Hasan",0,0
 0,327,"Min-jun  Pak",327,"Min-jun  Pak",0,0
-0,328,"Diego  Peña",328,"Diygo  Peña",0,4
+0,328,"Diego  Peña",328,"Diygo  Peña",0,3
 0,329,"Mùyáng  Law",329,"Mùyáng  Law",0,0
-0,321,"Ema Hina Nakashima",330,"Ema nzu Nakashima",0,5
-0,332,"Lucas  Lewis",332,"Lucas  Lwis",0,3
+0,331,"Aimar  Pérez",331,"Aimar  Pédrez",0,2
 0,334,"Ema Mei Nakashima",334,"Ema Mei Nakashima",0,0
 0,335,"Ema Riko Nakashima",335,"Ema Riko Nakashima",0,0
+0,336,"Ao  Matsuda",336,"Ao  Matsmda",0,4
 0,337,"Grace  Davis",337,"Gace  Davis",0,3
-0,338,"Fūma  Fujihara",338,"Fūma  Fujohara",0,4
-0,725,"Fūma  Fujihara",338,"Fūma  Fujohara",0,4
-0,339,"Martina  Franco",339,"Martina  Frunco",0,4
-0,432,"Martina  Franco",339,"Martina  Frunco",0,4
-0,341,"Mark  Novikov",341,"Mark  Nqvikov",0,3
+0,342,"Ámbar  Suárez",342,"Ámbar  Sugrez",0,3
 0,343,"Anar  Jafarov",343,"Jafarov Anar",0,0
 0,345,"Riko  Ishikawa",345,"Riko  Ishikawa",0,0
 0,346,"Matija Lea Stojanović",346,"Matija Lea Stojanović",0,0
 0,348,"Mattia  Grasso",348,"Maattia  Grasso",0,1
 0,350,"Mia  Kaur",350,"Mia  Kaur",0,0
+0,351,"Marija  Bogdanov",351,"Mzrija  Bogdanov",0,4
 0,352,"Hinata  Yoshida",352,"Hinata  Yoshida",0,0
 0,354,"Arthur  Lima",354,"Arthur  Lima",0,0
 0,356,"Elijah  Parker",356,"Elijah  Parker",0,0
-0,362,"Mila  Peretz",362,"Mila  Pererz",0,3
-0,363,"David  Martin",363,"Dsvid  Martin",0,4
-0,364,"Noah  Bah",364,"Noah  Bgah",0,3
-0,347,"Matija Natalija Stojanović",367,"Matija Stojanović",0,5
-0,376,"Matija Dušan Stojanović",367,"Matija Stojanović",0,5
+0,357,"Jiya  Singh",357,"Jiya  Sinhg",0,4
+0,359,"Meryem  Kara",359,"Meryjm  Kara",0,3
+0,361,"Olivia  Moore",361,"Olivit  Moore",0,4
+0,366,"Eun-woo  Hui",366,"Eun-woo  Hus",0,4
+0,349,"Matija Mateo Stojanović",367,"Matija Stojanović",0,3
+0,360,"Matija Marija Stojanović",367,"Matija Stojanović",0,2
+0,368,"Evelyn  Jenkins",368,"Evelyn  Jenkisn",0,3
 0,369,"Mary  Anderson",369,"Mary  Anderson",0,0
+0,370,"Sofia  Fontana",370,"S. Fontana",0,4
+0,371,"Sofia  Ivanov",371,"Sofia  Ivanvo",0,4
+0,1206,"Sofia  Ivanov",371,"Sofia  Ivanvo",0,4
+0,372,"Mateo  Hernández",372,"Matfo  Hernández",0,4
+0,373,"Mateo  Popović",373,"Mato  Popović",0,3
 0,374,"Juliana  Araújo",374,"Araújo Juliana",0,0
 0,375,"Jade  Petit",375,"Petit Jade",0,0
 0,376,"Matija Dušan Stojanović",376,"Matija Dušan Stojaanović",0,1
-0,378,"Georgi  Georgiev",378,"Georgi  Georgioev",0,3
+0,378,"Georgi  Georgiev",378,"Georgi  Georgioev",0,2
 0,381,"Victoria María José García",381,"Victoria María José Gorcía",0,2
-0,383,"Freja  Mejía",383,"Ferja  Mejía",0,5
+0,382,"Yasmin  Hazan",382,"Yasmin  Haazn",0,3
+0,383,"Freja  Mejía",383,"Ferja  Mejía",0,3
 0,385,"Ava  Thomas",385,"Thomas Ava",0,0
-0,386,"Lina  Frei",386,"Lina  Frep",0,4
+0,1463,"Ava  Thomas",385,"Thomas Ava",0,0
 0,387,"Camila  León",387,"Crmila  León",0,4
 0,388,"Victoria Santiago García",388,"Victoria Santiago García",0,0
 0,390,"Fūma  Fujii",390,"Fūma  Fujii",0,0
-0,391,"Kiara  Williams",391,"iKara  Williams",0,5
 0,392,"James  Morales",392,"J. Morales",0,4
-0,397,"Haruna  Saitō",397,"Harana  Saitō",0,4
+0,395,"Ema  Taketa",395,"Ema  Taklta",0,4
 0,399,"Dominykas  Žukauskas",399,"Žukauskas Dominykas",0,0
 0,400,"Sofía Regina Delgado",400,"Delgado Sofía Regina",0,0
 0,401,"Elizabeth  Edwards",401,"Elizabet  Edwards",0,3
 0,402,"Juliana  Correa",402,"wuliana  Correa",0,4
 0,403,"Sem  De Boer",403,"Sem  De Boer",0,0
-0,404,"Manuel  Molina",404,"Manuel  Moliba",0,4
 0,405,"Jack  Thomas",405,"Thomas Jack",0,0
 0,407,"Aurora  Parisi",407,"Parisi Aurora",0,0
 0,598,"Aurora  Parisi",407,"Parisi Aurora",0,0
-0,410,"Sofía Sebastián Delgado",410,"Sofía eebastián Delgado",0,3
-0,411,"Matías  Miranda",411,"Mtías  Miranda",0,3
-0,412,"María  Giménez",412,"María  Giménz",0,3
-0,419,"Liam  Brown",419,"Liay  Brown",0,4
+0,408,"Sofía Santiago Delgado",408,"Sofía Santiago Delgedo",0,2
+0,412,"María  Giménez",412,"María  Giménz",0,2
 0,422,"Liam  Tremblay",422,"Liam  Tremnlay",0,4
-0,425,"Sara  Popoff",425,"Sara  Ppooff",0,3
-0,428,"Lara  Meyers",428,"Lara  Msyers",0,4
+0,424,"Biljana  Andov",424,"Biljana  Adnov",0,3
+0,425,"Sara  Popoff",425,"Sara  Ppooff",0,2
+0,426,"Mateo  Luka",426,"Mateo  Luca",0,4
+0,428,"Lara  Meyers",428,"Lara  Msyers",0,3
 0,431,"Benjamin  Long",431,"Benjamin  Long",0,0
 0,433,"Gagik  Arakelyan",433,"Gagik  Arakelyan",0,0
 0,434,"Maria  Cavalcante",434,"Cavalcante Maria",0,0
 0,435,"Davit  Khachatryan",435,"Davif  Khachatryan",0,4
-0,436,"Ye-jun  Jung",436,"Ye-ju  Jung",0,2
-0,437,"Robert  Gutierrez",437,"Rosbert  Gutierrez",0,2
 0,441,"Liam  Navarro",441,"Liam  Navarro",0,0
 0,442,"Anna  Fischer",442,"Fischer Anna",0,0
 0,443,"Luis  Ramírez",443,"Luis  Ramírez",0,0
 0,444,"Eleni  Kontos",444,"Eleni  Kontos",0,0
-0,447,"Lucas Luna Hall",447,"Lucas Luna Hlal",0,4
 0,448,"Jakov  Božić",448,"Jakov  Bozic",0,0
 0,450,"Lucas Oliver Hall",450,"Lucas Oliver Hall",0,0
-0,454,"Valentina  Rosas",454,"Valentina  Rozas",0,3
-0,455,"Haruna  Nakayama",455,"Haruna  Nakayaia",0,4
-0,456,"Maria  Ben-David",456,"Maria  Ben-Davi",0,3
+0,452,"Catalina  Benítez",452,"Catalina  Benntez",0,3
+0,453,"Lucas William Hall",453,"Lucas Willaim Hall",0,2
+0,454,"Valentina  Rosas",454,"Valentina  Rozas",0,2
+0,455,"Haruna  Nakayama",455,"Haruna  Nakayaia",0,2
+0,457,"Lucas Theodore Hall",457,"Lucas Tjeodore Hall",0,4
 0,458,"Chun-hung  Choa",458,"Cbun-hung  Choa",0,2
+0,1118,"Chun-hung  Chhoà",458,"Cbun-hung  Choa",0,3
 0,459,"Leonor  Matos",459,"Leonor  Metos",0,4
 0,460,"Ramona  Gómez",460,"Ramona  Gomez",0,0
-0,463,"Olivia  Larsen",463,"lOivia  Larsen",0,5
+0,461,"Mia Isabella Sosa",461,"Moa Isabella Sosa",0,4
+0,463,"Olivia  Larsen",463,"lOivia  Larsen",0,3
+0,1600,"Olivia  Larsen",463,"lOivia  Larsen",0,3
 0,464,"Daniel  Méndez",464,"Daniel  Mkéndez",0,3
-0,465,"Mia Ámbar Sosa",465,"Mai Ámbar Sosa",0,5
+0,465,"Mia Ámbar Sosa",465,"Mai Ámbar Sosa",0,2
+0,467,"Mia Delfina Sosa",467,"Mia Delfifna Sosa",0,2
 0,468,"Hugo  Svensson",468,"Hugo  Svensoon",0,2
-0,469,"Yu-jun  Ju",469,"Yu-jxn  Ju",0,3
-0,471,"Álvaro  Morales",471,"Álvaro  Morames",0,3
+0,470,"Aimar  Iglesias",470,"Aimor  Iglesias",0,4
+0,472,"Josefa  Torres",472,"Josfea  Torres",0,3
+0,473,"Fūma  Shimizu",473,"Fnma  Shimizu",0,4
+0,474,"Mia Benicio Sosa",474,"Mia Benicio Sasa",0,1
 0,475,"Dorothy  Myers",475,"Dorothy  Myers",0,0
-0,477,"Jack  Brown",477,"J. Brown",0,5
+0,476,"Hugo  Muñoz",476,"Hujgo  Muñoz",0,3
 0,478,"Matilde  Caputo",478,"Matilde  Caputo",0,0
 0,479,"Ha-joon  Yoon",479,"Ha-joon  Yooh",0,2
+0,480,"Aoi  Taketa",480,"Aoi  Tazketa",0,3
 0,481,"Lucija  Jukić",481,"Jukić Lucija",0,0
+0,482,"Esma  Babić",482,"Esam  Babić",0,4
 0,496,"Thomas Thomas Brown",483,"Thomas. S. Brown",0,1
 0,484,"Andrias  Olsen",484,"Andrias  Olsen",0,0
 0,485,"Mateo  Muñoz",485,"Mateo  Muñoz",0,0
+0,487,"Thomas Isla Brown",487,"Thkmas Isla Brown",0,4
 0,492,"Yu-jun  Oh",492,"pu-jun  Oh",0,4
 0,494,"Nikola  Ivanova",494,"Ivanova Nikola",0,0
+0,495,"Isidora  Godoy",495,"Isidora  Godey",0,3
 0,496,"Thomas Thomas Brown",496,"Thomas. T. Brown",0,1
-0,498,"Ha-rin  Jee",498,"Ha-rin  Jte",0,4
-0,499,"Gaspar  Carrasco",499,"Gaspar  Currasco",0,3
 0,496,"Thomas Thomas Brown",500,"Thomas Brown",0,0
-0,509,"Thomas Noah Brown",500,"Thomas Brown",0,5
-0,518,"Thomas Nathan Brown",500,"Thomas Brown",0,5
-0,501,"Goran  Pavlovski",501,"Goran  Pavlivski",0,3
-0,503,"Matilde  Bianchi",503,"Matilde  Bitnchi",0,4
+0,511,"Thomas Liam Brown",500,"Thomas Brown",0,4
+0,503,"Matilde  Bianchi",503,"Matilde  Bitnchi",0,3
 0,504,"Olivia  Carrizo",504,"Olivia  Carrhzo",0,4
-0,508,"Mia  Henríquez",508,"Mija  Henríquez",0,3
-0,496,"Thomas Thomas Brown",511,"Thomas Oiam Brown",0,5
+0,505,"Maria  Long",505,"Marbia  Long",0,3
+0,506,"Olivia  Fisher",506,"Olivia  Risher",0,4
+0,496,"Thomas Thomas Brown",511,"Thomas Oiam Brown",0,4
+0,511,"Thomas Liam Brown",511,"Thomas Oiam Brown",0,4
 0,512,"Annie  Ali",512,"Aonnie  Ali",0,3
-0,515,"Vittoria  Di Stefano",515,"Vittoria. D. Stefano",0,3
-0,517,"Nino  Gogoladze",517,"Nino  Gogaladze",0,3
-0,519,"Richard  Roberts",519,"Richar  Roberts",0,3
+0,516,"Anna  Solovyov",516,"Anna  Solovoyv",0,0
+0,518,"Thomas Nathan Brown",518,"Thomas Nathan Byown",0,4
 0,520,"Sophia  Salvador",520,"Sophia  Salvador",0,0
+0,521,"Maximilian  Moser",521,"Maximilian  Noser",0,3
 0,523,"Eitan  Biton",523,"Eiton  Biton",0,2
 0,524,"Mia  Rogers",524,"Mina  Rogers",0,3
 0,525,"Henry  Ward",525,"Henry  Ward",0,0
 0,526,"Sara  Muratović",526,"Sara  Muratović",0,0
-0,527,"Amar  Salihović",527,"Amar  Salihovć",0,3
-0,528,"Alice  Correia",528,"Alice  Corteia",0,4
 0,530,"Tomás  Carvajal",530,"Tomas  Carvajal",0,0
 0,531,"Emma  De Jong",531,"Emma  De Joong",0,1
-0,532,"Ema Itsuki Shimada",532,"Ema Itsuku Shimada",0,4
-0,535,"Sō  Nakagawa",535,"Sō  Naknagawa",0,2
+0,532,"Ema Itsuki Shimada",532,"Ema Itsuku Shimada",0,3
+0,534,"Álvaro  Rubio",534,"Álvaro  Ruiio",0,4
+0,535,"Sō  Nakagawa",535,"Sō  Naknagawa",0,1
 0,536,"Aoi  Miyasaki",536,"Aoi  Miasaki",0,3
-0,538,"Ema Haru Shimada",538,"Ema Haru Shimbda",0,3
+0,538,"Ema Haru Shimada",538,"Ema Haru Shimbda",0,2
 0,541,"Camila  Maldonado",541,"Camila  Maldonado",0,0
+0,543,"Ema Uta Shimada",543,"Ema Uto Shimada",0,3
+0,545,"Uta  Imai",545,"kta  Imai",0,4
 0,546,"Chin-lung  Chong",546,"Chin-lung  Chong",0,0
+0,1348,"Chin-lung  Lǐ",546,"Chin-lung  Chong",0,4
 0,549,"Markel  Rodríguez",549,"Rodríguez Markel",0,0
-0,552,"Olivia  Koskinen",552,"Onivia  Koskinen",0,4
+0,551,"Anna  Moreau",551,"Anna  oreau",0,3
 0,553,"Olivia  Bakker",553,"Bakker Olivia",0,0
 0,554,"Ema Mei Shimada",554,"Ema Mei Shimada",0,0
-0,555,"Ao  Yamazaki",555,"Ao  Yamazakq",0,4
-0,556,"Mateo  Aguirre",556,"Mateo  Aguirrz",0,4
 0,557,"Tarana  Abbasov",557,"Tarana  Abbasov",0,0
-0,558,"Agnes  Christensen",558,"Agnes  Christense",0,2
-0,559,"Laura  Kamiński",559,"Laura  Ksmiński",0,4
-0,562,"Ilgar  Abdullayev",562,"nlgar  Abdullayev",0,4
+0,559,"Laura  Kamiński",559,"Laura  Ksmiński",0,3
+0,561,"Mikaere  Kaur",561,"Mikaerf  Kaur",0,3
+0,563,"Ámbar Catalina Bruno",563,"Ámbar Catalina Gruno",0,3
+0,564,"Shu-fen  Lîm",564,"Shu-fen  Lmî",0,4
+0,565,"Emiliano  Valencia",565,"Emihiano  Valencia",0,2
+0,566,"Hina  Takagi",566,"Hina  Twkagi",0,3
 0,567,"Ámbar Delfina Bruno",567,"Ámbar Delfina Bruno",0,0
-0,569,"Marie  Reiter",569,"Marie  Rester",0,4
-0,570,"María José  Ríos",570,"María Jusé  Ríos",0,3
-0,966,"María José  Ríos",570,"María Jusé  Ríos",0,3
+0,568,"Ámbar Mateo Bruno",568,"Ámba Mateo Bruno",0,3
+0,569,"Marie  Reiter",569,"Marie  Rester",0,3
 0,571,"Jerónimo  López",571,"Jeronimo  Lopez",0,0
 0,572,"Robert  Gomez",572,"Rober  Gomez",0,3
 0,573,"Sebastián  Cabrera",573,"Sebastián  Cabrera",0,0
+0,574,"Uri  Malcah",574,"Uri  Malcha",0,4
 0,575,"Niharika  Sharma",575,"Niharika  Sharmxa",0,3
 0,576,"Ámbar Ciro Bruno",576,"Ambar Ciro Bruno",0,0
+0,568,"Ámbar Mateo Bruno",577,"Ámbar Bruno",0,4
+0,577,"Ámbar Liam Bruno",577,"Ámbar Bruno",0,4
 0,578,"Ayzere  Abdrahmanov",578,"Eyzere  Abdrahmanov",0,3
 0,579,"I-chun  Huáng",579,"I-chun  cuáng",0,2
-0,580,"Michael  Nelson",580,"Michael  Nslson",0,3
+0,1296,"I-chun  Huang",579,"I-chun  cuáng",0,2
 0,581,"Agustín  Sanhueza",581,"Agustín  Sanhueza",0,0
 0,584,"Ana  Ferreira",584,"Ana  Ferreira",0,0
 0,585,"Yǔxī  Tsui",585,"Yǔxī  Tsui",0,0
 0,588,"Haru  Nakano",588,"Nakano Haru",0,0
-0,589,"Joel  Berisha",589,"Juel  Berisha",0,4
 0,590,"Rasmus Mark Semjonov",590,"Rasmus Mark Semjonov",0,0
-0,591,"Rasmus Hugo Semjonov",591,"Raskus Hugo Semjonov",0,3
+0,591,"Rasmus Hugo Semjonov",591,"Raskus Hugo Semjonov",0,4
+0,592,"Rasmus Robin Semjonov",592,"Rasmu sRobin Semjonov",0,4
 0,595,"Felipe  Gómez",595,"Felipe  Gómez",0,0
+0,407,"Aurora  Parisi",598,"Aurmra  Parisi",0,2
+0,598,"Aurora  Parisi",598,"Aurmra  Parisi",0,2
 0,599,"Mattia  Palmieri",599,"Mattia  Palmieri",0,0
 0,600,"August  Rodríguez",600,"August  Rodriguez",0,0
-0,602,"Mia  Godoy",602,"Mima  Godoy",0,3
-0,605,"Mark Alexandra Melnic",605,"Marm Alexandra Melnic",0,4
+0,601,"Leo  Rodríguez",601,"Leo  Rodrgíuez",0,4
+0,602,"Mia  Godoy",602,"Mima  Godoy",0,2
+0,606,"Maël  André",606,"Maël  Annré",0,4
 0,607,"Julieta  Hernández",607,"Mulieta  Hernández",0,4
+0,608,"Jakob  Mlakar",608,"Jakob  Mlakqr",0,3
 0,609,"Georgia  Kontos",609,"Georgia  Kontos",0,0
-0,611,"Mark Daniel Melnic",611,"Mark Daniel Melnivc",0,3
-0,615,"Ahmad  Mizrachi",615,"Ahmfd  Mizrachi",0,4
+0,612,"Ezekiel  Castro",612,"Ezekiael  Castro",0,3
 0,617,"Mark Ion Melnic",617,"Maark Ion Melnic",0,1
 0,620,"Léna Anna Tóth",620,"Tóth Léna Anna",0,0
+0,637,"Léna Ádám Tóth",620,"Tóth Léna Anna",0,4
 0,621,"Léna Léna Tóth",621,"Tóth Léna Léna",0,0
 0,623,"Léna Emma Tóth",621,"Tóth Léna Léna",0,4
-0,625,"Léna Lili Tóth",621,"Tóth Léna Léna",0,3
-0,622,"Rayana  Kim",622,"Rahana  Kim",0,4
+0,625,"Léna Lili Tóth",621,"Tóth Léna Léna",0,2
 0,621,"Léna Léna Tóth",623,"Lena Emma Toth",0,4
 0,623,"Léna Emma Tóth",623,"Lena Emma Toth",0,0
 0,621,"Léna Léna Tóth",625,"Léna Tóth",0,0
 0,623,"Léna Emma Tóth",625,"Léna Tóth",0,4
-0,625,"Léna Lili Tóth",625,"Léna Tóth",0,3
+0,625,"Léna Lili Tóth",625,"Léna Tóth",0,2
+0,627,"Zoe  Fernández",627,"Z. Fernández",0,3
 0,630,"Alice  Bianco",630,"Alice  Bianco",0,0
-0,632,"Onni  Niemi",632,"Onni  Nimi",0,3
+0,631,"William  Howard",631,"William  xoward",0,4
+0,632,"Onni  Niemi",632,"Onni  Nimi",0,2
+0,634,"Zeynab  Aliyev",634,"Zeynab  Aliyve",0,3
 0,635,"Chih-hao  Choa",635,"Choa Chih-hao",0,0
-0,636,"Yuna  Ōta",636,"Yuna  Ōtd",0,3
 0,639,"Chloé  Fournier",639,"Chloé  Fournier",0,0
 0,640,"Tamar  Gabai",640,"Tamar  Gabai",0,0
-0,641,"Ariel  Segel",641,"Areel  Segel",0,4
-0,642,"Afonso  Soares",642,"Afondo  Soares",0,3
-0,643,"Noah  Doherty",643,"Naoh  Doherty",0,5
 0,644,"Julieta  Reyes",644,"Julieta  Reyes",0,0
 0,645,"Lucía  Sánchez",645,"Lucia  Sanchez",0,0
 0,646,"Leon  Brunner",646,"Leon  Brunner",0,0
-0,647,"Luna Dorothy Johnson",647,"Luna Dorokhy Johnson",0,4
+0,648,"Sara  Gómez",648,"Sara  Gómze",0,4
 0,650,"Yusef  Chadad",650,"Yuset  Chadad",0,4
 0,651,"Chun-hung  Lei",651,"Chn-hung  Lei",0,1
 0,652,"Ida  Kristensen",652,"Ida  Kristensen",0,0
 0,654,"Archie  Alexander",654,"Archii  Alexander",0,4
-0,656,"Danel  Jiménez",656,"Danel  Jiménze",0,5
-0,658,"Ha-rin  Shim",658,"Ha-rie  Shim",0,4
+0,656,"Danel  Jiménez",656,"Danel  Jiménze",0,3
+0,657,"Jude  Azoulay",657,"Jude  Azoulajy",0,3
+0,660,"Ádám  Szilágyi",660,"Ádám  uzilágyi",0,4
+0,661,"Jakub  Jankowski",661,"Jakub  Jankowsko",0,3
 0,662,"Emil  Möller",662,"Emil  Möller",0,0
-0,663,"Matthildur  Jensen",663,"iatthildur  Jensen",0,4
-0,664,"Gabriele  Rinaldi",664,"Gabriele  Rinuldi",0,4
 0,665,"Onni  Järvinen",665,"Onni  Jarvinen",0,0
 0,666,"Dora  Grgić",666,"Grgić Dora",0,0
+0,667,"Dorothy  Kelly",667,"Dorotqy  Kelly",0,4
 0,668,"Luna Liam Johnson",668,"Luna Liim Johnson",0,4
+0,670,"Ha-rin  Jeon",670,"Ha-rin  Jaeon",0,3
 0,671,"Arman  Mkrtchyan",671,"Arman  Mkrtchyan",0,0
 0,672,"Luciana  Ramírez",672,"Luciana  Ramírez",0,0
 0,668,"Luna Liam Johnson",673,"Luna Johnson",0,4
@@ -417,29 +433,31 @@ round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
 0,682,"Riko  Kojima",682,"Eiko  Kojima",0,4
 0,685,"Viktorie  Dvořáková",685,"Dvořáková Viktorie",0,0
 0,687,"Camila  Rodríguez",687,"Camila  Rodríyuez",0,4
+0,688,"Martina  Muñoz",688,"Marhina  Muñoz",0,4
 0,690,"Maria  Simões",690,"Simões Maria",0,0
-0,691,"David  Clark",691,"Davxd  Clark",0,4
 0,693,"Richard  Peterson",693,"Richard  Peterson",0,0
 0,695,"Valentina  Lechner",695,"Valenthna  Lechner",0,3
-0,696,"Seo-yun Ju-won Shen",696,"Seo-yun Ju-won Sben",0,4
 0,697,"Ona  Fernández",697,"Ona  Fernández",0,0
-0,698,"Jori  Golan",698,"Jori  Golaz",0,4
-0,700,"Emine Emine Demir",700,"Ejine Emine Demir",0,2
 0,701,"Haruto  Fujiwara",701,"Haruto  Fujiwara",0,0
+0,702,"Saar  Van Leeuwen",702,"Saa  Van Leeuwen",0,3
 0,703,"Mateo  Castillo",703,"Mateo  Castgillo",0,3
-0,704,"Maxim  Ionescu",704,"Maxim  Ioneacu",0,4
+0,705,"Emine Şerife Demir",705,"Emine Şerife Demyr",0,2
+0,706,"Sōma  Yamaguchi",706,"Sōma  Yamaguchu",0,4
 0,700,"Emine Emine Demir",708,"Emine. M. Demir",0,2
 0,730,"Emine Miraç Demir",708,"Emine. M. Demir",0,4
+0,710,"Emine Ahmet Demir",710,"Emine Ahmet jemir",0,4
 0,712,"Emine Hüseyin Demir",712,"Emine Hüseyin Demir",0,0
-0,714,"Angel  Tan",714,"Angel  Tad",0,3
+0,713,"Emine Hasan Demir",713,"Emine Hasan eDmir",0,2
 0,715,"Emine İsmail Demir",715,"Demir Emine İsmail",0,0
+0,717,"Narine  Margaryan",717,"Nyrine  Margaryan",0,1
+0,718,"Hudson  Anderson",718,"Hodson  Anderson",0,4
 0,721,"Hugo  Morales",721,"Hugo  Morales",0,0
 0,722,"Mary  Clark",722,"Margy  Clark",0,3
 0,724,"Emine Azra Demir",724,"Emine Azra Demir",0,0
 0,338,"Fūma  Fujihara",725,"Fūma  Fujihara",0,0
 0,725,"Fūma  Fujihara",725,"Fūma  Fujihara",0,0
+0,726,"Markus  Thomsen",726,"Markus  Thmosen",0,4
 0,727,"Viktória  Hudák",727,"Viktoria  Hudak",0,0
-0,731,"Bruno  Arias",731,"Brtno  Arias",0,4
 0,732,"Mees  Meijer",732,"Mees  Meijer",0,0
 0,700,"Emine Emine Demir",733,"Emine Demir",0,0
 0,730,"Emine Miraç Demir",733,"Emine Demir",0,4
@@ -447,32 +465,37 @@ round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
 0,700,"Emine Emine Demir",735,"Emine Demir",0,0
 0,730,"Emine Miraç Demir",735,"Emine Demir",0,4
 0,724,"Emine Azra Demir",736,"Emine. A. Demir",0,3
+0,736,"Emine Aras Demir",736,"Emine. A. Demir",0,4
+0,737,"Maximiliano  Farías",737,"Maximilizno  Farías",0,3
 0,738,"Roel Amelia Halili",738,"Halili Roel Amelia",0,0
 0,741,"Si-woo  An",741,"Si-woo  An",0,0
 0,738,"Roel Amelia Halili",743,"Roel Amra Halili",0,4
+0,743,"Roel Ambra Halili",743,"Roel Amra Halili",0,3
 0,745,"Roel Melisa Halili",745,"Roel Melisa Halili",0,0
 0,747,"Roel Reina Halili",747,"Roel Reiyna Halili",0,3
+0,748,"Leandra  Gjika",748,"Leandra  Gjiak",0,3
+0,1115,"Noah  Johnson",749,"Noah  Johanssn",0,4
+0,750,"Ali  Demirović",750,"Ali  Deimrović",0,4
 0,751,"Esma  Salihović",751,"Esma  Salihović",0,0
-0,753,"Jakov  Knežević",753,"Jakov  Knerević",0,4
 0,754,"Ajda  Kavčič",754,"Ajda  Kavčič",0,0
+0,756,"Tereza  Veselá",756,"Tareza  Veselá",0,3
+0,757,"Emma  Martínez",757,"Emma  Mzrtínez",0,3
 0,758,"Charlotte Mary Morris",758,"Morris Charlotte Mary",0,0
 0,759,"Nik  Kovačič",759,"Nik  Kovacic",0,0
-0,761,"Charlotte Barbara Morris",761,"Charlotte Barbara Morsis",0,4
-0,762,"Julija  Petek",762,"Jilija  Petek",0,4
+0,761,"Charlotte Barbara Morris",761,"Charlotte Barbara Morsis",0,3
 0,763,"Charlotte Jennifer Morris",763,"Charlotte Jennifer Morris",0,0
 0,765,"Charlotte Susan Morris",765,"Charlotte Susan Morris",0,0
-0,766,"Charlotte Margaret Morris",766,"Chkarlotte Margaret Morris",0,3
+0,38,"José  Alves",767,"Alves João",0,4
 0,767,"João  Alves",767,"Alves João",0,0
 0,769,"Ji-an  Munn",769,"Ji-an  Munn",0,0
-0,772,"Ahmed  Mehmedović",772,"Ahmed  Mehmidović",0,2
-0,758,"Charlotte Mary Morris",774,"Charlotte. R. Morris",0,5
-0,774,"Charlotte Richard Morris",774,"Charlotte. R. Morris",0,4
+0,770,"Maja  Romero",770,"Maja  sRomero",0,3
+0,771,"Mùchén  Zhào",771,"Mochén  Zhào",0,4
 0,775,"Nora  Domínguez",775,"Nora  Domínguecz",0,3
 0,776,"Kári  Kvaran",776,"Kári  Kvaran",0,0
 0,777,"Luka  Popović",777,"Luka  Popović",0,0
+0,1013,"Luka  Popović",777,"Luka  Popović",0,0
 0,779,"I-chun  Coi",779,"Coi I-chun",0,0
-0,782,"Charlotte Sophia Morris",782,"Charlotte Sokhia Morris",0,4
-0,785,"Sophie  Clarke",785,"Sophie  Clarnke",0,3
+0,781,"Lucas  López",781,"Lukas  López",0,4
 0,786,"Paul  Fischer",786,"Paul  Fischer",0,0
 0,788,"Freya  Patel",788,"Patel Freya",0,0
 0,789,"Charlotte Noah Morris",789,"Charlotte Naah Morris",0,4
@@ -480,33 +503,36 @@ round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
 0,791,"Alice  Larsson",791,"Larsson Alice",0,0
 0,792,"Tim  Horvat",792,"Tim  Horvat",0,0
 0,793,"Yìchén  Lee",793,"Yìchén  Lee",0,0
-0,758,"Charlotte Mary Morris",794,"Charlotte. H. Morris",0,5
-0,789,"Charlotte Noah Morris",794,"Charlotte. H. Morris",0,5
-0,796,"Natálie  Němcová",796,"Nstálie  Němcová",0,4
+0,789,"Charlotte Noah Morris",794,"Charlotte. H. Morris",0,4
 0,797,"David  Winkler",797,"David  Winkler",0,0
-0,799,"Ji-yoo Ha-yoon Lee",799,"Ji-yoo Ha-ycoon Lee",0,2
-0,809,"Ji-yoo Ha-joon Lee",799,"Ji-yoo Ha-ycoon Lee",0,3
-0,800,"Noah  Rojas",800,"Noay  Rojas",0,4
+0,1870,"David  Winkler",797,"David  Winkler",0,0
 0,801,"Jon  Martínez",801,"Jon  Martíne",0,3
 0,803,"Luiz  Lima",803,"Luiz  Lima",0,0
 0,805,"Mia  Herrera",805,"Miu  Herrera",0,3
+0,806,"Oisín  Quinn",806,"Oisín  Quiyn",0,3
 0,807,"Emma  Ferrara",807,"mmma  Ferrara",0,3
-0,799,"Ji-yoo Ha-yoon Lee",809,"Ji-yo Ha-joon Lee",0,1
 0,809,"Ji-yoo Ha-joon Lee",809,"Ji-yo Ha-joon Lee",0,0
+0,810,"Mohammad  Ebner",810,"Moahmmad  Ebner",0,3
 0,812,"Sofia  Simon",812,"Sofia  Simon",0,0
+0,813,"Haruma  Kikuchi",813,"Haruma  Kikuchs",0,4
 0,814,"Maya  Omer",814,"Omer Maya",0,0
 0,815,"Emma  Balodis",815,"Emna  Balodis",0,4
+0,816,"Gaspar  Godoy",816,"Gsapar  Godoy",0,3
+0,817,"Zoe  Morales",817,"Zoe  Morale",0,2
 0,818,"Ji-an  Jee",818,"Jee Ji-an",0,0
 0,820,"Millie  Clarke",820,"Milli e Clarke",0,3
 0,821,"Mia  Rose",821,"Rose Mia",0,0
+0,822,"Alma  Romano",822,"Alma  Fomano",0,4
+0,823,"María  Serrano",823,"Maríi  Serrano",0,4
+0,1436,"María  Serrano",823,"Maríi  Serrano",0,4
 0,824,"Grace  Rose",824,"Grace  Rose",0,0
-0,825,"Polina  Smirnov",825,"Pooina  Smirnov",0,4
+0,1271,"Grace  Rose",824,"Grace  Rose",0,0
+0,826,"Angelina  Manukyan",826,"Angelina  Manuakyan",0,3
 0,827,"Hana  Trajanoski",827,"Hana  Trajanoske",0,4
 0,829,"Rían  O'Gallagher",829,"Rían  O'Gallagher",0,0
 0,830,"Ella  Larsen",830,"Ella  Larsen",0,0
-0,831,"Mila  Nikolovski",831,"Mila  Nikolovsli",0,3
-0,833,"Willow Keanu Patel",833,"Willoy Keanu Patel",0,4
-0,835,"Jennifer  Wood",835,"Jenniner  Wood",0,4
+0,831,"Mila  Nikolovski",831,"Mila  Nikolovsli",0,2
+0,835,"Jennifer  Wood",835,"Jenniner  Wood",0,2
 0,836,"Nikoloz  Mamedovi",836,"Nlkoloz  Mamedovi",0,4
 0,838,"Sofía  Valdez",838,"Sofia  Valdez",0,0
 0,839,"Ivan  Iliev",839,"Ivan  Iliev",0,0
@@ -516,520 +542,1600 @@ round,party0_index,party0_name,party1_index,party1_name,proj_dist,payload_dist
 0,845,"Ji-woo  Kwon",845,"Ji-woo  Kwon",0,0
 0,848,"Anna  Balodis",848,"Balodis Anna",0,0
 0,850,"Willow Leo Patel",850,"Willow Leo Patel",0,0
-0,852,"Willow Luca Patel",852,"Willw Luca Patel",0,3
-0,853,"Mei-hui  Gô͘",853,"eei-hui  Gô͘",0,4
 0,854,"Victoria  Cohen",854,"Victoria  Cohen",0,0
 0,855,"Pablo  Ruiz",855,"Pablo  Ruiz",0,0
 0,858,"Mustafa Fatma Kurt",858,"Mustafa Fatma Kuryt",0,3
-0,859,"Daniel  Vásquez",859,"Daniel  Vásuez",0,3
 0,860,"Sofia  Frei",860,"Sofia  Frei",0,0
-0,861,"Maryam  Malcah",861,"Maryam  Malcjh",0,4
-0,862,"Aron  Kelmendi",862,"Arun  Kelmendi",0,4
 0,863,"Amelia  Patel",863,"Amelia  Patel",0,0
 0,864,"Sofía  Rasmussen",864,"Sofía  Rasemussen",0,2
-0,867,"Frida  Hansen",867,"Frida  Hagsen",0,4
-0,868,"Min-jun  Shin",868,"Min-ju n Shin",0,3
-0,870,"Merjem  Hodžić",870,"kerjem  Hodžić",0,4
-0,872,"Mustafa Hüseyin Kurt",872,"Mustfa Hüseyin Kurt",0,3
+0,870,"Merjem  Hodžić",870,"kerjem  Hodžić",0,3
+0,872,"Mustafa Hüseyin Kurt",872,"Mustfa Hüseyin Kurt",0,2
 0,873,"Mariam  Sahakyan",873,"Sahakyan Mariam",0,0
 0,874,"Helena  Martins",874,"Helena  Martins",0,0
 0,875,"Sofia  Giuliani",875,"Sofia  Giulxani",0,3
+0,876,"Riko  Watanabe",876,"Rako  Watanabe",0,4
 0,877,"Mia  Williams",877,"Mia  Williams",0,0
+0,879,"Mustafa Elif Kurt",879,"Mdustafa Elif Kurt",0,3
 0,880,"Roan  Berisha",880,"Berisha Roan",0,0
 0,881,"Nils  Eriksson",881,"Eriksson Nils",0,0
 0,884,"Atlas  Möller",884,"Atlas  Möller",0,0
-0,887,"Hannah  Schmidt",887,"Hannah  Schmadt",0,4
-0,888,"Pau  Alonso",888,"Pah  Alonso",0,4
+0,886,"Niel  Ashkenazi",886,"Niel  Ashkenrazi",0,3
+0,894,"Julieta  Miranda",894,"Julieta  Msranda",0,4
 0,895,"Raquel  Cáceres",895,"Cáceres Raquel",0,0
+0,896,"João  Monteiro",896,"João  Mnnteiro",0,4
+0,899,"Elmar  Scheving",899,"Elmr  Scheving",0,3
 0,900,"Oliver  Pettersen",900,"Oliver  Pettersen",0,0
 0,901,"Juan  Vera",901,"Vera Juan",0,0
 0,902,"Benicio  Navarro",902,"Benicio  Navarro",0,0
-0,904,"Aoi  Inoue",904,"Aoi  Inohe",0,4
-0,906,"William Margaret Nelson",906,"Williau Margaret Nelson",0,4
-0,908,"William James Nelson",908,"William Jomes Nelson",0,3
+0,906,"William Margaret Nelson",906,"Williau Margaret Nelson",0,3
 0,909,"Mädïna  Kusainov",909,"Mädïna  Kusaiiov",0,3
 0,911,"David  Gruber",911,"David  Gruber",0,0
 0,912,"Martin  Němec",912,"Němec Martin",0,0
 0,915,"Ibai  González",915,"Ibai  Gonzalez",0,0
 0,917,"Olivia  O'Sullivan",917,"O'Sullivan Olivia",0,0
-0,921,"William Amelia Nelson",921,"Willeam Amelia Nelson",0,2
+0,918,"Oliwia  Piotrowski",918,"Oliwia  Piotrowsdki",0,3
+0,919,"Ao  Takada",919,"Ao  Taekada",0,2
+0,1275,"Ao  Tanaka",919,"Ao  Taekada",0,4
+0,921,"William Amelia Nelson",921,"Willeam Amelia Nelson",0,1
+0,922,"Malthe  Nielsen",922,"Malthi  Nielsen",0,4
 0,923,"Lyn  Edry",923,"Lyn  Edry",0,0
-0,925,"Sōma  Nishimura",925,"Sōma  Nishimuxa",0,4
-0,926,"Yūma  Fukuda",926,"Yūma  Fukuad",0,5
-0,929,"Hannah  Auer",929,"Hannah  Audr",0,4
-0,932,"William Elijah Nelson",932,"Williai Elijah Nelson",0,4
+0,928,"Olivia  Miller",928,"Olivir  Miller",0,3
+0,930,"Shu-hui  Chhoà",930,"Shu-hei  Chhoà",0,3
+0,932,"William Elijah Nelson",932,"Williai Elijah Nelson",0,3
+0,933,"Hina  Takeda",933,"Hina  Taeda",0,3
 0,935,"Hasmik  Mkrtchyan",935,"Hasmik  Mkrtchyan",0,0
 0,936,"Ivan  Bondarenko",936,"Bondarenko Ivan",0,0
 0,937,"Maria  Hill",937,"Maria  Hill",0,0
 0,939,"Ji-woo  Sin",939,"Ji-wo  Sin",0,1
 0,965,"Barbara Mia Thomas",940,"Barbara Thomas",0,3
-0,971,"Barbara James Thomas",940,"Barbara Thomas",0,5
-0,89,"Lucas  De Graaf",941,"Lucas  De Graav",0,4
-0,941,"Lucas  De Graaf",941,"Lucas  De Graav",0,4
+0,971,"Barbara James Thomas",940,"Barbara Thomas",0,4
 0,942,"Rayana  Sultanov",942,"yayana  Sultanov",0,3
-0,943,"Sofía  Muñoz",943,"Sofía  Muñez",0,4
 0,944,"Artem  Novikov",944,"Artem  Nzvikov",0,3
-0,945,"Leo  Harris",945,"Leo  Harmris",0,3
+0,945,"Leo  Harris",945,"Leo  Harmris",0,2
+0,1177,"Leo  Harris",945,"Leo  Harmris",0,2
 0,946,"Julie  Černý",946,"Julie  Černý",0,0
+0,1347,"Ema Julie Černý",946,"Julie  Černý",0,4
 0,948,"Ariel  Amar",948,"Ariel  Amar",0,0
 0,949,"Ji-an  Suh",949,"Ji-an  Suh",0,0
+0,950,"Jori  Moshe",950,"Jori  Noshe",0,4
 0,951,"Tess  Van Dyk",951,"Tess  Van Dyk",0,0
 0,952,"Barbara William Thomas",952,"Barbara William Thomas",0,0
-0,955,"Vicente  Paredes",955,"Vifente  Paredes",0,4
-0,956,"Santiago  Pizarro",956,"Santiago  Pidarro",0,4
 0,957,"Martín  Muñoz",957,"Martin  Munoz",0,0
+0,958,"Barbara Olivia Thomas",958,"Barbara Olivia Thhomas",0,1
 0,961,"Mei-hui  Ung",961,"Mec-hui  Ung",0,3
 0,963,"Esma  Jovanović",963,"Esma  Jovanović",0,0
-0,965,"Barbara Mia Thomas",965,"Burbara Mia Thomas",0,2
+0,1332,"Ema  Jovanović",963,"Esma  Jovanović",0,3
 0,570,"María José  Ríos",966,"María José  Ríis",0,3
 0,966,"María José  Ríos",966,"María José  Ríis",0,3
 0,967,"Barbara Luna Thomas",967,"Barbara Luna Thomas",0,0
 0,969,"Bogdan  Ciobanu",969,"Bogdan  Ciobanu",0,0
-0,958,"Barbara Olivia Thomas",970,"Thomas Barbara Oliver",0,5
 0,970,"Barbara Oliver Thomas",970,"Thomas Barbara Oliver",0,0
-0,971,"Barbara James Thomas",971,"Barbara James Thokas",0,4
 0,972,"Ezekiel  Gomez",972,"Gomez Ezekiel",0,0
 0,973,"Patricia  Bennett",973,"Patricia  Bennett",0,0
 0,974,"Isla  Davies",974,"Ila  Davies",0,3
 0,977,"Aleksandar  Vuković",977,"Aleksandar  Vuković",0,0
 0,979,"Charlie  Rose",979,"Charliv  Rose",0,3
 0,981,"Rin  Takada",981,"Rin  Takada",0,0
-0,982,"Ava  Smith",982,"Aa  Smith",0,3
+0,983,"Alberte  Mortensen",983,"Alberte  sortensen",0,4
 0,985,"Freya  Mitchell",985,"Mitchell Freya",0,0
 0,986,"Petar  Knežević",986,"Petar  Knežević",0,0
+0,987,"Arthur  Cardoso",987,"Arthur  Carmoso",0,4
 0,989,"Sara  Eder",989,"Ssara  Eder",0,1
-0,993,"Patricia David Hernandez",993,"Patricia. D. Hernandez",0,4
 0,994,"Patricia Richard Hernandez",994,"Patricia Richard Hernandez",0,0
 0,995,"Lovro  Bizjak",995,"Lovro  Bisjak",0,4
 0,997,"Francisca  Melo",997,"Melo Francisca",0,0
 0,998,"Anna  Bogdanov",998,"Anna  Bogdanov",0,0
 0,999,"Ji-ho  Jean",999,"Ji-ho  Jean",0,0
-1,585,"Yǔxī  Tsui",16,"Y. Tsui",0,4
-1,20,"Julen Júlia Gutiérrez",20,"Julen Júlia Gatiérrez",0,4
-1,22,"Leo  Gil",22,"L. Gil",0,3
-1,26,"Leonardo  Mariani",26,"kLeonardo  Mariani",0,3
-1,12,"Julen Julen Gutiérrez",31,"Julen Nkl Gutiérrez",0,4
-1,12,"Julen Julen Gutiérrez",39,"Julen Hugo Gutierrez",0,5
-1,12,"Julen Julen Gutiérrez",58,"Gutiérrez Julen Pablo",0,5
-1,35,"Julen Pau Gutiérrez",58,"Gutiérrez Julen Pablo",0,5
-1,67,"Viktoriya  Kravchenko",67,"Viktoriya  Kravchenky",0,4
+0,1001,"Yuina  Fukuda",1001,"Yuina  Fukudk",0,3
+0,1002,"Patricia Sophia Hernandez",1002,"Patricia Sophiza Hernandez",0,2
+0,1003,"Lucas  Campos",1003,"Lucas  Campos",0,0
+0,1011,"Francisco  Ferreira",1011,"Francisco  Feryeira",0,3
+0,1015,"Liz  Cavalcante",1015,"Liz  kavalcante",0,3
+0,1016,"Marya  Shapira",1016,"M. Shapira",0,4
+0,1017,"Muhammad  Ashkenazi",1017,"Ashkenazi Muhammad",0,0
+0,1021,"Juan  Díaz",1021,"Juan  Díza",0,4
+0,1022,"David Elizabeth Cook",1022,"David Elizabeth Cook",0,0
+0,1024,"Dorothy  Wood",1024,"Wood Dorothy",0,0
+0,1025,"Tomás  Olivares",1025,"Tomás  Olivares",0,0
+0,1026,"David Margaret Cook",1026,"David Mrgaret Cook",0,2
+0,1027,"Lejla  Suljić",1027,"Lejla  Suljić",0,0
+0,1030,"Emilia  Herrera",1030,"Emilia  Herwera",0,3
+0,1031,"Martin  Kollár",1031,"Mrtin  Kollár",0,2
+0,1033,"Ren  Miyazaki",1033,"Miyazaki Ren",0,0
+0,1035,"Aoi  Yamada",1035,"Aom  Yamada",0,4
+0,1036,"Lia  Adary",1036,"Lia  Atdary",0,2
+0,1037,"Mia  Torres",1037,"Mia  Tohres",0,4
+0,1040,"Regina  Méndez",1040,"Regina  Méndea",0,3
+0,1041,"Kairo  Jones",1041,"Kaieo  Jones",0,4
+0,1042,"Yua  Hashimoto",1042,"Yua  Hashimoto",0,0
+0,1048,"Haruna  Nakashima",1048,"Haruna  Nakashima",0,0
+0,1049,"Ha-yoon  Sonn",1049,"Ha-yoon  Sinn",0,3
+0,1050,"Dragana  Georgieva",1050,"Dragana  Gnorgieva",0,4
+0,1051,"Oscar  Petersen",1051,"Oscar  Petersen",0,0
+0,1053,"James  Ali",1053,"Jaes  Ali",0,3
+0,1054,"Florence  Brown",1054,"Florence  Brown",0,0
+0,1055,"Chih-hao  Eaw",1055,"Chi-hhao  Eaw",0,3
+0,1060,"Ha-rin  Kim",1060,"Ha-rin  Kim",0,0
+0,1232,"Ha-rin  Min",1060,"Ha-rin  Kim",0,4
+0,1062,"Mia  Salinas",1062,"Salinas Mia",0,0
+0,1064,"Emil  Christensen",1064,"Emil  Christansen",0,3
+0,1065,"Antonio  Núñez",1065,"Núñez Antonio",0,0
+0,1067,"Esma  Petrović",1067,"Esma  Pptrović",0,4
+0,1069,"Ajda  Kastelic",1069,"Ajda  Kastelic",0,0
+0,1072,"Althea  Reyes",1072,"Althea  Reyps",0,3
+0,1073,"Jon  Molina",1073,"Jon  Molini",0,3
+0,1075,"Chih-ming  Lîm",1075,"Chih-ming  Lîm",0,0
+0,1579,"Chih-ming  Lǐ",1075,"Chih-ming  Lîm",0,2
+0,1079,"Oscar  Rose",1079,"Rose Oscar",0,0
+0,1081,"Robert  Hernandez",1081,"Robert  Hercandez",0,3
+0,1085,"Do-yun  Jung",1085,"Dk-yun  Jung",0,4
+0,1086,"Ivan  Hristov",1086,"Ivan  Hrstov",0,3
+0,1087,"Liam Celine Ochion",1087,"Liam Celine Ochmon",0,4
+0,1090,"Liam Taim Ochion",1090,"Liam Taim Ochion",0,0
+0,1092,"Laura  Huber",1092,"Laura  Hiber",0,4
+0,1093,"Paulo  Pereira",1093,"Paulo  Pereita",0,4
+0,1095,"Liam Ayalah Ochion",1095,"Liam Ayalaah Ochion",0,1
+0,1097,"Bishal  Maharjan",1097,"Maharjan Bishal",0,0
+0,1098,"Samantha  Rodriguez",1098,"Samanaha  Rodriguez",0,2
+0,1099,"Grace  Taylor",1099,"Taylor Grace",0,0
+0,1101,"Arpi  Vardanyan",1101,"Arpi  Vardanyon",0,3
+0,1104,"Valentina  Orozco",1104,"Vallentina  Orozco",0,1
+0,1105,"Sō  Taketa",1105,"Sō  Taketa",0,0
+0,1106,"Mattia  Mariani",1106,"Mattia  Marieani",0,2
+0,1107,"Liam Ibrahim Ochion",1107,"Liam Ibrahim Ochion",0,0
+0,1111,"Liam Lyn Ochion",1111,"Liam Lyn Ohion",0,3
+0,1113,"Liam Jori Ochion",1113,"Ochion Liam Jori",0,0
+0,1114,"Matvey  Lebedev",1114,"Lebedev Matvey",0,0
+0,1115,"Noah  Johnson",1115,"Noah  Johnsofn",0,2
+0,1117,"Noa  Golan",1117,"Nos  Golan",0,4
+0,458,"Chun-hung  Choa",1118,"Chhoà Chun-hung",0,1
+0,1118,"Chun-hung  Chhoà",1118,"Chhoà Chun-hung",0,0
+0,1119,"Shu-chuan  Tiong",1119,"Shu-chuan  Tiono",0,3
+0,1120,"Ambra  Kuqi",1120,"Kuqi Ambra",0,0
+0,1121,"Liam Lavi Ochion",1121,"Liam Lavi Ochion",0,0
+0,255,"Laia  Álvarez",1122,"Mara  Álvarez",0,4
+0,1122,"María  Álvarez",1122,"Mara  Álvarez",0,2
+0,1125,"Thiago  Quiroga",1125,"Quiroga Thiago",0,0
+0,1126,"Ella  Bengtsson",1126,"Ella  Bengtsson",0,0
+0,1130,"Gabriel  Araújo",1130,"Gabriel  Amaújo",0,2
+0,1132,"Hinata  Kudō",1132,"Hinata  Kduō",0,4
+0,1133,"María  Jiménez",1133,"María  Jiménnz",0,3
+0,1134,"Sofía  Ríos",1134,"Sofía  Ríos",0,0
+0,1137,"Tunar  Ahmadov",1137,"Tunar  Ahamdov",0,3
+0,1138,"Victoria  González",1138,"Victoria  González",0,0
+0,1142,"Lara Emma Kiss",1142,"Lara. E. Kiss",0,4
+0,1144,"Lara Lili Kiss",1142,"Lara. E. Kiss",0,4
+0,1148,"Vera  Orellana",1148,"V. Orellana",0,3
+0,1150,"Freya  Wilson",1150,"Freye  Wilson",0,3
+0,1151,"Yamato  Wada",1151,"Yamwto  Wada",0,3
+0,1152,"Fūma  Sugiyama",1152,"Fūma  Sugiyaam",0,2
+0,1156,"Lara Ádám Kiss",1156,"Kiss Lara Ádám",0,0
+0,1158,"Ezekiel  Morales",1158,"Ezekifl  Morales",0,3
+0,1159,"Si-woo  Jeon",1159,"Jeon Si-woo",0,0
+0,1160,"Hinato  Miyazaki",1160,"Hinato  Mayazaki",0,3
+0,1164,"Ao  Sakamoto",1164,"Sakamoto Ao",0,0
+0,1165,"Mustafa  Yılmaz",1165,"Mustafa  Yılmuz",0,3
+0,1166,"Carolina  Gomes",1166,"Carolino  Gomes",0,4
+0,1168,"Lucas  Soto",1168,"Lucas  Soo",0,2
+0,1169,"Susan  Stewart",1169,"Susan  Stewarht",0,3
+0,1173,"Mei-hui  Teo",1173,"Teo Mei-hui",0,0
+0,1174,"Jennifer  Thompson",1174,"Thompson Jennifer",0,0
+0,1179,"Dániel  Farkas",1179,"Farkas Dániel",0,0
+0,1181,"Yǔzé  Ng",1181,"pYǔzé  Ng",0,3
+0,1180,"Barbara Barbara Lewis",1183,"Barbara Maria Lewis",0,4
+0,1183,"Barbara Maria Lewis",1183,"Barbara Maria Lewis",0,0
+0,1186,"Maximiliano  Moreno",1186,"Maximiliano  Moreno",0,0
+0,1187,"Delfina  Godoy",1187,"Delfina  Godoy",0,0
+0,1190,"Barbara Michael Lewis",1190,"Barbara Michael Leyis",0,4
+0,1191,"Emilía  Thorlacius",1191,"Thorlacius Emilía",0,0
+0,1192,"Seo-jun  Jean",1192,"Seo-jun  Jeaa",0,3
+0,1193,"Eva  Mägi",1193,"Mägi Eva",0,0
+0,1195,"Barbara Joseph Lewis",1195,"Lewis Barbara Joseph",0,0
+0,1198,"Ren  Ueno",1198,"Ren  Ueno",0,0
+0,1199,"Barbara Charlotte Lewis",1199,"Barbaa Charlotte Lewis",0,1
+0,1201,"Gerónimo  Pérez",1201,"Girónimo  Pérez",0,3
+0,1203,"Princess  Aquino",1203,"Princbess  Aquino",0,3
+0,1204,"Ginevra  Rinaldi",1204,"Gninevra  Rinaldi",0,2
+0,1205,"Dylan  García",1205,"Dylan  Garcia",0,0
+0,1207,"Isla  Williams",1207,"Ila  Williams",0,2
+0,1180,"Barbara Barbara Lewis",1208,"Barbara Lewis",0,0
+0,1183,"Barbara Maria Lewis",1208,"Barbara Lewis",0,4
+0,1180,"Barbara Barbara Lewis",1210,"Barbara. J. Lewis",0,2
+0,1212,"Prem  Chowdhury",1212,"Prem  Chowdhury",0,0
+0,1213,"Jan  Gómez",1213,"uan  Gómez",0,4
+0,1214,"Ana  Rodrigues",1214,"A. Rodrigues",0,1
+0,1215,"Rashad  Aliyev",1215,"Aliyev Rashad",0,0
+0,411,"Matías  Miranda",1217,"Matías Miranda",0,0
+0,1217,"Matías Sofía Miranda",1217,"Matías Miranda",0,4
+0,1218,"James  Carter",1218,"James  Cartre",0,3
+0,1224,"Matías Valeria Miranda",1224,"Matías Valeria Mniranda",0,3
+0,1227,"Valeria  Delgado",1227,"Valeriz  Delgado",0,4
+0,1229,"Àlex  Torres",1229,"Àlex  Torres",0,0
+0,1232,"Ha-rin  Min",1232,"Ha-rhn  Min",0,3
+0,1233,"Emiliano  Espinoza",1233,"Emiliano  Espinoza",0,0
+0,1235,"Yǔxuān  Hú",1235,"Hú Yǔxuān",0,0
+0,1272,"Yǔxuān  Hé",1235,"Hú Yǔxuān",0,4
+0,1907,"Yǔxuān  Hú",1235,"Hú Yǔxuān",0,0
+0,1237,"Anna  Ebner",1237,"A. Ebner",0,2
+0,1238,"Julia  Visser",1238,"Julua  Visser",0,3
+0,1239,"Martina  Molina",1239,"Mrartina  Molina",0,2
+0,1240,"Ciro  Fernández",1240,"Ciro  Fernándet",0,4
+0,1241,"Linda  Robinson",1241,"Lindo  Robinson",0,4
+0,1242,"Theodor  Mayr",1242,"Theodor  Maym",0,3
+0,1243,"Camila  Valdez",1243,"Valdez Camila",0,0
+0,910,"Lilit  Grigoryan",1244,"Lilit  Graigoryan",0,3
+0,1244,"Lilit  Grigoryan",1244,"Lilit  Graigoryan",0,3
+0,1247,"Ha-joon Seo-jun Sung",1245,"Ha-joon Sung",0,4
+0,1253,"Ha-joon Ye-jun Sung",1245,"Ha-joon Sung",0,4
+0,1254,"Ha-joon Yu-jun Sung",1245,"Ha-joon Sung",0,4
+0,1247,"Ha-joon Seo-jun Sung",1247,"Ha-joon Seo-jun Sung",0,0
+0,1248,"Ana  Giorgadze",1248,"Ana  Giorgadze",0,0
+0,1253,"Ha-joon Ye-jun Sung",1250,"Ha-joon. E. Sung",0,4
+0,1252,"Emil  Berg",1252,"Emkl  Berg",0,4
+0,1253,"Ha-joon Ye-jun Sung",1253,"Ha-joon Ye-jun Sugn",0,2
+0,1253,"Ha-joon Ye-jun Sung",1254,"Ha-joon Yu-jun Sung",0,4
+0,1254,"Ha-joon Yu-jun Sung",1254,"Ha-joon Yu-jun Sung",0,0
+0,1255,"Muhammad  Alexander",1255,"Mvhammad  Alexander",0,4
+0,1256,"Marie  Gruber",1256,"Mcarie  Gruber",0,3
+0,1257,"Benicio  Moreno",1257,"enicio  Moreno",0,3
+0,1258,"Mia  Rodríguez",1258,"Mai  Rodríguez",0,4
+0,1261,"Lara Luca Balázs",1261,"Lraa Luca Balázs",0,2
+0,1262,"Panagiotis  Kritikos",1262,"Panagiotis  rKitikos",0,2
+0,1032,"Boglárka  Balázs",1263,"Lara Boglárka Balázs",0,1
+0,1263,"Lara Boglárka Balázs",1263,"Lara Boglárka Balázs",0,0
+0,1264,"Leonardo  Russo",1264,"Leonardk  Russo",0,3
+0,1265,"Cillian  Khan",1265,"Cilldan  Khan",0,3
+0,1266,"Louis  Fischer",1266,"Lofis  Fischer",0,3
+0,1267,"Chun-chieh  Tsoi",1267,"Chun-chieh  Tsou",0,4
+0,1268,"Sarah  Becker",1268,"Sarah  Becuker",0,3
+0,1273,"Hinato  Ōtsuka",1273,"Ōtsuka Hinato",0,0
+0,919,"Ao  Takada",1275,"Tanaka Ao",0,2
+0,1275,"Ao  Tanaka",1275,"Tanaka Ao",0,0
+0,1279,"Tatsuki  Kobayashi",1279,"Titsuki  Kobayashi",0,2
+0,1280,"Victoria  Matei",1280,"Matei Victoria",0,0
+0,1282,"Nagisa  Yamazaki",1282,"Nagisa  Yamazaik",0,4
+0,1283,"Hana  Ahmetović",1283,"Hana  Ahmetovic",0,0
+0,1284,"Mio  Miyasaki",1284,"M. Miyasaki",0,3
+0,1801,"Mio  Miyasaki",1284,"M. Miyasaki",0,3
+0,1285,"Sofi Narine Khachatryan",1285,"Khachatryan Sofi Narine",0,0
+0,1286,"Trinidad  Salazar",1286,"Trinidad  Salazar",0,0
+0,1287,"Markas  Kazlauskienė",1287,"Markas  Kazlauskienė",0,0
+0,1290,"Vasilisa  Pavlov",1290,"Vaislisa  Pavlov",0,2
+0,1292,"Emil  Andersen",1292,"Emil  Andersen",0,0
+0,1401,"Emil  Andersen",1292,"Emil  Andersen",0,0
+0,1293,"Mikayel  Harutyunyan",1293,"Mikayel  Harutyunyan",0,0
+0,1294,"William  Gustafsson",1294,"William  Gsutafsson",0,4
+0,579,"I-chun  Huáng",1296,"I-chun  Huang",0,0
+0,1296,"I-chun  Huang",1296,"I-chun  Huang",0,0
+0,1297,"Sofi Nare Khachatryan",1297,"Sofi Nare Khrchatryan",0,3
+0,1299,"Leandra  Hysi",1299,"Leandra  Hyi",0,3
+0,1300,"Amelia  Cox",1300,"Amelia  ox",0,3
+0,1301,"Amir  Ahmetov",1301,"Amir  Ahmwtov",0,4
+0,1302,"Beatrice  Grasso",1302,"Beatrice  Grassi",0,4
+0,1304,"Àlex  Rubio",1304,"Alex  Rubio",0,0
+0,1308,"Sakura  Yamazaki",1308,"Yamazaki Sakura",0,0
+0,1310,"Sofi Tigran Khachatryan",1310,"Khachatryan Sofi Tigran",0,0
+0,1312,"Aoi  Kōno",1312,"Aoi  Kōno",0,0
+0,1315,"Sofi Aleks Khachatryan",1315,"Sofi Aleks Khachatryn",0,3
+0,1316,"Seo-jun  Ryoo",1316,"Sao-jun  Ryoo",0,4
+0,1319,"Ambra  Bektashi",1319,"Ambra  Bektakhi",0,4
+0,1320,"Milica  Stojanović",1320,"Milbca  Stojanović",0,2
+0,1321,"Luca  Kovács",1321,"Luca  Kovács",0,0
+0,1326,"Vicente  Gutiérrez",1326,"Vicente  Gutierrez",0,0
+0,1327,"Ádám  Gál",1327,"Ádát  Gál",0,4
+0,1328,"Emma Alessandro De Rosa",1328,"Emma Alessxndro De Rosa",0,3
+0,1329,"Chia-hao  Heng",1329,"Chia-hao  feng",0,3
+0,1330,"Emma Francesco De Rosa",1330,"Emma Fgancesco De Rosa",0,4
+0,1334,"Mikhail  Solovyov",1334,"Mikhail  Solsovyov",0,1
+0,1337,"Hinato  Kobayashi",1337,"Hinati  Kobayashi",0,3
+0,1338,"Lukas  Pärn",1338,"Lukas  Parn",0,0
+0,1339,"Ema Adéla Černý",1339,"Em aAdéla Černý",0,3
+0,1340,"Samir  Hasanov",1340,"Smir  Hasanov",0,2
+0,1343,"Eun-woo  Im",1343,"Im Eun-woo",0,0
+0,1346,"Ema Amálie Černý",1346,"Ema Amálie Černý",0,0
+0,946,"Julie  Černý",1347,"Ema Julie Černý",0,4
+0,1347,"Ema Julie Černý",1347,"Ema Julie Černý",0,0
+0,1350,"Ona  Sánchez",1350,"Ono  Sánchez",0,2
+0,1351,"Davit  Lomidze",1351,"Davht  Lomidze",0,4
+0,1352,"Roan  Toska",1352,"Roan  Toska",0,0
+0,1354,"Neža  Korošec",1354,"Neza  Korosec",0,0
+0,1357,"Noah  López",1357,"Noah  Lopez",0,0
+0,1358,"Daniel  Maldonado",1358,"Daniel  Maldonado",0,0
+0,1360,"Benedita Leonor Castro",1360,"Castro Benedita Leonor",0,0
+0,1362,"Yua  Ogawa",1362,"Yua  Ogawa",0,0
+0,1363,"Hina  Ogawa",1363,"Hini  Ogawa",0,2
+0,1366,"Valentina  Mayr",1366,"Valentina  Mayr",0,0
+0,1368,"Dion  Sinani",1368,"Dion  Siani",0,1
+0,1369,"Benedita Afonso Castro",1369,"Benedita Afonso Castro",0,0
+0,1370,"Uri  Ohayon",1370,"Uri  Ohayoin",0,3
+0,1371,"Elias  Aigner",1371,"Elias  Aivner",0,4
+0,1680,"Elias  Aigner",1371,"Elias  Aivner",0,4
+0,1373,"Benedita Lourenço Castro",1373,"Benedita Lourença Castro",0,1
+0,1374,"Margarida  Correia",1374,"Maragrida  Correia",0,0
+0,1375,"Hugo  Ortega",1375,"Hugo  Otega",0,3
+0,1377,"Mihail  Mladenovski",1377,"Mihail  Mladenovski",0,0
+0,1379,"Yuina  Kimura",1379,"Yuini  Kimura",0,2
+0,1380,"Seo-ah  Ha",1380,"Seo-ah  Ha",0,0
+0,1777,"Seo-ah  Heo",1380,"Seo-ah  Ha",0,2
+0,1381,"James  Domingo",1381,"Jame s Domingo",0,3
+0,1383,"Yǔxī Yǐmò Hé",1383,"Yǔxī kǐmò Hé",0,3
+0,1384,"Leah  Ramos",1384,"Leah  Rsmos",0,4
+0,1385,"Ha-eun  Yoo",1385,"Yoo Ha-eun",0,0
+0,1386,"Maximiliano  Bravo",1386,"Maximiliano  ravo",0,3
+0,1387,"Fatima  Mammadov",1387,"Fatimi  Mammadov",0,2
+0,1388,"Charles  James",1388,"James Charles",0,0
+0,1392,"Yǔxī Yìchén Hé",1392,"Yǔxī Yìchén Hs",0,3
+0,1393,"Yǔxī Yǔzé Hé",1393,"Yǔxī Yǔzs Hé",0,3
+0,1394,"Nagi  Takagi",1394,"Nagi  Tqkagi",0,3
+0,1395,"Maja  Orellana",1395,"M. Orellana",0,3
+0,1404,"Mark  Mlakar",1404,"Mark  Mlakar",0,0
+0,1405,"Polina  Solovyov",1405,"Polina  Solovyiv",0,3
+0,1406,"Merjem Lamija Muratović",1406,"Merjem Lamija Muratović",0,0
+0,1407,"Victoria  Guzmán",1407,"Guzmán Victoria",0,0
+0,1908,"Victoria  Guzmán",1407,"Guzmán Victoria",0,0
+0,1409,"Susanna  Hovhannisyan",1409,"S. Hovhannisyan",0,4
+0,1413,"Merjem Džan Muratović",1413,"Merjem Džan Murtović",0,3
+0,1414,"Agustín  Jara",1414,"Agustín  ara",0,2
+0,1418,"Luis Amelia Gega",1418,"Luis Amelia Gega",0,0
+0,1422,"Samantha  Reyes",1422,"Samantha  Reyes",0,0
+0,1424,"Yu-jun  Kuen",1424,"Yu-jun  xuen",0,4
+0,1426,"Luis Amaris Gega",1426,"Luis Amaras Gega",0,2
+0,1432,"Luis Amar Gega",1426,"Luis Amaras Gega",0,2
+0,1427,"David  Ciobanu",1427,"David  Ciobanu",0,0
+0,1429,"Luis Aron Gega",1429,"Luis Aron Geg",0,3
+0,1430,"Martina  Costa",1430,"Mcrtina  Costa",0,4
+0,1433,"Alicja  Kowalski",1433,"Alicjla  Kowalski",0,2
+0,1434,"Francisco  Santos",1434,"Francicso  Santos",0,2
+0,823,"María  Serrano",1436,"Maria  Serrano",0,0
+0,1436,"María  Serrano",1436,"Maria  Serrano",0,0
+0,1437,"Maria Alice  Fernandes",1437,"Maria Alice  Ferandes",0,1
+0,1453,"Felix Felix Lechner",1438,"Felix Lechner",0,0
+0,1439,"Ju-won  Bai",1439,"Ju-won  Bai",0,0
+0,1440,"Julieta  Poblete",1440,"Julieta  Pobleite",0,1
+0,1441,"Felix Emma Lechner",1441,"Filix Emma Lechner",0,2
+0,1442,"Radmila  Ivanović",1442,"Radmila  Ivaović",0,3
+0,1449,"Lina  Fischer",1449,"Lina  Fisccer",0,4
+0,1450,"Robin  Aleksejev",1450,"Robin  Alekejev",0,2
+0,1451,"Margaret  Myers",1451,"Mararet  Myers",0,2
+0,1452,"Aksel  Berg",1452,"Aksel  werg",0,4
+0,1453,"Felix Felix Lechner",1453,"Felix Felix Lechner",0,0
+0,1454,"Sakura  Miyazaki",1454,"Sakur  Miyazaki",0,3
+0,1455,"Haruma  Ōtsuka",1455,"Haruma  Ōtsuka",0,0
+0,1457,"Yuna  Sugahara",1457,"uYuna  Sugahara",0,2
+0,1453,"Felix Felix Lechner",1458,"Felix. S. Lechner",0,2
+0,1459,"Sofía  Navarro",1459,"Sofía  Mavarro",0,4
+0,1460,"Emil  Marković",1460,"Emiyl  Marković",0,3
+0,1462,"Matías  Molina",1462,"Matías  Molina",0,0
+0,1464,"Yasmin  Segal",1464,"Yasmoin  Segal",0,3
+0,1465,"Siddhartha  Sah",1465,"Siddharth  Sah",0,1
+0,1466,"Hudson  Jones",1466,"Hudson  Jones",0,0
+0,1467,"Alexander  Miranda",1467,"Miranda Alexander",0,0
+0,943,"Sofía  Muñoz",1468,"Sofía  Muñoz",0,0
+0,1468,"Sofía  Muñoz",1468,"Sofía  Muñoz",0,0
+0,1736,"Sofía  Muñoz",1468,"Sofía  Muñoz",0,0
+0,1470,"Felix Theodor Lechner",1470,"Felix Theodor Lechner",0,0
+0,1473,"Kaloyan  Ivanov",1473,"Kaloyan  Ivanov",0,0
+0,1474,"Sofía  Tapia",1474,"S. Tapia",0,4
+0,1480,"Min-jun  Choy",1480,"Min-jun  Fhoy",0,4
+0,1481,"Elif  Özdemir",1481,"Elif  Ozdemir",0,0
+0,1482,"Huseyn Elnur Huseynov",1482,"Huseyn Elnur Husepnov",0,2
+0,1485,"Tamar  Ohana",1485,"Tamaa  Ohana",0,3
+0,1487,"Marie  Schmid",1487,"Mbrie  Schmid",0,4
+0,1488,"Huseyn Zahra Huseynov",1488,"Huseyn Zahro Huseynov",0,4
+0,1490,"Felipe  Ponce",1490,"Felipe  Ponce",0,0
+0,1492,"Leo  Majerus",1492,"Leo  Majerus",0,0
+0,1493,"Sara  Tahirović",1493,"S. Tahirović",0,4
+0,1494,"Huseyn Malak Huseynov",1494,"Huseyn Malak Huseynov",0,0
+0,1495,"Agustín  Escobar",1495,"Agustín  Escobar",0,0
+0,1496,"Huseyn İnci Huseynov",1496,"Huseyn İnci Husezynov",0,2
+0,1497,"Tomyris  Li",1497,"Li Tomyris",0,0
+0,1498,"Huseyn Ali Huseynov",1498,"Huseynov Huseyn Ali",0,0
+0,1501,"Huseyn Mahammad Huseynov",1501,"Huseyn Mahammad Huseynov",0,0
+0,1504,"Fiadh  Doyle",1504,"Fiach  Doyle",0,4
+0,1506,"Sama  Levi",1506,"Sama  Lefi",0,4
+0,1507,"Olivia  Reilly",1507,"Reilly Olivia",0,0
+0,1510,"Amelia  Vassiljev",1510,"Amelia  Vassiliev",0,3
+0,1511,"Ema  Ono",1511,"Em  Ono",0,3
+0,1512,"Huseyn Sevda Huseynov",1512,"Huseynov Huseyn Sevda",0,0
+0,1513,"Huseyn Vusala Huseynov",1513,"Huseyn Vusala Huseynov",0,0
+0,1515,"Aleksandra  Mladenovski",1515,"Mladenovski Aleksandra",0,0
+0,1518,"Giulia  Martinelli",1518,"Gjulia  Martinelli",0,4
+0,1528,"Ámbar  Quiroga",1528,"Ámbar  Quiroga",0,0
+0,1529,"Ji-yoo  Gwak",1529,"Ji-yoo  Gwak",0,0
+0,1531,"James  Morgan",1531,"James  Morgan",0,0
+0,1533,"Ajda  Hočevar",1533,"Ajda  Hocevar",0,0
+0,1784,"Ajda  Hočevar",1533,"Ajda  Hocevar",0,0
+0,1534,"Oliver  Nilsen",1534,"Oliver  Nilsen",0,0
+0,1535,"Omar  Marat",1535,"O. Marat",0,3
+0,1536,"Lev Ivan Novikov",1536,"Lev Ivan Novikov",0,0
+0,1537,"Isabella  Gil",1537,"Gil Isabella",0,0
+0,1539,"Emine  Çetin",1539,"Emine  Çetvn",0,3
+0,1540,"Nils  Jansson",1540,"Jansson Nils",0,0
+0,1542,"Mateo  Schmid",1542,"Mateo  rSchmid",0,3
+0,1543,"Lev Tatiana Novikov",1543,"Novikov Lev Tatiana",0,0
+0,1545,"Sophia  Sullivan",1545,"Sophia  Sullivan",0,0
+0,1546,"Victoria  Espinoza",1546,"Victoria  Espinoza",0,0
+0,1548,"Isidora  Cortés",1548,"Isidora  Cortés",0,0
+0,1552,"Evelyn  Ward",1552,"Epelyn  Ward",0,2
+0,1554,"Lucas  Guerrero",1554,"Guerrero Lucas",0,0
+0,1555,"Alexandra  Cebotari",1555,"Alexanrra  Cebotari",0,4
+0,1556,"Adam  Berger",1556,"adam  Berger",0,0
+0,1558,"Lev Mariya Novikov",1558,"Lec Mariya Novikov",0,3
+0,1559,"Martín  Ortiz",1559,"Mzrtín  Ortiz",0,4
+0,1560,"Agnes  Thomsen",1560,"Thomsen Agnes",0,0
+0,1561,"Emma  Reiter",1561,"Emma  Roiter",0,3
+0,1562,"Lev Viktoriya Novikov",1562,"Lev Viktoriyu Novikov",0,4
+0,1563,"Prakash  Maharjan",1563,"Prakash  uaharjan",0,4
+0,1564,"Yua  Miyazaki",1564,"Yua  Miyazaki",0,0
+0,1566,"Ema  Ferhatović",1566,"Ema  Ferhatovic",0,0
+0,1570,"Klea  Koroveshi",1570,"Klea  Koroveshi",0,0
+0,1573,"Gaspar  Araya",1573,"Araya Gaspar",0,0
+0,1613,"Gaspar  Araya",1573,"Araya Gaspar",0,0
+0,1574,"Sofiya  Moroz",1574,"Sofiya  Mroz",0,2
+0,1530,"Lev Matvey Novikov",1575,"Lev Matvey Novikov",0,0
+0,1575,"Lev Matvey Novikov",1575,"Lev Matvey Novikov",0,0
+0,1075,"Chih-ming  Lîm",1579,"Chih-ming  Lǐ",0,2
+0,1579,"Chih-ming  Lǐ",1579,"Chih-ming  Lǐ",0,0
+0,1581,"Minato  Abe",1581,"Minato  Abe",0,0
+0,1585,"Heitor  Carvalho",1585,"Hetor  Carvalho",0,3
+0,1587,"Daria  Rusu",1587,"Darua  Rusu",0,3
+0,1588,"Mia  Thomas",1588,"Mia  Thoams",0,4
+0,1589,"Sophia  Villanueva",1589,"Sophia  Villanueva",0,0
+0,1590,"Charlotte  White",1590,"Charlotte  White",0,0
+0,1593,"Nagi Yūma Ichikawa",1593,"Nagi Yūma Ichikajwa",0,2
+0,1599,"Nagi Hina Ichikawa",1595,"Nagi Dna Ichikawa",0,4
+0,1597,"Nagi Himari Ichikawa",1597,"magi Himari Ichikawa",0,3
+0,463,"Olivia  Larsen",1600,"Olivia  Larsen",0,0
+0,1600,"Olivia  Larsen",1600,"Olivia  Larsen",0,0
+0,1604,"Antônia  Araújo",1604,"Anxtônia  Araújo",0,3
+0,1605,"Ella  Murphy",1605,"Murphy Ella",0,0
+0,1609,"Yǔxī  Wong",1609,"Yuxi  Wong",0,0
+0,1611,"Ren  Nakagawa",1611,"Ren  Nkagawa",0,2
+0,805,"Mia  Herrera",1612,"M. Herrera",0,3
+0,1614,"Maja  López",1614,"Macja  López",0,2
+0,1616,"Lin Charbel Levy",1616,"Levy Lin Charbel",0,0
+0,1672,"Lin Maya Levy",1618,"Lin Levy",0,4
+0,1619,"Melisa  Çami",1619,"Melisa  Çami",0,0
+0,1622,"William  Cooper",1622,"lilliam  Cooper",0,3
+0,1625,"Emma  Arias",1625,"Emka  Arias",0,4
+0,1626,"Lin Leah Levy",1626,"Levy Lin Leah",0,0
+0,1628,"Rían  O'Ryan",1628,"Rian  O'Ryan",0,0
+0,1633,"Andriy  Rudenko",1633,"Andriy  Rudenko",0,0
+0,1634,"Jakov  Trajcevski",1634,"Jakov  Trajcevski",0,0
+0,1635,"Matěj  Horák",1635,"Matej  Horak",0,0
+0,1636,"Mia  Fernández",1636,"Mia  Fernándyz",0,4
+0,1637,"Shu-hua  Goh",1637,"Shu-hia  Goh",0,3
+0,1641,"Oliver  Smith",1641,"Olpver  Smith",0,4
+0,1647,"Sophia  Mytaras",1647,"Sophia  Mytaras",0,0
+0,1672,"Lin Maya Levy",1650,"Lin Levy",0,4
+0,968,"Vasileios  Kontos",1651,"Vasileio s Kontos",0,2
+0,1651,"Vasileios  Kontos",1651,"Vasileio s Kontos",0,2
+0,1653,"Adin  Simić",1653,"Adin  Simic",0,0
+0,1654,"Teodora  Radulović",1654,"Radulović Teodora",0,0
+0,1656,"Min-jun  Ra",1656,"Min-jun  Ra",0,0
+0,1658,"Lin Ariel Levy",1658,"Lin Ariel Levy",0,0
+0,1660,"Lin Uri Levy",1660,"Lin Uri Levy",0,0
+0,116,"Liam  Martínez",1661,"M. Martínez",0,3
+0,1661,"Mia  Martínez",1661,"M. Martínez",0,4
+0,1894,"Mia  Martínez",1661,"M. Martínez",0,4
+0,1662,"Lin Noam Levy",1662,"Lin Niam Levy",0,3
+0,1665,"Andrea  Grassi",1665,"Andrea  Grassi",0,0
+0,1668,"Evelyn  Taylor",1668,"Evelyn  Tarlor",0,3
+0,1671,"Lin Adele Levy",1671,"Lin Adele Levy",0,0
+0,1672,"Lin Maya Levy",1672,"Lin Levy",0,4
+0,1675,"Alice  Fonseca",1675,"Alice  Finseca",0,4
+0,1676,"Valdemar  Rasmussen",1676,"Rasmussen Valdemar",0,0
+0,1677,"Leonardo  Palumbo",1677,"Leontrdo  Palumbo",0,4
+0,1679,"Mila  Đorđević",1679,"Đorđević Mila",0,0
+0,1371,"Elias  Aigner",1680,"Aigner Elias",0,0
+0,1680,"Elias  Aigner",1680,"Aigner Elias",0,0
+0,160,"Maria  Araújo",1681,"Mari  Araújo",0,3
+0,1681,"Maria  Araújo",1681,"Mari  Araújo",0,3
+0,1645,"Lucas  Moreno",1682,"Moreno Lucas",0,0
+0,1682,"Lucas  Moreno",1682,"Moreno Lucas",0,0
+0,1683,"Muhammad Sama Dahan",1683,"Muhammad Sama Dahan",0,0
+0,1731,"Muhammad Maya Dahan",1683,"Muhammad Sama Dahan",0,3
+0,1684,"Muhammad Celine Dahan",1684,"Dahan Muhammad Celine",0,0
+0,1685,"Lina  Dupont",1685,"Lina  Dupost",0,4
+0,1686,"Min-jun  Yang",1686,"Min-jun  Yang",0,0
+0,1688,"Muhammad Niel Dahan",1688,"Muhpmmad Niel Dahan",0,2
+0,1690,"Lucas  Mendoza",1690,"Lucas  Mendoza",0,0
+0,1731,"Muhammad Maya Dahan",1691,"Muhammad Milya Dahan",0,3
+0,1694,"Tatsuki  Ōta",1694,"Tatsuki  Ōat",0,4
+0,1961,"Tatsuki  Ono",1694,"Tatsuki  Ōat",0,4
+0,1696,"Elli  Tamm",1696,"Tamm Elli",0,0
+0,1699,"Ava  Martin",1699,"Martin Ava",0,0
+0,1700,"Vittoria  Leone",1700,"Vitotria  Leone",0,3
+0,1702,"Muhammad Abd Dahan",1702,"Muhammad Abd hahan",0,2
+0,1703,"Niel  Levi",1703,"Niel  Lyevi",0,2
+0,1704,"Yasmin  Ashkenazi",1704,"Yasmin  Ashkenzzi",0,4
+0,1705,"Lorenzo  Lombardo",1705,"Lorenzo  Lombardo",0,0
+0,1706,"Julieta  Vega",1706,"Julieta  Veta",0,2
+0,1707,"Theo  Jensen",1707,"Jensen Theo",0,0
+0,1709,"Selma  Lindberg",1709,"Selma  Lhindberg",0,3
+0,1710,"Anzu  Sakurai",1710,"Anzu  Sakurwi",0,4
+0,1712,"Elijah  Nguyen",1712,"lEijah  Nguyen",0,4
+0,436,"Ye-jun  Jung",1716,"Ye-jun  Nan",0,4
+0,1716,"Ye-jun  Nan",1716,"Ye-jun  Nan",0,0
+0,1722,"Sophia  Clark",1722,"Sophio  Clark",0,4
+0,1723,"Dejan  Dimitrov",1723,"Dejan  Dimitrov",0,0
+0,1725,"Yìchén  Wong",1725,"Yìchén  Wong",0,0
+0,1727,"Aleksandr  Kozlov",1727,"Aleksandr  Kozlov",0,0
+0,1728,"Santiago  Costa",1728,"Santaigo  Costa",0,3
+0,1730,"Muhammad Adele Dahan",1730,"Mehammad Adele Dahan",0,4
+0,1683,"Muhammad Sama Dahan",1731,"Muhammad Dahan",0,3
+0,1731,"Muhammad Maya Dahan",1731,"Muhammad Dahan",0,2
+0,1732,"Muhammad Lia Dahan",1731,"Muhammad Dahan",0,4
+0,1734,"Shu-chen  Chhoà",1734,"Shu-chen  Chhoa",0,0
+0,943,"Sofía  Muñoz",1736,"Sofía  Muñoz",0,0
+0,1468,"Sofía  Muñoz",1736,"Sofía  Muñoz",0,0
+0,1736,"Sofía  Muñoz",1736,"Sofía  Muñoz",0,0
+0,1740,"William Frida Olsen",1740,"Olsen William Frida",0,0
+0,1744,"Amir  Iskakov",1744,"Amir  Iskakov",0,0
+0,1745,"Alexander  Weber",1745,"Alexander  Weber",0,0
+0,1747,"William Lucas Olsen",1747,"Willniam Lucas Olsen",0,2
+0,1748,"Jakov  Pavlović",1748,"Jaokv  Pavlović",0,3
+0,1749,"Bruno  Alonso",1749,"Bruni  Alonso",0,2
+0,1750,"Lucas  André",1750,"Lucas  Andre",0,0
+0,1754,"Martim  Antunes",1754,"Antunes Martim",0,0
+0,1755,"Adin  Delić",1755,"Adin  Delić",0,0
+0,1757,"Emil  Đorđević",1757,"Eyil  Đorđević",0,4
+0,1759,"César  Ayala",1759,"César  Ayrala",0,1
+0,1761,"Hàoyǔ  Zhāng",1761,"Hàoyǔ  Zhāfng",0,3
+0,1762,"María José  Morales",1762,"Jaría José  Morales",0,2
+0,1766,"Ju-won  Roh",1766,"pJu-won  Roh",0,3
+0,1767,"Emma  Medina",1767,"Emma  Medina",0,0
+0,1768,"Louis Jules Nguyen",1768,"Louihs Jules Nguyen",0,3
+0,1772,"Pol  Ramírez",1772,"Pol  Ramírea",0,4
+0,1773,"Mei  Watanabe",1773,"Mei  Watnabe",0,1
+0,1774,"Zeynep  Yılmaz",1774,"Zeynep  Yılmaz",0,0
+0,1776,"Tomás  Pérez",1776,"Tomas  Perez",0,0
+0,1778,"Manuela  Silva",1778,"Manuela  Sllva",0,4
+0,1780,"Bruno Mia Ferreyra",1780,"Bruno Mia Ferreyra",0,0
+0,1781,"Charles  Garcia",1781,"Charles  Garciu",0,4
+0,1782,"Ian  González",1782,"Ian  González",0,0
+0,1783,"Bruno Delfina Ferreyra",1783,"Bruno Delfina Ferereyra",0,1
+0,1785,"Bruno Bautista Ferreyra",1785,"Ferreyra Bruno Bautista",0,0
+0,1786,"Shams  Moshe",1786,"Shams  Mmoshe",0,1
+0,1787,"George  Smith",1787,"Goorge  Smith",0,3
+0,1788,"Ji-yoo  Shen",1788,"Ji-yno  Shen",0,4
+0,1789,"Ahmed  Božić",1789,"Ahmed  Bosić",0,4
+0,1790,"Agustín  Poblete",1790,"Agustín  Poblete",0,0
+0,1792,"Gabriele  Conte",1792,"Yabriele  Conte",0,3
+0,1793,"Bruno Liam Ferreyra",1793,"Bruno Liam Ferreyra",0,0
+0,1798,"Ari  Edri",1798,"A. Edri",0,2
+0,1284,"Mio  Miyasaki",1801,"M. Miyasaki",0,3
+0,1801,"Mio  Miyasaki",1801,"M. Miyasaki",0,3
+0,1805,"Ha-rin Ha-joon Zuu",1805,"Ha-rni Ha-joon Zuu",0,3
+0,1809,"Bautista  Iglesias",1809,"Bautista  Iglesias",0,0
+0,1810,"Elias  Kinnunen",1810,"Elis  Kinnunen",0,3
+0,1811,"Paul  Pichler",1811,"Paul  Pichler",0,0
+0,1812,"Luka  Vidmar",1812,"Luka  Vidmar",0,0
+0,1813,"Chun-hung  Lâu",1813,"ohun-hung  Lâu",0,4
+0,1815,"Gevorg  Martirosyan",1815,"Gevorg  Martirosyan",0,0
+0,1816,"Davud  Delemović",1816,"Davud  belemović",0,3
+0,1818,"Yua  Watabe",1818,"Yua  Watabe",0,0
+0,1819,"Noah  Campos",1819,"Noah  Camypos",0,3
+0,1822,"Emma  Muller",1822,"Emma  Muller",0,0
+0,1823,"Javier  Ayala",1823,"Javier  Ayala",0,0
+0,1824,"Bibek  Lama",1824,"Bibek  Lama",0,0
+0,1826,"Ginevra  Barone",1826,"Ginevra  Barone",0,0
+0,1827,"Aline  Peretz",1827,"Aline  Peretz",0,0
+0,1828,"Vuk  Popović",1828,"Vuk  Popović",0,0
+0,1829,"Laura  Koller",1829,"Laura  Koller",0,0
+0,1831,"Ji-ho  Choo",1831,"Ji-ho  Chho",0,2
+0,1832,"Artem  Kravchenko",1832,"Artem  Kravchenko",0,0
+0,1833,"William Thomas Walker",1833,"William Thomas Walker",0,0
+0,1834,"Tommaso  Mancini",1834,"Tommaso  Mancini",0,0
+0,1835,"William Emma Walker",1835,"William Emma Walker",0,0
+0,1836,"Valeria  Torres",1836,"Valeia  Torres",0,2
+0,1837,"Emma  Sepúlveda",1837,"Ema  Sepúlveda",0,1
+0,1839,"Oliver  Ortiz",1839,"Oliver  Ortiz",0,0
+0,1875,"Oliver  Ortiz",1839,"Oliver  Ortiz",0,0
+0,1841,"Viktoría  Möller",1841,"Viktoría  Möller",0,0
+0,1842,"Margaret  Torres",1842,"Maraaret  Torres",0,3
+0,1843,"Beatrice  Mariani",1843,"Mariani Beatrice",0,0
+0,1844,"Camila  Salazar",1844,"Camila  Salazar",0,0
+0,1845,"Angel  Ramos",1845,"Angel  Ramos",0,0
+0,1846,"Hina  Watanabe",1846,"H. Watanabe",0,4
+0,1847,"Matvey  Petrov",1847,"Matoey  Petrov",0,4
+0,1848,"Valentina  Ramírez",1848,"Ramírez Valentina",0,0
+0,1849,"Himari  Murata",1849,"Murata Himari",0,0
+0,1853,"Emma  Valentini",1853,"Emma  Valentiki",0,2
+0,1854,"Mädïna  Tsoi",1854,"Mädïna  Tsei",0,4
+0,1858,"Sophia  de Guzman",1858,"Sophia  de Guzman",0,0
+0,1859,"Nur  Ochion",1859,"Nur  Ochion",0,0
+0,1860,"Dominykas  Petrauskas",1860,"Dominykas  Petrausjas",0,3
+0,471,"Álvaro  Morales",1861,"Alvaro  Morales",0,0
+0,1861,"Álvaro  Morales",1861,"Alvaro  Morales",0,0
+0,1862,"Beatriz Francisca Figueiredo",1862,"Figueiredo Beatriz Francisca",0,0
+0,1864,"Beatriz Francisco Figueiredo",1862,"Figueiredo Beatriz Francisca",0,3
+0,326,"Hasan  Kılıç",1863,"Kılıç Hasan",0,0
+0,1863,"Hasan  Kılıç",1863,"Kılıç Hasan",0,0
+0,1865,"Vittoria  Sanna",1865,"Virttoria  Sanna",0,2
+0,1867,"Mio  Takada",1867,"Mwo  Takada",0,4
+0,1869,"Petar  Georgiev",1869,"Petar  Goorgiev",0,4
+0,1871,"Chih-chiang  Yang",1871,"Chih-chiang  Yang",0,0
+0,1874,"Sofía  Delgado",1874,"Sofíu  Delgado",0,4
+0,1878,"Liz  Gomes",1878,"Gomes Liz",0,0
+0,1880,"Eun-woo Ji-yoo Cho",1880,"Eun-woo Ji-yoo Cho",0,0
+0,887,"Hannah  Schmidt",1882,"Hannah  Schmidt",0,0
+0,1882,"Hannah  Schmidt",1882,"Hannah  Schmidt",0,0
+0,1350,"Ona  Sánchez",1884,"S. Sánchez",0,4
+0,1886,"Eun-woo Do-yun Cho",1886,"Eun-woo Do-yun Cho",0,0
+0,1888,"Eun-woo Si-woo Cho",1888,"Eun-woo Si-woo Czo",0,4
+0,1890,"Suzana  Dimitrov",1890,"Sujana  Dimitrov",0,4
+0,1891,"Eun-woo Yu-jun Cho",1891,"Cho Eun-woo Yu-jun",0,0
+0,1892,"Helena  Costa",1892,"Helena  Costs",0,2
+0,1893,"Emilia  Schmid",1893,"Emlia  Schmid",0,1
+0,116,"Liam  Martínez",1894,"M. Martínez",0,3
+0,1661,"Mia  Martínez",1894,"M. Martínez",0,4
+0,1894,"Mia  Martínez",1894,"M. Martínez",0,4
+0,1898,"Carolina  Teixeira",1898,"Carolina  Tteixeira",0,1
+0,1901,"Anna Polina Smirnov",1901,"Anna Polina Smirtnov",0,3
+0,1693,"Olivia  Petersen",1902,"Olivia  Pedersen",0,2
+0,1902,"Olivia  Pedersen",1902,"Olivia  Pedersen",0,0
+0,1903,"Fūma  Matsui",1903,"F. Matsui",0,4
+0,1905,"Isla  Rodríguez",1905,"Isla  Rodriguez",0,0
+0,56,"Ava  Davis",1906,"Ava  Davks",0,4
+0,1906,"Ava  Davis",1906,"Ava  Davks",0,4
+0,1407,"Victoria  Guzmán",1908,"Guzmán Victoria",0,0
+0,1908,"Victoria  Guzmán",1908,"Guzmán Victoria",0,0
+0,1909,"Noah  Thomas",1909,"Noah  Thmoas",0,3
+0,677,"Noah  Jørgensen",1910,"Noah  Jonsen",0,3
+0,749,"Noah  Johansen",1910,"Noah  Jonsen",0,2
+0,1913,"Guadalupe  Pérez",1913,"Guddalupe  Pérez",0,3
+0,1914,"Anastasiya  Kovalchuk",1914,"Kovalchuk Anastasiya",0,0
+0,1916,"Zuzanna  Wiśniewski",1916,"Zuzanna  wiśniewski",0,0
+0,1917,"Andrea  Corpuz",1917,"Audrea  Corpuz",0,4
+0,1918,"Mary  Torres",1918,"Mary  Torrej",0,4
+0,1919,"William  Møller",1919,"Møller William",0,0
+0,1921,"Anna Maria Smirnov",1921,"Anno Maria Smirnov",0,1
+0,1924,"Osman  Kaya",1924,"Osman  Kayu",0,3
+0,1930,"Irati  Marín",1930,"I. Marín",0,2
+0,1933,"Mei-hui  Lǐ",1933,"Lǐ Mei-hui",0,0
+0,1934,"Mikael  Nielsen",1934,"yikael  Nielsen",0,4
+0,1935,"Emma  Tremblay",1935,"Emma  Tremblay",0,0
+0,1936,"Benjamín  Garrido",1936,"Benjamín  Garrido",0,0
+0,1937,"Anna Alisa Smirnov",1937,"Anna Alisa Smrnov",0,3
+0,1938,"Thiago  Aguilar",1938,"Thiago  Aguilar",0,0
+0,1939,"Fatma  Yılmaz",1939,"Fatma  kılmaz",0,4
+0,1921,"Anna Maria Smirnov",1941,"Anna. A. Smirnov",0,4
+0,1943,"Susanna  Margaryan",1943,"Susanna  Margaryan",0,0
+0,1944,"Victoria  Benítez",1944,"Victoria  Benxtez",0,4
+0,1947,"Ajla  Hoxha",1947,"Hoxha Ajla",0,0
+0,1948,"Marks  Kļaviņš",1948,"Marks  Kļaviņš",0,0
+0,1949,"Lucas  Morel",1949,"Lucas  Morel",0,0
+0,1950,"Charlotte  Mitchell",1950,"Charlotte  Motchell",0,3
+0,1952,"Amar  Laçi",1952,"Amar  Laiç",0,4
+0,1953,"Ellen  Salminen",1953,"Eplen  Salminen",0,3
+0,1955,"Celeste  Gómez",1955,"Gómez Celeste",0,0
+0,1957,"Maria Matilde Neves",1957,"Miria Matilde Neves",0,2
+0,1960,"Cecília  Correia",1960,"Cecília  Correiz",0,2
+0,1962,"Goran  Penov",1962,"Gran  Penov",0,3
+0,1954,"Maria Maria Neves",1963,"Maria. C. Neves",0,2
+0,1966,"I-chun  Liu",1966,"Liu I-chun",0,0
+0,1967,"Valentina  Gutiérrez",1967,"Valentina  Gutierrez",0,0
+0,1971,"Clara  Hansen",1971,"Clara  Hansen",0,0
+0,1972,"Léa  Gagnon",1972,"Léa  Gagcon",0,3
+0,1973,"Liam  Smit",1973,"Lia m Smit",0,3
+0,1974,"Shu-chuan  Wú",1974,"Wú Shu-chuan",0,0
+0,1977,"Maël  Leroy",1977,"Maël  Leroy",0,0
+0,1979,"Matilde  Amato",1979,"Mytilde  Amato",0,2
+0,1980,"Charlotte  Miller",1980,"Miller Charlotte",0,0
+0,1981,"Ao Hinato Ōtsuka",1981,"Ōtsuka Ao Hinato",0,0
+0,1984,"Lilja  Salo",1984,"Salo Lilja",0,0
+0,1987,"Sama  Edry",1987,"Spma  Edry",0,3
+0,1989,"Lamija  Adilović",1989,"Lamija  Adilović",0,0
+0,1992,"Patricia  Wilson",1992,"Patrxcia  Wilson",0,3
+0,1993,"Evie  Thomas",1993,"Evie  Thoma",0,3
+0,1994,"Giulia  Parisi",1994,"Gfulia  Parisi",0,4
+0,1997,"Mila  Biton",1997,"Biton Mila",0,0
+1,12,"Julen Julen Gutiérrez",0,"Gutiérrez Julen Ane",0,3
+1,33,"Julen Jan Gutiérrez",0,"Gutiérrez Julen Ane",0,3
+1,0,"Julen Ane Gutiérrez",3,"Julen. N. Gutiérrez",0,4
+1,14,"Julen Jon Gutiérrez",3,"Julen. N. Gutiérrez",0,3
+1,9,"Chun-hung  Lin",9,"Chan-hung  Lin",0,2
+1,12,"Julen Julen Gutiérrez",12,"rulen Julen Gutiérrez",0,2
+1,14,"Julen Jon Gutiérrez",12,"rulen Julen Gutiérrez",0,4
+1,33,"Julen Jan Gutiérrez",12,"rulen Julen Gutiérrez",0,4
+1,12,"Julen Julen Gutiérrez",14,"Julen Jon Gutiérrrez",0,2
+1,33,"Julen Jan Gutiérrez",14,"Julen Jon Gutiérrrez",0,4
+1,0,"Julen Ane Gutiérrez",23,"Julen. E. Gutiérrez",0,3
+1,14,"Julen Jon Gutiérrez",23,"Julen. E. Gutiérrez",0,4
+1,0,"Julen Ane Gutiérrez",33,"Julen Jan Gutiérrez",0,3
+1,14,"Julen Jon Gutiérrez",33,"Julen Jan Gutiérrez",0,4
+1,42,"Artiom  Munteanu",42,"Ardiom  Munteanu",0,4
+1,45,"Muhammad  David",45,"Muhmmad  David",0,2
+1,52,"Sakura  Arai",52,"Sakora  Arai",0,4
+1,12,"Julen Julen Gutiérrez",59,"Julen. Á. Gutiérrez",0,2
+1,14,"Julen Jon Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
+1,33,"Julen Jan Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
+1,64,"William  Morris",64,"Williax  Morris",0,4
 1,652,"Ida  Kristensen",73,"Ida  hristensen",0,4
+1,77,"Nathan  Martin",77,"Nathqn  Martin",0,3
+1,79,"Noah  Aguilar",79,"Noah  gAuilar",0,4
 1,82,"Miguel Ángel  Valdez",82,"Miguel Ángel  aldez",0,2
 1,95,"Mark Maxim Petrov",101,"Mark Petrov",0,4
-1,113,"Sophia  Bell",113,"Sophia  Bela",0,3
-1,116,"Liam  Martínez",116,"jLiam  Martínez",0,3
+1,103,"Mark Alisa Petrov",103,"Mrak Alisa Petrov",0,4
+1,104,"Ji-a  Shen",104,"Ji-a  Scen",0,4
 1,118,"Refael  Cohen",118,"Refael  Cohn",0,3
-1,119,"Mark Daniil Petrov",119,"Mark Daniil Letrov",0,4
-1,138,"Margarida  Gonçalves",138,"Margarida  Gonçalve",0,3
-1,139,"Ha-yoon  Bak",139,"Ha-yoon  Btk",0,4
-1,142,"Dion  Shkreli",142,"Dion  Shkrels",0,4
+1,135,"Aleksandar Dejan Trajanovski",135,"Aleksandar Dejan Trajanovsji",0,3
 1,104,"Ji-a  Shen",143,"Ji-a  Shin",0,4
-1,135,"Aleksandar Dejan Trajanovski",144,"Aleksandar Trajanovski",0,4
-1,145,"Harris  Phillips",145,"Harrjs  Phillips",0,4
-1,153,"Chih-wei  Li",153,"Chh-wei  Li",0,3
-1,155,"Goran  Kostovski",155,"Goran  Knstovski",0,4
-1,135,"Aleksandar Dejan Trajanovski",157,"Aleksandar Trajanovski",0,4
-1,196,"Lavi  Cohen",196,"Lavi  Cohun",0,4
-1,197,"Beatrice  Benedetti",197,"Beatrice  Bdnedetti",0,3
-1,210,"Alma  Romero",210,"Alma  Romekro",0,3
-1,41,"Yìzé  Wáng",217,"Y. Y. Wáng",0,5
-1,992,"Yìhán  Wáng",217,"Y. Y. Wáng",0,5
-1,223,"Lian  Ohayon",223,"L. Ohayon",0,4
-1,230,"Cillian  O'Gallagher",230,"Cillian  O'Gallaghqr",0,4
+1,131,"Aleksandar Zoran Trajanovski",144,"Aleksandar Trajanovski",0,4
+1,147,"Noor  Van Leeuwen",147,"Nour  Van Leeuwen",0,4
+1,148,"Henry  King",148,"Heory  King",0,4
+1,151,"Mikael  Hansen",151,"Mikael  Hensen",0,3
+1,152,"Juan  Aguilar",152,"nJuan  Aguilar",0,3
+1,131,"Aleksandar Zoran Trajanovski",157,"Aleksandar Trajanovski",0,4
+1,1430,"Martina  Costa",170,"Martina  Acosta",0,3
+1,176,"Li-hua  Yang",176,"Li-hua  aYng",0,4
+1,190,"Amar  Božić",190,"mar  Božić",0,2
+1,213,"Hàorán  Lǐ",213,"àorán  Lǐ",0,3
+1,218,"August  Olsson",218,"August  Oesson",0,4
+1,222,"Laura Antônia Sousa",222,"Laqura Antônia Sousa",0,3
+1,239,"Laura Helena Sousa",239,"Laura Helenva Sousa",0,3
 1,241,"Daniel  López",241,"Daniel  Lzópez",0,3
-1,249,"Leonardo  Caruso",249,"Peonardo  Caruso",0,4
-1,252,"Laura Théo Sousa",252,"Laura Tho Sousa",0,3
-1,266,"Martina  Godoy",266,"Martina  Gmdoy",0,4
+1,246,"Éabha  Sullivan",246,"Éabha  Sulliva",0,2
+1,248,"Laura Isabella Sousa",248,"Laura Isabellu Sousa",0,2
+1,264,"Amar  Savić",264,"mar  Savić",0,2
+1,266,"Martina  Godoy",266,"Martina  Gmdoy",0,3
+1,275,"Isabella  Vidal",275,"Isabelzla  Vidal",0,2
+1,280,"Regina  Torres",280,"Regine  Torres",0,4
 1,281,"Mikhail  Kozlov",281,"Mikhail  Kzlov",0,3
-1,284,"Éabha  O'Ryan",284,"Éabha  O'Ryazn",0,3
-1,293,"Mateo  Donoso",293,"M. Donoso",0,5
 1,295,"Tatsuki  Kondō",295,"Tatsuki  Kwndō",0,4
-1,298,"Oleksandra  Tkachuk",298,"Oleksandra  Tpachuk",0,4
-1,302,"Chih-ming  Ieong",302,"Chih-ming  Iecong",0,3
-1,306,"Hinato  Kimura",306,"Hinato  Kixura",0,4
-1,323,"Ema Uta Nakashima",321,"Ema Hina Nakashima",0,5
-1,321,"Ema Hina Nakashima",323,"Ema Uta Nakashima",0,5
-1,340,"Leo  Ali",340,"Leqo  Ali",0,3
-1,342,"Ámbar  Suárez",342,"Ámbar  Sugrez",0,3
-1,359,"Meryem  Kara",359,"Meryjm  Kara",0,4
-1,366,"Eun-woo  Hui",366,"Eun-woo  Hus",0,4
-1,346,"Matija Lea Stojanović",367,"Matija Stojanović",0,3
-1,349,"Matija Mateo Stojanović",367,"Matija Stojanović",0,3
-1,353,"Matija Teo Stojanović",367,"Matija Stojanović",0,4
-1,368,"Evelyn  Jenkins",368,"Evelyn  Jenkisn",0,5
-1,370,"Sofia  Fontana",370,"S. Fontana",0,5
-1,372,"Mateo  Hernández",372,"Matfo  Hernández",0,4
-1,373,"Mateo  Popović",373,"Mato  Popović",0,3
-1,379,"Victoria Valentina García",379,"Victoria Valontina García",0,4
-1,382,"Yasmin  Hazan",382,"Yasmin  Haazn",0,4
-1,395,"Ema  Taketa",395,"Ema  Taklta",0,4
-1,398,"Anna  Eder",398,"Alna  Eder",0,4
-1,416,"Sofía Miguel Ángel Delgado",416,"Sofía Miguel Ángel Delgadf",0,4
-1,418,"Roan  Kola",418,"Roan  Kova",0,4
-1,423,"Linda  Gonzalez",423,"Linda  Gonzalaez",0,3
-1,427,"Lucas Dorothy Hall",427,"Lufcas Dorothy Hall",0,3
+1,301,"Zǐhán  Mǎ",301,"Zǐkán  Mǎ",0,4
+1,303,"Ema Nagisa Nakashima",303,"Ema Naggisa Nakashima",0,1
+1,317,"Hamza  Savić",317,"Hamza  Savkć",0,4
+1,330,"Ema Anzu Nakashima",330,"Ema nzu Nakashima",0,1
+1,333,"Ema Yua Nakashima",333,"Ema Yua Nakashqma",0,4
+1,344,"Yasmin  Chen",344,"Yasmin  Cahen",0,3
+1,347,"Matija Natalija Stojanović",347,"Matij aNatalija Stojanović",0,3
+1,363,"David  Martin",363,"Dsvid  Martin",0,4
+1,380,"Eva  Trajanoski",380,"Eva  rrajanoski",0,3
+1,396,"Ha-yoon  Youn",396,"gHa-yoon  Youn",0,3
+1,410,"Sofía Sebastián Delgado",410,"Sofía eebastián Delgado",0,3
+1,413,"Nik  Zupan",413,"Nrk  Zupan",0,4
+1,414,"Astrid  Rivas",414,"Astird  Rivas",0,4
+1,415,"Noah  Bengtsson",415,"koah  Bengtsson",0,3
 1,429,"Maria  Vardanyan",429,"Maria  Vardanyfn",0,3
-1,461,"Mia Isabella Sosa",461,"Moa Isabella Sosa",0,4
-1,513,"Thomas Leo Brown",483,"Thomas. S. Brown",0,5
-1,486,"Lin  Moshe",486,"Len  Moshe",0,4
-1,489,"Haruto  Endō",489,"Harjto  Endō",0,4
-1,490,"Artem  Bondarenko",490,"Artm  Bondarenko",0,3
-1,493,"Väinö  Turunen",493,"Väinö  Turuneg",0,4
-1,513,"Thomas Leo Brown",496,"Thomas. T. Brown",0,5
-1,511,"Thomas Liam Brown",500,"Thomas Brown",0,5
-1,513,"Thomas Leo Brown",500,"Thomas Brown",0,4
-1,502,"Luiz  Pereira",502,"Luiz  Pkreira",0,4
-1,506,"Olivia  Fisher",506,"Olivia  Risher",0,4
-1,507,"Teodor  Todorova",507,"Teodor  Todoorva",0,4
-1,511,"Thomas Liam Brown",511,"Thomas Oiam Brown",0,4
-1,496,"Thomas Thomas Brown",513,"Thomas. L. Brown",0,2
-1,511,"Thomas Liam Brown",513,"Thomas. L. Brown",0,5
-1,513,"Thomas Leo Brown",513,"Thomas. L. Brown",0,4
-1,514,"Mia  Ledesma",514,"Mia  Ledzsma",0,4
-1,516,"Anna  Solovyov",516,"Anna  Solovoyv",0,5
-1,518,"Thomas Nathan Brown",518,"Thomas Nathan Byown",0,4
-1,534,"Álvaro  Rubio",534,"Álvaro  Ruiio",0,4
+1,430,"Diego  Domínguez",430,"Diego  Domínluez",0,4
+1,436,"Ye-jun  Jung",436,"Ye-ju  Jung",0,2
+1,437,"Robert  Gutierrez",437,"Rosbert  Gutierrez",0,2
+1,438,"Francisca  Simões",438,"Fracnisca  Simões",0,3
+1,447,"Lucas Luna Hall",447,"Lucas Luna Hlal",0,3
+1,449,"Lilit  Poghosyan",449,"Lilit  Poghosya",0,3
+1,451,"Lena  Wójcik",451,"Lena  Wójcsk",0,4
+1,491,"Mila  Chen",491,"Mila  Cahen",0,3
+1,493,"Väinö  Turunen",493,"Väinö  Turuneg",0,3
+1,1904,"Nikola  Ivanović",494,"Ivanova Nikola",0,2
+1,499,"Gaspar  Carrasco",499,"Gaspar  Currasco",0,3
+1,502,"Luiz  Pereira",502,"Luiz  Pkreira",0,3
+1,507,"Teodor  Todorova",507,"Teodor  Todoorva",0,3
+1,514,"Mia  Ledesma",514,"Mia  Ledzsma",0,3
+1,522,"Emilia  Castillo",522,"Emilia  Cqstillo",0,3
+1,527,"Amar  Salihović",527,"Amar  Salihovć",0,3
 1,542,"Shu-hui  Tsay",542,"Shuu-hui  Tsay",0,1
-1,543,"Ema Uta Shimada",543,"Ema Uto Shimada",0,3
-1,544,"Arthur  Dubois",544,"Arthur  Duboiq",0,4
-1,545,"Uta  Imai",545,"kta  Imai",0,4
-1,561,"Mikaere  Kaur",561,"Mikaerf  Kaur",0,4
-1,577,"Ámbar Liam Bruno",577,"Ámbar Bruno",0,4
-1,587,"Sita  Thapa",587,"Sitm  Thapa",0,3
-1,592,"Rasmus Robin Semjonov",592,"Rasmu sRobin Semjonov",0,4
-1,596,"Emma  Kļaviņš",596,"Emma  Kļoviņš",0,4
-1,612,"Ezekiel  Castro",612,"Ezekiael  Castro",0,3
-1,613,"Nora  Smits",613,"Nora  Smitq",0,4
+1,558,"Agnes  Christensen",558,"Agnes  Christense",0,2
+1,576,"Ámbar Ciro Bruno",577,"Ámbar Bruno",0,4
+1,1043,"I-chun  Chang",579,"I-chun  cuáng",0,3
+1,586,"Rasmus Sandra Semjonov",586,"Rasmus Sandra Semjoniv",0,3
+1,594,"Rasmus David Semjonov",594,"Rasmus aDvid Semjonov",0,4
+1,597,"Gita  Tamang",597,"Gita  Tqmang",0,2
+1,605,"Mark Alexandra Melnic",605,"Marm Alexandra Melnic",0,4
+1,611,"Mark Daniel Melnic",611,"Mark Daniel Melnivc",0,3
 1,619,"Leonor  Lopes",619,"Leonor  Lopws",0,4
-1,624,"Léna Boglárka Tóth",624,"Lna Boglárka Tóth",0,3
-1,627,"Zoe  Fernández",627,"Z. Fernández",0,3
-1,629,"Emma  Schmitz",629,"Emma  Schmitr",0,4
-1,661,"Jakub  Jankowski",661,"Jakub  Jankowsko",0,3
-1,684,"Violeta  Matovski",684,"Violeta  Mqtovski",0,4
+1,621,"Léna Léna Tóth",620,"Tóth Léna Anna",0,2
+1,620,"Léna Anna Tóth",621,"Tóth Léna Léna",0,2
+1,637,"Léna Ádám Tóth",621,"Tóth Léna Léna",0,4
+1,622,"Rayana  Kim",622,"Rahana  Kim",0,2
+1,620,"Léna Anna Tóth",625,"Léna Tóth",0,2
+1,637,"Léna Ádám Tóth",625,"Léna Tóth",0,4
+1,697,"Ona  Fernández",627,"Z. Fernández",0,4
+1,637,"Léna Ádám Tóth",637,"Léna yÁdám Tóth",0,3
+1,643,"Noah  Doherty",643,"Naoh  Doherty",0,3
+1,647,"Luna Dorothy Johnson",647,"Luna Dorokhy Johnson",0,4
+1,1298,"Chien-hung  Lei",651,"Chn-hung  Lei",0,3
+1,653,"Luna David Johnson",653,"Luna David aJohnson",0,3
+1,658,"Ha-rin  Shim",658,"Ha-rie  Shim",0,4
+1,659,"Ivana  Perović",659,"Ivena  Perović",0,3
+1,683,"Seo-yun Ha-rin Shen",683,"Seo-yun Ha-cin Shen",0,4
+1,684,"Violeta  Matovski",684,"Violeta  Mqtovski",0,3
+1,691,"David  Clark",691,"Davxd  Clark",0,4
+1,696,"Seo-yun Ju-won Shen",696,"Seo-yun Ju-won Sben",0,4
+1,698,"Jori  Golan",698,"Jori  Golaz",0,4
 1,699,"Leon  Wojciechowski",699,"Len  Wojciechowski",0,3
-1,705,"Emine Şerife Demir",705,"Emine Şerife Demyr",0,3
-1,706,"Sōma  Yamaguchi",706,"Sōma  Yamaguchu",0,4
-1,707,"Freya  Cox",707,"ireya  Cox",0,4
-1,709,"Amir  Mizrahi",709,"Amir  Mqzrahi",0,3
-1,711,"Emine Ali Demir",711,"Emine Ali Remir",0,4
-1,718,"Hudson  Anderson",718,"Hodson  Anderson",0,4
-1,737,"Maximiliano  Farías",737,"Maximilizno  Farías",0,3
-1,744,"Victoria  Figueroa",744,"Victoria  Figueoa",0,3
-1,748,"Leandra  Gjika",748,"Leandra  Gjiak",0,5
-1,749,"Noah  Johansen",749,"Noah  Johanssn",0,4
-1,794,"Charlotte Henry Morris",758,"Morris Charlotte Mary",0,5
+1,1565,"Leon  Wojciechowski",699,"Len  Wojciechowski",0,3
+1,704,"Maxim  Ionescu",704,"Maxim  Ioneacu",0,4
+1,719,"Adriana  Araújo",719,"Adriana  Arajúo",0,4
+1,728,"Ayala  Levin",728,"Ayala  Levni",0,4
+1,730,"Emine Miraç Demir",730,"Emien Miraç Demir",0,4
+1,700,"Emine Emine Demir",736,"Emine. A. Demir",0,2
+1,742,"Roel Leandra Halili",742,"Roel Leandra Haluli",0,1
+1,755,"Minato  Watabe",755,"Minato  Watqbe",0,3
 1,760,"Sofía  Petersen",760,"Sofía  Peterswn",0,4
-1,770,"Maja  Romero",770,"Maja  sRomero",0,3
-1,771,"Mùchén  Zhào",771,"Mochén  Zhào",0,4
-1,783,"Tommaso  Esposito",783,"Tommaso  Espodito",0,4
+1,764,"Charlotte Maria Morris",764,"Charlutte Maria Morris",0,4
+1,766,"Charlotte Margaret Morris",766,"Chkarlotte Margaret Morris",0,3
+1,772,"Ahmed  Mehmedović",772,"Ahmed  Mehmidović",0,2
+1,785,"Sophie  Clarke",785,"Sophie  Clarnke",0,3
 1,787,"Chien-hung  Liú",787,"Chaen-hung  Liú",0,4
-1,806,"Oisín  Quinn",806,"Oisín  Quiyn",0,3
-1,811,"Lyn  Hazan",811,"Lyn  Bazan",0,4
-1,817,"Zoe  Morales",817,"Zoe  Morale",0,2
-1,822,"Alma  Romano",822,"Alma  Fomano",0,4
-1,826,"Angelina  Manukyan",826,"Angelina  Manuakyan",0,3
+1,795,"Charlotte Lucas Morris",795,"Charlotte Lcuas Morris",0,4
+1,799,"Ji-yoo Ha-yoon Lee",799,"Ji-yoo Ha-ycoon Lee",0,2
+1,809,"Ji-yoo Ha-joon Lee",799,"Ji-yoo Ha-ycoon Lee",0,3
+1,802,"Lili  Horváth",802,"Lilu  Horváth",0,3
+1,799,"Ji-yoo Ha-yoon Lee",809,"Ji-yo Ha-joon Lee",0,1
+1,819,"Elias  Niemi",819,"Elias  ciemi",0,4
 1,828,"Willow Nikau Patel",828,"Willow Nikuu Patel",0,4
-1,834,"Diego  Maldonado",834,"Diego  Makdonado",0,4
+1,832,"Chih-wei  Tiong",832,"Cfih-wei  Tiong",0,3
 1,840,"Julia  Kowalski",840,"Julia  Kwalski",0,3
-1,847,"Léo  Thomas",847,"L. Thomas",0,4
-1,876,"Riko  Watanabe",876,"Rako  Watanabe",0,4
-1,879,"Mustafa Elif Kurt",879,"Mdustafa Elif Kurt",0,3
-1,882,"Vesna  Radulović",882,"Vesna  Radulavić",0,4
-1,883,"Mustafa Nehir Kurt",883,"Mustafa Nehir Kutr",0,5
-1,886,"Niel  Ashkenazi",886,"Niel  Ashkenrazi",0,3
-1,889,"Jennifer  Sanchez",889,"Jehnifer  Sanchez",0,4
-1,894,"Julieta  Miranda",894,"Julieta  Msranda",0,4
-1,896,"João  Monteiro",896,"João  Mnnteiro",0,4
+1,846,"Hana  Ademović",846,"Hana  dAemović",0,4
+1,852,"Willow Luca Patel",852,"Willw Luca Patel",0,3
+1,853,"Mei-hui  Gô͘",853,"eei-hui  Gô͘",0,4
+1,887,"Hannah  Schmidt",887,"Hannah  Schmadt",0,4
+1,1882,"Hannah  Schmidt",887,"Hannah  Schmadt",0,4
+1,889,"Jennifer  Sanchez",889,"Jehnifer  Sanchez",0,3
+1,890,"Benjamín  Donoso",890,"Bwnjamín  Donoso",0,4
+1,892,"Jan  Martínez",892,"Jaj  Martínez",0,3
+1,897,"Artiom  Țurcan",897,"Artiom  Țurcen",0,4
 1,898,"Chun-chieh  Tiong",898,"Chun-chueh  Tiong",0,3
-1,486,"Lin  Moshe",907,"M. Moshe",0,5
-1,916,"Ali  Ismayilov",916,"Ali  Ismayilav",0,4
-1,919,"Ao  Takada",919,"Ao  Taekada",0,3
-1,922,"Malthe  Nielsen",922,"Malthi  Nielsen",0,4
-1,930,"Shu-hui  Chhoà",930,"Shu-hei  Chhoà",0,3
-1,933,"Hina  Takeda",933,"Hina  Taeda",0,3
-1,940,"Barbara Linda Thomas",940,"Barbara Thomas",0,5
-1,954,"Robert  Evans",954,"Robert  Evane",0,4
-1,958,"Barbara Olivia Thomas",958,"Barbara Olivia Thhomas",0,1
-1,385,"Ava  Thomas",964,"B. A. Thomas",0,4
-1,987,"Arthur  Cardoso",987,"Arthur  Carmoso",0,4
-2,31,"Julen Nil Gutiérrez",3,"Julen. N. Gutiérrez",0,3
-2,18,"Isabella  Palma",18,"Isibella  Palma",0,4
-2,23,"Julen Emma Gutiérrez",23,"Julen. E. Gutiérrez",0,5
-2,47,"Julen Emma Gutiérrez",23,"Julen. E. Gutiérrez",0,5
-2,25,"Elias  Eder",25,"Elias  Edr",0,3
-2,29,"Julen Paula Gutiérrez",29,"Julen Paula Guptiérrez",0,3
-2,41,"Yìzé  Wáng",41,"Yìzé  cáng",0,4
-2,43,"Charlotte  Kelly",43,"Charlotte  Kekly",0,4
-2,12,"Julen Julen Gutiérrez",47,"Julen Emma Gutierrez",0,5
+1,903,"Camila  Sandoval",903,"zCamila  Sandoval",0,3
+1,905,"Maximiliano  Carvajal",905,"Maximiliano  Carvjal",0,2
+1,908,"William James Nelson",908,"William Jomes Nelson",0,3
+1,913,"Victoria  Hernández",913,"Victoria  Hernándiz",0,4
+1,914,"William Richard Nelson",914,"William Ricyard Nelson",0,4
+1,916,"Ali  Ismayilov",916,"Ali  Ismayilav",0,3
+1,964,"Barbara Ava Thomas",940,"Barbara Thomas",0,2
+1,943,"Sofía  Muñoz",943,"Sofía  Muñez",0,4
+1,1468,"Sofía  Muñoz",943,"Sofía  Muñez",0,4
+1,1736,"Sofía  Muñoz",943,"Sofía  Muñez",0,4
+1,947,"Adéla  Dvořák",947,"Adéla  cvořák",0,4
+1,955,"Vicente  Paredes",955,"Vifente  Paredes",0,4
+1,956,"Santiago  Pizarro",956,"Santiago  Pidarro",0,4
+1,688,"Martina  Muñoz",957,"Martin  Munoz",0,3
+1,971,"Barbara James Thomas",971,"Barbara James Thokas",0,3
+1,988,"Aria  Bardhi",988,"tria  Bardhi",0,3
+1,992,"Yìhán  Wáng",992,"Yìhán  Wwng",0,3
+1,993,"Patricia David Hernandez",993,"Patricia. D. Hernandez",0,4
+1,1009,"Patricia Noah Hernandez",1009,"Patricia Noah Hernandze",0,4
+1,1010,"Patricia Oliver Hernandez",1010,"Patridia Oliver Hernandez",0,2
+1,1012,"Concepción  Martínez",1012,"Concecpión  Martínez",0,3
+1,1020,"David Linda Cook",1020,"David Linda Couk",0,4
+1,1032,"Boglárka  Balázs",1032,"Boglárka  Blázs",0,2
+1,1263,"Lara Boglárka Balázs",1032,"Boglárka  Blázs",0,3
+1,1039,"Min-jun  Yoo",1039,"pin-jun  Yoo",0,4
+1,1043,"I-chun  Chang",1043,"-Ichun  Chang",0,2
+1,1046,"David Evelyn Cook",1046,"Davnd Evelyn Cook",0,4
+1,1047,"Dan  Hashimoto",1047,"Dan  Hashikoto",0,4
+1,1057,"David Theodore Cook",1057,"David Theodore Coowk",0,3
+1,1061,"Matilde  Santoro",1061,"Matilde  Santuro",0,3
+1,1083,"Lukáš  Procházka",1083,"Lukáš  Procuázka",0,4
+1,1091,"Regina  Guerrero",1091,"Regina  Gcerrero",0,4
+1,1103,"Liam Omer Ochion",1103,"Liam Omer Ovhion",0,4
+1,1108,"Nikoloz  Kapanadze",1108,"Nikoloz  Kapanadwe",0,4
+1,1124,"Solomiya  Bondarenko",1124,"Solomiya  Bonbarenko",0,4
+1,1135,"Ha-joon  Rhee",1135,"Hu-joon  Rhee",0,4
+1,1139,"Grace  Johnson",1139,"Grace  Johnsob",0,4
+1,1153,"Lara Marcell Kiss",1153,"Larq Marcell Kiss",0,3
+1,1154,"Máté  Kovács",1154,"Máté  Koács",0,3
+1,1163,"Mila  Vidović",1163,"Mila  gidović",0,3
+1,1171,"Ha-joon  Kim",1171,"Ha-joon  Kcim",0,3
+1,1176,"Grace  Gallagher",1176,"Grace  Gallgaher",0,3
+1,1178,"Jón  Olsen",1178,"J. Olsen",0,3
+1,1219,"Elijah  Jones",1219,"Elijah  Jrnes",0,4
+1,1220,"Matías María José Miranda",1220,"Matíjs María José Miranda",0,3
+1,1223,"Giulia  Bellini",1223,"Giulia  Bellinj",0,3
+1,1226,"Richard  Brooks",1226,"Richard  Broloks",0,2
+1,1231,"Paula  Navarro",1231,"Paula  aNvarro",0,3
+1,1251,"Nagi  Watanabe",1251,"Nagi  Woatanabe",0,3
+1,1260,"Ethan  Soriano",1260,"Etuan  Soriano",0,4
+1,1270,"Hayk  Hakobyan",1270,"Hayk  Hakdbyan",0,4
+1,1981,"Ao Hinato Ōtsuka",1273,"Ōtsuka Hinato",0,2
+1,1278,"Juan  Rossi",1278,"Juan  vRossi",0,2
+1,1288,"Ivan  Popović",1288,"I. Popović",0,4
+1,1289,"Victor  Martin",1289,"pictor  Martin",0,4
+1,1291,"Anna  Huber",1291,"Ann  Huber",0,2
+1,1043,"I-chun  Chang",1296,"I-chun  Huang",0,3
+1,1306,"Uta  Takagi",1306,"Uta  pakagi",0,3
+1,1317,"Miguel Ángel  Ríos",1317,"Miguel Ríos",0,4
+1,1344,"Liam  Van Dijk",1344,"Liam  Vna Dijk",0,4
+1,1345,"Ilgar  Abbasov",1345,"Ilgar  Abbascv",0,4
+1,1349,"Ema Jan Černý",1349,"Ema. J. Černý",0,4
+1,1361,"Ginevra  Silvestri",1361,"Ginemra  Silvestri",0,3
+1,1376,"Aisultan  Kusainov",1376,"Aisuhtan  Kusainov",0,4
+1,1382,"August  López",1382,"August  Lópdz",0,4
+1,1396,"Chun-chieh  Lei",1396,"Chun-ccieh  Lei",0,3
+1,1397,"Maxim  Volkov",1397,"Maxim  Volkxv",0,3
+1,1399,"Hugo  André",1399,"Hulo  André",0,4
+1,526,"Sara  Muratović",1400,"M. A. Muratović",0,4
+1,1292,"Emil  Andersen",1401,"Emil  Andersan",0,3
+1,1401,"Emil  Andersen",1401,"Emil  Andersan",0,3
+1,1402,"Merjem Amina Muratović",1402,"Merjem Amina Muratovći",0,4
+1,1403,"Ane  Morales",1403,"Ane  Mkrales",0,4
+1,1410,"Delfina  Franco",1410,"Delzina  Franco",0,4
+1,1415,"Alice  Cavalcante",1415,"Alice  Caualcante",0,2
+1,1425,"Davud  Đukić",1425,"Davud  Đukoć",0,4
+1,1428,"Yǔzé  Chow",1428,"qǔzé  Chow",0,4
+1,1431,"Marie  Huber",1431,"Mqarie  Huber",0,3
+1,1446,"Felix Hannah Lechner",1446,"Felix Hannah Lychner",0,3
+1,1447,"James  Bos",1447,"qames  Bos",0,4
+1,1461,"Haruma  Murakami",1461,"Harkma  Murakami",0,2
+1,385,"Ava  Thomas",1463,"A. Thomas",0,1
+1,1463,"Ava  Thomas",1463,"A. Thomas",0,1
+1,1469,"Ruòxī  Ko",1469,"Tuòxī  Ko",0,4
+1,1453,"Felix Felix Lechner",1472,"Felix. N. Lechner",0,2
+1,1477,"Alessandro  Santoro",1477,"Alessandgo  Santoro",0,3
+1,1483,"Huseyn Samir Huseynov",1483,"Huseyn Scmir Huseynov",0,4
+1,1503,"Jovan  Petkov",1503,"Jovan  Petkv",0,2
+1,1505,"Ana  Mamedov",1505,"Ena  Mamedov",0,3
+1,1519,"Mei  Fujita",1519,"Mei  Fujuta",0,3
+1,1523,"Ji-a  Moon",1523,"Ji-a  loon",0,4
+1,1526,"Noah  Correa",1526,"Noah  Clrrea",0,4
+1,1532,"Ha-joon  Jen",1532,"Ha-zoon  Jen",0,3
+1,1541,"Emma  Schneider",1541,"Emma  Sphneider",0,4
+1,1547,"Seo-ah  Kwon",1547,"Seo-ah  Lwon",0,4
+1,1553,"Sakura  Murata",1553,"Swakura  Murata",0,3
+1,1569,"Lev Maxim Novikov",1569,"Lev. M. Novikov",0,4
+1,1578,"Nagi Sō Ichikawa",1578,"Nagi Sō Ichikawq",0,3
+1,1583,"Ömer  Şahin",1583,"Ömer  Şahni",0,4
+1,1584,"Sesili  Maisuradze",1584,"Sesili  Maisuraeze",0,3
+1,1586,"Hannah  Reiter",1586,"qannah  Reiter",0,3
+1,1591,"Eva  Ceban",1591,"Eva  Csban",0,4
+1,1592,"Aline  Lima",1592,"Aline  Limpa",0,3
+1,1595,"Nagi Dan Ichikawa",1595,"Nagi Dna Ichikawa",0,3
+1,1598,"Lovro  Žagar",1598,"Lovro  Žbgar",0,3
+1,1603,"Ji-yoo  Ko",1603,"Ja-yoo  Ko",0,4
+1,1608,"Nagi Anzu Ichikawa",1608,"Nagn Anzu Ichikawa",0,4
+1,1573,"Gaspar  Araya",1613,"Gasear  Araya",0,4
+1,1613,"Gaspar  Araya",1613,"Gasear  Araya",0,4
+1,1671,"Lin Adele Levy",1618,"Lin Levy",0,4
+1,1620,"Demetre  Mamedovi",1620,"Dimetre  Mamedovi",0,2
+1,1624,"Sara  Žagar",1624,"Sara  sŽagar",0,2
+1,1629,"Kiara  Sharma",1629,"Kiara  Shaurma",0,2
+1,1630,"Do-yun  Im",1630,"Do-yun  Ic",0,4
+1,1617,"Lin Jude Levy",1631,"Liqn Jude Levy",0,3
+1,1631,"Lin Jude Levy",1631,"Liqn Jude Levy",0,3
+1,1632,"Nela  Balog",1632,"Npela  Balog",0,3
+1,1639,"Isabella  López",1639,"Isavella  López",0,4
+1,1644,"Asel  Çetin",1644,"Asel  Çetijn",0,3
+1,1671,"Lin Adele Levy",1650,"Lin Levy",0,4
+1,1657,"Mùchén  Zhōu",1657,"Mùchjn  Zhōu",0,4
+1,1666,"Yasmin  Adary",1666,"Yasmen  Adary",0,4
+1,1671,"Lin Adele Levy",1672,"Lin Levy",0,4
+1,1689,"Davi  Oliveira",1689,"Divi  Oliveira",0,3
+1,1683,"Muhammad Sama Dahan",1692,"Muhammad. A. Dahan",0,3
+1,1702,"Muhammad Abd Dahan",1692,"Muhammad. A. Dahan",0,3
+1,1731,"Muhammad Maya Dahan",1692,"Muhammad. A. Dahan",0,2
+1,1695,"Emil  Savolainen",1695,"Emil  Savolaindn",0,2
+1,1697,"Seo-jun  Kuen",1697,"Seo-jun  Kueb",0,3
+1,1708,"Hana  Zukić",1708,"Hana  Zukdć",0,4
+1,1714,"Vasilije  Perović",1714,"Vasilije  Perovmć",0,4
+1,1717,"Lucas  Donoso",1717,"Lucas  Doneso",0,2
+1,1724,"William  Jonsson",1724,"William  Jnsson",0,2
+1,1729,"Paula  González",1729,"Paulw  González",0,3
+1,1702,"Muhammad Abd Dahan",1731,"Muhammad Dahan",0,3
+1,1731,"Muhammad Maya Dahan",1732,"Muhammad Loa Dahan",0,4
+1,1735,"Vicente  Vera",1735,"Vucente  Vera",0,4
+1,1738,"Andrias  Jacobsen",1738,"Andrias  Jicobsen",0,4
+1,1739,"William Leah Olsen",1739,"Williabm Leah Olsen",0,3
+1,1742,"Jakob  Aigner",1742,"Jaob  Aigner",0,3
+1,1743,"Artem  Moroz",1743,"Artem  Morboz",0,2
+1,1764,"Hovhannes  Gevorgyan",1764,"Hovhannes  Gevorgyqn",0,3
+1,1771,"Andria  Tabatadze",1771,"Awdria  Tabatadze",0,4
+1,1795,"Ha-rin Ha-yoon Zuu",1795,"Ha-rin Ha-yoon ouu",0,4
+1,1800,"Alexandra  Lebedev",1800,"Alexandra  Lebdeev",0,2
+1,1802,"Shu-hua  Ts'ai",1802,"Shu-ha  Ts'ai",0,2
+1,1807,"Ha-rin Eun-woo Zuu",1807,"Hea-rin Eun-woo Zuu",0,3
+1,1808,"Berrdo  Azevedo",1808,"Berrbo  Azevedo",0,3
+1,1814,"Felipe  Rivero",1814,"Felipe  Rovero",0,3
+1,1821,"Maria  Correia",1821,"Maria  Correix",0,2
+1,1838,"Mariya  Volkov",1838,"Mariya  Voloov",0,3
+1,1855,"Éabha  O'Brien",1855,"Éabha  O'Brven",0,4
+1,1872,"Ji-an  Joe",1872,"yi-an  Joe",0,3
+1,1873,"Lovro  Krajnc",1873,"oLvro  Krajnc",0,4
+1,1887,"Emma  Vos",1887,"Emma  nos",0,4
+1,1889,"Tomás  Henríquez",1889,"aomás  Henríquez",0,4
+1,1895,"Eevi  Laine",1895,"Ebevi  Laine",0,2
+1,1621,"Gilli  Johansen",1896,"Gilli  Johansef",0,4
+1,1896,"Gilli  Johansen",1896,"Gilli  Johansef",0,4
+1,1900,"Ivan  Novikov",1900,"I. Novikov",0,4
+1,1904,"Nikola  Ivanović",1904,"Nikola  Ivdnović",0,4
+1,1910,"Noah  Jansen",1910,"Noah  Jonsen",0,3
+1,1915,"Anna Yelena Smirnov",1915,"Anjna Yelena Smirnov",0,2
+1,1925,"Mia  Pérez",1925,"Mia  Péree",0,4
+1,1927,"Filip  Nikolić",1927,"Filip  Nikolif",0,3
+1,1931,"Richard  Sullivan",1931,"Richard  Sullivaen",0,3
+1,1942,"Haru  Harada",1942,"Hadu  Harada",0,2
+1,1958,"Ludovica  Galli",1958,"Ludomica  Galli",0,4
+1,1959,"Sōma  Andō",1959,"Sōmq  Andō",0,4
+1,1968,"Chin-lung  Ngô͘",1968,"Cihn-lung  Ngô͘",0,4
+1,1978,"Gabriele  Galli",1978,"Gabriegle  Galli",0,2
+1,1273,"Hinato  Ōtsuka",1981,"Ōtsuka Ao Hinato",0,2
+1,1982,"Ava  Jenkins",1982,"Aea  Jenkins",0,2
+1,1985,"Lucía  Marín",1985,"Ludía  Marín",0,4
+1,1990,"Yusef  Gabai",1990,"Ysuef  Gabai",0,4
+1,1996,"Amina  Ismailov",1996,"Amipa  Ismailov",0,4
+1,1998,"Finlay  Johnson",1998,"Finlay  ohnson",0,3
+2,7,"Isidora  Reyes",7,"psidora  Reyes",0,3
+2,22,"Leo  Gil",22,"L. Gil",0,3
+2,25,"Elias  Eder",25,"Elias  Edr",0,2
+2,19,"Julen Danel Gutiérrez",33,"Julen Jan Gutiérrez",0,4
+2,12,"Julen Julen Gutiérrez",36,"Julen Alex Gutierrez",0,4
+2,40,"Juan  Duarte",40,"Juan  Durate",0,3
+2,44,"Ju-won  Ko",44,"Ju-aon  Ko",0,4
+2,51,"Ha-joon  Joe",51,"Ha-joon  Jue",0,3
 2,36,"Julen Àlex Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
-2,62,"Maximiliano  Sepúlveda",62,"Maximiliano  Senúlveda",0,4
+2,61,"Agustina  Campos",61,"Sgustina  Campos",0,4
 2,63,"Tereza  Novotný",63,"Tereza  Novotnb",0,4
-2,89,"Lucas  De Graaf",89,"Lucad  De Graaf",0,4
-2,941,"Lucas  De Graaf",89,"Lucad  De Graaf",0,4
-2,93,"Mark Andrei Petrov",93,"Mwrk Andrei Petrov",0,4
-2,121,"Daris  Đurić",121,"D. Đurić",0,5
-2,122,"Sara  Castro",122,"Sara  Caytro",0,4
+2,67,"Viktoriya  Kravchenko",67,"Viktoriya  Kravchenky",0,4
+2,105,"Gabriel  Simon",105,"Gabriil  Simon",0,4
+2,111,"Bruno  López",111,"Bruno  Lpóez",0,4
+2,113,"Sophia  Bell",113,"Sophia  Bela",0,3
+2,119,"Mark Daniil Petrov",119,"Mark Daniil Letrov",0,4
 2,137,"Matyáš  Černá",137,"Matyáš  lerná",0,4
-2,131,"Aleksandar Zoran Trajanovski",144,"Aleksandar Trajanovski",0,4
-2,131,"Aleksandar Zoran Trajanovski",157,"Aleksandar Trajanovski",0,4
-2,159,"Mateo  Pino",159,"cateo  Pino",0,4
-2,175,"Dimitar  Georgiev",175,"Dimitaj  Georgiev",0,4
-2,180,"Julieta  Bustos",180,"Julieda  Bustos",0,4
-2,205,"Chih-ming  Chua",205,"Chih-ming  Chuc",0,4
-2,225,"Noor  Dijkstra",225,"Noow  Dijkstra",0,4
-2,232,"Ella  Ryan",232,"E. Ryan",0,5
-2,240,"Felipe  Gallo",240,"Felipe  wGallo",0,3
-2,248,"Laura Isabella Sousa",248,"Laura Isabellu Sousa",0,2
-2,251,"Laura Gael Sousa",251,"Laura Gael Souas",0,5
+2,141,"Lėja  Urbonas",141,"Lėja  Urbohas",0,4
+2,135,"Aleksandar Dejan Trajanovski",144,"Aleksandar Trajanovski",0,4
+2,155,"Goran  Kostovski",155,"Goran  Knstovski",0,4
+2,135,"Aleksandar Dejan Trajanovski",157,"Aleksandar Trajanovski",0,4
+2,160,"Maria  Araújo",160,"Maria  Arnújo",0,3
+2,1681,"Maria  Araújo",160,"Maria  Arnújo",0,3
+2,162,"Hamza  Delić",162,"Hamza  Deilć",0,4
+2,165,"Adéla  Nováková",165,"Adxla  Nováková",0,4
+2,169,"Stanisław Antoni Kozłowski",169,"Stanisłow Antoni Kozłowski",0,2
+2,179,"Sakura  Ogawa",179,"Sakura  Ogswa",0,3
+2,183,"Cecília  Ribeiro",183,"Cecíplia  Ribeiro",0,2
+2,192,"Liam  Lee",192,"piam  Lee",0,3
+2,1538,"Liam  Lee",192,"piam  Lee",0,3
+2,202,"Jennifer  Bailey",202,"Jennifer  Bailee",0,4
+2,206,"Anna  Roux",206,"Anna  Ruox",0,4
+2,210,"Alma  Romero",210,"Alma  Romekro",0,3
+2,216,"Agustín  Tapia",216,"Agustín  Talia",0,4
+2,240,"Felipe  Gallo",240,"Felipe  wGallo",0,2
+2,245,"Laura Maitê Sousa",245,"Lauea Maitê Sousa",0,4
+2,249,"Leonardo  Caruso",249,"Peonardo  Caruso",0,4
 2,258,"Lucas  Wilson",258,"ucas  Wilson",0,3
-2,280,"Regina  Torres",280,"Regine  Torres",0,4
-2,292,"Sofía Lucas Hernández",292,"Sofía Luca sHernández",0,4
-2,305,"Melisa  Shehu",305,"Memisa  Shehu",0,4
-2,312,"Uta  Kudō",312,"Uts  Kudō",0,4
-2,331,"Aimar  Pérez",331,"Aimar  Pédrez",0,3
+2,391,"Kiara  Williams",261,"Kiwa  Williams",0,2
+2,262,"Lucía  Díaz",262,"Lucía  líaz",0,3
+2,272,"Mia  Potočnik",272,"ia  Potočnik",0,3
+2,263,"Zǐhán Zǐhán Ho",274,"Zǐhán. Y. Ho",0,2
+2,288,"Isabella  Ramos",288,"Isaeblla  Ramos",0,4
+2,305,"Melisa  Shehu",305,"Memisa  Shehu",0,3
+2,313,"Yuna  Shimada",313,"Y. Shimada",0,4
+2,314,"Sara  Blanco",314,"Sara  Blanoc",0,4
+2,316,"Ema Haruma Nakashima",316,"Ema Harumw Nakashima",0,2
+2,339,"Martina  Franco",339,"Martina  Frunco",0,2
+2,432,"Martina  Franco",339,"Martina  Frunco",0,2
+2,341,"Mark  Novikov",341,"Mark  Nqvikov",0,3
+2,349,"Matija Mateo Stojanović",349,"Matija aMteo Stojanović",0,2
 2,355,"Alessia  Huamán",355,"Alcssia  Huamán",0,4
-2,396,"Ha-yoon  Youn",396,"gHa-yoon  Youn",0,3
-2,430,"Diego  Domínguez",430,"Diego  Domínluez",0,4
-2,466,"Ellie  Walsh",466,"Ellie  Salsh",0,4
-2,470,"Aimar  Iglesias",470,"Aimor  Iglesias",0,4
-2,474,"Mia Benicio Sosa",474,"Mia Benicio Sasa",0,3
-2,476,"Hugo  Muñoz",476,"Hujgo  Muñoz",0,3
-2,480,"Aoi  Taketa",480,"Aoi  Tazketa",0,3
-2,522,"Emilia  Castillo",522,"Emilia  Cqstillo",0,3
+2,365,"Manuela  Gomes",365,"Manulea  Gomes",0,4
+2,346,"Matija Lea Stojanović",367,"Matija Stojanović",0,3
+2,347,"Matija Natalija Stojanović",367,"Matija Stojanović",0,3
+2,377,"Nur  Gabai",377,"uNr  Gabai",0,4
+2,386,"Lina  Frei",386,"Lina  Frep",0,4
+2,397,"Haruna  Saitō",397,"Harana  Saitō",0,2
+2,398,"Anna  Eder",398,"Alna  Eder",0,3
+2,409,"Alina  Brunner",409,"lina  Brunner",0,3
+2,411,"Matías  Miranda",411,"Mtías  Miranda",0,3
+2,423,"Linda  Gonzalez",423,"Linda  Gonzalaez",0,2
+2,456,"Maria  Ben-David",456,"Maria  Ben-Davi",0,3
+2,462,"Mia Alma Sosa",462,"Mia Sosa",0,4
+2,469,"Yu-jun  Ju",469,"Yu-jxn  Ju",0,3
+2,471,"Álvaro  Morales",471,"Álvaro  Morames",0,3
+2,1861,"Álvaro  Morales",471,"Álvaro  Morames",0,3
+2,513,"Thomas Leo Brown",500,"Thomas Brown",0,4
+2,518,"Thomas Nathan Brown",500,"Thomas Brown",0,4
+2,496,"Thomas Thomas Brown",513,"Thomas. L. Brown",0,2
+2,513,"Thomas Leo Brown",513,"Thomas. L. Brown",0,4
+2,515,"Vittoria  Di Stefano",515,"Vittoria. D. Stefano",0,3
+2,517,"Nino  Gogoladze",517,"Nino  Gogaladze",0,2
 2,529,"Aysel  Aliyev",529,"Aysel  Abiyev",0,4
-2,540,"Ya-ting  Wang",540,"Y-ting  Wang",0,3
-2,551,"Anna  Moreau",551,"Anna  oreau",0,3
-2,563,"Ámbar Catalina Bruno",563,"Ámbar Catalina Gruno",0,4
-2,568,"Ámbar Mateo Bruno",568,"Ámba Mateo Bruno",0,3
-2,568,"Ámbar Mateo Bruno",577,"Ámbar Bruno",0,5
-2,583,"Felix  Moser",583,"Filix  Moser",0,4
-2,582,"Rasmus Marta Semjonov",590,"Rasmus Mark Semjonov",0,5
-2,593,"Valter  Mejía",593,"Valter  Menía",0,4
-2,597,"Gita  Tamang",597,"Gita  Tqmang",0,3
+2,539,"Ajda  Kos",539,"Afda  Kos",0,4
+2,544,"Arthur  Dubois",544,"Arthur  Duboiq",0,4
+2,547,"Samantha  Torres",547,"Samantha  Torras",0,3
+2,552,"Olivia  Koskinen",552,"Onivia  Koskinen",0,3
+2,556,"Mateo  Aguirre",556,"Mateo  Aguirrz",0,4
+2,562,"Ilgar  Abdullayev",562,"nlgar  Abdullayev",0,4
+2,583,"Felix  Moser",583,"Filix  Moser",0,3
+2,615,"Ahmad  Mizrachi",615,"Ahmfd  Mizrachi",0,4
+2,616,"Vera  Andersson",616,"Verk  Andersson",0,4
 2,618,"Santiago  Ruíz",618,"Santiagl  Ruíz",0,4
+2,625,"Léna Lili Tóth",620,"Tóth Léna Anna",0,4
 2,628,"Hugo  Álvarez",628,"Hugo  Álvadez",0,4
-2,657,"Jude  Azoulay",657,"Jude  Azoulajy",0,3
-2,667,"Dorothy  Kelly",667,"Dorotqy  Kelly",0,4
+2,636,"Yuna  Ōta",636,"Yuna  Ōtd",0,3
+2,655,"Luna Charles Johnson",655,"Luna Charlse Johnson",0,4
+2,664,"Gabriele  Rinaldi",664,"Gabriele  Rinuldi",0,4
+2,674,"Sara  Baumgartner",674,"Sara  aBumgartner",0,4
 2,675,"Abd  Malka",675,"Abs  Malka",0,4
-2,676,"Luna Benjamin Johnson",676,"Luna Beljamin Johnson",0,4
-2,702,"Saar  Van Leeuwen",702,"Saa  Van Leeuwen",0,3
-2,710,"Emine Ahmet Demir",710,"Emine Ahmet jemir",0,4
-2,713,"Emine Hasan Demir",713,"Emine Hasan eDmir",0,4
+2,692,"Ciro  Arias",692,"C. Arias",0,4
+2,700,"Emine Emine Demir",700,"Ejine Emine Demir",0,2
+2,709,"Amir  Mizrahi",709,"Amir  Mqzrahi",0,3
+2,711,"Emine Ali Demir",711,"Emine Ali Remir",0,4
+2,714,"Angel  Tan",714,"Angel  Tad",0,3
 2,716,"Theodore  Moore",716,"Theodore  poore",0,4
-2,717,"Narine  Margaryan",717,"Nyrine  Margaryan",0,3
-2,720,"Hovhannes  Arakelyan",720,"Hovhanyes  Arakelyan",0,4
-2,739,"Jan  Černý",739,"Jan  Čorný",0,4
-2,755,"Minato  Watabe",755,"Minato  Watqbe",0,4
-2,756,"Tereza  Veselá",756,"Tareza  Veselá",0,4
-2,764,"Charlotte Maria Morris",764,"Charlutte Maria Morris",0,4
-2,773,"Robert  Martinez",773,"Robert  Maqtinez",0,3
+2,729,"Lourenço  Lopes",729,"Lourenço  Looes",0,4
+2,731,"Bruno  Arias",731,"Brtno  Arias",0,4
+2,711,"Emine Ali Demir",733,"Emine Demir",0,4
+2,711,"Emine Ali Demir",735,"Emine Demir",0,4
+2,711,"Emine Ali Demir",736,"Emine. A. Demir",0,4
+2,744,"Victoria  Figueroa",744,"Victoria  Figueoa",0,2
+2,746,"Lara  Gál",746,"Lara  Glá",0,3
+2,753,"Jakov  Knežević",753,"Jakov  Knerević",0,2
+2,762,"Julija  Petek",762,"Jilija  Petek",0,2
+2,782,"Charlotte Sophia Morris",782,"Charlotte Sokhia Morris",0,4
 2,784,"Nathaniel  Flores",784,"Nathaniel  Flpres",0,3
-2,798,"Ella  Lund",798,"Erlla  Lund",0,3
-2,869,"Ji-woo  Gwon",845,"Ji-woo  Kwon",0,4
-2,851,"Dorothy  Morris",851,"Dorothp  Morris",0,4
-2,865,"Riko  Nakagawa",865,"Rilo  Nakagawa",0,4
-2,885,"Zala  Klemenčič",885,"Z. Klemenčič",0,5
-2,903,"Camila  Sandoval",903,"zCamila  Sandoval",0,3
-2,905,"Maximiliano  Carvajal",905,"Maximiliano  Carvjal",0,3
-2,910,"Lilit  Grigoryan",910,"Lilit  krigoryan",0,4
-2,913,"Victoria  Hernández",913,"Victoria  Hernándiz",0,4
-2,918,"Oliwia  Piotrowski",918,"Oliwia  Piotrowsdki",0,3
-2,927,"William Luna Nelson",927,"William. L. Nelson",0,5
-2,938,"Vittoria  Amato",938,"Vittoria  Amajo",0,3
+2,811,"Lyn  Hazan",811,"Lyn  Bazan",0,4
+2,825,"Polina  Smirnov",825,"Pooina  Smirnov",0,4
+2,833,"Willow Keanu Patel",833,"Willoy Keanu Patel",0,4
+2,847,"Léo  Thomas",847,"L. Thomas",0,4
+2,857,"Benicio  Gallo",857,"Benicio  Gello",0,4
+2,859,"Daniel  Vásquez",859,"Daniel  Vásuez",0,3
+2,862,"Aron  Kelmendi",862,"Arun  Kelmendi",0,4
+2,867,"Frida  Hansen",867,"Frida  Hagsen",0,4
+2,868,"Min-jun  Shin",868,"Min-ju n Shin",0,3
+2,871,"Mustafa Ali Kurt",871,"Mustafa li Kurt",0,3
+2,878,"Gaspar  Jiménez",878,"Gasapr  Jiménez",0,3
+2,885,"Zala  Klemenčič",885,"Z. Klemenčič",0,4
+2,891,"Julia  Marín",891,"Jelia  Marín",0,4
+2,1782,"Ian  González",915,"Ibai  Gonzalez",0,4
+2,925,"Sōma  Nishimura",925,"Sōma  Nishimuxa",0,4
+2,934,"William Henry Nelson",934,"William Henry Nelsno",0,4
 2,967,"Barbara Luna Thomas",940,"Barbara Thomas",0,4
-2,688,"Martina  Muñoz",957,"Martin  Munoz",0,3
 2,962,"Luis  Ruiz",962,"L. Ruiz",0,4
-2,975,"Linda  Powell",975,"L. Powell",0,5
-2,980,"Luna  Butler",980,"L. Butler",0,5
-2,983,"Alberte  Mortensen",983,"Alberte  sortensen",0,4
-2,990,"Mikhail  Petrov",990,"Mikhail  Petrohv",0,3
-2,992,"Yìhán  Wáng",992,"Yìhán  Wwng",0,3
-3,20,"Julen Júlia Gutiérrez",14,"Julen Jon Gutiérrrez",0,5
-3,44,"Ju-won  Ko",44,"Ju-aon  Ko",0,4
-3,12,"Julen Julen Gutiérrez",59,"Julen. Á. Gutiérrez",0,2
-3,14,"Julen Jon Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
+2,965,"Barbara Mia Thomas",965,"Burbara Mia Thomas",0,2
+2,978,"Ema  Zupančič",978,"Ema  Zpuančič",0,4
+2,984,"Nik  Petek",984,"Nik  Pdtek",0,3
+2,1000,"Leo  Ortega",1000,"geo  Ortega",0,3
+2,1004,"Nagi  Ueda",1004,"Nagi  Ued",0,3
+2,1014,"Jack  Clarke",1014,"Jack  Clarek",0,3
+2,1029,"Sophie  Schwarz",1029,"Sophie  Scwharz",0,4
+2,1038,"David Olivia Cook",1038,"David Olevia Cook",0,3
+2,1063,"Ju-won  Chun",1063,"Ju-won  Chtn",0,4
+2,1066,"Asja  Delić",1066,"Asja  Delć",0,3
+2,1070,"Michal  Kováč",1070,"Micha  Kováč",0,3
+2,1071,"Ha-yoon Eun-woo Chang",1071,"Ha-yoon Eu-woo Chang",0,2
+2,1078,"Liam Charbel Ochion",1078,"Liam Charbeal Ochion",0,3
+2,1080,"Arthur  François",1080,"Arthur  Fradçois",0,4
+2,1082,"Meryem  Arslan",1082,"Mexyem  Arslan",0,4
+2,1094,"Benicio  Figueroa",1094,"Benicio  Figueora",0,4
+2,1100,"Dalila  Radić",1100,"Dalil  Radić",0,2
+2,1111,"Liam Lyn Ochion",1127,"Liam. D. Ochion",0,4
+2,1128,"Pau  Ortega",1128,"P. Ortega",0,4
+2,804,"Oliver  Laine",1136,"Oiver  Laine",0,3
+2,1136,"Oliver  Laine",1136,"Oiver  Laine",0,3
+2,1141,"Sōma  Hashimoto",1141,"Sōma  Hashiomto",0,3
+2,1144,"Lara Lili Kiss",1144,"ara Lili Kiss",0,2
+2,1145,"Lara Lilien Kiss",1145,"Lara ilien Kiss",0,1
+2,56,"Ava  Davis",1157,"A. David",0,4
+2,127,"Ali  David",1157,"A. David",0,4
+2,1906,"Ava  Davis",1157,"A. David",0,4
+2,1161,"Ha-eun  No",1161,"Ha-euhn  No",0,3
+2,1170,"Oliver  Jørgensen",1170,"Oiver  Jørgensen",0,3
+2,1185,"Yu-jun  Son",1185,"Y-jun  Son",0,3
+2,1188,"Barbara John Lewis",1188,"Barbara John Pewis",0,4
+2,1189,"Samantha  de Guzman",1189,"Samantha. d. Guzman",0,3
+2,1196,"Ahmad  Levin",1196,"Ahmad  Lmvin",0,4
+2,877,"Mia  Williams",1207,"Ila  Williams",0,4
+2,1246,"Kaloyan  Georgieva",1246,"Kaloyan  Gxorgieva",0,4
+2,1269,"Ha-eun  Noh",1269,"Ha-edn  Noh",0,4
+2,824,"Grace  Rose",1271,"Grace  Rpse",0,3
+2,1271,"Grace  Rose",1271,"Grace  Rpse",0,3
+2,1303,"Jack  Quinn",1303,"Jack  Qzinn",0,4
+2,1305,"Ju-won  Her",1305,"Ji-won  Her",0,4
+2,1318,"Emma Aurora De Rosa",1318,"Emma surora De Rosa",0,4
+2,1322,"Adam  Ben-David",1322,"Adam  Ben-Davic",0,4
+2,1323,"Ji-yoo  Chun",1323,"Ju-yoo  Chun",0,4
+2,1324,"Ruòxī  Gāo",1324,"Raòxī  Gāo",0,3
+2,1333,"Liz  López",1333,"L. López",0,3
+2,1335,"Benjamín  Reyes",1335,"Benjamní  Reyes",0,4
+2,1336,"Riko  Kimura",1336,"Rikn  Kimura",0,4
+2,1008,"Eun-woo  Ghim",1343,"Im Eun-woo",0,4
+2,1355,"Ema Lukáš Černý",1355,"Ema Lukáš Čerýn",0,4
+2,1365,"Amelia  Popa",1365,"Amelia  Ppa",0,2
+2,1367,"Nathalie  Mercado",1367,"Nathaglie  Mercado",0,3
+2,1821,"Maria  Correia",1374,"Maragrida  Correia",0,4
+2,1391,"Davit  Mchedlishvili",1391,"Davit  Mchedzishvili",0,3
+2,1408,"Merjem Davud Muratović",1408,"Mxrjem Davud Muratović",0,3
+2,1412,"Amelia  Jones",1412,"Amslia  Jones",0,4
+2,1416,"Noah  Wolf",1416,"Noah  Wulf",0,4
+2,1417,"Carla  Morales",1417,"Carlo  Morales",0,3
+2,1419,"Leah  Azoulay",1419,"Leah  Azoulya",0,4
+2,1432,"Luis Amar Gega",1432,"Luis Amar Gegha",0,3
+2,1456,"Haruma  Ueta",1456,"Haruma  geta",0,4
+2,1471,"Camila  Cárdenas",1471,"Camela  Cárdenas",0,4
+2,1478,"Ariel  Hazan",1478,"griel  Hazan",0,4
+2,1484,"Benjamin  Jenkins",1484,"aenjamin  Jenkins",0,4
+2,1486,"María José  Valencia",1486,"María José  Valnecia",0,4
+2,1489,"Tomáš  Oláh",1489,"Tomáš  Oáh",0,3
+2,1900,"Ivan  Novikov",1536,"Lev Ivan Novikov",0,3
+2,192,"Liam  Lee",1538,"iam  Lee",0,2
+2,1538,"Liam  Lee",1538,"iam  Lee",0,2
+2,1549,"Amelia  Thompson",1549,"Ameuia  Thompson",0,4
+2,1571,"Min-jun  Shim",1571,"Min-jun  Shitm",0,2
+2,755,"Minato  Watabe",1581,"Minato  Abe",0,3
+2,1582,"George  Klein",1582,"keorge  Klein",0,2
+2,1601,"Edoardo  Palumbo",1601,"Edoardo  Palmubo",0,4
+2,1618,"Lin Niel Levy",1618,"Lin Levy",0,3
+2,1642,"Lin Ali Levy",1618,"Lin Levy",0,3
+2,1621,"Gilli  Johansen",1621,"Gillo  Johansen",0,3
+2,1896,"Gilli  Johansen",1621,"Gillo  Johansen",0,3
+2,1623,"Lin Maria Levy",1623,"in Maria Levy",0,2
+2,1638,"Felipe  Núñez",1638,"Folipe  Núñez",0,4
+2,1640,"Isabella  Jiménez",1640,"Isabeloa  Jiménez",0,4
+2,1642,"Lin Ali Levy",1642,"Lin Ali uevy",0,3
+2,1645,"Lucas  Moreno",1645,"Lucas  Mtreno",0,4
+2,1682,"Lucas  Moreno",1645,"Lucas  Mtreno",0,4
+2,1618,"Lin Niel Levy",1650,"Lin Levy",0,3
+2,1642,"Lin Ali Levy",1650,"Lin Levy",0,3
+2,1669,"Josefa  Miranda",1669,"Josefa  Miranad",0,2
+2,1670,"Elizabeth  Hill",1670,"Eldzabeth  Hill",0,3
+2,1618,"Lin Niel Levy",1672,"Lin Levy",0,3
+2,1642,"Lin Ali Levy",1672,"Lin Levy",0,3
+2,1673,"Soo-ah  Bae",1673,"Soo-ah  fae",0,4
+2,1691,"Muhammad Mila Dahan",1692,"Muhammad. A. Dahan",0,4
+2,1730,"Muhammad Adele Dahan",1692,"Muhammad. A. Dahan",0,4
+2,1693,"Olivia  Petersen",1693,"Oivia  Petersen",0,3
+2,1713,"Muhammad Aline Dahan",1713,"Muhammad Apine Dahan",0,4
+2,1720,"Manuel  Gutiérrez",1720,"Manuil  Gutiérrez",0,4
+2,1691,"Muhammad Mila Dahan",1731,"Muhammad Dahan",0,4
+2,1730,"Muhammad Adele Dahan",1731,"Muhammad Dahan",0,4
+2,1741,"William Iben Olsen",1741,"William ben Olsen",0,3
+2,1746,"William Emil Olsen",1746,"William Ejil Olsen",0,4
+2,1752,"Yusef  Adrei",1752,"Yuef  Adrei",0,3
+2,1756,"Patricia  James",1756,"Patricia  Jamee",0,4
+2,1758,"Louis Alice Nguyen",1758,"Louis rAlice Nguyen",0,3
+2,1770,"Louis Lucas Nguyen",1770,"Louis Lecas Nguyen",0,4
+2,915,"Ibai  González",1782,"Ian  González",0,4
+2,1533,"Ajda  Hočevar",1784,"Atda  Hočevar",0,4
+2,1784,"Ajda  Hočevar",1784,"Atda  Hočevar",0,4
+2,1796,"Haruna  Koyama",1796,"Haruna  Keyama",0,4
+2,1799,"Ji-yoo  An",1799,"iJ-yoo  An",0,4
+2,1804,"Edoardo  Grassi",1804,"Edoardo  crassi",0,4
+2,1806,"Fūma  Sakamoto",1806,"Fūma  Sakaomto",0,2
+2,1866,"Alma  García",1866,"Almw  García",0,3
+2,1868,"Soo-ah  Yu",1868,"Soo-xh  Yu",0,4
+2,1876,"Andrias  Simonsen",1876,"Andprias  Simonsen",0,3
+2,1881,"Mila  Bogdanov",1881,"Mita  Bogdanov",0,4
+2,1235,"Yǔxuān  Hú",1907,"Yǔxuān  Hl",0,4
+2,1907,"Yǔxuān  Hú",1907,"Yǔxuān  Hl",0,4
+2,1912,"Elshan  Mammadov",1912,"Ebshan  Mammadov",0,4
+2,1922,"Liz  Acosta",1922,"iz  Acosta",0,3
+2,1928,"Olivia  Olsen",1928,"Olvia  Olsen",0,2
+2,1932,"Thiago  Suárez",1932,"Thiago  Suáeez",0,4
+2,1951,"Rei  Uchida",1951,"jei  Uchida",0,4
+2,1956,"Theodore  Clark",1956,"Theodore  Chark",0,4
+2,1969,"I-chun  Chhoà",1969,"I. Chhoà",0,3
+2,1970,"Valeria  Pacheco",1970,"Vareria  Pacheco",0,3
+2,1988,"Princess  David",1988,"Princess  Davic",0,4
+3,31,"Julen Nil Gutiérrez",3,"Julen. N. Gutiérrez",0,3
+3,585,"Yǔxī  Tsui",16,"Y. Tsui",0,4
+3,18,"Isabella  Palma",18,"Isibella  Palma",0,3
+3,12,"Julen Julen Gutiérrez",31,"Julen Nkl Gutiérrez",0,4
+3,41,"Yìzé  Wáng",41,"Yìzé  cáng",0,4
+3,43,"Charlotte  Kelly",43,"Charlotte  Kekly",0,3
+3,54,"Aoife  Davis",54,"Aoife  Dqvis",0,4
+3,56,"Ava  Davis",56,"vAa  Davis",0,3
+3,1906,"Ava  Davis",56,"vAa  Davis",0,3
 3,20,"Julen Júlia Gutiérrez",59,"Julen. Á. Gutiérrez",0,3
-3,29,"Julen Paula Gutiérrez",59,"Julen. Á. Gutiérrez",0,5
-3,73,"Ida  Christensen",73,"Ida  hristensen",0,3
-3,101,"Mark Mariya Petrov",101,"Mark Petrov",0,4
-3,102,"Haruto  Ichikawa",102,"Haruto  Ichhkawa",0,4
-3,105,"Gabriel  Simon",105,"Gabriil  Simon",0,4
-3,149,"Aleksandar Luka Trajanovski",144,"Aleksandar Trajanovski",0,5
-3,148,"Henry  King",148,"Heory  King",0,4
-3,149,"Aleksandar Luka Trajanovski",157,"Aleksandar Trajanovski",0,5
-3,211,"Yìhán Mùchén Wáng",211,"Yìhán Mùcnén Wáng",0,4
-3,213,"Hàorán  Lǐ",213,"àorán  Lǐ",0,3
-3,235,"Sophia  Morais",235,"Sophka  Morais",0,4
-3,247,"James  Ross",247,"James  oRss",0,5
-3,289,"Aleksandr  Vinogradov",289,"Aleksandr  Vinogradopv",0,3
-3,296,"Szymon  Zieliński",296,"Szysmon  Zieliński",0,3
-3,311,"Ema Aoi Nakashima",311,"Ema Aoi Nakashkma",0,4
-3,344,"Yasmin  Chen",344,"Yasmin  Cahen",0,3
-3,360,"Matija Marija Stojanović",367,"Matija Stojanović",0,2
-3,408,"Sofía Santiago Delgado",408,"Sofía Santiago Delgedo",0,4
-3,409,"Alina  Brunner",409,"lina  Brunner",0,3
+3,89,"Lucas  De Graaf",89,"Lucad  De Graaf",0,4
+3,941,"Lucas  De Graaf",89,"Lucad  De Graaf",0,4
+3,97,"Freja  Mortensen",97,"Freja  Mortenien",0,4
+3,126,"Malen  Moreno",126,"talen  Moreno",0,3
+3,139,"Ha-yoon  Bak",139,"Ha-yoon  Btk",0,4
+3,156,"Yuina  Fujii",156,"Yuina  Fjuii",0,3
+3,194,"Mary  Howard",194,"M. Howard",0,4
+3,211,"Yìhán Mùchén Wáng",211,"Yìhán Mùcnén Wáng",0,3
+3,223,"Lian  Ohayon",223,"L. Ohayon",0,4
+3,298,"Oleksandra  Tkachuk",298,"Oleksandra  Tpachuk",0,4
+3,332,"Lucas  Lewis",332,"Lucas  Lwis",0,3
+3,362,"Mila  Peretz",362,"Mila  Pererz",0,3
+3,364,"Noah  Bah",364,"Noah  Bgah",0,3
+3,964,"Barbara Ava Thomas",385,"Thomas Ava",0,4
+3,404,"Manuel  Molina",404,"Manuel  Moliba",0,3
+3,419,"Liam  Brown",419,"Liay  Brown",0,4
 3,420,"Wen-Hsiung  Lei",420,"Wen-Hciung  Lei",0,4
 3,421,"Artiom  Ionescu",421,"iArtiom  Ionescu",0,2
-3,426,"Mateo  Luka",426,"Mateo  Luca",0,4
-3,451,"Lena  Wójcik",451,"Lena  Wójcsk",0,4
-3,457,"Lucas Theodore Hall",457,"Lucas Tjeodore Hall",0,4
-3,467,"Mia Delfina Sosa",467,"Mia Delfifna Sosa",0,3
-3,473,"Fūma  Shimizu",473,"Fnma  Shimizu",0,4
-3,487,"Thomas Isla Brown",487,"Thkmas Isla Brown",0,4
-3,491,"Mila  Chen",491,"Mila  Cahen",0,3
-3,487,"Thomas Isla Brown",500,"Thomas Brown",0,5
-3,505,"Maria  Long",505,"Marbia  Long",0,3
+3,445,"Sara  Lund",445,"Spra  Lund",0,3
+3,486,"Lin  Moshe",486,"Len  Moshe",0,4
+3,497,"Olivia  De Jong",497,"Oluvia  De Jong",0,3
+3,498,"Ha-rin  Jee",498,"Ha-rin  Jte",0,4
+3,508,"Mia  Henríquez",508,"Mija  Henríquez",0,3
+3,511,"Thomas Liam Brown",513,"Thomas. L. Brown",0,4
+3,519,"Richard  Roberts",519,"Richar  Roberts",0,3
+3,528,"Alice  Correia",528,"Alice  Corteia",0,4
+3,540,"Ya-ting  Wang",540,"Y-ting  Wang",0,3
 3,548,"Ludovica  Russo",548,"Lidovica  Russo",0,4
-3,565,"Emiliano  Valencia",565,"Emihiano  Valencia",0,4
-3,566,"Hina  Takagi",566,"Hina  Twkagi",0,4
-3,576,"Ámbar Ciro Bruno",577,"Ámbar Bruno",0,4
-3,407,"Aurora  Parisi",598,"Aurmra  Parisi",0,4
-3,598,"Aurora  Parisi",598,"Aurmra  Parisi",0,4
-3,608,"Jakob  Mlakar",608,"Jakob  Mlakqr",0,4
-3,697,"Ona  Fernández",627,"Z. Fernández",0,4
-3,631,"William  Howard",631,"William  xoward",0,4
-3,670,"Ha-rin  Jeon",670,"Ha-rin  Jaeon",0,3
-3,681,"Karen  Mkrtchyan",681,"K. Mkrtchyan",0,5
-3,683,"Seo-yun Ha-rin Shen",683,"Seo-yun Ha-cin Shen",0,4
+3,580,"Michael  Nelson",580,"Michael  Nslson",0,2
+3,593,"Valter  Mejía",593,"Valter  Menía",0,4
+3,603,"Mark Maria Melnic",603,"Mark Mari aMelnic",0,4
+3,610,"Lucas  Álvarez",610,"Lucsa  Álvarez",0,4
+3,624,"Léna Boglárka Tóth",624,"Lna Boglárka Tóth",0,3
+3,629,"Emma  Schmitz",629,"Emma  Schmitr",0,4
+3,649,"Valeria  Tapia",649,"Valeria  aTpia",0,4
 3,686,"Matthildur  Waage",686,"Mattheldur  Waage",0,4
-3,711,"Emine Ali Demir",733,"Emine Demir",0,4
-3,711,"Emine Ali Demir",735,"Emine Demir",0,4
-3,700,"Emine Emine Demir",736,"Emine. A. Demir",0,2
-3,711,"Emine Ali Demir",736,"Emine. A. Demir",0,4
-3,742,"Roel Leandra Halili",742,"Roel Leandra Haluli",0,3
-3,743,"Roel Ambra Halili",743,"Roel Amra Halili",0,3
-3,757,"Emma  Martínez",757,"Emma  Mzrtínez",0,3
-3,781,"Lucas  López",781,"Lukas  López",0,4
-3,802,"Lili  Horváth",802,"Lilu  Horváth",0,3
-3,823,"María  Serrano",823,"Maríi  Serrano",0,4
-3,832,"Chih-wei  Tiong",832,"Cfih-wei  Tiong",0,4
-3,841,"Willow Mila Patel",841,"Willow. M. Patel",0,4
-3,857,"Benicio  Gallo",857,"Benicio  Gello",0,4
-3,871,"Mustafa Ali Kurt",871,"Mustafa li Kurt",0,3
-3,891,"Julia  Marín",891,"Jelia  Marín",0,4
-3,914,"William Richard Nelson",914,"William Ricyard Nelson",0,4
-3,928,"Olivia  Miller",928,"Olivir  Miller",0,3
-3,988,"Aria  Bardhi",988,"tria  Bardhi",0,3
-4,12,"Julen Julen Gutiérrez",0,"Gutiérrez Julen Ane",0,4
-4,33,"Julen Jan Gutiérrez",0,"Gutiérrez Julen Ane",0,4
-4,0,"Julen Ane Gutiérrez",3,"Julen. N. Gutiérrez",0,5
-4,20,"Julen Júlia Gutiérrez",3,"Julen. N. Gutiérrez",0,4
-4,36,"Julen Àlex Gutiérrez",3,"Julen. N. Gutiérrez",0,5
-4,0,"Julen Ane Gutiérrez",23,"Julen. E. Gutiérrez",0,4
-4,20,"Julen Júlia Gutiérrez",23,"Julen. E. Gutiérrez",0,5
-4,31,"Julen Nil Gutiérrez",31,"Julen Nkl Gutiérrez",0,4
-4,0,"Julen Ane Gutiérrez",33,"Julen Jan Gutiérrez",0,4
-4,20,"Julen Júlia Gutiérrez",33,"Julen Jan Gutiérrez",0,5
-4,12,"Julen Julen Gutiérrez",36,"Julen Alex Gutierrez",0,4
-4,56,"Ava  Davis",56,"vAa  Davis",0,3
-4,869,"Ji-woo  Gwon",57,"Gwon Ji-an",0,5
-4,0,"Julen Ane Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
-4,33,"Julen Jan Gutiérrez",59,"Julen. Á. Gutiérrez",0,4
-4,61,"Agustina  Campos",61,"Sgustina  Campos",0,4
-4,64,"William  Morris",64,"Williax  Morris",0,4
-4,74,"Emilia  Steiner",74,"Emilis  Steiner",0,4
-4,87,"Eleni  Samaras",87,"Eleni  Samaars",0,4
+3,689,"Joel  Prishtina",689,"Jobl  Prishtina",0,4
+3,736,"Emine Aras Demir",733,"Emine Demir",0,4
+3,736,"Emine Aras Demir",735,"Emine Demir",0,4
+3,764,"Charlotte Maria Morris",758,"Morris Charlotte Mary",0,4
+3,774,"Charlotte Richard Morris",774,"Charlotte. R. Morris",0,4
+3,783,"Tommaso  Esposito",783,"Tommaso  Espodito",0,3
+3,796,"Natálie  Němcová",796,"Nstálie  Němcová",0,3
+3,798,"Ella  Lund",798,"Erlla  Lund",0,3
+3,1872,"Ji-an  Joe",818,"Jee Ji-an",0,4
+3,851,"Dorothy  Morris",851,"Dorothp  Morris",0,4
+3,1365,"Amelia  Popa",863,"Amelia  Patel",0,4
+3,865,"Riko  Nakagawa",865,"Rilo  Nakagawa",0,4
+3,883,"Mustafa Nehir Kurt",883,"Mustafa Nehir Kutr",0,3
+3,893,"Shristi  Chowdhury",893,"Shristi  Chowdhuyr",0,4
+3,910,"Lilit  Grigoryan",910,"Lilit  krigoryan",0,4
+3,1244,"Lilit  Grigoryan",910,"Lilit  krigoryan",0,4
+3,926,"Yūma  Fukuda",926,"Yūma  Fukuad",0,3
+3,929,"Hannah  Auer",929,"Hannah  Audr",0,4
+3,938,"Vittoria  Amato",938,"Vittoria  Amajo",0,3
+3,89,"Lucas  De Graaf",941,"Lucas  De Graav",0,4
+3,941,"Lucas  De Graaf",941,"Lucas  De Graav",0,4
+3,968,"Vasileios  Kontos",968,"Vqsileios  Kontos",0,4
+3,1651,"Vasileios  Kontos",968,"Vqsileios  Kontos",0,4
+3,982,"Ava  Smith",982,"Aa  Smith",0,2
+3,991,"Valter  Escobar",991,"Valter  Escoabr",0,4
+3,1006,"Tiago  Leroy",1006,"Tiago  eLroy",0,4
+3,1052,"Emiliano  Ávila",1052,"Emiloano  Ávila",0,3
+3,1077,"Jack  Kelly",1077,"Jack  Kellt",0,4
+3,1089,"Seo-ah  Jung",1089,"Seo-ah  fJung",0,3
+3,1084,"Liam Lin Ochion",1090,"Liam Taim Ochion",0,4
+3,1110,"James  Flores",1110,"tames  Flores",0,4
+3,1116,"Lia  Golan",1116,"Lpa  Golan",0,4
+3,1084,"Liam Lin Ochion",1127,"Liam. D. Ochion",0,3
+3,1129,"Szymon  Wójcik",1129,"Szymon  Wóscik",0,4
+3,1131,"Mateo  Salinas",1131,"Matjo  Salinas",0,4
+3,1146,"Martina  Torres",1146,"Martina  Torras",0,3
+3,1200,"Ömer Asaf  Kılıç",1200,"Ömer Asaf  Kıxıç",0,2
+3,1202,"Henry  Patel",1202,"Henry  Patfl",0,4
+3,1249,"Jon  Delgado",1249,"Jon  Delsado",0,4
+3,1259,"Emilía  Petersen",1259,"Emilí a Petersen",0,3
+3,1272,"Yǔxuān  Hé",1272,"Yǔxiān  Hé",0,3
+3,1274,"Mirjana  Petrović",1274,"Mirjana  Petrovia",0,3
+3,536,"Aoi  Miyasaki",1284,"M. Miyasaki",0,4
+3,1298,"Chien-hung  Lei",1298,"Chien-hung  ei",0,3
+3,1331,"Zoé  Braun",1331,"Zoé  Vraun",0,4
+3,1332,"Ema  Jovanović",1332,"Ema  fovanović",0,4
+3,1342,"Benicio  Vásquez",1342,"Benicio  aásquez",0,4
+3,1359,"Emma  Vergara",1359,"Emma  Vergura",0,3
+3,1364,"Elias  Keller",1364,"Elids  Keller",0,4
+3,863,"Amelia  Patel",1365,"Amelia  Ppa",0,4
+3,1389,"Ha-rin  Gang",1389,"Ha-rir  Gang",0,3
+3,1398,"Mabel  Fernández",1398,"Mabel  Feenández",0,4
+3,1411,"Aron  Berndsen",1411,"Oron  Berndsen",0,3
+3,1423,"Leah  Henriksen",1423,"Leah  Hrenriksen",0,3
+3,1443,"Liam  Castillo",1443,"L. Castillo",0,4
+3,1444,"Liam  Delgado",1444,"Liay  Delgado",0,4
+3,1445,"Paula  Vázquez",1445,"Paila  Vázquez",0,4
+3,1588,"Mia  Thomas",1463,"A. Thomas",0,4
+3,1522,"Olivér  Kovács",1522,"Olivér  fovács",0,4
+3,1524,"Marc  Díaz",1524,"Marc  Díav",0,4
+3,699,"Leon  Wojciechowski",1565,"Leon  Wojciechowsbi",0,4
+3,1565,"Leon  Wojciechowski",1565,"Leon  Wojciechowsbi",0,4
+3,1567,"Tara  Radović",1567,"Tara  Radvić",0,3
+3,1577,"Benjamin  Baker",1577,"Bcnjamin  Baker",0,4
+3,1596,"Aleksandar  Georgieva",1596,"Aliksandar  Georgieva",0,4
+3,1606,"Nagi Yūna Ichikawa",1606,"Nagi Yūna Ichikawl",0,2
+3,1627,"Gabriel  Figueiredo",1627,"Gabriel  Figueirepo",0,4
+3,1646,"Aleksandar  Ivanović",1646,"Alksandar  Ivanović",0,3
+3,1659,"Gabriel  Gerber",1659,"Gabrikl  Gerber",0,4
+3,1664,"Chien-hung  Wang",1664,"Chiet-hung  Wang",0,4
+3,1678,"Felipe  Ferrari",1678,"Flipe  Ferrari",0,2
+3,1732,"Muhammad Lia Dahan",1692,"Muhammad. A. Dahan",0,4
+3,1731,"Muhammad Maya Dahan",1718,"Muhammad. L. Dahan",0,4
+3,1732,"Muhammad Lia Dahan",1718,"Muhammad. L. Dahan",0,4
+3,1726,"Muhammad Avigail Dahan",1726,"Muhammad Avigael Dahan",0,4
+3,1732,"Muhammad Lia Dahan",1732,"Muhammad Loa Dahan",0,4
+3,1733,"Uta  Ueno",1733,"tUa  Ueno",0,3
+3,1753,"Ema  Fukuda",1753,"Ema  Fukuad",0,3
+3,1775,"Bruno Olivia Ferreyra",1775,"Bruno Olivoia Ferreyra",0,2
+3,1797,"William  Petersen",1797,"Willeam  Petersen",0,3
+3,536,"Aoi  Miyasaki",1801,"M. Miyasaki",0,4
+3,1820,"Mateo  Bustamante",1820,"Mateo  Busbamante",0,3
+3,1825,"William John Walker",1825,"William John Walekr",0,4
+3,1856,"Vittoria  Sorrentino",1856,"Vittori a Sorrentino",0,3
+3,1857,"Amelia  Morris",1857,"Zmelia  Morris",0,4
+3,1839,"Oliver  Ortiz",1875,"Olivel  Ortiz",0,4
+3,1875,"Oliver  Ortiz",1875,"Olivel  Ortiz",0,4
+3,1926,"Olivia  Thomas",1926,"Olivia  Thoman",0,4
+3,1005,"Haru  Fukuda",1942,"Hadu  Harada",0,4
+3,1961,"Tatsuki  Ono",1961,"Ratsuki  Ono",0,3
+3,1964,"Ema  Hribar",1964,"Ema  Hriaar",0,4
+3,1965,"Maria Afonso Neves",1965,"Mpria Afonso Neves",0,4
+3,1991,"Ao  Watanabe",1991,"Ao  Wataanbe",0,3
+4,75,"Murad  Ismayilov",75,"Murad  Osmayilov",0,4
+4,81,"Ali  Ibragimov",81,"oli  Ibragimov",0,4
 4,140,"Sophia  Aquino",140,"Sophia  Wquino",0,4
-4,184,"Bisera  Popoff",184,"Bisero  Popoff",0,4
-4,190,"Amar  Božić",190,"mar  Božić",0,3
-4,822,"Alma  Romano",210,"Alma  Romekro",0,5
+4,225,"Noor  Dijkstra",225,"Noow  Dijkstra",0,4
 4,226,"Gita  Bishwakarma",226,"Gita  Biwshwakarma",0,3
-4,238,"Biel  Ramos",238,"Biel  Ranos",0,4
-4,242,"Nora  Christensen",242,"N. Christensen",0,4
-4,256,"Ao  Fujihara",256,"Ao  Fujihart",0,4
-4,264,"Amar  Savić",264,"mar  Savić",0,3
-4,286,"Sofía Agustina Hernández",286,"Sofía Agustona Hernández",0,4
-4,330,"Ema Anzu Nakashima",330,"Ema nzu Nakashima",0,2
-4,347,"Matija Natalija Stojanović",347,"Matij aNatalija Stojanović",0,3
-4,349,"Matija Mateo Stojanović",349,"Matija aMteo Stojanović",0,3
-4,353,"Matija Teo Stojanović",349,"Matija aMteo Stojanović",0,4
-4,361,"Olivia  Moore",361,"Olivit  Moore",0,4
-4,415,"Noah  Bengtsson",415,"koah  Bengtsson",0,4
-4,449,"Lilit  Poghosyan",449,"Lilit  Poghosya",0,3
-4,452,"Catalina  Benítez",452,"Catalina  Benntez",0,4
-4,497,"Olivia  De Jong",497,"Oluvia  De Jong",0,4
-4,521,"Maximilian  Moser",521,"Maximilian  Noser",0,3
-4,547,"Samantha  Torres",547,"Samantha  Torras",0,4
-4,582,"Rasmus Marta Semjonov",582,"Rasmus Mart aSemjonov",0,5
-4,586,"Rasmus Sandra Semjonov",586,"Rasmus Sandra Semjoniv",0,4
-4,621,"Léna Léna Tóth",620,"Tóth Léna Anna",0,3
-4,620,"Léna Anna Tóth",621,"Tóth Léna Léna",0,3
-4,620,"Léna Anna Tóth",625,"Léna Tóth",0,3
-4,637,"Léna Ádám Tóth",637,"Léna yÁdám Tóth",0,3
-4,653,"Luna David Johnson",653,"Luna David aJohnson",0,3
-4,692,"Ciro  Arias",692,"C. Arias",0,5
-4,700,"Emine Emine Demir",724,"Emine Azra Demir",0,5
-4,256,"Ao  Fujihara",725,"Fūma  Fujihara",0,5
-4,724,"Emine Azra Demir",733,"Emine Demir",0,5
-4,724,"Emine Azra Demir",735,"Emine Demir",0,5
-4,939,"Ji-woo  Sin",741,"Si-woo  An",0,5
-4,764,"Charlotte Maria Morris",758,"Morris Charlotte Mary",0,4
-4,764,"Charlotte Maria Morris",794,"Charlotte. H. Morris",0,5
-4,808,"Yulia  Zaytsev",808,"Yulia  Zaytmev",0,4
-4,819,"Elias  Niemi",819,"Elias  ciemi",0,4
-4,890,"Benjamín  Donoso",890,"Bwnjamín  Donoso",0,4
-4,892,"Jan  Martínez",892,"Jaj  Martínez",0,4
-4,897,"Artiom  Țurcan",897,"Artiom  Țurcen",0,4
-4,921,"William Amelia Nelson",927,"William. L. Nelson",0,5
-4,947,"Adéla  Dvořák",947,"Adéla  cvořák",0,4
-4,950,"Jori  Moshe",950,"Jori  Noshe",0,4
-4,984,"Nik  Petek",984,"Nik  Pdtek",0,4
-5,20,"Julen Júlia Gutiérrez",12,"rulen Julen Gutiérrez",0,5
-5,228,"Jan  Szymański",228,"Jan  Szykański",0,4
-5,391,"Kiara  Williams",261,"Kiwa  Williams",0,4
-5,316,"Ema Haruma Nakashima",321,"Ema Hina Nakashima",0,5
-5,318,"Ema Haru Nakashima",321,"Ema Hina Nakashima",0,5
-5,333,"Ema Yua Nakashima",333,"Ema Yua Nakashqma",0,4
-5,336,"Ao  Matsuda",336,"Ao  Matsmda",0,4
-5,360,"Matija Marija Stojanović",346,"Matija Lea Stojanović",0,5
-5,380,"Eva  Trajanoski",380,"Eva  rrajanoski",0,3
-5,964,"Barbara Ava Thomas",385,"Thomas Ava",0,5
-5,413,"Nik  Zupan",413,"Nrk  Zupan",0,4
-5,424,"Biljana  Andov",424,"Biljana  Adnov",0,5
-5,539,"Ajda  Kos",539,"Afda  Kos",0,4
+4,230,"Cillian  O'Gallagher",230,"Cillian  O'Gallaghqr",0,4
+4,289,"Aleksandr  Vinogradov",289,"Aleksandr  Vinogradopv",0,3
+4,294,"John  Jackson",294,"pohn  Jackson",0,3
+4,353,"Matija Teo Stojanović",349,"Matija aMteo Stojanović",0,3
+4,353,"Matija Teo Stojanović",367,"Matija Stojanović",0,4
+4,391,"Kiara  Williams",391,"iKara  Williams",0,3
+4,416,"Sofía Miguel Ángel Delgado",416,"Sofía Miguel Ángel Delgadf",0,4
+4,446,"David  Bogdanov",446,"David  oBgdanov",0,4
+4,489,"Haruto  Endō",489,"Harjto  Endō",0,4
+4,501,"Goran  Pavlovski",501,"Goran  Pavlivski",0,4
+4,537,"Julen  Suárez",537,"uJlen  Suárez",0,4
+4,555,"Ao  Yamazaki",555,"Ao  Yamazakq",0,4
+4,570,"María José  Ríos",570,"María Jusé  Ríos",0,3
+4,966,"María José  Ríos",570,"María Jusé  Ríos",0,3
+4,589,"Joel  Berisha",589,"Juel  Berisha",0,4
+4,613,"Nora  Smits",613,"Nora  Smitq",0,4
+4,707,"Freya  Cox",707,"ireya  Cox",0,4
+4,739,"Jan  Černý",739,"Jan  Čorný",0,4
+4,773,"Robert  Martinez",773,"Robert  Maqtinez",0,3
+4,837,"Willow Kiwa Patel",837,"Willwo Kiwa Patel",0,4
+4,849,"Princess  Bautista",849,"Prnicess  Bautista",0,4
+4,861,"Maryam  Malcah",861,"Maryam  Malcjh",0,4
+4,535,"Sō  Nakagawa",865,"Rilo  Nakagawa",0,4
+4,1007,"David  Barišić",1007,"Davdi  Barišić",0,4
+4,1034,"David Richard Cook",1034,"Davod Richard Cook",0,4
+4,1074,"Sara  Gil",1074,"Sara  wil",0,4
+4,1088,"Lily  Rodríguez",1088,"Lily  Rfdríguez",0,4
+4,1143,"Lucas  Richardson",1143,"Lucas  xichardson",0,3
+4,1149,"Lara Dominik Kiss",1149,"Laqa Dominik Kiss",0,2
+4,1155,"Lara Zalán Kiss",1155,"Lara Zalán Kiws",0,4
+4,945,"Leo  Harris",1177,"Lwo  Harris",0,4
+4,1177,"Leo  Harris",1177,"Lwo  Harris",0,4
+4,371,"Sofia  Ivanov",1206,"Sofia  lvanov",0,4
+4,1206,"Sofia  Ivanov",1206,"Sofia  lvanov",0,4
+4,1222,"Matías Camila Miranda",1217,"Matías Miranda",0,4
+4,1221,"Nikola  Vuković",1221,"Nikola  iuković",0,4
+4,1281,"Leah  Flores",1281,"Laeh  Flores",0,4
+4,1309,"Sara  Demirović",1309,"Sara  Demiroić",0,3
+4,1314,"Sofi Mikayel Khachatryan",1314,"Sofi Mjkayel Khachatryan",0,4
+4,1353,"Luca  Visser",1353,"Luca  Vnsser",0,4
+4,1448,"Sita  Chowdhury",1448,"vita  Chowdhury",0,4
+4,1476,"Jakob  Zupančič",1476,"aJkob  Zupančič",0,4
+4,1491,"Mia  Kukk",1491,"Mia  Kukb",0,4
+4,1500,"Noel  Kiss",1500,"Ncoel  Kiss",0,3
+4,1514,"Roan  Leka",1514,"Roan  Lekq",0,4
+4,1521,"Malen  López",1521,"Maken  López",0,4
+4,1557,"Jude  Malcah",1557,"Jde  Malcah",0,3
+4,1602,"Mila  Božič",1602,"Milw  Božič",0,4
+4,1607,"Vesna  Nikolovski",1607,"wesna  Nikolovski",0,4
+4,1610,"Sofía  Rosales",1610,"Sofía  Roseles",0,2
+4,1615,"Chih-hao  Liu",1615,"Chih-hao  viu",0,4
+4,1655,"Lin Nur Levy",1618,"Lin Levy",0,4
+4,1660,"Lin Uri Levy",1618,"Lin Levy",0,4
+4,1655,"Lin Nur Levy",1650,"Lin Levy",0,4
+4,1660,"Lin Uri Levy",1650,"Lin Levy",0,4
+4,1652,"Marti  Morales",1652,"Marti  Moqales",0,3
+4,1655,"Lin Nur Levy",1655,"Lin Nur Lkvy",0,4
+4,1618,"Lin Niel Levy",1658,"Lin Ariel Levy",0,4
+4,1655,"Lin Nur Levy",1672,"Lin Levy",0,4
+4,1660,"Lin Uri Levy",1672,"Lin Levy",0,4
+4,1691,"Muhammad Mila Dahan",1691,"Muhammad Milya Dahan",0,3
+4,1698,"David  Țurcan",1698,"David  urcan",0,3
+4,1701,"Laura  Pereira",1701,"Laura  Perelra",0,4
+4,1715,"Alexey  Vorobyov",1715,"Elexey  Vorobyov",0,3
+4,1737,"William Ella Olsen",1737,"William Slla Olsen",0,3
+4,1380,"Seo-ah  Ha",1777,"Seo-ah  Hqo",0,3
+4,1777,"Seo-ah  Heo",1777,"Seo-ah  Hqo",0,3
+4,1779,"Sandra  Pavlov",1779,"Sandra  Pavlox",0,4
+4,1803,"Ha-rin Ji-a Zuu",1803,"Ha-rin Ji-a uZu",0,3
+4,1850,"Felipe  Bianchi",1850,"Felipe  Bianochi",0,3
+4,1885,"Goran  Stojanov",1885,"Goran  Stojano",0,3
+4,1920,"Alisa  Popov",1920,"A. Popov",0,4
+4,1940,"Harper  Wilson",1940,"Harper  Wlson",0,3
+4,1937,"Anna Alisa Smirnov",1941,"Anna. A. Smirnov",0,4
+4,1945,"Mary  Garcia",1945,"Mary  Gaqcia",0,3
+5,172,"Grace  Jones",172,"Grace  Jojes",0,3
+5,199,"Thomas  Wilson",199,"Thomas  Wnlson",0,4
+5,338,"Fūma  Fujihara",338,"Fūma  Fujohara",0,4
+5,725,"Fūma  Fujihara",338,"Fūma  Fujohara",0,4
+5,340,"Leo  Ali",340,"Leqo  Ali",0,3
+5,353,"Matija Teo Stojanović",353,"Mtaija Teo Stojanović",0,4
+5,418,"Roan  Kola",418,"Roan  Kova",0,4
+5,490,"Artem  Bondarenko",490,"Artm  Bondarenko",0,3
 5,560,"Himari  Kōno",560,"Himaqi  Kōno",0,4
-5,616,"Vera  Andersson",616,"Verk  Andersson",0,4
-5,688,"Martina  Muñoz",688,"Marhina  Muñoz",0,4
-5,736,"Emine Aras Demir",733,"Emine Demir",0,5
-5,736,"Emine Aras Demir",735,"Emine Demir",0,5
-5,736,"Emine Aras Demir",736,"Emine. A. Demir",0,5
-5,899,"Elmar  Scheving",899,"Elmr  Scheving",0,3
-6,40,"Juan  Duarte",40,"Juan  Durate",0,5
-6,52,"Sakura  Arai",52,"Sakora  Arai",0,4
-6,23,"Julen Emma Gutiérrez",59,"Julen. Á. Gutiérrez",0,5
-6,47,"Julen Emma Gutiérrez",59,"Julen. Á. Gutiérrez",0,5
-6,69,"Carolina  Castro",69,"Caaolina  Castro",0,3
-6,81,"Ali  Ibragimov",81,"oli  Ibragimov",0,4
-6,769,"Ji-an  Munn",90,"J. Munn",0,5
-6,106,"Mark Polina Petrov",106,"Murk Polina Petrov",0,4
-6,165,"Adéla  Nováková",165,"Adxla  Nováková",0,4
-6,244,"Yǔtóng  Chow",244,"Yǔtóng  Chiw",0,4
-6,271,"Helmi  Järvinen",271,"Helma  Järvinen",0,4
-6,351,"Marija  Bogdanov",351,"Mzrija  Bogdanov",0,4
-6,414,"Astrid  Rivas",414,"Astird  Rivas",0,5
-6,462,"Mia Alma Sosa",462,"Mia Sosa",0,4
-6,495,"Isidora  Godoy",495,"Isidora  Godey",0,3
-6,689,"Joel  Prishtina",689,"Jobl  Prishtina",0,4
-6,746,"Lara  Gál",746,"Lara  Glá",0,4
-6,57,"Ji-an  Gwon",869,"J. Gwon",0,5
-7,147,"Noor  Van Leeuwen",147,"Nour  Van Leeuwen",0,4
-7,729,"Lourenço  Lopes",729,"Lourenço  Looes",0,4
-7,764,"Charlotte Maria Morris",774,"Charlotte. R. Morris",0,5
-7,813,"Haruma  Kikuchi",813,"Haruma  Kikuchs",0,4
-7,968,"Vasileios  Kontos",968,"Vqsileios  Kontos",0,4
-8,16,"Yǔzé  Tsui",16,"Y. Tsui",0,5
-8,95,"Mark Maxim Petrov",95,"Mark Maxi mPetrov",0,5
-8,274,"Zǐhán Yǔzé Ho",274,"Zǐhán. Y. Ho",0,5
-8,16,"Yǔzé  Tsui",585,"Yǔxī  Tsui",0,5
-9,73,"Ida  Christensen",652,"Ida  Kristensen",0,5
-9,659,"Ivana  Perović",659,"Ivena  Perović",0,4
-9,964,"Barbara Ava Thomas",940,"Barbara Thomas",0,3
-10,3,"Julen Nahia Gutiérrez",3,"Julen. N. Gutiérrez",0,5
-10,73,"Ida  Christensen",242,"N. Christensen",0,5
-10,660,"Ádám  Szilágyi",660,"Ádám  uzilágyi",0,4
-11,637,"Léna Ádám Tóth",621,"Tóth Léna Léna",0,5
-11,637,"Léna Ádám Tóth",625,"Léna Tóth",0,5
-12,445,"Sara  Lund",445,"Spra  Lund",0,4
-12,603,"Mark Maria Melnic",603,"Mark Mari aMelnic",0,5
-12,606,"Maël  André",606,"Maël  Annré",0,4
-15,743,"Roel Ambra Halili",738,"Halili Roel Amelia",0,5
+5,596,"Emma  Kļaviņš",596,"Emma  Kļoviņš",0,4
+5,720,"Hovhannes  Arakelyan",720,"Hovhanyes  Arakelyan",0,4
+5,749,"Noah  Johansen",749,"Noah  Johanssn",0,3
+5,800,"Noah  Rojas",800,"Noay  Rojas",0,4
+5,808,"Yulia  Zaytsev",808,"Yulia  Zaytmev",0,4
+5,834,"Diego  Maldonado",834,"Diego  Makdonado",0,4
+5,841,"Willow Mila Patel",841,"Willow. M. Patel",0,4
+5,869,"Ji-woo  Gwon",845,"Ji-woo  Kwon",0,4
+5,882,"Vesna  Radulović",882,"Vesna  Radulavić",0,4
+5,888,"Pau  Alonso",888,"Pah  Alonso",0,4
+5,904,"Aoi  Inoue",904,"Aoi  Inohe",0,4
+5,954,"Robert  Evans",954,"Robert  Evane",0,4
+5,385,"Ava  Thomas",964,"B. A. Thomas",0,3
+5,1463,"Ava  Thomas",964,"B. A. Thomas",0,3
+5,990,"Mikhail  Petrov",990,"Mikhail  Petrohv",0,3
+5,1019,"Mabel  Duarte",1019,"Mayel  Duarte",0,4
+5,1058,"Liam  Edri",1058,"Lzam  Edri",0,4
+5,1140,"Ginevra  Romeo",1140,"Gincvra  Romeo",0,4
+5,1167,"Melisa  Berisha",1167,"Melisa  Berisma",0,4
+5,1172,"Ju-won  Gang",1172,"Ju-won  Yang",0,4
+5,1197,"Barbara Olivia Lewis",1197,"Barbara Olqivia Lewis",0,3
+5,1216,"Ju-won  Seoh",1216,"Ju-won  Seeh",0,4
+5,1225,"Noah  Schmidt",1225,"Noam  Schmidt",0,4
+5,1341,"Katerina  Kitanovski",1341,"Katerina  Kitancvski",0,4
+5,1348,"Chin-lung  Lǐ",1348,"Chin-lunl  Lǐ",0,4
+5,1421,"Linda  Nelson",1421,"iLnda  Nelson",0,4
+5,1435,"Mila  Bizjak",1435,"Mlia  Bizjak",0,4
+5,1502,"Andrias  Johannesen",1502,"Andrias  Jihannesen",0,4
+5,1517,"Charlotte  Torres",1517,"Charlotze  Torres",0,4
+5,1520,"Ravi  Azevedo",1520,"Ravi  Azevedl",0,4
+5,1525,"Helmi  Salonen",1525,"Helmi  Sclonen",0,4
+5,1530,"Lev Matvey Novikov",1530,"Lev Mtavey Novikov",0,4
+5,1575,"Lev Matvey Novikov",1530,"Lev Mtavey Novikov",0,4
+5,868,"Min-jun  Shin",1571,"Min-jun  Shitm",0,3
+5,1617,"Lin Jude Levy",1617,"Lzn Jude Levy",0,4
+5,1631,"Lin Jude Levy",1617,"Lzn Jude Levy",0,4
+5,1626,"Lin Leah Levy",1618,"Lin Levy",0,3
+5,1626,"Lin Leah Levy",1650,"Lin Levy",0,3
+5,1667,"Noah  Schmitz",1667,"Noav  Schmitz",0,4
+5,1626,"Lin Leah Levy",1672,"Lin Levy",0,3
+5,1692,"Muhammad Ayalah Dahan",1692,"Muhammad. A. Dahan",0,4
+5,1721,"Gayane  Manukyan",1721,"G. Manukyan",0,4
+5,1852,"Vita  Krajnc",1852,"Vita  Krainc",0,4
+5,797,"David  Winkler",1870,"Daid  Winkler",0,3
+5,1870,"David  Winkler",1870,"Daid  Winkler",0,3
+5,1883,"Mariami  Beridze",1883,"Mariam i Beridze",0,3
+5,1975,"Paula  García",1975,"Paulfa  García",0,3
+5,1995,"Yeva  Kravchenko",1995,"Yeqva  Kravchenko",0,3
+6,15,"Milana  Bondar",15,"Milana  Bdondar",0,3
+6,427,"Lucas Dorothy Hall",427,"Lufcas Dorothy Hall",0,3
+6,466,"Ellie  Walsh",466,"Ellie  Salsh",0,4
+6,641,"Ariel  Segel",641,"Areel  Segel",0,4
+6,642,"Afonso  Soares",642,"Afondo  Soares",0,3
+6,318,"Ema Haru Nakashima",1048,"Haruna  Nakashima",0,4
+6,1182,"Haruna  Sasaki",1182,"Harbna  Sasaki",0,4
+6,1230,"Yǔxuān  Law",1230,"Yǔxuān  oaw",0,4
+6,1307,"Rei  Kondō",1307,"Rie  Kondō",0,4
+6,1580,"Charles  Thompson",1580,"Charlhs  Thompson",0,4
+6,1649,"Ariana  González",1649,"Ariuna  González",0,3
+6,1794,"Ha-rin Ji-an Zuu",1803,"Ha-rin Ji-a uZu",0,4
+6,1879,"Ji-an  U",1879,"Ji-ah  U",0,4
+6,1272,"Yǔxuān  Hé",1907,"Yǔxuān  Hl",0,4
+7,488,"Ha-eun  Lau",488,"Ha-uen  Lau",0,4
+7,509,"Thomas Noah Brown",509,"Thomas Noah rBown",0,4
+7,587,"Sita  Thapa",587,"Sitm  Thapa",0,3
+7,1008,"Eun-woo  Ghim",1008,"uEn-woo  Ghim",0,4
+7,1028,"Alma  Aguirre",1028,"Alma  Aguirrr",0,3
+7,1123,"Liam Refael Ochion",1123,"Liam Refael Ochien",0,4
+7,1297,"Sofi Nare Khachatryan",1285,"Khachatryan Sofi Narine",0,4
+7,1420,"Ali  Ochion",1420,"Ali  Ochien",0,4
+7,1648,"Izaro  Martín",1648,"Izaro  Martíb",0,4
+7,1830,"Amálie  Novotná",1830,"Amáclie  Novotná",0,3
+7,1976,"Mateo  Lovrić",1976,"Maten  Lovrić",0,4
+8,62,"Maximiliano  Sepúlveda",62,"Maximiliano  Senúlveda",0,4
+8,106,"Mark Polina Petrov",106,"Murk Polina Petrov",0,4
+8,189,"Delfina  Muñoz",189,"Delfina  Miñoz",0,3
+8,196,"Lavi  Cohen",196,"Lavi  Cohun",0,4
+8,1461,"Haruma  Murakami",214,"Fūma  Murakami",0,4
+8,306,"Hinato  Kimura",306,"Hinato  Kixura",0,4
+8,318,"Ema Haru Nakashima",316,"Ema Harumw Nakashima",0,4
+8,379,"Victoria Valentina García",379,"Victoria Valontina García",0,4
+8,663,"Matthildur  Jensen",663,"iatthildur  Jensen",0,4
+8,676,"Luna Benjamin Johnson",676,"Luna Beljamin Johnson",0,4
+8,316,"Ema Haruma Nakashima",1048,"Haruna  Nakashima",0,4
+8,1234,"Rory  Phillips",1234,"Rorh  Phillips",0,4
+8,1325,"Oleksandr  Marchenko",1325,"Oleksandr  Murchenko",0,4
+8,1378,"Pola  Kwiatkowski",1378,"Pola  Kwiatkowgki",0,4
+8,1390,"Eva  Kuznetsov",1390,"Eva  Kunzetsov",0,4
+8,469,"Yu-jun  Ju",1424,"Yu-jun  xuen",0,4
+8,1536,"Lev Ivan Novikov",1527,"Lev Novikov",0,4
+8,1536,"Lev Ivan Novikov",1544,"Lev Novikov",0,4
+8,1536,"Lev Ivan Novikov",1550,"Lev Novikov",0,4
+8,1599,"Nagi Hina Ichikawa",1599,"Nagi Hin aIchikawa",0,4
+8,1692,"Muhammad Ayalah Dahan",1731,"Muhammad Dahan",0,4
+8,1840,"Dan  Wada",1840,"Dun  Wada",0,3
+8,1911,"Nika  Oblak",1911,"Nika  Oblwk",0,3
+8,1102,"Shu-chuan  Wang",1974,"Wú Shu-chuan",0,4
+8,1999,"Lena  Binder",1999,"Lzna  Binder",0,4
+9,1986,"Igor  Petrevski",1986,"Iqor  Petrevski",0,4
+10,1571,"Min-jun  Shim",868,"Min-ju n Shin",0,4
+10,1209,"Jennifer  Wilson",1209,"Junnifer  Wilson",0,4
+10,1245,"Ha-joon Soo-ah Sung",1245,"Ha-joon Sung",0,4
+11,1915,"Anna Yelena Smirnov",1941,"Anna. A. Smirnov",0,4
+13,958,"Barbara Olivia Thomas",970,"Thomas Barbara Oliver",0,4
+13,1687,"Lamija  Kovačević",1687,"Lumija  Kovačević",0,4

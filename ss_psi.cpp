@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <string>
 #include <tuple>
+#include <unordered_map>
 #include <vector>
 
 #include "ass.h"
@@ -24,9 +25,9 @@ using namespace std;
 
 const int L_BIT_LENGTH = 8192;
 const int GRAM_SIZE = 2;
-const int HAMMING_D = 5;
+const int HAMMING_D = 4;
 const int GAP_T = 9;
-const int N_ELEMENTS = 10000;
+const int N_ELEMENTS = 2000;
 const int K_ROUNDS = 50;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
 const char* MATCH_OUTPUT_CSV = "output/ss_psi_opened_matches.csv";
@@ -58,6 +59,12 @@ string to_binary_string(const BinaryVector& v) {
     s.reserve(v.size());
     for (int bit : v) s.push_back(bit ? '1' : '0');
     return s;
+}
+
+string projection_key(const BinaryVector& projection) {
+    // Stable bucket key for exact projection matching. This preserves the old
+    // `proj_dist == 0` semantics without comparing every A/B pair.
+    return to_binary_string(projection);
 }
 
 BinaryVector from_binary_string(const string& s) {
@@ -213,6 +220,7 @@ void simulate_f_sspsi(int party_id) {
     const auto matching_start = chrono::steady_clock::now();
 
     for (int k = 0; k < K_ROUNDS; ++k) {
+        const auto round_start = chrono::steady_clock::now();
         vector<EncodedRecord> dataA;
         vector<EncodedRecord> dataB;
 
@@ -225,10 +233,22 @@ void simulate_f_sspsi(int party_id) {
         }
 
         int matches_this_round = 0;
+        size_t candidate_pairs_this_round = 0;
+
+        unordered_map<string, vector<const EncodedRecord*>> projection_buckets;
+        projection_buckets.reserve(dataA.size());
+        for (const auto& recA : dataA) {
+            projection_buckets[projection_key(recA.projection)].push_back(&recA);
+        }
+
         for (const auto& recB : dataB) {
-            for (const auto& recA : dataA) {
-                int proj_dist = hamming_distance(recA.projection, recB.projection);
-                if (proj_dist > 0) continue;
+            const auto bucket_it = projection_buckets.find(projection_key(recB.projection));
+            if (bucket_it == projection_buckets.end()) continue;
+
+            candidate_pairs_this_round += bucket_it->second.size();
+            for (const EncodedRecord* recA_ptr : bucket_it->second) {
+                const EncodedRecord& recA = *recA_ptr;
+                const int proj_dist = 0;
 
                 int payload_dist = hamming_distance(recA.payload, recB.payload);
                 if (payload_dist > HAMMING_D) continue;
@@ -272,8 +292,16 @@ void simulate_f_sspsi(int party_id) {
         }
 
         total_matches += matches_this_round;
-        cout << "Round " << k << ": " << matches_this_round
-             << " candidate matches written to " << outFile << "\n";
+        const auto round_end = chrono::steady_clock::now();
+        const chrono::duration<double> round_elapsed = round_end - round_start;
+        cout << "Round " << k
+             << ": A=" << dataA.size()
+             << ", B=" << dataB.size()
+             << ", projection_buckets=" << projection_buckets.size()
+             << ", bucket_candidate_pairs=" << candidate_pairs_this_round
+             << ", payload_threshold_matches=" << matches_this_round
+             << ", elapsed=" << fixed << setprecision(3) << round_elapsed.count() << "s"
+             << " | written to " << outFile << "\n";
     }
 
     const auto matching_end = chrono::steady_clock::now();
