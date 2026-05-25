@@ -6,6 +6,7 @@
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <random>
 #include <map>
 #include <set>
 #include <span>
@@ -32,14 +33,15 @@ using namespace std;
 using namespace osuCrypto;
 using namespace volePSI;
 
-const int HAMMING_D = 5;
+const int HAMMING_D = 4;
 const int K_ROUNDS = 50;
 const u64 STAT_SEC_PARAM = 40;
 const u64 NUM_THREADS = 1;
 const size_t MAX_NAME_BYTES = 128;
 const size_t MAX_BUCKET_RECORDS = 512;
+const size_t MAX_REPRESENTATIVES_PER_PROJECTION = 4;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
-const size_t MPC_PAYLOAD_BITS = 8192;
+const size_t MPC_PAYLOAD_BITS = 2048;
 const size_t MPC_CHUNK_BITS = 64;
 const size_t MPC_PAYLOAD_CHUNKS = MPC_PAYLOAD_BITS / MPC_CHUNK_BITS;
 const char* RECEIVER_MATCH_OUTPUT_CSV = "output/mpc_fuzzy_matches.csv";
@@ -191,6 +193,29 @@ block projection_key(const BinaryVector& projection) {
     return projection_key_from_string(projection_string(projection));
 }
 
+uint64_t representative_seed(int round, int party_id, const string& key) {
+    uint64_t seed = 0x9E3779B97F4A7C15ULL;
+    seed ^= static_cast<uint64_t>(round + 1) + 0xBF58476D1CE4E5B9ULL + (seed << 6) + (seed >> 2);
+    seed ^= static_cast<uint64_t>(party_id + 1) + 0x94D049BB133111EBULL + (seed << 6) + (seed >> 2);
+    seed ^= static_cast<uint64_t>(hash<string>{}(key)) + 0xD6E8FEB86659FD93ULL + (seed << 6) + (seed >> 2);
+    return seed;
+}
+
+template <typename T>
+void cap_projection_representatives(vector<T>& bucket,
+                                    int round,
+                                    int party_id,
+                                    const string& key) {
+    if (MAX_REPRESENTATIVES_PER_PROJECTION == 0) {
+        throw runtime_error("MAX_REPRESENTATIVES_PER_PROJECTION must be > 0");
+    }
+    if (bucket.size() <= MAX_REPRESENTATIVES_PER_PROJECTION) return;
+
+    mt19937_64 rng(representative_seed(round, party_id, key));
+    shuffle(bucket.begin(), bucket.end(), rng);
+    bucket.resize(MAX_REPRESENTATIVES_PER_PROJECTION);
+}
+
 vector<u8> pack_bits(const BinaryVector& bits) {
     vector<u8> bytes((bits.size() + 7) / 8, 0);
     for (size_t i = 0; i < bits.size(); ++i) {
@@ -224,8 +249,12 @@ size_t single_sender_value_byte_length(size_t payload_bits) {
     return sizeof(u32) + sizeof(u32) + MAX_NAME_BYTES;
 }
 
+size_t max_serialized_bucket_records() {
+    return min(MAX_BUCKET_RECORDS, MAX_REPRESENTATIVES_PER_PROJECTION);
+}
+
 size_t bucket_value_byte_length(size_t payload_bits) {
-    return sizeof(u32) + (MAX_BUCKET_RECORDS * single_sender_value_byte_length(payload_bits));
+    return sizeof(u32) + (max_serialized_bucket_records() * single_sender_value_byte_length(payload_bits));
 }
 
 vector<u8> serialize_sender_value(const EncodedRecord& rec) {
@@ -264,8 +293,8 @@ SenderValue deserialize_sender_value(std::span<const u8> data) {
 vector<u8> serialize_sender_bucket(const vector<size_t>& bucket_records,
                                    const vector<EncodedRecord>& dataA,
                                    size_t payload_bits) {
-    if (bucket_records.size() > MAX_BUCKET_RECORDS) {
-        throw runtime_error("Sender projection bucket exceeds MAX_BUCKET_RECORDS");
+    if (bucket_records.size() > max_serialized_bucket_records()) {
+        throw runtime_error("Sender projection bucket exceeds serialized representative cap");
     }
 
     vector<u8> out(bucket_value_byte_length(payload_bits), 0);
@@ -295,8 +324,8 @@ vector<SenderValue> deserialize_sender_bucket(std::span<const u8> data,
     }
 
     const auto bucket_count = read_u32(data.data());
-    if (bucket_count > MAX_BUCKET_RECORDS) {
-        throw runtime_error("Serialized sender bucket count exceeds MAX_BUCKET_RECORDS");
+    if (bucket_count > max_serialized_bucket_records()) {
+        throw runtime_error("Serialized sender bucket count exceeds representative cap");
     }
 
     vector<SenderValue> out;
@@ -401,6 +430,7 @@ void write_summary_file(long total_candidates, const vector<OpenMatch>& opened_m
     fout << "Filtering: split_party_mpc_handoff_secret_shared_hamming\n";
     fout << "K_ROUNDS: " << K_ROUNDS << "\n";
     fout << "HAMMING_D: " << HAMMING_D << "\n";
+    fout << "MAX_REPRESENTATIVES_PER_PROJECTION: " << MAX_REPRESENTATIVES_PER_PROJECTION << "\n";
     fout << "Total expanded exact-projection candidate pairs across rounds: " << total_candidates << "\n";
     fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
     fout << "MPC handoff manifest: " << MPC_HANDOFF_MANIFEST_CSV << "\n";
@@ -522,12 +552,15 @@ void run_sender(coproto::Socket& sock) {
             sender_projection_buckets[key].push_back(i);
         }
 
+        size_t max_sender_bucket_before_cap = 0;
         size_t max_sender_bucket_size = 0;
-        for (const auto& [key, bucket_records] : sender_projection_buckets) {
+        for (auto& [key, bucket_records] : sender_projection_buckets) {
+            max_sender_bucket_before_cap = max(max_sender_bucket_before_cap, bucket_records.size());
+            cap_projection_representatives(bucket_records, round, 0, key);
             max_sender_bucket_size = max(max_sender_bucket_size, bucket_records.size());
-            if (bucket_records.size() > MAX_BUCKET_RECORDS) {
+            if (bucket_records.size() > max_serialized_bucket_records()) {
                 throw runtime_error("Sender projection bucket for round " + to_string(round)
-                                    + " exceeds MAX_BUCKET_RECORDS");
+                                    + " exceeds serialized representative cap");
             }
         }
 
@@ -563,7 +596,9 @@ void run_sender(coproto::Socket& sock) {
             cout << "Round " << round
                  << ": party0_records=" << dataA.size()
                  << ", sender_projection_buckets=" << sender_projection_buckets.size()
+                 << ", max_sender_bucket_before_cap=" << max_sender_bucket_before_cap
                  << ", max_sender_bucket_size=" << max_sender_bucket_size
+                 << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
                  << ", receiver reported " << receiver_candidates
                  << " expanded candidate pairs.\n";
             continue;
@@ -627,7 +662,9 @@ void run_sender(coproto::Socket& sock) {
         cout << "Round " << round
              << ": party0_records=" << dataA.size()
              << ", sender_projection_buckets=" << sender_projection_buckets.size()
+             << ", max_sender_bucket_before_cap=" << max_sender_bucket_before_cap
              << ", max_sender_bucket_size=" << max_sender_bucket_size
+             << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
              << ", receiver reported " << receiver_candidates
              << " expanded candidate pairs.\n";
     }
@@ -666,6 +703,7 @@ void run_receiver(coproto::Socket& sock) {
 
         vector<block> keys;
         vector<vector<size_t>> receiver_row_records;
+        vector<string> receiver_row_keys;
         map<string, size_t> receiver_projection_rows;
 
         for (size_t i = 0; i < dataB.size(); ++i) {
@@ -674,8 +712,15 @@ void run_receiver(coproto::Socket& sock) {
             if (inserted) {
                 keys.push_back(projection_key_from_string(key));
                 receiver_row_records.push_back({});
+                receiver_row_keys.push_back(key);
             }
             receiver_row_records[it->second].push_back(i);
+        }
+
+        size_t max_receiver_bucket_before_cap = 0;
+        for (size_t i = 0; i < receiver_row_records.size(); ++i) {
+            max_receiver_bucket_before_cap = max(max_receiver_bucket_before_cap, receiver_row_records[i].size());
+            cap_projection_representatives(receiver_row_records[i], round, 1, receiver_row_keys[i]);
         }
 
         const u64 receiver_size = static_cast<u64>(keys.size());
@@ -712,7 +757,9 @@ void run_receiver(coproto::Socket& sock) {
                  << ", max_sender_bucket_size=" << max_sender_bucket_size
                  << ", party1_records=" << dataB.size()
                  << ", receiver_projection_buckets=" << receiver_projection_rows.size()
+                 << ", max_receiver_bucket_before_cap=" << max_receiver_bucket_before_cap
                  << ", max_receiver_bucket_size=" << max_receiver_bucket_size
+                 << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
                  << ", bucket_intersections=" << bucket_intersections_this_round
                  << ", expanded_candidate_pairs=" << candidate_pairs_this_round
                  << ", mpc_candidate_pairs=" << candidate_pairs_this_round
@@ -802,7 +849,9 @@ void run_receiver(coproto::Socket& sock) {
              << ", max_sender_bucket_size=" << max_sender_bucket_size
              << ", party1_records=" << dataB.size()
              << ", receiver_projection_buckets=" << receiver_projection_rows.size()
+             << ", max_receiver_bucket_before_cap=" << max_receiver_bucket_before_cap
              << ", max_receiver_bucket_size=" << max_receiver_bucket_size
+             << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
              << ", bucket_intersections=" << bucket_intersections_this_round
              << ", expanded_candidate_pairs=" << candidate_pairs_this_round
              << ", mpc_candidate_pairs=" << candidate_pairs_this_round

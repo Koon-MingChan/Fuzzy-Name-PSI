@@ -1,0 +1,149 @@
+# Fuzzy Name Approx-PSI Commands
+# Run from the project root unless a step says otherwise:
+# /data/Fuzzy-Name-PSI
+
+============================================================
+Prototype version: local_compute + ss_psi
+============================================================
+
+1. Rebuild C++ programs
+
+cd /data/Fuzzy-Name-PSI/build
+make clean && make
+cd /data/Fuzzy-Name-PSI
+
+2. Generate projected round files from the CSV dataset
+
+./build/local_compute
+
+3. Run prototype matching
+
+./build/ss_psi 0 2>&1 | tee ss_psi_party0.log
+
+# Optional: run as party 1 too, if you want the other simulated share output.
+# The opened/evaluation matches are the same because this prototype simulates both sides locally.
+./build/ss_psi 1 2>&1 | tee ss_psi_party1.log
+
+4. Evaluate prototype output
+
+python3 evaluate_ss_psi.py \
+  --matches output/ss_psi_opened_matches.csv \
+  --n 2000 \
+  --max-token-edit 1
+
+# Optional looser duplicate/equivalent-name classification
+python3 evaluate_ss_psi.py \
+  --matches output/ss_psi_opened_matches.csv \
+  --n 2000 \
+  --max-token-edit 2
+
+5. Key prototype outputs
+
+cat output/ss_psi_summary.txt
+cat output/ss_psi_eval_summary.csv
+
+
+============================================================
+MPC version: one-command full pipeline
+============================================================
+
+1. Run full MPC pipeline sequentially
+
+./scripts/run_mpc_fuzzy_pipeline.sh
+
+# Optional: smaller MP-SPDZ batches if the MP-SPDZ stage is too heavy.
+MPC_CANDIDATES_PER_BATCH=2000 ./scripts/run_mpc_fuzzy_pipeline.sh
+
+# Optional: override eval record count or equivalent-name typo allowance.
+MPC_EVAL_N=2000 MPC_EVAL_MAX_TOKEN_EDIT=1 ./scripts/run_mpc_fuzzy_pipeline.sh
+
+2. Key MPC outputs
+
+cat output/mpc_fuzzy_summary.txt
+cat output/mpc_fuzzy_eval_summary.csv
+head output/mpc_fuzzy_matches_from_mpc.csv
+
+
+============================================================
+MPC version: manual step-by-step flow
+============================================================
+
+1. Rebuild C++ programs
+
+cd /data/Fuzzy-Name-PSI/build
+make clean && make
+cd /data/Fuzzy-Name-PSI
+
+2. Generate projected round files from the CSV dataset
+
+./build/local_compute
+
+3. Run MPC candidate generation in two terminals
+
+# Terminal 1: Party 0 / sender
+cd /data/Fuzzy-Name-PSI
+./build/mpc_fuzzy_psi 0 127.0.0.1:1212 2>&1 | tee party0.log
+
+# Terminal 2: Party 1 / receiver
+cd /data/Fuzzy-Name-PSI
+./build/mpc_fuzzy_psi 1 127.0.0.1:1212 2>&1 | tee party1.log
+
+4. Check candidate-generation summary
+
+cat output/mpc_fuzzy_summary.txt
+wc -l output/mpc_fuzzy_mpc_candidates.csv
+wc -l output/mp_spdz/Player-Data/Input-P0-0 output/mp_spdz/Player-Data/Input-P1-0
+
+5. Run MP-SPDZ secure Hamming threshold filter
+
+./scripts/run_mp_spdz_approx.sh 2>&1 | tee mp_spdz_approx.log
+
+# Optional: use smaller MP-SPDZ batches if the run is too heavy.
+# Example: 2000 candidates per batch.
+MPC_CANDIDATES_PER_BATCH=2000 ./scripts/run_mp_spdz_approx.sh 2>&1 | tee mp_spdz_approx.log
+
+# Optional: resume from a specific batch.
+# Example: start from batch 3.
+MPC_START_BATCH=3 ./scripts/run_mp_spdz_approx.sh 2>&1 | tee mp_spdz_approx_resume.log
+
+6. Evaluate final MPC output
+
+python3 evaluate_ss_psi.py \
+  --matches output/mpc_fuzzy_matches_from_mpc.csv \
+  --n 2000 \
+  --max-token-edit 1 \
+  --summary-out output/mpc_fuzzy_eval_summary.csv \
+  --true-positive-out output/mpc_fuzzy_true_positives.csv \
+  --duplicate-out output/mpc_fuzzy_equivalent_duplicate_matches.csv \
+  --false-positive-out output/mpc_fuzzy_false_positives.csv \
+  --missed-out output/mpc_fuzzy_missed_true_matches.csv
+
+# Optional looser duplicate/equivalent-name classification
+python3 evaluate_ss_psi.py \
+  --matches output/mpc_fuzzy_matches_from_mpc.csv \
+  --n 2000 \
+  --max-token-edit 2 \
+  --summary-out output/mpc_fuzzy_eval_summary.csv \
+  --true-positive-out output/mpc_fuzzy_true_positives.csv \
+  --duplicate-out output/mpc_fuzzy_equivalent_duplicate_matches.csv \
+  --false-positive-out output/mpc_fuzzy_false_positives.csv \
+  --missed-out output/mpc_fuzzy_missed_true_matches.csv
+
+7. Key MPC outputs
+
+cat output/mpc_fuzzy_summary.txt
+cat output/mpc_fuzzy_eval_summary.csv
+head output/mpc_fuzzy_matches_from_mpc.csv
+
+
+============================================================
+Useful tuning constants before rebuilding
+============================================================
+
+# Representative cap, in both ss_psi.cpp and mpc_fuzzy_psi.cpp:
+#   MAX_REPRESENTATIVES_PER_PROJECTION = 1, 2, 4, or 8
+# Smaller is faster. Larger may improve recall.
+
+# Payload bit length, must match in local_compute.cpp and mpc_fuzzy_psi.cpp:
+#   L_BIT_LENGTH / MPC_PAYLOAD_BITS = 8192, 4096, 2048, etc.
+# Smaller reduces MP-SPDZ work, but accuracy must be re-tested.

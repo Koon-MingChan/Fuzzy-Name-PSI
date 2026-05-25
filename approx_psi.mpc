@@ -18,6 +18,7 @@
 from approx_psi_config import *
 
 word_type = sbits.get_type(CHUNK_BITS)
+count_type = sbitint.get_type(16)
 
 def candidate_word_offset(candidate_index):
     return candidate_index * PAYLOAD_CHUNKS
@@ -27,12 +28,12 @@ def f_ss_hamcom(words_a, words_b, threshold):
     Secret-shared Hamming distance comparison.
     Returns a secret bit indicating whether popcount(a xor b) <= threshold.
     """
-    dist = MemValue(sint(0))
+    dist = MemValue(count_type(0))
 
     @for_range(PAYLOAD_CHUNKS)
     def _(chunk):
         diff = words_a[chunk] ^ words_b[chunk]
-        dist.write(dist.read() + diff.popcnt())
+        dist.write(dist.read() + count_type(diff.popcnt()))
 
     return dist.read() <= threshold
 

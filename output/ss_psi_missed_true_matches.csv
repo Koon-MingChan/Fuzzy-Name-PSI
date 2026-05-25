@@ -118,7 +118,6 @@ index,record_id,clean_name,fuzzy_name,original_name,error_type,is_noisy,clean_no
 1276,N00001277,Amelja  Toska,A. Toska,Amelja  Toska,abbrev_forename,True,AMELJA TOSKA,A TOSKA,AMELJA TOSKA,A TOSKA
 1277,N00001278,Sofi Anahit Khachatryan,S. A. Khachatryan,Sofi Anahit Khachatryan,abbrev_forename,True,SOFI ANAHIT KHACHATRYAN,S A KHACHATRYAN,ANAHIT KHACHATRYAN SOFI,A KHACHATRYAN S
 1295,N00001296,Sofi Hovhannes Khachatryan,Sofi. H. Khachatryan,Sofi Hovhannes Khachatryan,abbrev_middle,True,SOFI HOVHANNES KHACHATRYAN,SOFI H KHACHATRYAN,HOVHANNES KHACHATRYAN SOFI,H KHACHATRYAN SOFI
-1311,N00001312,Luis  Marku,L. Marku,Luis  Marku,abbrev_forename,True,LUIS MARKU,L MARKU,LUIS MARKU,L MARKU
 1313,N00001314,Sofi Mark Khachatryan,Sofi. M. Khachatryan,Sofi Mark Khachatryan,abbrev_middle,True,SOFI MARK KHACHATRYAN,SOFI M KHACHATRYAN,KHACHATRYAN MARK SOFI,KHACHATRYAN M SOFI
 1356,N00001357,Manaia  Taylor,M. Taylor,Manaia  Taylor,abbrev_forename,True,MANAIA TAYLOR,M TAYLOR,MANAIA TAYLOR,M TAYLOR
 1372,N00001373,Benedita Duarte Castro,Benedita Castro,Benedita Duarte Castro,drop_middle,True,BENEDITA DUARTE CASTRO,BENEDITA CASTRO,BENEDITA CASTRO DUARTE,BENEDITA CASTRO

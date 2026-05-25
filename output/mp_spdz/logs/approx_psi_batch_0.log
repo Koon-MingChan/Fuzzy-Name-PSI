@@ -1,0 +1,125 @@
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/approx_psi.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/approx_psi-binary_add16x16(1)-1.bc
+Writing to Programs/Schedules/approx_psi.sch
+Writing to Programs/Bytecode/approx_psi-0.bc
+Hash: a3364d9749f7a4b6bbb1154b5c6eceaeca8325105d8df2daad131f5df1c3e7d5
+Program requires at most:
+    81930000 bit inputs from player 0
+    81930000 bit inputs from player 1
+   317680000 bit triples
+       80000 bit opens
+     2560000 bit mixeds
+    23120000 virtual machine rounds
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 0 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 11512 -h localhost -N 2
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 1 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 11512 -h localhost -N 2
+Using statistical security parameter 40
+--- Starting MP-SPDZ Approx-PSI post-filter ---
+CANDIDATE_OFFSET=0 MAX_CANDIDATES=10000 PAYLOAD_BITS=8192 HAMMING_D=4
+MATCH candidate_id=0
+MATCH candidate_id=1
+MATCH candidate_id=7
+MATCH candidate_id=8
+MATCH candidate_id=16
+MATCH candidate_id=22
+MATCH candidate_id=25
+MATCH candidate_id=34
+MATCH candidate_id=42
+MATCH candidate_id=46
+MATCH candidate_id=48
+MATCH candidate_id=52
+MATCH candidate_id=58
+MATCH candidate_id=61
+MATCH candidate_id=75
+MATCH candidate_id=85
+MATCH candidate_id=86
+MATCH candidate_id=91
+MATCH candidate_id=96
+MATCH candidate_id=103
+MATCH candidate_id=107
+MATCH candidate_id=112
+MATCH candidate_id=121
+MATCH candidate_id=135
+MATCH candidate_id=136
+MATCH candidate_id=137
+MATCH candidate_id=138
+MATCH candidate_id=146
+MATCH candidate_id=150
+MATCH candidate_id=151
+MATCH candidate_id=152
+MATCH candidate_id=153
+MATCH candidate_id=154
+MATCH candidate_id=155
+MATCH candidate_id=161
+MATCH candidate_id=162
+MATCH candidate_id=165
+MATCH candidate_id=168
+MATCH candidate_id=171
+MATCH candidate_id=172
+MATCH candidate_id=189
+MATCH candidate_id=191
+MATCH candidate_id=193
+MATCH candidate_id=201
+MATCH candidate_id=204
+MATCH candidate_id=207
+MATCH candidate_id=210
+MATCH candidate_id=213
+MATCH candidate_id=216
+MATCH candidate_id=217
+MATCH candidate_id=218
+MATCH candidate_id=223
+MATCH candidate_id=233
+MATCH candidate_id=234
+MATCH candidate_id=236
+MATCH candidate_id=241
+MATCH candidate_id=250
+MATCH candidate_id=251
+MATCH candidate_id=252
+MATCH candidate_id=253
+MATCH candidate_id=255
+MATCH candidate_id=258
+MATCH candidate_id=259
+MATCH candidate_id=280
+MATCH candidate_id=281
+MATCH candidate_id=282
+MATCH candidate_id=285
+MATCH candidate_id=288
+MATCH candidate_id=299
+MATCH candidate_id=302
+MATCH candidate_id=303
+MATCH candidate_id=307
+MATCH candidate_id=318
+MATCH candidate_id=319
+MATCH candidate_id=320
+MATCH candidate_id=321
+MATCH candidate_id=324
+MATCH candidate_id=325
+MATCH candidate_id=326
+MATCH candidate_id=330
+MATCH candidate_id=332
+MATCH candidate_id=341
+MATCH candidate_id=345
+MATCH candidate_id=346
+MATCH candidate_id=348
+MATCH candidate_id=351
+MATCH candidate_id=358
+MATCH candidate_id=361
+MATCH candidate_id=366
+MATCH candidate_id=367
+MATCH candidate_id=368
+MATCH candidate_id=369
+MATCH candidate_id=370
+MATCH candidate_id=372
+MATCH candidate_id=375
+MATCH candidate_id=376
+MATCH candidate_id=377
+MATCH candidate_id=380
+MATCH candidate_id=381
+MATCH candidate_id=384
+MATCH candidate_id=385
+MATCH candidate_id=386
+MATCH candidate_id=387
+MATCH candidate_id=393
+MATCH candidate_id=394

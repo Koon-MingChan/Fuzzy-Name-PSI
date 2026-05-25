@@ -12,8 +12,8 @@ set_target_properties(macoro::macoro PROPERTIES
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libmacoro.a"
   )
 
-list(APPEND _cmake_import_check_targets macoro::macoro )
-list(APPEND _cmake_import_check_files_for_macoro::macoro "${_IMPORT_PREFIX}/lib/libmacoro.a" )
+list(APPEND _IMPORT_CHECK_TARGETS macoro::macoro )
+list(APPEND _IMPORT_CHECK_FILES_FOR_macoro::macoro "${_IMPORT_PREFIX}/lib/libmacoro.a" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

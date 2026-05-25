@@ -20,7 +20,7 @@ using namespace approx_psi;
 using BitVector = approx_psi::BitVector;
 
 // Global Constants for the Approx-PSI Pipeline
-const int L_BIT_LENGTH = 8192;
+const int L_BIT_LENGTH = 2048;
 const int GRAM_SIZE = 2;
 const int HAMMING_D = 4;
 const int GAP_T = 9;

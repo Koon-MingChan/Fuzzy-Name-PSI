@@ -1,8 +1,11 @@
 #include <chrono>
+#include <algorithm>
+#include <cstdint>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
+#include <random>
 #include <set>
 #include <sstream>
 #include <stdexcept>
@@ -23,12 +26,13 @@
 
 using namespace std;
 
-const int L_BIT_LENGTH = 8192;
+const int L_BIT_LENGTH = 2048;
 const int GRAM_SIZE = 2;
 const int HAMMING_D = 4;
 const int GAP_T = 9;
 const int N_ELEMENTS = 2000;
 const int K_ROUNDS = 50;
+const size_t MAX_REPRESENTATIVES_PER_PROJECTION = 4;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
 const char* MATCH_OUTPUT_CSV = "output/ss_psi_opened_matches.csv";
 const char* SUMMARY_OUTPUT_TXT = "output/ss_psi_summary.txt";
@@ -65,6 +69,29 @@ string projection_key(const BinaryVector& projection) {
     // Stable bucket key for exact projection matching. This preserves the old
     // `proj_dist == 0` semantics without comparing every A/B pair.
     return to_binary_string(projection);
+}
+
+uint64_t representative_seed(int round, int party_id, const string& key) {
+    uint64_t seed = 0x9E3779B97F4A7C15ULL;
+    seed ^= static_cast<uint64_t>(round + 1) + 0xBF58476D1CE4E5B9ULL + (seed << 6) + (seed >> 2);
+    seed ^= static_cast<uint64_t>(party_id + 1) + 0x94D049BB133111EBULL + (seed << 6) + (seed >> 2);
+    seed ^= static_cast<uint64_t>(hash<string>{}(key)) + 0xD6E8FEB86659FD93ULL + (seed << 6) + (seed >> 2);
+    return seed;
+}
+
+template <typename T>
+void cap_projection_representatives(vector<T>& bucket,
+                                    int round,
+                                    int party_id,
+                                    const string& key) {
+    if (MAX_REPRESENTATIVES_PER_PROJECTION == 0) {
+        throw runtime_error("MAX_REPRESENTATIVES_PER_PROJECTION must be > 0");
+    }
+    if (bucket.size() <= MAX_REPRESENTATIVES_PER_PROJECTION) return;
+
+    mt19937_64 rng(representative_seed(round, party_id, key));
+    shuffle(bucket.begin(), bucket.end(), rng);
+    bucket.resize(MAX_REPRESENTATIVES_PER_PROJECTION);
 }
 
 BinaryVector from_binary_string(const string& s) {
@@ -203,6 +230,7 @@ void write_summary_file(long total_matches,
     fout << "Technique: simulation_ss_psi\n";
     fout << "K_ROUNDS: " << K_ROUNDS << "\n";
     fout << "HAMMING_D: " << HAMMING_D << "\n";
+    fout << "MAX_REPRESENTATIVES_PER_PROJECTION: " << MAX_REPRESENTATIVES_PER_PROJECTION << "\n";
     fout << "Total matched pairs across rounds: " << total_matches << "\n";
     fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
     fout << fixed << setprecision(3);
@@ -240,54 +268,73 @@ void simulate_f_sspsi(int party_id) {
         for (const auto& recA : dataA) {
             projection_buckets[projection_key(recA.projection)].push_back(&recA);
         }
+        size_t max_a_bucket_before_cap = 0;
+        for (auto& [key, bucket] : projection_buckets) {
+            max_a_bucket_before_cap = max(max_a_bucket_before_cap, bucket.size());
+            cap_projection_representatives(bucket, k, 0, key);
+        }
 
+        unordered_map<string, vector<const EncodedRecord*>> receiver_projection_buckets;
+        receiver_projection_buckets.reserve(dataB.size());
         for (const auto& recB : dataB) {
-            const auto bucket_it = projection_buckets.find(projection_key(recB.projection));
+            receiver_projection_buckets[projection_key(recB.projection)].push_back(&recB);
+        }
+        size_t max_b_bucket_before_cap = 0;
+        for (auto& [key, bucket] : receiver_projection_buckets) {
+            max_b_bucket_before_cap = max(max_b_bucket_before_cap, bucket.size());
+            cap_projection_representatives(bucket, k, 1, key);
+        }
+
+        for (const auto& [key, b_bucket] : receiver_projection_buckets) {
+            const auto bucket_it = projection_buckets.find(key);
             if (bucket_it == projection_buckets.end()) continue;
 
-            candidate_pairs_this_round += bucket_it->second.size();
-            for (const EncodedRecord* recA_ptr : bucket_it->second) {
-                const EncodedRecord& recA = *recA_ptr;
-                const int proj_dist = 0;
+            candidate_pairs_this_round += bucket_it->second.size() * b_bucket.size();
+            for (const EncodedRecord* recB_ptr : b_bucket) {
+                const EncodedRecord& recB = *recB_ptr;
+                for (const EncodedRecord* recA_ptr : bucket_it->second) {
+                    const EncodedRecord& recA = *recA_ptr;
+                    const int proj_dist = 0;
 
-                int payload_dist = hamming_distance(recA.payload, recB.payload);
-                if (payload_dist > HAMMING_D) continue;
+                    int payload_dist = hamming_distance(recA.payload, recB.payload);
+                    if (payload_dist > HAMMING_D) continue;
 
-                BinaryVector z = xor_vector(recA.payload, recB.payload);
-                size_t verified_share_count = 0;
+                    BinaryVector z = xor_vector(recA.payload, recB.payload);
+                    size_t verified_share_count = 0;
 
-                for (size_t i = 0; i < z.size(); ++i) {
-                    auto [share0, share1] = ass_engine.share(z[i], k);
-                    approx_psi::Share my_share = (party_id == 0 ? share0 : share1);
+                    for (size_t i = 0; i < z.size(); ++i) {
+                        auto [share0, share1] = ass_engine.share(z[i], k);
+                        approx_psi::Share my_share = (party_id == 0 ? share0 : share1);
 
-                    if (!ass_engine.verify(my_share, k)) {
-                        throw runtime_error("ASS Verification Failed in Round " + to_string(k));
+                        if (!ass_engine.verify(my_share, k)) {
+                            throw runtime_error("ASS Verification Failed in Round " + to_string(k));
+                        }
+                        ++verified_share_count;
                     }
-                    ++verified_share_count;
+
+                    fout << recA.index
+                         << "\t" << recB.index
+                         << "\t" << quoted(recA.name)
+                         << "\t" << quoted(recB.name)
+                         << "\t" << proj_dist
+                         << "\t" << payload_dist
+                         << "\t" << verified_share_count
+                         << "\n";
+
+                    if (seen_pairs.insert({recA.index, recB.index}).second) {
+                        opened_matches.push_back(OpenMatch{
+                            k,
+                            recA.index,
+                            recA.name,
+                            recB.index,
+                            recB.name,
+                            proj_dist,
+                            payload_dist
+                        });
+                    }
+
+                    ++matches_this_round;
                 }
-
-                fout << recA.index
-                     << "\t" << recB.index
-                     << "\t" << quoted(recA.name)
-                     << "\t" << quoted(recB.name)
-                     << "\t" << proj_dist
-                     << "\t" << payload_dist
-                     << "\t" << verified_share_count
-                     << "\n";
-
-                if (seen_pairs.insert({recA.index, recB.index}).second) {
-                    opened_matches.push_back(OpenMatch{
-                        k,
-                        recA.index,
-                        recA.name,
-                        recB.index,
-                        recB.name,
-                        proj_dist,
-                        payload_dist
-                    });
-                }
-
-                ++matches_this_round;
             }
         }
 
@@ -298,6 +345,9 @@ void simulate_f_sspsi(int party_id) {
              << ": A=" << dataA.size()
              << ", B=" << dataB.size()
              << ", projection_buckets=" << projection_buckets.size()
+             << ", max_A_bucket_before_cap=" << max_a_bucket_before_cap
+             << ", max_B_bucket_before_cap=" << max_b_bucket_before_cap
+             << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
              << ", bucket_candidate_pairs=" << candidate_pairs_this_round
              << ", payload_threshold_matches=" << matches_this_round
              << ", elapsed=" << fixed << setprecision(3) << round_elapsed.count() << "s"

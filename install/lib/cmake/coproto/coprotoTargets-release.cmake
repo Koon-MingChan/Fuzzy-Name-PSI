@@ -12,8 +12,8 @@ set_target_properties(coproto::coproto PROPERTIES
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libcoproto.a"
   )
 
-list(APPEND _cmake_import_check_targets coproto::coproto )
-list(APPEND _cmake_import_check_files_for_coproto::coproto "${_IMPORT_PREFIX}/lib/libcoproto.a" )
+list(APPEND _IMPORT_CHECK_TARGETS coproto::coproto )
+list(APPEND _IMPORT_CHECK_FILES_FOR_coproto::coproto "${_IMPORT_PREFIX}/lib/libcoproto.a" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

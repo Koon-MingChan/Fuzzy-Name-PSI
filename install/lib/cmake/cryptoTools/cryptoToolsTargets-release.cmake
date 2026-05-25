@@ -12,8 +12,8 @@ set_target_properties(oc::cryptoTools PROPERTIES
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libcryptoTools.a"
   )
 
-list(APPEND _cmake_import_check_targets oc::cryptoTools )
-list(APPEND _cmake_import_check_files_for_oc::cryptoTools "${_IMPORT_PREFIX}/lib/libcryptoTools.a" )
+list(APPEND _IMPORT_CHECK_TARGETS oc::cryptoTools )
+list(APPEND _IMPORT_CHECK_FILES_FOR_oc::cryptoTools "${_IMPORT_PREFIX}/lib/libcryptoTools.a" )
 
 # Import target "oc::tests_cryptoTools" for configuration "Release"
 set_property(TARGET oc::tests_cryptoTools APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
@@ -22,8 +22,8 @@ set_target_properties(oc::tests_cryptoTools PROPERTIES
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/lib/libtests_cryptoTools.a"
   )
 
-list(APPEND _cmake_import_check_targets oc::tests_cryptoTools )
-list(APPEND _cmake_import_check_files_for_oc::tests_cryptoTools "${_IMPORT_PREFIX}/lib/libtests_cryptoTools.a" )
+list(APPEND _IMPORT_CHECK_TARGETS oc::tests_cryptoTools )
+list(APPEND _IMPORT_CHECK_FILES_FOR_oc::tests_cryptoTools "${_IMPORT_PREFIX}/lib/libtests_cryptoTools.a" )
 
 # Commands beyond this point should not need to know the version.
 set(CMAKE_IMPORT_FILE_VERSION)

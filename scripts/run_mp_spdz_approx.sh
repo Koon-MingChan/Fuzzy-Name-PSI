@@ -76,13 +76,35 @@ CANDIDATE_OFFSET = $offset
 MAX_CANDIDATES = $batch_candidates
 EOF_CONFIG
 
+  cp "$MP_SPDZ_DIR/Programs/Source/approx_psi_config.mpc" \
+     "$MP_SPDZ_DIR/Programs/Source/approx_psi_config.py"
+  cp "$MP_SPDZ_DIR/Programs/Source/approx_psi_config.mpc" \
+     "$MP_SPDZ_DIR/approx_psi_config.py"
+
+  batch_log="$RUN_LOG_DIR/approx_psi_batch_${batch}.log"
+
   (
     cd "$MP_SPDZ_DIR"
     ./compile.py approx_psi
+  ) 2>&1 | tee "$batch_log"
+
+  set +e
+  (
+    cd "$MP_SPDZ_DIR"
     Scripts/mascot.sh approx_psi \
       --disk-memory "$DISK_MEMORY_DIR" \
       --batch-size "$MP_BATCH_SIZE"
-  ) 2>&1 | tee "$RUN_LOG_DIR/approx_psi_batch_${batch}.log"
+  ) 2>&1 | tee -a "$batch_log"
+  mascot_status=${PIPESTATUS[0]}
+  set -e
+
+  if [ "$mascot_status" -ne 0 ]; then
+    if grep -q "MP-SPDZ Approx-PSI post-filter complete\." "$batch_log"; then
+      echo "Warning: mascot.sh exited with status $mascot_status after completing batch $batch; continuing." >&2
+    else
+      exit "$mascot_status"
+    fi
+  fi
 
   grep -hEo 'MATCH candidate_id=[0-9]+' "$RUN_LOG_DIR/approx_psi_batch_${batch}.log" \
     | sed 's/[^0-9]//g' >> "$MATCH_ID_FILE" || true

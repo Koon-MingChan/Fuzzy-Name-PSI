@@ -122,6 +122,12 @@ if [ "${SETUP_MP_SPDZ}" -eq 1 ]; then
         git -C "${MP_SPDZ_DIR}" submodule update --init --recursive
     fi
 
+    if ! command -v clang++ >/dev/null 2>&1 && command -v g++ >/dev/null 2>&1; then
+        if ! grep -Eq '^[[:space:]]*CXX[[:space:]]*=' "${MP_SPDZ_DIR}/CONFIG.mine" 2>/dev/null; then
+            echo "CXX = g++" >> "${MP_SPDZ_DIR}/CONFIG.mine"
+        fi
+    fi
+
     # Build only the binary used by scripts/run_mp_spdz_approx.sh.
     # Keep the default job count modest because MP-SPDZ can exhaust WSL memory.
     make -C "${MP_SPDZ_DIR}" -j"${MP_SPDZ_JOBS}" "${MP_SPDZ_TARGET}"
