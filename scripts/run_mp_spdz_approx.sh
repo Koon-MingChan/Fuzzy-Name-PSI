@@ -5,7 +5,7 @@ PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 MP_SPDZ_DIR="${MP_SPDZ_DIR:-"$PROJECT_DIR/../MP-SPDZ"}"
 DISK_MEMORY_DIR="${MP_SPDZ_DISK_MEMORY_DIR:-"$MP_SPDZ_DIR/Player-Data/disk-memory"}"
 MP_BATCH_SIZE="${MP_SPDZ_BATCH_SIZE:-1}"
-CANDIDATES_PER_BATCH="${MPC_CANDIDATES_PER_BATCH:-10000}"
+CANDIDATES_PER_BATCH="${MPC_CANDIDATES_PER_BATCH:-2000}"
 START_BATCH="${MPC_START_BATCH:-0}"
 STOP_AFTER_BATCH="${MPC_STOP_AFTER_BATCH:-}"
 
@@ -28,10 +28,34 @@ HAMMING_D="$(read_config_value HAMMING_D)"
 LINES_PER_CANDIDATE=$((PAYLOAD_CHUNKS + 1))
 TOTAL_BATCHES=$(((TOTAL_CANDIDATES + CANDIDATES_PER_BATCH - 1) / CANDIDATES_PER_BATCH))
 
+input0_lines=$(wc -l < "$INPUT0_SRC")
+input1_lines=$(wc -l < "$INPUT1_SRC")
+expected_lines=$((TOTAL_CANDIDATES * LINES_PER_CANDIDATE))
+
+if [[ "$input0_lines" -ne "$expected_lines" || "$input1_lines" -ne "$expected_lines" ]]; then
+  echo "Input line count mismatch." >&2
+  echo "Expected lines: $expected_lines" >&2
+  echo "Input-P0-0 lines: $input0_lines" >&2
+  echo "Input-P1-0 lines: $input1_lines" >&2
+  exit 1
+fi
+
 mkdir -p "$MP_SPDZ_DIR/Programs/Source"
 mkdir -p "$MP_SPDZ_DIR/Player-Data"
 mkdir -p "$DISK_MEMORY_DIR"
 mkdir -p "$RUN_LOG_DIR"
+
+for f in "$CONFIG_SRC" "$INPUT0_SRC" "$INPUT1_SRC" "$PROJECT_DIR/approx_psi.mpc"; do
+  if [[ ! -f "$f" ]]; then
+    echo "Missing required file: $f" >&2
+    exit 1
+  fi
+done
+
+if [[ "$START_BATCH" == "0" ]]; then
+  : > "$MATCH_ID_FILE"
+  rm -f "$RUN_LOG_DIR"/approx_psi_batch_*.log
+fi
 
 cp "$PROJECT_DIR/approx_psi.mpc" \
    "$MP_SPDZ_DIR/Programs/Source/approx_psi.mpc"

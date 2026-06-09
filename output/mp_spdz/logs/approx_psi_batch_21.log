@@ -1,0 +1,58 @@
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/approx_psi.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/approx_psi-binary_add16x16(1)-1.bc
+Writing to Programs/Schedules/approx_psi.sch
+Writing to Programs/Bytecode/approx_psi-0.bc
+Hash: ba7f0d2fe90436df243fa4235290fbc18fd2f0a964e5bd32f8e0eb87c49e33ed
+Program requires at most:
+     1954746 bit inputs from player 0
+     1954746 bit inputs from player 1
+     3686256 bit triples
+        7632 bit opens
+      496080 virtual machine rounds
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 0 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 19941 -h localhost -N 2
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 1 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 19941 -h localhost -N 2
+Using statistical security parameter 40
+--- Starting MP-SPDZ Approx-PSI post-filter ---
+CANDIDATE_OFFSET=21000 MAX_CANDIDATES=954 PAYLOAD_BITS=2048 PAYLOAD_CHUNKS=32 HAMMING_D=4
+MATCH candidate_id=21255
+MP-SPDZ Approx-PSI post-filter complete.
+The following benchmarks are including preprocessing (offline phase).
+Time = 1005.64 seconds 
+Data sent = 7608.87 MB in ~32220847 rounds (party 0 only; use '-v' for more details)
+Global data sent = 15217.7 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 387842 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     387843 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 387844 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     387845 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+=== Party 1
+Data sent = 7608.87 MB in ~32220132 rounds (party 1 only; use '-v' for more details)
+Global data sent = 15217.7 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.

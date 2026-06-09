@@ -34,12 +34,12 @@ using namespace osuCrypto;
 using namespace volePSI;
 
 const int HAMMING_D = 4;
-const int K_ROUNDS = 50;
 const u64 STAT_SEC_PARAM = 40;
 const u64 NUM_THREADS = 1;
 const size_t MAX_NAME_BYTES = 128;
 const size_t MAX_BUCKET_RECORDS = 512;
-const size_t MAX_REPRESENTATIVES_PER_PROJECTION = 4;
+const int K_ROUNDS = 30;
+const size_t MAX_REPRESENTATIVES_PER_PROJECTION = 3;
 const size_t TERMINAL_PREVIEW_LIMIT = 10;
 const size_t MPC_PAYLOAD_BITS = 2048;
 const size_t MPC_CHUNK_BITS = 64;
@@ -419,7 +419,10 @@ void write_opened_matches_csv(const vector<OpenMatch>& opened_matches) {
     }
 }
 
-void write_summary_file(long total_candidates, const vector<OpenMatch>& opened_matches) {
+void write_summary_file(long total_expanded_candidate_pairs,
+                        long total_unique_mpc_candidates,
+                        long total_duplicate_candidate_pairs_skipped,
+                        const vector<OpenMatch>& opened_matches) {
     const string output_path = resolve_output_path(RECEIVER_SUMMARY_OUTPUT_TXT);
     ofstream fout(output_path);
     if (!fout) {
@@ -431,7 +434,11 @@ void write_summary_file(long total_candidates, const vector<OpenMatch>& opened_m
     fout << "K_ROUNDS: " << K_ROUNDS << "\n";
     fout << "HAMMING_D: " << HAMMING_D << "\n";
     fout << "MAX_REPRESENTATIVES_PER_PROJECTION: " << MAX_REPRESENTATIVES_PER_PROJECTION << "\n";
-    fout << "Total expanded exact-projection candidate pairs across rounds: " << total_candidates << "\n";
+    fout << "Total expanded candidate pairs before deduplication: "
+         << total_expanded_candidate_pairs << "\n";
+    fout << "Total unique MPC candidates written: " << total_unique_mpc_candidates << "\n";
+    fout << "Total duplicate candidate pairs skipped: "
+         << total_duplicate_candidate_pairs_skipped << "\n";
     fout << "Unique fuzzy-matched record pairs opened: " << opened_matches.size() << "\n";
     fout << "MPC handoff manifest: " << MPC_HANDOFF_MANIFEST_CSV << "\n";
     fout << "MPC Party 0 input: " << MPC_PARTY0_INPUT_TXT << "\n";
@@ -534,7 +541,7 @@ vector<T> recv_vec(coproto::Socket& sock) {
 void run_sender(coproto::Socket& sock) {
     cout << "Party 0 starting PSI-style candidate generation sender on exact projected keys.\n";
 
-    long total_candidates = 0;
+    long total_unique_mpc_candidates = 0;
     vector<MpcInputRecord> party0_inputs;
     for (int round = 0; round < K_ROUNDS; ++round) {
         vector<EncodedRecord> dataA;
@@ -589,9 +596,9 @@ void run_sender(coproto::Socket& sock) {
                 throw runtime_error("Expected no candidate assignments for empty PSI round");
             }
 
-            u64 receiver_candidates = 0;
-            macoro::sync_wait(sock.recv(receiver_candidates));
-            total_candidates += static_cast<long>(receiver_candidates);
+            u64 receiver_unique_candidates = 0;
+            macoro::sync_wait(sock.recv(receiver_unique_candidates));
+            total_unique_mpc_candidates += static_cast<long>(receiver_unique_candidates);
 
             cout << "Round " << round
                  << ": party0_records=" << dataA.size()
@@ -599,8 +606,8 @@ void run_sender(coproto::Socket& sock) {
                  << ", max_sender_bucket_before_cap=" << max_sender_bucket_before_cap
                  << ", max_sender_bucket_size=" << max_sender_bucket_size
                  << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
-                 << ", receiver reported " << receiver_candidates
-                 << " expanded candidate pairs.\n";
+                 << ", receiver_unique_mpc_candidates=" << receiver_unique_candidates
+                 << ".\n";
             continue;
         }
 
@@ -655,9 +662,12 @@ void run_sender(coproto::Socket& sock) {
             });
         }
 
-        u64 receiver_candidates = 0;
-        macoro::sync_wait(sock.recv(receiver_candidates));
-        total_candidates += static_cast<long>(receiver_candidates);
+        u64 receiver_unique_candidates = 0;
+        macoro::sync_wait(sock.recv(receiver_unique_candidates));
+        if (receiver_unique_candidates != assignment_words.size() / 2) {
+            throw runtime_error("Receiver unique candidate count does not match assignment list size");
+        }
+        total_unique_mpc_candidates += static_cast<long>(receiver_unique_candidates);
 
         cout << "Round " << round
              << ": party0_records=" << dataA.size()
@@ -665,13 +675,13 @@ void run_sender(coproto::Socket& sock) {
              << ", max_sender_bucket_before_cap=" << max_sender_bucket_before_cap
              << ", max_sender_bucket_size=" << max_sender_bucket_size
              << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
-             << ", receiver reported " << receiver_candidates
-             << " expanded candidate pairs.\n";
+             << ", receiver_unique_mpc_candidates=" << receiver_unique_candidates
+             << ".\n";
     }
 
     cout << "\n--- MPC Sender Summary ---\n";
-    cout << "Receiver reported " << total_candidates
-         << " expanded exact-projection candidate pairs across " << K_ROUNDS << " rounds.\n";
+    cout << "Receiver reported " << total_unique_mpc_candidates
+         << " unique MPC candidates across " << K_ROUNDS << " rounds.\n";
     cout << "Party 0 private MPC inputs written: " << party0_inputs.size() << "\n";
     write_mpc_party_input_files(MPC_PARTY0_INPUT_TXT, MPC_SPDZ_PARTY0_INPUT_TXT, party0_inputs);
     cout << "Party 0 MPC inputs written to " << MPC_PARTY0_INPUT_TXT << "\n";
@@ -681,10 +691,13 @@ void run_sender(coproto::Socket& sock) {
 void run_receiver(coproto::Socket& sock) {
     cout << "Party 1 starting PSI-style candidate generation receiver on exact projected keys.\n";
 
-    long total_candidates = 0;
+    long total_expanded_candidate_pairs = 0;
+    long total_unique_mpc_candidates = 0;
+    long total_duplicate_candidate_pairs_skipped = 0;
     vector<OpenMatch> opened_matches;
     vector<MpcCandidate> mpc_candidates;
     vector<MpcInputRecord> party1_inputs;
+    set<pair<size_t, size_t>> seen_candidate_pairs;
     u64 next_candidate_id = 0;
 
     for (int round = 0; round < K_ROUNDS; ++round) {
@@ -737,7 +750,9 @@ void run_receiver(coproto::Socket& sock) {
         }
 
         u64 bucket_intersections_this_round = 0;
-        u64 candidate_pairs_this_round = 0;
+        u64 expanded_candidate_pairs_before_dedup_this_round = 0;
+        u64 new_unique_mpc_candidates_this_round = 0;
+        u64 duplicate_candidate_pairs_skipped_this_round = 0;
         const size_t packed_len = bucket_value_byte_length(payload_bits);
 
         if (sender_size == 0 || receiver_size == 0) {
@@ -747,9 +762,8 @@ void run_receiver(coproto::Socket& sock) {
                 throw runtime_error("Expected empty sender shares for empty PSI round");
             }
 
-            total_candidates += static_cast<long>(candidate_pairs_this_round);
             send_vec(sock, vector<u64>{});
-            macoro::sync_wait(sock.send(candidate_pairs_this_round));
+            macoro::sync_wait(sock.send(new_unique_mpc_candidates_this_round));
 
             cout << "Round " << round
                  << ": party0_records=" << sender_record_count
@@ -761,8 +775,12 @@ void run_receiver(coproto::Socket& sock) {
                  << ", max_receiver_bucket_size=" << max_receiver_bucket_size
                  << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
                  << ", bucket_intersections=" << bucket_intersections_this_round
-                 << ", expanded_candidate_pairs=" << candidate_pairs_this_round
-                 << ", mpc_candidate_pairs=" << candidate_pairs_this_round
+                 << ", expanded_candidate_pairs_before_dedup="
+                 << expanded_candidate_pairs_before_dedup_this_round
+                 << ", new_unique_mpc_candidates="
+                 << new_unique_mpc_candidates_this_round
+                 << ", duplicate_candidate_pairs_skipped="
+                 << duplicate_candidate_pairs_skipped_this_round
                  << ".\n";
             continue;
         }
@@ -789,10 +807,9 @@ void run_receiver(coproto::Socket& sock) {
             throw runtime_error("Sender flag share size mismatch");
         }
 
-        // Stage 2 handoff: PSI gives exact projection-bucket candidates. Each
-        // expanded record pair receives a public candidate id. Party 1 writes
-        // only Party 1 payloads locally, and sends candidate id + Party 0
-        // record id back to Party 0 so Party 0 can write its own private input.
+        // PSI yields projection-bucket intersections. Deduplicate expanded
+        // record pairs globally before assigning candidate IDs so MP-SPDZ sees
+        // each Party0/Party1 pair at most once across all projection rounds.
         vector<u64> assignment_words;
         for (size_t i = 0; i < keys.size(); ++i) {
             const auto output_row = share.mMapping[i];
@@ -813,13 +830,20 @@ void run_receiver(coproto::Socket& sock) {
                 std::span<const u8>(sender_row, share.mValues.cols()));
 
             auto sender_values = deserialize_sender_bucket(opened_value, payload_bits);
-            candidate_pairs_this_round +=
+            expanded_candidate_pairs_before_dedup_this_round +=
                 static_cast<u64>(sender_values.size() * receiver_row_records[i].size());
 
             for (const auto& sender_value : sender_values) {
                 for (size_t rec_index : receiver_row_records[i]) {
                     const auto& recB = dataB[rec_index];
+                    const auto pair_key = make_pair(sender_value.index, recB.index);
+                    if (!seen_candidate_pairs.insert(pair_key).second) {
+                        ++duplicate_candidate_pairs_skipped_this_round;
+                        continue;
+                    }
+
                     const u64 candidate_id = next_candidate_id++;
+                    ++new_unique_mpc_candidates_this_round;
                     mpc_candidates.push_back(MpcCandidate{
                         candidate_id,
                         round,
@@ -839,9 +863,14 @@ void run_receiver(coproto::Socket& sock) {
             }
         }
 
-        total_candidates += static_cast<long>(candidate_pairs_this_round);
+        total_expanded_candidate_pairs +=
+            static_cast<long>(expanded_candidate_pairs_before_dedup_this_round);
+        total_unique_mpc_candidates +=
+            static_cast<long>(new_unique_mpc_candidates_this_round);
+        total_duplicate_candidate_pairs_skipped +=
+            static_cast<long>(duplicate_candidate_pairs_skipped_this_round);
         send_vec(sock, assignment_words);
-        macoro::sync_wait(sock.send(candidate_pairs_this_round));
+        macoro::sync_wait(sock.send(new_unique_mpc_candidates_this_round));
 
         cout << "Round " << round
              << ": party0_records=" << sender_record_count
@@ -853,22 +882,32 @@ void run_receiver(coproto::Socket& sock) {
              << ", max_receiver_bucket_size=" << max_receiver_bucket_size
              << ", reps_per_projection=" << MAX_REPRESENTATIVES_PER_PROJECTION
              << ", bucket_intersections=" << bucket_intersections_this_round
-             << ", expanded_candidate_pairs=" << candidate_pairs_this_round
-             << ", mpc_candidate_pairs=" << candidate_pairs_this_round
+             << ", expanded_candidate_pairs_before_dedup="
+             << expanded_candidate_pairs_before_dedup_this_round
+             << ", new_unique_mpc_candidates="
+             << new_unique_mpc_candidates_this_round
+             << ", duplicate_candidate_pairs_skipped="
+             << duplicate_candidate_pairs_skipped_this_round
              << ".\n";
     }
 
     cout << "\n--- MPC Fuzzy PSI Summary ---\n";
     cout << "Filtering mode: split-party MPC handoff for secret-shared Hamming threshold.\n";
-    cout << "Total expanded exact-projection candidate pairs across " << K_ROUNDS << " rounds: "
-         << total_candidates << "\n";
+    cout << "Total expanded candidate pairs before deduplication across " << K_ROUNDS
+         << " rounds: " << total_expanded_candidate_pairs << "\n";
+    cout << "Total unique MPC candidates written: " << total_unique_mpc_candidates << "\n";
+    cout << "Total duplicate candidate pairs skipped: "
+         << total_duplicate_candidate_pairs_skipped << "\n";
     cout << "MPC candidate inputs written: " << mpc_candidates.size() << "\n";
     cout << "Plaintext fuzzy pairs opened before MPC: " << opened_matches.size() << "\n";
     write_mpc_config(mpc_candidates.size());
     write_mpc_manifest_file(mpc_candidates);
     write_mpc_party_input_files(MPC_PARTY1_INPUT_TXT, MPC_SPDZ_PARTY1_INPUT_TXT, party1_inputs);
     write_opened_matches_csv(opened_matches);
-    write_summary_file(total_candidates, opened_matches);
+    write_summary_file(total_expanded_candidate_pairs,
+                       total_unique_mpc_candidates,
+                       total_duplicate_candidate_pairs_skipped,
+                       opened_matches);
     cout << "MPC handoff manifest written to " << MPC_HANDOFF_MANIFEST_CSV << "\n";
     cout << "Party 0 MPC inputs written to " << MPC_PARTY0_INPUT_TXT << "\n";
     cout << "Party 1 MPC inputs written to " << MPC_PARTY1_INPUT_TXT << "\n";

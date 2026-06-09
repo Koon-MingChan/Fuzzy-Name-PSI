@@ -25,7 +25,7 @@ const int GRAM_SIZE = 2;
 const int HAMMING_D = 4;
 const int GAP_T = 9;
 const int N_ELEMENTS = 2000;
-const int K_ROUNDS = 50;
+const int K_ROUNDS = 30;
 
 const bool USE_CSV_DATASET = true;
 const size_t CSV_LIMIT = 2000;

@@ -1,2 +1,2 @@
 evaluated_records,opened_candidate_pairs,true_positives_index_match,equivalent_duplicate_name_matches,possible_false_positives,missed_true_matches,strict_precision,strict_recall,strict_f1,adjusted_precision_including_equivalent_duplicates,adjusted_f1_including_equivalent_duplicates,strict_false_discovery_rate,possible_false_discovery_rate,valid_expected_records,false_negative_rate
-2000,2140,1828,174,138,166,0.854206,0.916750,0.884373,0.935514,0.926037,0.145794,0.064486,1994,0.083250
+2000,2139,1826,173,140,168,0.853670,0.915747,0.883620,0.934549,0.925053,0.146330,0.065451,1994,0.084253

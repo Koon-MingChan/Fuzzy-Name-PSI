@@ -1,0 +1,351 @@
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/approx_psi.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/approx_psi-binary_add16x16(1)-1.bc
+Writing to Programs/Schedules/approx_psi.sch
+Writing to Programs/Bytecode/approx_psi-0.bc
+Hash: bc187a45c4aab02ac0cb38d6e229fdd098b3c0deffc4040108f744e9bc7599e8
+Program requires at most:
+     2049000 bit inputs from player 0
+     2049000 bit inputs from player 1
+     3864000 bit triples
+        8000 bit opens
+      520000 virtual machine rounds
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 0 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 15695 -h localhost -N 2
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 1 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 15695 -h localhost -N 2
+Using statistical security parameter 40
+--- Starting MP-SPDZ Approx-PSI post-filter ---
+CANDIDATE_OFFSET=2000 MAX_CANDIDATES=1000 PAYLOAD_BITS=2048 PAYLOAD_CHUNKS=32 HAMMING_D=4
+MATCH candidate_id=2013
+MATCH candidate_id=2015
+MATCH candidate_id=2022
+MATCH candidate_id=2028
+MATCH candidate_id=2029
+MATCH candidate_id=2043
+MATCH candidate_id=2048
+MATCH candidate_id=2058
+MATCH candidate_id=2061
+MATCH candidate_id=2064
+MATCH candidate_id=2065
+MATCH candidate_id=2070
+MATCH candidate_id=2080
+MATCH candidate_id=2081
+MATCH candidate_id=2086
+MATCH candidate_id=2088
+MATCH candidate_id=2090
+MATCH candidate_id=2091
+MATCH candidate_id=2092
+MATCH candidate_id=2093
+MATCH candidate_id=2100
+MATCH candidate_id=2118
+MATCH candidate_id=2123
+MATCH candidate_id=2131
+MATCH candidate_id=2152
+MATCH candidate_id=2159
+MATCH candidate_id=2160
+MATCH candidate_id=2161
+MATCH candidate_id=2163
+MATCH candidate_id=2165
+MATCH candidate_id=2184
+MATCH candidate_id=2192
+MATCH candidate_id=2198
+MATCH candidate_id=2202
+MATCH candidate_id=2212
+MATCH candidate_id=2215
+MATCH candidate_id=2220
+MATCH candidate_id=2225
+MATCH candidate_id=2231
+MATCH candidate_id=2233
+MATCH candidate_id=2234
+MATCH candidate_id=2237
+MATCH candidate_id=2238
+MATCH candidate_id=2239
+MATCH candidate_id=2240
+MATCH candidate_id=2241
+MATCH candidate_id=2244
+MATCH candidate_id=2248
+MATCH candidate_id=2249
+MATCH candidate_id=2252
+MATCH candidate_id=2261
+MATCH candidate_id=2263
+MATCH candidate_id=2264
+MATCH candidate_id=2265
+MATCH candidate_id=2266
+MATCH candidate_id=2272
+MATCH candidate_id=2273
+MATCH candidate_id=2274
+MATCH candidate_id=2276
+MATCH candidate_id=2279
+MATCH candidate_id=2282
+MATCH candidate_id=2283
+MATCH candidate_id=2287
+MATCH candidate_id=2289
+MATCH candidate_id=2291
+MATCH candidate_id=2306
+MATCH candidate_id=2307
+MATCH candidate_id=2332
+MATCH candidate_id=2334
+MATCH candidate_id=2340
+MATCH candidate_id=2341
+MATCH candidate_id=2342
+MATCH candidate_id=2343
+MATCH candidate_id=2344
+MATCH candidate_id=2345
+MATCH candidate_id=2346
+MATCH candidate_id=2350
+MATCH candidate_id=2363
+MATCH candidate_id=2368
+MATCH candidate_id=2369
+MATCH candidate_id=2370
+MATCH candidate_id=2373
+MATCH candidate_id=2376
+MATCH candidate_id=2377
+MATCH candidate_id=2380
+MATCH candidate_id=2385
+MATCH candidate_id=2386
+MATCH candidate_id=2401
+MATCH candidate_id=2402
+MATCH candidate_id=2404
+MATCH candidate_id=2405
+MATCH candidate_id=2408
+MATCH candidate_id=2413
+MATCH candidate_id=2416
+MATCH candidate_id=2422
+MATCH candidate_id=2424
+MATCH candidate_id=2435
+MATCH candidate_id=2448
+MATCH candidate_id=2460
+MATCH candidate_id=2463
+MATCH candidate_id=2478
+MATCH candidate_id=2479
+MATCH candidate_id=2482
+MATCH candidate_id=2483
+MATCH candidate_id=2487
+MATCH candidate_id=2488
+MATCH candidate_id=2489
+MATCH candidate_id=2490
+MATCH candidate_id=2492
+MATCH candidate_id=2495
+MATCH candidate_id=2498
+MATCH candidate_id=2501
+MATCH candidate_id=2505
+MATCH candidate_id=2506
+MATCH candidate_id=2521
+MATCH candidate_id=2524
+MATCH candidate_id=2526
+MATCH candidate_id=2528
+MATCH candidate_id=2530
+MATCH candidate_id=2532
+MATCH candidate_id=2533
+MATCH candidate_id=2537
+MATCH candidate_id=2541
+MATCH candidate_id=2543
+MATCH candidate_id=2544
+MATCH candidate_id=2547
+MATCH candidate_id=2548
+MATCH candidate_id=2550
+MATCH candidate_id=2551
+MATCH candidate_id=2552
+MATCH candidate_id=2553
+MATCH candidate_id=2559
+MATCH candidate_id=2561
+MATCH candidate_id=2563
+MATCH candidate_id=2567
+MATCH candidate_id=2568
+MATCH candidate_id=2577
+MATCH candidate_id=2578
+MATCH candidate_id=2581
+MATCH candidate_id=2582
+MATCH candidate_id=2583
+MATCH candidate_id=2585
+MATCH candidate_id=2587
+MATCH candidate_id=2588
+MATCH candidate_id=2589
+MATCH candidate_id=2590
+MATCH candidate_id=2591
+MATCH candidate_id=2593
+MATCH candidate_id=2600
+MATCH candidate_id=2602
+MATCH candidate_id=2613
+MATCH candidate_id=2614
+MATCH candidate_id=2616
+MATCH candidate_id=2617
+MATCH candidate_id=2618
+MATCH candidate_id=2619
+MATCH candidate_id=2631
+MATCH candidate_id=2633
+MATCH candidate_id=2634
+MATCH candidate_id=2635
+MATCH candidate_id=2637
+MATCH candidate_id=2638
+MATCH candidate_id=2641
+MATCH candidate_id=2647
+MATCH candidate_id=2652
+MATCH candidate_id=2657
+MATCH candidate_id=2661
+MATCH candidate_id=2665
+MATCH candidate_id=2666
+MATCH candidate_id=2669
+MATCH candidate_id=2670
+MATCH candidate_id=2672
+MATCH candidate_id=2680
+MATCH candidate_id=2685
+MATCH candidate_id=2693
+MATCH candidate_id=2694
+MATCH candidate_id=2697
+MATCH candidate_id=2698
+MATCH candidate_id=2701
+MATCH candidate_id=2704
+MATCH candidate_id=2705
+MATCH candidate_id=2711
+MATCH candidate_id=2719
+MATCH candidate_id=2727
+MATCH candidate_id=2728
+MATCH candidate_id=2729
+MATCH candidate_id=2732
+MATCH candidate_id=2733
+MATCH candidate_id=2734
+MATCH candidate_id=2735
+MATCH candidate_id=2739
+MATCH candidate_id=2740
+MATCH candidate_id=2741
+MATCH candidate_id=2743
+MATCH candidate_id=2745
+MATCH candidate_id=2747
+MATCH candidate_id=2748
+MATCH candidate_id=2752
+MATCH candidate_id=2753
+MATCH candidate_id=2754
+MATCH candidate_id=2755
+MATCH candidate_id=2763
+MATCH candidate_id=2764
+MATCH candidate_id=2765
+MATCH candidate_id=2766
+MATCH candidate_id=2767
+MATCH candidate_id=2768
+MATCH candidate_id=2769
+MATCH candidate_id=2773
+MATCH candidate_id=2774
+MATCH candidate_id=2775
+MATCH candidate_id=2776
+MATCH candidate_id=2778
+MATCH candidate_id=2779
+MATCH candidate_id=2781
+MATCH candidate_id=2782
+MATCH candidate_id=2785
+MATCH candidate_id=2790
+MATCH candidate_id=2791
+MATCH candidate_id=2792
+MATCH candidate_id=2796
+MATCH candidate_id=2797
+MATCH candidate_id=2799
+MATCH candidate_id=2800
+MATCH candidate_id=2803
+MATCH candidate_id=2807
+MATCH candidate_id=2811
+MATCH candidate_id=2812
+MATCH candidate_id=2813
+MATCH candidate_id=2816
+MATCH candidate_id=2818
+MATCH candidate_id=2823
+MATCH candidate_id=2824
+MATCH candidate_id=2825
+MATCH candidate_id=2826
+MATCH candidate_id=2827
+MATCH candidate_id=2828
+MATCH candidate_id=2836
+MATCH candidate_id=2839
+MATCH candidate_id=2840
+MATCH candidate_id=2841
+MATCH candidate_id=2843
+MATCH candidate_id=2844
+MATCH candidate_id=2845
+MATCH candidate_id=2846
+MATCH candidate_id=2847
+MATCH candidate_id=2848
+MATCH candidate_id=2854
+MATCH candidate_id=2855
+MATCH candidate_id=2857
+MATCH candidate_id=2859
+MATCH candidate_id=2860
+MATCH candidate_id=2862
+MATCH candidate_id=2863
+MATCH candidate_id=2865
+MATCH candidate_id=2867
+MATCH candidate_id=2868
+MATCH candidate_id=2869
+MATCH candidate_id=2870
+MATCH candidate_id=2871
+MATCH candidate_id=2872
+MATCH candidate_id=2878
+MATCH candidate_id=2885
+MATCH candidate_id=2886
+MATCH candidate_id=2887
+MATCH candidate_id=2888
+MATCH candidate_id=2889
+MATCH candidate_id=2890
+MATCH candidate_id=2892
+MATCH candidate_id=2897
+MATCH candidate_id=2898
+MATCH candidate_id=2900
+MATCH candidate_id=2901
+MATCH candidate_id=2906
+MATCH candidate_id=2907
+MATCH candidate_id=2908
+MATCH candidate_id=2909
+MATCH candidate_id=2910
+MATCH candidate_id=2911
+MATCH candidate_id=2912
+MATCH candidate_id=2913
+MATCH candidate_id=2914
+MATCH candidate_id=2916
+MATCH candidate_id=2918
+MATCH candidate_id=2922
+MATCH candidate_id=2924
+MATCH candidate_id=2925
+MATCH candidate_id=2931
+MATCH candidate_id=2951
+MATCH candidate_id=2961
+MATCH candidate_id=2968
+MATCH candidate_id=2986
+MATCH candidate_id=2991
+MATCH candidate_id=2998
+MP-SPDZ Approx-PSI post-filter complete.
+The following benchmarks are including preprocessing (offline phase).
+Time = 1051.28 seconds 
+Data sent = 7974.2 MB in ~33774467 rounds (party 0 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 316127 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     316128 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+=== Party 1
+Data sent = 7974.2 MB in ~33773718 rounds (party 1 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 95: 316129 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     316130 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }

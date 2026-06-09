@@ -1,0 +1,148 @@
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/approx_psi.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/approx_psi-binary_add16x16(1)-1.bc
+Writing to Programs/Schedules/approx_psi.sch
+Writing to Programs/Bytecode/approx_psi-0.bc
+Hash: e85893928b587b1fae61986cf0083cd09abe0cc4b43cb0f2a5eec42a43ebd761
+Program requires at most:
+     2049000 bit inputs from player 0
+     2049000 bit inputs from player 1
+     3864000 bit triples
+        8000 bit opens
+      520000 virtual machine rounds
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 0 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 18415 -h localhost -N 2
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 1 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 18415 -h localhost -N 2
+Using statistical security parameter 40
+--- Starting MP-SPDZ Approx-PSI post-filter ---
+CANDIDATE_OFFSET=4000 MAX_CANDIDATES=1000 PAYLOAD_BITS=2048 PAYLOAD_CHUNKS=32 HAMMING_D=4
+MATCH candidate_id=4034
+MATCH candidate_id=4088
+MATCH candidate_id=4089
+MATCH candidate_id=4093
+MATCH candidate_id=4121
+MATCH candidate_id=4122
+MATCH candidate_id=4144
+MATCH candidate_id=4188
+MATCH candidate_id=4223
+MATCH candidate_id=4250
+MATCH candidate_id=4266
+MATCH candidate_id=4289
+MATCH candidate_id=4324
+MATCH candidate_id=4346
+MATCH candidate_id=4356
+MATCH candidate_id=4388
+MATCH candidate_id=4391
+MATCH candidate_id=4404
+MATCH candidate_id=4418
+MATCH candidate_id=4482
+MATCH candidate_id=4490
+MATCH candidate_id=4517
+MATCH candidate_id=4524
+MATCH candidate_id=4534
+MATCH candidate_id=4543
+MATCH candidate_id=4545
+MATCH candidate_id=4572
+MATCH candidate_id=4578
+MATCH candidate_id=4582
+MATCH candidate_id=4586
+MATCH candidate_id=4600
+MATCH candidate_id=4602
+MATCH candidate_id=4608
+MATCH candidate_id=4609
+MATCH candidate_id=4610
+MATCH candidate_id=4637
+MATCH candidate_id=4670
+MATCH candidate_id=4675
+MATCH candidate_id=4678
+MATCH candidate_id=4698
+MATCH candidate_id=4704
+MATCH candidate_id=4710
+MATCH candidate_id=4724
+MATCH candidate_id=4728
+MATCH candidate_id=4733
+MATCH candidate_id=4736
+MATCH candidate_id=4747
+MATCH candidate_id=4757
+MATCH candidate_id=4760
+MATCH candidate_id=4767
+MATCH candidate_id=4778
+MATCH candidate_id=4779
+MATCH candidate_id=4780
+MATCH candidate_id=4788
+MATCH candidate_id=4790
+MATCH candidate_id=4797
+MATCH candidate_id=4798
+MATCH candidate_id=4805
+MATCH candidate_id=4809
+MATCH candidate_id=4816
+MATCH candidate_id=4838
+MATCH candidate_id=4840
+MATCH candidate_id=4841
+MATCH candidate_id=4842
+MATCH candidate_id=4847
+MATCH candidate_id=4857
+MATCH candidate_id=4861
+MATCH candidate_id=4865
+MATCH candidate_id=4871
+MATCH candidate_id=4879
+MATCH candidate_id=4884
+MATCH candidate_id=4897
+MATCH candidate_id=4900
+MATCH candidate_id=4902
+MATCH candidate_id=4905
+MATCH candidate_id=4906
+MATCH candidate_id=4907
+MATCH candidate_id=4909
+MATCH candidate_id=4913
+MATCH candidate_id=4914
+MATCH candidate_id=4916
+MATCH candidate_id=4917
+MATCH candidate_id=4936
+MATCH candidate_id=4946
+MATCH candidate_id=4951
+MATCH candidate_id=4963
+MATCH candidate_id=4964
+MATCH candidate_id=4966
+MATCH candidate_id=4968
+MATCH candidate_id=4976
+MATCH candidate_id=4995
+MP-SPDZ Approx-PSI post-filter complete.
+The following benchmarks are including preprocessing (offline phase).
+Time = 1111.07 seconds 
+Data sent = 7974.2 MB in ~33774467 rounds (party 0 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 334300 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     334301 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 334302 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     334303 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+=== Party 1
+Data sent = 7974.2 MB in ~33773718 rounds (party 1 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.

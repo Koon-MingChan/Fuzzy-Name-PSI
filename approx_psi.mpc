@@ -10,18 +10,25 @@
 #
 # Each candidate slot contains:
 #   active_flag
-#   128 decimal u64 chunks of the 8192-bit payload
+#   PAYLOAD_CHUNKS decimal chunks of the encoded payload
 #
 # This program keeps the payload chunks secret-shared, computes the Hamming
-# threshold check inside MP-SPDZ, applies the match flag as a secret mask
-# (F_ssVMult-style), and reveals only the final match indicators.
+# threshold check inside MP-SPDZ, and reveals only the final matched candidate IDs.
+#
+# Optional:
+#   ENABLE_VMULT = True keeps the Approx-PSI-style F_ssVMult masking stage
+#   in-circuit, where non-matching payloads are multiplied by 0.
+#   For runtime evaluation where only matched candidate IDs are needed,
+#   ENABLE_VMULT can be set to False.
 from approx_psi_config import *
 
 word_type = sbits.get_type(CHUNK_BITS)
 count_type = sbitint.get_type(16)
 
-def candidate_word_offset(candidate_index):
-    return candidate_index * PAYLOAD_CHUNKS
+# Set to True if you want to keep the F_ssVMult-style masking step.
+# Set to False for faster runtime when only matched candidate IDs are required.
+ENABLE_VMULT = False
+
 
 def f_ss_hamcom(words_a, words_b, threshold):
     """
@@ -37,10 +44,12 @@ def f_ss_hamcom(words_a, words_b, threshold):
 
     return dist.read() <= threshold
 
+
 def f_ss_vmult(is_match, words):
     """
-    Secret-shared vector masking. Non-matches become zero chunks, matches keep
-    their secret payload chunks until the explicit opening phase.
+    Secret-shared vector masking.
+    If is_match = 1, the payload is kept.
+    If is_match = 0, the payload becomes zero.
     """
     out = Array(PAYLOAD_CHUNKS, word_type)
 
@@ -50,9 +59,11 @@ def f_ss_vmult(is_match, words):
 
     return out
 
+
 print_ln("--- Starting MP-SPDZ Approx-PSI post-filter ---")
-print_ln("CANDIDATE_OFFSET=%s MAX_CANDIDATES=%s PAYLOAD_BITS=%s HAMMING_D=%s",
-         CANDIDATE_OFFSET, MAX_CANDIDATES, PAYLOAD_BITS, HAMMING_D)
+print_ln("CANDIDATE_OFFSET=%s MAX_CANDIDATES=%s PAYLOAD_BITS=%s PAYLOAD_CHUNKS=%s HAMMING_D=%s",
+         CANDIDATE_OFFSET, MAX_CANDIDATES, PAYLOAD_BITS, PAYLOAD_CHUNKS, HAMMING_D)
+
 
 @for_range(MAX_CANDIDATES)
 def evaluate_candidate(candidate):
@@ -60,6 +71,7 @@ def evaluate_candidate(candidate):
     # MAX_CANDIDATES * PAYLOAD_CHUNKS secret words in VM memory.
     active_a = sbit.get_input_from(0)
     active_b = sbit.get_input_from(1)
+
     words_a = Array(PAYLOAD_CHUNKS, word_type)
     words_b = Array(PAYLOAD_CHUNKS, word_type)
 
@@ -71,21 +83,30 @@ def evaluate_candidate(candidate):
     def _(chunk):
         words_b[chunk] = word_type.get_input_from(1)
 
+    # Secret-shared Hamming threshold check.
     within_threshold = f_ss_hamcom(words_a, words_b, HAMMING_D)
+
+    # Candidate slot is valid only if both parties marked it active.
     is_active = active_a & active_b
     is_match = within_threshold & is_active
 
-    # Keep the vector-multiplication stage in-circuit. We do not reveal the
-    # masked chunks here; candidate metadata is joined outside MP-SPDZ using
-    # the revealed candidate id.
-    f_ss_vmult(is_match, words_a)
-    f_ss_vmult(is_match, words_b)
+    # Optional Approx-PSI-style vector masking.
+    # This is useful if the protocol opens masked vectors later.
+    # In the current prototype, only matched candidate IDs are revealed,
+    # so this step can be disabled to reduce runtime.
+    if ENABLE_VMULT:
+        f_ss_vmult(is_match, words_a)
+        f_ss_vmult(is_match, words_b)
 
+    # Reveal only the match indicator.
+    # Unmatched candidates are not printed.
     revealed_match = is_match.reveal()
+
     @if_(revealed_match == 1)
     def _():
         # Candidate metadata stays in output/mpc_fuzzy_mpc_candidates.csv.
         # The candidate number here is the candidate_id from that manifest.
         print_ln("MATCH candidate_id=%s", CANDIDATE_OFFSET + candidate)
+
 
 print_ln("MP-SPDZ Approx-PSI post-filter complete.")

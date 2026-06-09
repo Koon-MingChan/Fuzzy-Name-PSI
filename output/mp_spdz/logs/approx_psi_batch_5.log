@@ -1,0 +1,240 @@
+Default bit length for compilation: 64
+Default security parameter for compilation: 40
+Compiling file Programs/Source/approx_psi.mpc
+WARNING: Order of memory instructions not preserved, errors possible
+Writing to Programs/Bytecode/approx_psi-binary_add16x16(1)-1.bc
+Writing to Programs/Schedules/approx_psi.sch
+Writing to Programs/Bytecode/approx_psi-0.bc
+Hash: a6b573add461807713362e076852eb78961a467a794eb0459770d989915cb9e1
+Program requires at most:
+     2049000 bit inputs from player 0
+     2049000 bit inputs from player 1
+     3864000 bit triples
+        8000 bit opens
+      520000 virtual machine rounds
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 0 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 10914 -h localhost -N 2
+Running /data/MP-SPDZ/Scripts/../mascot-party.x 1 approx_psi --disk-memory /data/Fuzzy-Name-PSI/../MP-SPDZ/Player-Data/disk-memory --batch-size 1 -pn 10914 -h localhost -N 2
+Using statistical security parameter 40
+--- Starting MP-SPDZ Approx-PSI post-filter ---
+CANDIDATE_OFFSET=5000 MAX_CANDIDATES=1000 PAYLOAD_BITS=2048 PAYLOAD_CHUNKS=32 HAMMING_D=4
+MATCH candidate_id=5002
+MATCH candidate_id=5003
+MATCH candidate_id=5006
+MATCH candidate_id=5008
+MATCH candidate_id=5011
+MATCH candidate_id=5012
+MATCH candidate_id=5013
+MATCH candidate_id=5017
+MATCH candidate_id=5026
+MATCH candidate_id=5039
+MATCH candidate_id=5040
+MATCH candidate_id=5041
+MATCH candidate_id=5042
+MATCH candidate_id=5058
+MATCH candidate_id=5066
+MATCH candidate_id=5067
+MATCH candidate_id=5074
+MATCH candidate_id=5077
+MATCH candidate_id=5079
+MATCH candidate_id=5087
+MATCH candidate_id=5088
+MATCH candidate_id=5090
+MATCH candidate_id=5093
+MATCH candidate_id=5094
+MATCH candidate_id=5101
+MATCH candidate_id=5103
+MATCH candidate_id=5107
+MATCH candidate_id=5108
+MATCH candidate_id=5110
+MATCH candidate_id=5111
+MATCH candidate_id=5112
+MATCH candidate_id=5113
+MATCH candidate_id=5114
+MATCH candidate_id=5115
+MATCH candidate_id=5121
+MATCH candidate_id=5122
+MATCH candidate_id=5123
+MATCH candidate_id=5124
+MATCH candidate_id=5125
+MATCH candidate_id=5129
+MATCH candidate_id=5132
+MATCH candidate_id=5136
+MATCH candidate_id=5137
+MATCH candidate_id=5140
+MATCH candidate_id=5141
+MATCH candidate_id=5142
+MATCH candidate_id=5143
+MATCH candidate_id=5158
+MATCH candidate_id=5161
+MATCH candidate_id=5163
+MATCH candidate_id=5165
+MATCH candidate_id=5167
+MATCH candidate_id=5169
+MATCH candidate_id=5175
+MATCH candidate_id=5176
+MATCH candidate_id=5185
+MATCH candidate_id=5193
+MATCH candidate_id=5214
+MATCH candidate_id=5218
+MATCH candidate_id=5220
+MATCH candidate_id=5231
+MATCH candidate_id=5235
+MATCH candidate_id=5303
+MATCH candidate_id=5304
+MATCH candidate_id=5318
+MATCH candidate_id=5320
+MATCH candidate_id=5321
+MATCH candidate_id=5331
+MATCH candidate_id=5341
+MATCH candidate_id=5380
+MATCH candidate_id=5399
+MATCH candidate_id=5406
+MATCH candidate_id=5422
+MATCH candidate_id=5428
+MATCH candidate_id=5457
+MATCH candidate_id=5466
+MATCH candidate_id=5467
+MATCH candidate_id=5468
+MATCH candidate_id=5471
+MATCH candidate_id=5472
+MATCH candidate_id=5480
+MATCH candidate_id=5481
+MATCH candidate_id=5484
+MATCH candidate_id=5485
+MATCH candidate_id=5504
+MATCH candidate_id=5507
+MATCH candidate_id=5542
+MATCH candidate_id=5553
+MATCH candidate_id=5554
+MATCH candidate_id=5558
+MATCH candidate_id=5566
+MATCH candidate_id=5571
+MATCH candidate_id=5574
+MATCH candidate_id=5575
+MATCH candidate_id=5577
+MATCH candidate_id=5579
+MATCH candidate_id=5580
+MATCH candidate_id=5581
+MATCH candidate_id=5582
+MATCH candidate_id=5592
+MATCH candidate_id=5599
+MATCH candidate_id=5600
+MATCH candidate_id=5610
+MATCH candidate_id=5611
+MATCH candidate_id=5617
+MATCH candidate_id=5619
+MATCH candidate_id=5621
+MATCH candidate_id=5622
+MATCH candidate_id=5623
+MATCH candidate_id=5628
+MATCH candidate_id=5629
+MATCH candidate_id=5641
+MATCH candidate_id=5645
+MATCH candidate_id=5652
+MATCH candidate_id=5655
+MATCH candidate_id=5669
+MATCH candidate_id=5674
+MATCH candidate_id=5680
+MATCH candidate_id=5681
+MATCH candidate_id=5690
+MATCH candidate_id=5691
+MATCH candidate_id=5692
+MATCH candidate_id=5696
+MATCH candidate_id=5698
+MATCH candidate_id=5708
+MATCH candidate_id=5710
+MATCH candidate_id=5712
+MATCH candidate_id=5724
+MATCH candidate_id=5725
+MATCH candidate_id=5726
+MATCH candidate_id=5728
+MATCH candidate_id=5730
+MATCH candidate_id=5735
+MATCH candidate_id=5741
+MATCH candidate_id=5750
+MATCH candidate_id=5758
+MATCH candidate_id=5766
+MATCH candidate_id=5767
+MATCH candidate_id=5768
+MATCH candidate_id=5773
+MATCH candidate_id=5775
+MATCH candidate_id=5785
+MATCH candidate_id=5786
+MATCH candidate_id=5789
+MATCH candidate_id=5790
+MATCH candidate_id=5799
+MATCH candidate_id=5812
+MATCH candidate_id=5815
+MATCH candidate_id=5816
+MATCH candidate_id=5817
+MATCH candidate_id=5826
+MATCH candidate_id=5827
+MATCH candidate_id=5828
+MATCH candidate_id=5829
+MATCH candidate_id=5830
+MATCH candidate_id=5831
+MATCH candidate_id=5832
+MATCH candidate_id=5833
+MATCH candidate_id=5834
+MATCH candidate_id=5837
+MATCH candidate_id=5839
+MATCH candidate_id=5856
+MATCH candidate_id=5861
+MATCH candidate_id=5864
+MATCH candidate_id=5865
+MATCH candidate_id=5870
+MATCH candidate_id=5880
+MATCH candidate_id=5891
+MATCH candidate_id=5892
+MATCH candidate_id=5946
+MATCH candidate_id=5947
+MATCH candidate_id=5948
+MATCH candidate_id=5949
+MATCH candidate_id=5954
+MATCH candidate_id=5965
+MATCH candidate_id=5966
+MATCH candidate_id=5969
+MATCH candidate_id=5970
+MATCH candidate_id=5972
+MATCH candidate_id=5979
+MATCH candidate_id=5984
+MATCH candidate_id=5990
+MATCH candidate_id=5992
+MP-SPDZ Approx-PSI post-filter complete.
+The following benchmarks are including preprocessing (offline phase).
+Time = 1066.65 seconds 
+Data sent = 7974.2 MB in ~33774467 rounds (party 0 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 94: 339839 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     339840 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }
+=== Party 1
+Data sent = 7974.2 MB in ~33773718 rounds (party 1 only; use '-v' for more details)
+Global data sent = 15948.4 MB (all parties)
+This virtual machine was compiled with GCC. Recompile with 'CXX = clang++' in 'CONFIG.mine' for optimal performance.
+/data/MP-SPDZ/Scripts/run-common.sh: line 95: 339841 Segmentation fault      (core dumped) $my_prefix $SPDZROOT/$bin $i $params 2>&1
+     339842 Done                    | { if test "$BENCH"; then
+    if test $i = $front_player; then
+        tee -a $log;
+    else
+        cat >> $log;
+    fi;
+else
+    if test $i = $front_player; then
+        tee $log;
+    else
+        cat > $log;
+    fi;
+fi; }

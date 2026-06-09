@@ -1,0 +1,37 @@
+Party 0 starting PSI-style candidate generation sender on exact projected keys.
+Round 0: party0_records=1994, sender_projection_buckets=1645, max_sender_bucket_before_cap=22, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=1551.
+Round 1: party0_records=1994, sender_projection_buckets=1226, max_sender_bucket_before_cap=65, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=1365.
+Round 2: party0_records=1994, sender_projection_buckets=1437, max_sender_bucket_before_cap=64, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=1012.
+Round 3: party0_records=1994, sender_projection_buckets=1074, max_sender_bucket_before_cap=58, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=1243.
+Round 4: party0_records=1994, sender_projection_buckets=1592, max_sender_bucket_before_cap=16, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=669.
+Round 5: party0_records=1994, sender_projection_buckets=1771, max_sender_bucket_before_cap=11, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=391.
+Round 6: party0_records=1994, sender_projection_buckets=1101, max_sender_bucket_before_cap=57, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=1049.
+Round 7: party0_records=1994, sender_projection_buckets=1317, max_sender_bucket_before_cap=59, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=939.
+Round 8: party0_records=1994, sender_projection_buckets=1207, max_sender_bucket_before_cap=60, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=977.
+Round 9: party0_records=1994, sender_projection_buckets=1233, max_sender_bucket_before_cap=104, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=814.
+Round 10: party0_records=1994, sender_projection_buckets=1364, max_sender_bucket_before_cap=57, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=743.
+Round 11: party0_records=1994, sender_projection_buckets=1650, max_sender_bucket_before_cap=13, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=467.
+Round 12: party0_records=1994, sender_projection_buckets=1807, max_sender_bucket_before_cap=7, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=266.
+Round 13: party0_records=1994, sender_projection_buckets=1565, max_sender_bucket_before_cap=20, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=549.
+Round 14: party0_records=1994, sender_projection_buckets=1424, max_sender_bucket_before_cap=37, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=644.
+Round 15: party0_records=1994, sender_projection_buckets=1524, max_sender_bucket_before_cap=26, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=585.
+Round 16: party0_records=1994, sender_projection_buckets=1498, max_sender_bucket_before_cap=26, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=624.
+Round 17: party0_records=1994, sender_projection_buckets=1451, max_sender_bucket_before_cap=25, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=616.
+Round 18: party0_records=1994, sender_projection_buckets=1546, max_sender_bucket_before_cap=38, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=539.
+Round 19: party0_records=1994, sender_projection_buckets=1722, max_sender_bucket_before_cap=10, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=339.
+Round 20: party0_records=1994, sender_projection_buckets=1535, max_sender_bucket_before_cap=40, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=488.
+Round 21: party0_records=1994, sender_projection_buckets=1436, max_sender_bucket_before_cap=34, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=649.
+Round 22: party0_records=1994, sender_projection_buckets=1635, max_sender_bucket_before_cap=18, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=448.
+Round 23: party0_records=1994, sender_projection_buckets=1279, max_sender_bucket_before_cap=75, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=773.
+Round 24: party0_records=1994, sender_projection_buckets=1025, max_sender_bucket_before_cap=85, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=898.
+Round 25: party0_records=1994, sender_projection_buckets=1075, max_sender_bucket_before_cap=99, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=904.
+Round 26: party0_records=1994, sender_projection_buckets=1545, max_sender_bucket_before_cap=26, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=502.
+Round 27: party0_records=1994, sender_projection_buckets=1135, max_sender_bucket_before_cap=81, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=801.
+Round 28: party0_records=1994, sender_projection_buckets=1603, max_sender_bucket_before_cap=43, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=427.
+Round 29: party0_records=1994, sender_projection_buckets=1314, max_sender_bucket_before_cap=62, max_sender_bucket_size=3, reps_per_projection=3, receiver_unique_mpc_candidates=682.
+
+--- MPC Sender Summary ---
+Receiver reported 21954 unique MPC candidates across 30 rounds.
+Party 0 private MPC inputs written: 21954
+Party 0 MPC inputs written to output/mpc_fuzzy_party0_payloads.txt
+MP-SPDZ Party 0 input written to output/mp_spdz/Player-Data/Input-P0-0
